@@ -1,1 +1,119 @@
-
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js" defer></script>
+  
+  <!-- Inline Script for homepage slideshow -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      if (slides.length === 0) return;
+      
+      // Show first slide
+      slides[currentSlide].classList.add('active');
+      
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 6000);
+    });
+  </script>
+  <style>
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--surface-border);
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .home-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .home-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .home-card h3 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      font-family: var(--font-heading);
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .slider-container {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="site-main container">
+    <!-- Image Slider -->
+    <div class="slider-container">
+      <div class="slide" style="background-image: url('img/slide/slide1.jpg');"></div>
+      <div class="slide" style="background-image: url('img/slide/slide2.jpg');"></div>
+      <div class="slide" style="background-image: url('img/slide/slide3.jpg');"></div>
+      <div class="slide" style="background-image: url('img/slide/slide4.jpg');"></div>
+    </div>
+    
+    <!-- Unique Content Area -->
+    <div id="page-content">
+      <h1>ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์</h1>
+      <p>ยินดีต้อนรับสู่ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ภาควิชาของเรามุ่งเน้นการผลิตบัณฑิตพยาบาลที่มีความเชี่ยวชาญด้านสุขภาพจิตและจิตเวช พร้อมทั้งบริการวิชาการแก่สังคมและวิจัยเพื่อพัฒนาองค์ความรู้ทางพยาบาลศาสตร์ในระดับสากล</p>
+      
+      <div class="home-grid">
+        <div class="home-card">
+          <h3>หลักสูตรการเรียนการสอน</h3>
+          <p>เปิดสอนทั้งในระดับปริญญาตรีและระดับบัณฑิตศึกษา มุ่งเน้นการเรียนรู้แบบลงมือปฏิบัติจริงในคลินิกและชุมชนเพื่อเพิ่มสมรรถนะในการดูแลผู้รับบริการ</p>
+          <a href="teaching.html" style="color: var(--secondary); font-weight: 600; display: inline-block; margin-top: 0.5rem;">อ่านเพิ่มเติม &rarr;</a>
+        </div>
+        <div class="home-card">
+          <h3>การวิจัยและนวัตกรรม</h3>
+          <p>ส่งเสริมการทำงานวิจัยและนวัตกรรมด้านสุขภาพจิต เพื่อสนับสนุนการสร้างนโยบายสาธารณะและการพัฒนาสุขภาพจิตของประชากรในทุกช่วงวัย</p>
+          <a href="research.html" style="color: var(--secondary); font-weight: 600; display: inline-block; margin-top: 0.5rem;">อ่านเพิ่มเติม &rarr;</a>
+        </div>
+        <div class="home-card">
+          <h3>การบริการวิชาการ</h3>
+          <p>มีศูนย์ความเป็นเลิศทางวิชาการและจัดอบรมหลักสูตรระยะสั้นเพื่อเพิ่มพูนความรู้แก่พยาบาลวิชาชีพและบุคลากรทางการแพทย์ทั่วประเทศ</p>
+          <a href="academic.html" style="color: var(--secondary); font-weight: 600; display: inline-block; margin-top: 0.5rem;">อ่านเพิ่มเติม &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

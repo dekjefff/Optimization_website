@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การบริการวิชาการ | ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js" defer></script>
+  
+  <style>
+    .academic-header {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .academic-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .service-box {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      border-top: 4px solid var(--primary);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .service-box:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .service-box h3 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .service-box ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .service-box ul li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+    .service-box ul li::before {
+      content: "•";
+      color: var(--secondary);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    /* Timeline styles */
+    .timeline {
+      position: relative;
+      margin: 2rem auto;
+      padding: 1rem 0;
+      list-style: none;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40px;
+      width: 2px;
+      background: var(--primary-glow);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 70px;
+    }
+    .timeline-badge {
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      width: 42px;
+      height: 24px;
+      background: var(--secondary);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      font-size: 0.75rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      z-index: 2;
+    }
+    .timeline-content {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .timeline-content:hover {
+      transform: translateX(3px);
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+</head>
+<body>
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>การบริการวิชาการ</h1>
+      
+      <section class="academic-header">
+        <div>
+          <img src="img/other/pic_academic.jpg" alt="การบริการวิชาการ คณะพยาบาลศาสตร์" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--surface-border); padding: 5px;">
+        </div>
+        <div>
+          <p style="text-indent: 2.5em; font-size: 1.05rem; line-height: 1.8;">
+            ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์ มุ่งมั่นในการนำองค์ความรู้ความเชี่ยวชาญเฉพาะทางไปถ่ายทอดและจัดกิจกรรมบริการวิชาการแก่สังคม เพื่อสนับสนุนการดูแลและส่งเสริมสุขภาวะทางจิตของประชาชนในทุกช่วงวัย รวมถึงสร้างเครือข่ายความร่วมมือทางวิชาชีพในระดับชาติและสากล
+          </p>
+        </div>
+      </section>
+      
+      <!-- Service Pillars -->
+      <h2 style="margin-bottom: 1.5rem;">เสาหลักการบริการวิชาการ</h2>
+      <div class="services-grid">
+        <!-- Pillar 1 -->
+        <div class="service-box">
+          <h3>1. ส่งเสริมสุขภาพจิตประชาชน</h3>
+          <ul>
+            <li>จัดโครงการให้คำปรึกษาแก่บุคลากร นักศึกษา และบุคคลทั่วไป</li>
+            <li>ให้บริการผ่าน Line Official <strong>"NS พลังใจ"</strong></li>
+            <li>ช่องทางติดต่อโทรศัพท์ <strong>089-6861316</strong> หรือทาง Facebook ภาควิชาฯ</li>
+          </ul>
+        </div>
+        
+        <!-- Pillar 2 -->
+        <div class="service-box">
+          <h3>2. ที่ปรึกษาโครงการวิจัย</h3>
+          <ul>
+            <li>เป็นที่ปรึกษาโครงการวิจัยและวิชาการแก่สถาบันภายนอก</li>
+            <li>ร่วมพัฒนาแนวปฏิบัติทางการพยาบาลในโรงพยาบาลต่างๆ</li>
+          </ul>
+        </div>
+        
+        <!-- Pillar 3 -->
+        <div class="service-box">
+          <h3>3. เครือข่ายพัฒนาหลักสูตร</h3>
+          <ul>
+            <li>ร่วมกับกรมสุขภาพจิต (สถาบันกัลยาณ์ฯ, สถาบันสมเด็จเจ้าพระยา, รพ.ศรีธัญญา) จัดหลักสูตรการพยาบาลเฉพาะทาง</li>
+            <li>ร่วมกับ รพ.ยุวประสาทไวทโยถัมภ์ พัฒนาหลักสูตรเฉพาะทางเด็กและวัยรุ่น</li>
+          </ul>
+        </div>
+        
+        <!-- Pillar 4 -->
+        <div class="service-box">
+          <h3>4. อบรมระยะสั้นเฉพาะทาง</h3>
+          <ul>
+            <li>จัดฝึกอบรมเชิงปฏิบัติการทางจิตวิทยาและจิตเวชแก่พยาบาลวิชาชีพ</li>
+            <li>การดูแลประคับประคองจิตใจผู้ป่วยโรคเรื้อรังและจิตเวชชุมชน</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Past Services Timeline -->
+      <h2>โครงการบริการวิชาการแก่สังคมที่ผ่านมา (2563 - 2565)</h2>
+      <ul class="timeline">
+        
+        <!-- 2565 -->
+        <li class="timeline-item">
+          <div class="timeline-badge">2565</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่นักเรียนและผู้สนใจทั่วไป เรื่อง “Major depressive disorder what to know & how to cope”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2565</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่ผู้สนใจทั่วไปใน Webinar Meeting โดย National University of Singapore เรื่อง "Prototype development and pilot testing of the "MU My Mind" programme"
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2565</div>
+          <div class="timeline-content">
+            ให้ความรู้เชิงปฏิบัติแก่อาจารย์คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล เรื่อง “การพัฒนาอาจารย์ให้มีสมรรถนะ empathic listening”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2565</div>
+          <div class="timeline-content">
+            ให้ความรู้เชิงปฏิบัติแก่อาจารย์พยาบาล วิทยาลัยพยาบาลกองทัพบก เรื่อง “ค้นหาความเข้าใจผ่านการฟังแบบ empathic listening”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2565</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่อาจารย์ นักศึกษา และผู้ที่สนใจ มหาวิทยาลัยศรีปทุม เรื่อง “สุขกายสุขใจ ปรับอย่างไรในยุคโควิด”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2565</div>
+          <div class="timeline-content">
+            ให้ความรู้ผ่านเรื่องเล่าเร้าพลังจากประสบการณ์ของอาจารย์ในคณะพยาบาลศาสตร์แก่อาจารย์ และผู้สนใจทั่วไป เรื่อง “การรับมือกับนักศึกษา Gen Z”
+          </div>
+        </li>
+        
+        <!-- 2564 -->
+        <li class="timeline-item">
+          <div class="timeline-badge">2564</div>
+          <div class="timeline-content">
+            ให้บริการการปรึกษา...สุขภาพใจแก่นักศึกษา บุคลากร และบุคคลทั่วไป ให้บริการผ่าน Line official “NS พลังใจ”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2564</div>
+          <div class="timeline-content">
+            ให้บริการการปรึกษา “เพิ่มพลังใจแก่ผู้ติดเชื้อโควิด-19” (Home isolation) ผ่าน Line official “NS พลังใจ”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2564</div>
+          <div class="timeline-content">
+            ให้บริการปรึกษา Hot line ส่งเสริมสุขภาพใจ คนไทยรับมือ Covid-19
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2564</div>
+          <div class="timeline-content">
+            ให้บริการการคัดกรองและฉีดวัคซีน ในโครงการ “NS จิตอาสา หยุดเชื้อช่วยชาติ”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2564</div>
+          <div class="timeline-content">
+            ให้ความรู้ผ่าน Facebook live ในโครงการ "พยาบาลมหิดลร่วมใจ ช่วยคนไทยปลอดภัยจากโควิด-19" หัวข้อการดูแลสุขภาพใจผู้สูงวัยและจิตใจในวิกฤติโควิด
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2564</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่นักศึกษาระดับบัณฑิตศึกษา เรื่อง “ปรับใจให้เป็นสุขในการเรียนและการทำงานยุคโควิด” และ “Empower your Mental health during Covid-19 pandemic”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2564</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่เจ้าหน้าที่หลักสูตร มหาวิทยาลัยมหิดล เรื่อง “การดูแลและช่วยเหลือนักศึกษาที่มีปัญหาด้านสุขภาพใจ”
+          </div>
+        </li>
+        
+        <!-- 2563 -->
+        <li class="timeline-item">
+          <div class="timeline-badge">2563</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่ครูโรงเรียนกรุงเทพคริสเตียนวิทยาลัย เรื่อง “ทักษะการให้การปรึกษา”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2563</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่นักเรียนแกนนำโรงเรียนทีปังกรพิทยาพัฒน์ และโรงเรียนกาญจนาภิเษกวิทยาลัย เรื่อง “ทักษะการให้การปรึกษา”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2563</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่ครูที่เข้าร่วมโครงการบริการวิชาการ “ครูเพศวิถีพันธุ์ใหม่สำหรับวัยรุ่น เรื่อง “การให้คำปรึกษาสุขภาพทางเพศ”
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-badge">2563</div>
+          <div class="timeline-content">
+            ให้ความรู้แก่ผู้ฝึกสอนและผู้ตัดสินกีฬาเทเบิลเทนนิส สมาคมกีฬาคนพิการทางปัญญาแห่งประเทศไทย เรื่อง “ภาวะบกพร่องทางปัญญา รู้จัก เข้าใจ พัฒนา”
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

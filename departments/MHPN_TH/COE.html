@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ศูนย์ความเป็นเลิศทางวิชาการ | ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js" defer></script>
+  
+  <style>
+    .coe-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .coe-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .coe-text-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      padding: 2.5rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      border-top: 4px solid var(--primary);
+    }
+    .coe-text-card p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 2rem;
+    }
+    .coe-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: var(--text-inverse);
+      padding: 0.8rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .coe-button:hover {
+      background: var(--secondary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+  </style>
+</head>
+<body>
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>ศูนย์ความเป็นเลิศทางวิชาการ</h1>
+      
+      <div class="coe-layout">
+        <div>
+          <img src="img/other/pic_COE.jpg" alt="ศูนย์ความเป็นเลิศทางวิชาการ" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--surface-border); padding: 5px;">
+        </div>
+        <div class="coe-text-card">
+          <p>
+            The Center of Excellence for Prevention and Caring for Persons with Depressive Symptoms was endorsed by the Department of Psychiatric and Mental Health Nursing in March 2008. The Center is dedicated to providing education, research, and nursing services to meet the challenges of prevention and caring for persons with depressive symptoms and their families.
+          </p>
+          <a href="http://www.ns.mahidol.ac.th/english/departments/MHPN/coe-psy-prevention/coe-psy-prevention-index.html" target="_blank" class="coe-button">
+            Visit Center of Excellence Portal
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
