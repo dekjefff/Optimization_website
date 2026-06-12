@@ -1,20 +1,203 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>หน้าหลัก | ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <title>ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
   
-  <link rel="stylesheet" href="style.css">
-  <script src="layout.js" defer></script>
+  <link rel="stylesheet" href="../../components/style.css">
+  <script src="../../components/layout.js" defer></script>
+  
+  <!-- Inline Script for homepage slideshow -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      if (slides.length === 0) return;
+      
+      // Show first slide
+      slides[currentSlide].classList.add('active');
+      
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 6000);
+    });
+  </script>
+  <style>
+    /* Hero Slider */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--surface-border);
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+
+    /* Soft UI Bento Grid */
+    .home-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 4rem;
+    }
+    
+    .bento-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none !important;
+    }
+    
+    .bento-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Icon Badges */
+    .icon-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .icon-badge svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* Card Themes */
+    .theme-blue .icon-badge {
+      background-color: #eef5ff;
+      color: #3b82f6;
+    }
+    .theme-blue .subtitle { color: #3b82f6; }
+
+    .theme-green .icon-badge {
+      background-color: #ecfdf5;
+      color: #10b981;
+    }
+    .theme-green .subtitle { color: #10b981; }
+
+    .theme-orange .icon-badge {
+      background-color: #fff7ed;
+      color: #f97316;
+    }
+    .theme-orange .subtitle { color: #f97316; }
+
+    /* Typography inside card */
+    .bento-card h3 {
+      color: var(--text-main);
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 0.25rem;
+      margin-top: 0;
+    }
+    
+    .bento-card .subtitle {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      font-family: var(--font-body);
+    }
+    
+    .bento-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .slider-container {
+        height: 250px;
+      }
+      .home-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body>
+<body data-dept-en="Surgical Nursing Department" data-dept-th="ภาควิชาการพยาบาลศัลยศาสตร์">
   <main class="site-main container">
-    <div id="page-content">
-      <h1>ภาควิชาการพยาบาลศัลยศาสตร์</h1>
-      <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
-        ยินดีต้อนรับสู่ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล หน้านี้ได้รับการอัปเกรดโครงสร้างพื้นฐานให้ทันสมัย เรียบร้อยแล้ว
-      </p>
+    
+    <!-- Image Slider -->
+    <div class="slider-container">
+      <div class="slide" style="background-image: url('img/slide/slide1.jpg');"></div>
+      <div class="slide" style="background-image: url('img/slide/slide2.jpg');"></div>
+      <div class="slide" style="background-image: url('img/slide/slide3.jpg');"></div>
+      <div class="slide" style="background-image: url('img/slide/slide4.jpg');"></div>
+    </div>
+    
+    <!-- Intro Content without white box background -->
+    <div style="margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+      <h1 style="font-family: var(--font-heading); color: var(--primary); font-size: 2.2rem; margin-bottom: 1rem;">ภาควิชาการพยาบาลศัลยศาสตร์</h1>
+      <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">ยินดีต้อนรับสู่ภาควิชาการพยาบาลศัลยศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ภาควิชาของเรามุ่งเน้นการผลิตบัณฑิตพยาบาลที่มีความเชี่ยวชาญด้านสุขภาพจิตและจิตเวช พร้อมทั้งบริการวิชาการแก่สังคมและวิจัยเพื่อพัฒนาองค์ความรู้ทางพยาบาลศาสตร์ในระดับสากล</p>
+    </div>
+      
+    <!-- Soft UI Bento Grid (Directly on background) -->
+    <div class="home-grid">
+      
+      <!-- Card 1: Teaching (Blue Theme) -->
+      <a href="teaching.html" class="bento-card theme-blue">
+        <div class="icon-badge">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+        </div>
+        <h3>หลักสูตรการเรียนการสอน</h3>
+        <div class="subtitle">Academic Programs</div>
+        <p>เปิดสอนทั้งในระดับปริญญาตรีและระดับบัณฑิตศึกษา มุ่งเน้นการเรียนรู้แบบลงมือปฏิบัติจริงในคลินิกและชุมชนเพื่อเพิ่มสมรรถนะในการดูแลผู้รับบริการ</p>
+      </a>
+
+      <!-- Card 2: Research (Green Theme) -->
+      <a href="research.html" class="bento-card theme-green">
+        <div class="icon-badge">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+        </div>
+        <h3>การวิจัยและนวัตกรรม</h3>
+        <div class="subtitle">Research & Innovation</div>
+        <p>ส่งเสริมการทำงานวิจัยและนวัตกรรมด้านสุขภาพจิต เพื่อสนับสนุนการสร้างนโยบายสาธารณะและการพัฒนาสุขภาพจิตของประชากรในทุกช่วงวัย</p>
+      </a>
+
+      <!-- Card 3: Academic Services (Orange Theme) -->
+      <a href="academic.html" class="bento-card theme-orange">
+        <div class="icon-badge">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        </div>
+        <h3>การบริการวิชาการ</h3>
+        <div class="subtitle">Academic Services</div>
+        <p>มีศูนย์ความเป็นเลิศทางวิชาการและจัดอบรมหลักสูตรระยะสั้นเพื่อเพิ่มพูนความรู้แก่พยาบาลวิชาชีพและบุคลากรทางการแพทย์ทั่วประเทศ</p>
+      </a>
+
     </div>
   </main>
 </body>
