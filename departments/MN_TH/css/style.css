@@ -320,7 +320,7 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   NAVIGATION BAR
+   NAVIGATION BAR (ฉบับปรับปรุงตัวล็อกบั๊กแตกแถวและระยะห่างบรรทัด)
    ========================================= */
 .navbar {
   background: var(--mu-blue);
@@ -336,6 +336,17 @@ ul { list-style: none; }
   justify-content: space-between;
   height: var(--navbar-height);
   padding: 0 var(--space-4);
+}
+
+.navbar-brand {
+  color: var(--white); /* บังคับให้เป็นสีขาวพรีเมียมตลอดเวลา */
+  font-size: 16px;
+  font-family: var(--font-base);
+  font-weight: 400;               
+  letter-spacing: 0.3px;
+
+  line-height: 1.2;    /* บีบระยะห่างบรรทัดให้กระชับสมส่วน ไม่ถ่างลอยเคว้งคว้าง */
+  margin-right: 20px;/* เพิ่มระยะห่างขวาให้โลโก้กับเมนูหลัก เพื่อความสมดุลและไม่ติดกันจนเกินไป */
 }
 
 /* Desktop Nav */
@@ -357,7 +368,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 0 var(--space-4);
+  padding: 0 11px;
   height: 100%;
   color: rgba(255,255,255,0.88);
   font-family: var(--font-base);
@@ -387,7 +398,7 @@ ul { list-style: none; }
 .nav-link:hover,
 .nav-link.active {
   color: var(--white);
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .nav-link:hover::after,
@@ -404,7 +415,6 @@ ul { list-style: none; }
 .nav-item:hover .nav-arrow {
   transform: rotate(180deg);
 }
-
 /* Dropdown */
 .dropdown {
   position: absolute;

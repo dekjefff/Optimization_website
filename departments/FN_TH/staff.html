@@ -1,499 +1,613 @@
-<!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE html>
+<html lang="th">
 
-<!-- Mirrored from ns.mahidol.ac.th/department/fn_dept/staff.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jun 2026 07:11:51 GMT -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>บุคลากร:  ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
-<!-- InstanceEndEditable -->
-<style type="text/css">
-body {
-	
-	
-	
-	
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	background-color: #083A6F;
-	background-image: url(img/template/bg2.jpg);
-	background-repeat: no-repeat;
-}
-</style>
-<style type="text/css" media="all">
-@import url("css/menu_style.css");
-</style>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-<link href="css/font.css" rel="stylesheet" type="text/css" media="all">
-<style type="text/css">
-body,td,th {
-	font-family: tahoma;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บุคลากร : ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+    <meta name="description"
+        content="ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล — คณาจารย์ประจำภาควิชา">
 
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KNBKGNVR');</script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
 
+    <style>
+        /* --- Clean Header --- */
+        .clean-header {
+            text-align: center;
+            padding: 40px 20px 25px;
+            margin-bottom: 20px;
+        }
+        .clean-header h1 {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .clean-divider {
+            width: 40px;
+            height: 4px;
+            background: var(--mu-gold);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
 
+        /* --- Staff Directory Styles --- */
+        .staff-section {
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        .staff-leadership {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .staff-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .staff-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(25, 68, 136, 0.1);
+        }
+        .staff-img-wrapper {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            background: #f0f4f8;
+            position: relative;
+        }
+        .staff-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+        .staff-card:hover .staff-img-wrapper img {
+            transform: scale(1.05);
+        }
+        .staff-info {
+            padding: 25px 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .staff-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--mu-blue-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .staff-name:hover {
+            color: var(--mu-gold-dark);
+        }
+        .staff-position {
+            font-size: 14.5px;
+            color: var(--mu-blue);
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .staff-contact {
+            margin-top: auto;
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        .staff-contact a {
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .staff-contact a:hover {
+            color: var(--mu-gold-dark);
+        }
+        .leadership-card .staff-name { font-size: 19px; }
+        .leadership-card .staff-position { font-size: 15.5px; }
 
-
-
-
-
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
- 
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com/"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com/"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&amp;display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- 1. START Styling Cookie | cookieconsent.css -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="cookie/cookieconsent.css"
-    />
-    <!-- 1. END Styling Cookie | cookieconsent.css -->
-
-
-
-
-
-
-
+        @media (max-width: 768px) {
+            .staff-leadership { grid-template-columns: 1fr; gap: 30px; }
+            .staff-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+        }
+    </style>
 </head>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <body>
 
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-title">เมนูหลัก</span>
+                <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+            </div>
+            <nav class="mobile-nav-list">
+                <div class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">หน้าหลัก</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link active" onclick="toggleMobileDropdown(this)">
+                        เกี่ยวกับภาควิชา <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown open">
+                        <a href="about.html">ประวัติและความเป็นมา</a>
+                        <a href="vision.html">วิสัยทัศน์ / พันธกิจ</a>
+                        <a href="staff.html" class="active">บุคลากร</a>
+                        <a href="contact.html">ติดต่อเรา</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">การเรียนการสอน</a></div>
+                <div class="mobile-nav-item"><a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">วิจัยและนวัตกรรม</a></div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+                        การบริการวิชาการ <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="academic.html">การบริการวิชาการ</a>
+                        <a href="textbook.html">ตำราของภาควิชา</a>
+                        <a href="COE.html">ศูนย์ความเป็นเลิศทางวิชาการ</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item"><a href="km.html" class="mobile-nav-link">การจัดการความรู้</a></div>
+                <div class="mobile-nav-item"><a href="excellence.html" class="mobile-nav-link">ศูนย์ความเป็นเลิศ</a></div>
+                <div class="mobile-nav-item"><a href="Activities_all.html" class="mobile-nav-link">ข่าวสารภาควิชา</a></div>
+            </nav>
+        </div>
+    </div>
 
+    <div class="mn-wrapper">
 
+        <div class="topbar">
+            <div class="topbar-links">
+                <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+                <span class="sep">|</span>
+                <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+            </div>
+            <div class="topbar-social">
+                <a href="#" title="Facebook"><img src="img/template/fb.png" alt="Facebook"></a>
+                <a href="#" title="Twitter / X"><img src="img/template/twitter.png" alt="Twitter"></a>
+                <a href="#" title="Instagram"><img src="img/template/ig.png" alt="Instagram"></a>
+            </div>
+            <div class="topbar-lang">
+                <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent" title="English version">
+                    <img src="img/template/en.png" alt="EN"> EN
+                </a>
+            </div>
+        </div>
 
+        <header class="site-header">
+            <div class="header-logo">
+                <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+            </div>
+            <div class="header-text">
+                <div class="header-dept-name">ภาควิชาการพยาบาลรากฐาน</div>
+                <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
+                <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
+            </div>
+        </header>
 
+        <nav class="navbar" id="mainNav">
+            <div class="navbar-inner">
+                <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลรากฐาน</span>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link active">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
+                            <li><a href="vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
+                            <li><a href="staff.html" class="dropdown-item">บุคลากร</a></li>
+                            <li><a href="contact.html" class="dropdown-item">ติดต่อเรา</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="teaching.html" class="nav-link">การเรียนการสอน</a></li>
+                    <li class="nav-item"><a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="nav-link" target="_blank" rel="noopener noreferrer">วิจัยและนวัตกรรม</a></li>
+                    <li class="nav-item">
+                        <span class="nav-link">การบริการวิชาการ <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="academic.html" class="dropdown-item">การบริการวิชาการ</a></li>
+                            <li><a href="textbook.html" class="dropdown-item">ตำราของภาควิชา</a></li>
+                            <li><a href="COE.html" class="dropdown-item">ศูนย์ความเป็นเลิศทางวิชาการ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="km.html" class="nav-link">จัดการความรู้</a></li>
+                    <li class="nav-item"><a href="excellence.html" class="nav-link">ศูนย์ความเป็นเลิศ</a></li>
+                    <li class="nav-item"><a href="Activities_all.html" class="nav-link">ข่าวสาร</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+        <div id="header-placeholder"></div>
 
+        <main class="content-area">
 
+            <div class="clean-header">
+                <h1>คณาจารย์ประจำภาควิชา</h1>
+            </div>
 
+            <div class="staff-section">
+                <!-- ผู้บริหารภาควิชา -->
+                <div class="staff-leadership">
+                    <!-- 1 -->
+                    <div class="staff-card leadership-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/Virapun.jpg" alt="รองศาสตราจารย์ ดร.วิราพรรณ วิโรจน์รัตน์">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630218" target="_blank" class="staff-name">รองศาสตราจารย์ ดร.วิราพรรณ วิโรจน์รัตน์</a>
+                            <div class="staff-position">หัวหน้าภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2604<br>
+                                ✉️ <a href="mailto:virapun.wir@mahidol.ac.th">virapun.wir@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="staff-card leadership-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/nantakarn.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.นันทกานต์ มณีจักร">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630096" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ดร.นันทกานต์ มณีจักร</a>
+                            <div class="staff-position">รองคณบดีฝ่ายนวัตกรรมการศึกษาและสารสนเทศ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2411<br>
+                                ✉️ <a href="mailto:nantakarn.maj@mahidol.ac.th">nantakarn.maj@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- คณาจารย์ท่านอื่นๆ -->
+                <div class="staff-grid">
+                    <!-- 3 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/theepapha.jpg" alt="ผู้ช่วยศาสตราจารย์ ทีปภา แจ่มกระจ่าง">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630084" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ทีปภา แจ่มกระจ่าง</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2605<br>
+                                ✉️ <a href="mailto:theepapha.jam@mahidol.ac.th">theepapha.jam@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/piyaporn.jpg" alt="ผู้ช่วยศาสตราจารย์ ปิยาภรณ์ เยาวเรศ">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630132" target="_blank" class="staff-name">ผู้ช่วยศาสตราจารย์ ปิยาภรณ์ เยาวเรศ</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2609<br>
+                                ✉️ <a href="mailto:piyaporn.yao@mahidol.ac.th">piyaporn.yao@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2568/supinda.jpg" alt="อาจารย์ ดร.สุพินดา เรืองจิรัษเฐียร">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630273" target="_blank" class="staff-name">อาจารย์ ดร.สุพินดา เรืองจิรัษเฐียร</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ -<br>
+                                ✉️ <a href="mailto:supinda.rua@mahidol.ac.th">supinda.rua@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/saowaluck.jpg" alt="อาจารย์ ดร.เสาวลักษณ์ สุขพัฒนศรีกุล">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630287" target="_blank" class="staff-name">อาจารย์ ดร.เสาวลักษณ์ สุขพัฒนศรีกุล</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2606<br>
+                                ✉️ <a href="mailto:saowaluck.suk@mahidol.ac.th">saowaluck.suk@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/apiradee.jpg" alt="อาจารย์ ดร.อภิรฎี พิมเสน">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630291" target="_blank" class="staff-name">อาจารย์ ดร.อภิรฎี พิมเสน</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2606<br>
+                                ✉️ <a href="mailto:apiradee.pim@mahidol.ac.th">apiradee.pim@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/siriluk.jpg" alt="อาจารย์ ร้อยตำรวจโทหญิง ดร.ศิริลักษณ์ วินิชโญธิน">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630236" target="_blank" class="staff-name">อ. ร.ต.ท.หญิง ดร.ศิริลักษณ์ วินิชโญธิน</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2608<br>
+                                ✉️ <a href="mailto:siriluk.win@mahidol.ac.th">siriluk.win@mahidol.ac.th</a><br>
+                                ✉️ <a href="mailto:siriluk.win@mahidol.edu">siriluk.win@mahidol.edu</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2568/kwanta.jpg" alt="อาจารย์ ดร.ขวัญตา แทนสา">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630448" target="_blank" class="staff-name">อาจารย์ ดร.ขวัญตา แทนสา</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ -<br>
+                                ✉️ <a href="mailto:kwanta.tha@mahidol.ac.th">kwanta.tha@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/jirawan.wit.jpg" alt="อาจารย์ ดร.จิราวรรณ วิทยานุกรณ์">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630045" target="_blank" class="staff-name">อาจารย์ ดร.จิราวรรณ วิทยานุกรณ์</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2605<br>
+                                ✉️ <a href="mailto:jirawan.wit@mahidol.ac.th">jirawan.wit@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2569/chanita.jpg" alt="อาจารย์ ดร.ชนิตา ตัณฑเจริญรัตน์">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630052" target="_blank" class="staff-name">อาจารย์ ดร.ชนิตา ตัณฑเจริญรัตน์</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ -<br>
+                                ✉️ <a href="mailto:chanita.tan@mahidol.ac.th">chanita.tan@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 12 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/jirawan.jpg" alt="อาจารย์จิรวรรณ มาลา">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630042" target="_blank" class="staff-name">อาจารย์จิรวรรณ มาลา</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2605<br>
+                                ✉️ <a href="mailto:jirawan.maa@mahidol.ac.th">jirawan.maa@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 13 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/wanrudee.jpg" alt="อาจารย์วรรณฤดี เชาว์อยชัย">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630199" target="_blank" class="staff-name">อาจารย์วรรณฤดี เชาว์อยชัย</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2608<br>
+                                ✉️ <a href="mailto:wanrudee.cho@mahidol.ac.th">wanrudee.cho@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 14 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/budsara.jpg" alt="อาจารย์บุษรา หิรัญสาโรจน์ จิรวิศัลย์">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630114" target="_blank" class="staff-name">อาจารย์บุษรา หิรัญสาโรจน์ จิรวิศัลย์</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2609<br>
+                                ✉️ <a href="mailto:budsara.hir@mahidol.ac.th">budsara.hir@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 15 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/areeya.jpg" alt="อาจารย์อารียา ประเสริฐสังข์">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630310" target="_blank" class="staff-name">อาจารย์อารียา ประเสริฐสังข์</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2609<br>
+                                ✉️ <a href="mailto:areeya.prs@mahidol.ac.th">areeya.prs@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 16 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/parpatsorn.jpg" alt="อาจารย์ประภัสสร พิมพาสาร">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630392" target="_blank" class="staff-name">อาจารย์ประภัสสร พิมพาสาร</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2606<br>
+                                ✉️ <a href="mailto:parpatsorn.pim@mahidol.ac.th">parpatsorn.pim@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 17 -->
+                    <div class="staff-card">
+                        <div class="staff-img-wrapper">
+                            <img src="img/staff/2567/jittima.jpg" alt="อาจารย์จิตติมา ปัญญาสราวุธ">
+                        </div>
+                        <div class="staff-info">
+                            <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630408" target="_blank" class="staff-name">อาจารย์จิตติมา ปัญญาสราวุธ</a>
+                            <div class="staff-position">อาจารย์ประจำภาควิชาฯ</div>
+                            <div class="staff-contact">
+                                📞 02-441-5333 ต่อ 2602<br>
+                                ✉️ <a href="mailto:jittima.pay@mahidol.ac.th">jittima.pay@mahidol.ac.th</a>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
 
+        </main>
 
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h3>ภาควิชาการพยาบาลรากฐาน</h3>
+                    <p>
+                        <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+                        <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+                    </p>
+                    <p class="footer-copy">
+                        Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+                        Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+                    </p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+                    <div style="display:flex;gap:10px;">
+                        <a href="#" title="Facebook"
+                            style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+                            <img src="img/template/fb.png" alt="Facebook"
+                                style="width:18px;height:18px;filter:brightness(0) invert(1);">
+                        </a>
+                        <a href="#" title="Twitter"
+                            style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+                            <img src="img/template/twitter.png" alt="Twitter"
+                                style="width:18px;height:18px;filter:brightness(0) invert(1);">
+                        </a>
+                        <a href="#" title="Instagram"
+                            style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+                            <img src="img/template/ig.png" alt="Instagram"
+                                style="width:18px;height:18px;filter:brightness(0) invert(1);">
+                        </a>
+                    </div>
+                    <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent"
+                        style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+                        <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
+                        English
+                    </a>
+                </div>
+            </div>
+        </footer>
 
+    </div>
 
-
-
- <!-- 2. START Reconsent Button -->
-    <button
-      data-cc="c-settings"
-      class="cc-link cc-reconsent"
-      style="
-        position: fixed;
-        left: 8px;
-        bottom: 16px;
-        border-radius: 999px;
-        padding: 4px;
-        display: grid;
-        place-items: center;
-        width: 40px;
-        height: 40px;
-        box-shadow: rgb(204 204 204 / 50%) 0 2px
-          10px 0;
-        border: 1px solid #e8e8e8;
-        background-color: #fff;
-      "
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#0a0b0c"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path
-          d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"
-        ></path>
-        <path d="M8.5 8.5v.01"></path>
-        <path d="M16 15.5v.01"></path>
-        <path d="M12 12v.01"></path>
-        <path d="M11 17v.01"></path>
-        <path d="M7 14v.01"></path>
-      </svg>
-    </button>
-    <!-- 2. END Reconsent Button -->
-
-    <!-- 3. START CookieConsent | cookieconsent.js -->
-    <script
-      defer
-      src="cookie/cookieconsent.js"
-    ></script>
-    <!-- 3. END CookieConsent | cookieconsent.js -->
-
-    <!-- 4. START CookieConsent Customization  | consent-init.js -->
-    <script
-      defer
-      src="cookie/consent-init.js"
-    ></script>
-    <!-- 4. END CookieConsent Customization  | consent-init.js -->
-
-    <!-- 5. START Script Blocking Analytics -->
-    <script
-      async
-      type="text/plain"
-      data-cookiecategory="analytics"
-      src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"
-    ></script>
-
-    <script
-      type="text/plain"
-      data-cookiecategory="analytics"
-    >
-      console.log('"analytics" category accepted');
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-C0VND84NRS');
+    <script async type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C0VND84NRS');
     </script>
-    <!-- 5. END Script Blocking Analytics -->
 
-    <!-- 6. START Script Blocking Marketing -->
-    <script
-      type="text/plain"
-      data-cookiecategory="marketing"
-    >
-      console.log('"ads" category accepted');
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        function toggleMobileDropdown(el) {
+            const dropdown = el.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+                el.classList.toggle('active');
+            }
+        }
+
+        const navBrand = document.getElementById('navBrand');
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (header) {
+                const headerBottom = header.getBoundingClientRect().bottom;
+                if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+            }
+        }, { passive: true });
     </script>
-    <!-- 6. END Script Blocking Marketing -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <td height="40" bgcolor="#ffffff"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="38%" valign="middle" class="txt_font"><a href="https://ns.mahidol.ac.th/" target="_blank" class="hyperlink">&nbsp;&nbsp;คณะพยาบาลศาสตร์</a> |<a href="https://mahidol.ac.th/" target="_blank" class="hyperlink"> มหาวิทยาลัยมหิดล </a>| <a href="http://ns.mahidol.ac.th/Department/FN_dept_en/index.html" target="_blank"><img src="img/template/en.png" width="28" height="20"></a></td>
-          <td width="43%">&nbsp;</td>
-          <td width="19%"><table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
-            <tr>
-              <td align="center"><a href="facebook.html" target="_parent"><img src="img/template/fb.png" width="35" height="35"></a></td>
-              <td align="center"><img src="img/template/twitter.png" width="35" height="35"></td>
-              <td align="center"><img src="img/template/ig.png" alt="" width="35" height="35"></td>
-            </tr>
-          </table></td>
-        </tr>
-      </table></td>
-    </tr>
-    <tr>
-      <td><img src="img/template/head.jpg" width="1020" height="168"></td>
-    </tr>
-    <tr>
-      <td bgcolor="#085180"><div class="menu">
-		<ul>
-        
-        
-        
-        
-        
-        <li><a href="index-2.html" target="_parent" class="head_menu">หน้าหลัก</a> </li>
-        
-        
-        
-        
-        
-		  <li><a href="#" class="head_menu">เกี่ยวกับภาควิชา</a>
-				<ul>
-					<li><a href="about.html" class="line_menublue">เกี่ยวกับภาควิชา</a></li>
-					<li><a href="vision.html" target="_parent" class="line_menublue">วิสัยทัศน์ / พันธกิจ
-</a></li>
-					<li><a href="staff.html" target="_parent" class="line_menublue">บุคลากร</a></li>
-			   
-               
-              		
-			  </ul> 
-          </li>
-          
-          
-          
-		  <li><a href="teaching.html" target="_parent" class="head_menu">การเรียนการสอน</a> </li>
-            
-          
-          
-          
-		  <li><a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" target="_blank"  class="head_menu">การวิจัย</a> </li>
-          
-          
-          
-          
-          
-          <li><a href="#" class="head_menu">การบริการวิชาการ</a>
-				<ul>
-					<li><a href="academic.html" target="_parent" class="line_menublue">การบริการวิชาการ</a></li>
-					<li><a href="textbook.html" target="_parent" class="line_menublue">ตำราของภาควิชา
-</a></li>
-					<li><a href="COE.html" target="_parent" class="line_menublue">ศูนย์ความเป็นเลิศทางวิชาการ</a></li>
-			   
-               
-              		
-			  </ul> 
-          </li>
-                
-                
-                
-                
-                
-                  
-                  
-                  <li><a href="km.html" target="_blank" class="head_menu">การจัดการความรู้</a> </li>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                   <li><a href="#" class="head_menu">ข่าวสาร</a>
-				<ul>
-					<li><a href="Activities.html" target="_blank" class="line_menublue">ประมวลภาพกิจกรรม</a></li>
-					
-                    
-                    
-                    <!--<li><a href="../congrat.html" target="_parent" class="line_menublue">ข่าวแสดงความยินดี
-</a></li> -->
-					
-			   
-               
-              		
-			  </ul> 
-          </li>
-          
-          
-          
-          
-          
-                  
-                  
-                  
-                  
-                  
-              
-              
-                
-                     <li><a href="contact.html" class="head_menu">ติดต่อภาควิชา</a></li></ul></div></td>
-    </tr>
-    <tr>
-      <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="10" cellpadding="0">
-        <tr>
-          <td><!-- InstanceBeginEditable name="body" -->
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">บุคลากร</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font"><p>คณาจารย์ประจำภาควิชาการพยาบาลรากฐาน</p>
-                  <table width="100%" border="0" align="center" cellpadding="5" cellspacing="2">
-                    <tr>
-                      <td width="22%" valign="top" ><img src="img/staff/2567/Virapun.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td width="26%" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630218" target="_blank" class="hyperlink">รองศาสตราจารย์ ดร.วิราพรรณ <br>
-                        วิโรจน์รัตน์</a></span><br>
-                        <span class="txt_blue_reg">หัวหน้าภาควิชาฯ
-                          </p>
-                        </span>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2604<br>
-                          E-mail: <a href="mailto:virapun.wir@mahidol.ac.th" class="hyperlink">virapun.wir@mahidol.ac.th</a></p></td>
-                      <td width="22%" class="line_body"><img src="img/staff/2567/nantakarn.jpg" width="200" height="250" style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td width="30%" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630096" target="_blank" class="hyperlink">ผู้ช่วยศาสตราจารย์ ดร.นันทกานต์ มณีจักร</a></span><br>
-                        <span class="txt_blue_reg">รองคณบดีฝ่ายนวัตกรรมการศึกษาและสารสนเทศ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2411<br>
-                          E-mail: <a href="mailto:nantakarn.maj@mahidol.ac.th" class="hyperlink">nantakarn.maj@mahidol.ac.th</a></p></td>
-                    </tr>
-                   
-				
-				
-				<!--
-				<tr>
-                      <td valign="top" ><img src="img/staff/2563/patsamon.jpg" width="123" height="155" style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="http://www.lib.ns.mahidol.ac.th/ns-expert/detail.nsp?view=MUEXPERT&db=MUEXPERT&query0=N00058&field0=EXPERTID&ranked=1&numresults=1" target="_blank" class="hyperlink">รศ.พัสมณฑ์  คุ้มทวีพร</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2607<br>
-                      E-mail: <a href="mailto:patsamon.khu@mahidol.ac.th" class="hyperlink">patsamon.khu@mahidol.ac.th</a></p></td>
-                    </tr>
-				
-				-->
-				
-				
-				
-				
-				
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/theepapha.jpg" alt="" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630084" target="_blank" class="hyperlink">ผู้ช่วยศาสตราจารย์ ทีปภา แจ่มกระจ่าง</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2605<br>
-                        E-mail: <a href="mailto:theepapha.jam@mahidol.ac.th" class="hyperlink">theepapha.jam@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/piyaporn.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630132" target="_blank" class="hyperlink">ผู้ช่วยศาสตราจารย์ ปิยาภรณ์ เยาวเรศ </a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2609<br>
-                        E-mail: <a href="mailto:piyaporn.yao@mahidol.ac.th" class="hyperlink">piyaporn.yao@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2568/supinda.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630273" target="_blank" class="hyperlink">อาจารย์ ดร.สุพินดา เรืองจิรัษเฐียร</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ -<br>
-                        E-mail: <a href="mailto:supinda.rua@mahidol.ac.th" class="hyperlink">supinda.rua@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/saowaluck.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630287" target="_blank" class="hyperlink">อาจารย์ ดร.เสาวลักษณ์ สุขพัฒนศรีกุล</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2606<br>
-                        E-mail: <a href="mailto:saowaluck.suk@mahidol.ac.th" class="hyperlink">saowaluck.suk@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/apiradee.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630291" target="_blank" class="hyperlink">อาจารย์ ดร.อภิรฎี พิมเสน</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2606<br>
-                        E-mail: <a href="mailto:apiradee.pim@mahidol.ac.th" target="_blank" class="hyperlink">apiradee.pim@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/siriluk.jpg" alt="" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630236" target="_blank" class="hyperlink">อาจารย์ ร้อยตำรวจโทหญิง ดร.ศิริลักษณ์ วินิชโญธิน</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2608<br>
-                          E-mail: <a href="mailto:siriluk.win@mahidol.ac.th" class="hyperlink">siriluk.win@mahidol.ac.th</a> <br>
-                          <a href="mailto:siriluk.win@mahidol.edu" class="hyperlink">siriluk.win@mahidol.edu</a></p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2568/kwanta.jpg" alt="" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630448" target="_blank" class="hyperlink">อาจารย์ ดร.ขวัญตา   แทนสา</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ -<br>
-                          E-mail: <a href="mailto:kwanta.tha@mahidol.ac.th" class="hyperlink">kwanta.tha@mahidol.ac.th</a></p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/jirawan.wit.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630045" target="_blank" class="hyperlink">อาจารย์ ดร.จิราวรรณ วิทยานุกรณ์</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2605<br>
-                          E-mail: <a href="mailto:jirawan.wit@mahidol.ac.th" class="hyperlink">jirawan.wit@mahidol.ac.th</a></p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2569/chanita.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630052" target="_blank" class="hyperlink">อาจารย์ ดร.ชนิตา ตัณฑเจริญรัตน์</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ -<br>
-                          E-mail: <a href="mailto:chanita.tan@mahidol.ac.th" class="hyperlink">chanita.tan@mahidol.ac.th</a></p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/jirawan.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_name_bold"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630042" target="_blank" class="hyperlink">อาจารย์จิรวรรณ มาลา</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2605<br>
-                        E-mail: <a href="mailto:jirawan.maa@mahidol.ac.th" class="hyperlink">jirawan.maa@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/wanrudee.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630199" target="_blank" class="hyperlink">อาจารย์วรรณฤดี เชาว์อยชัย</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2608<br>
-                        E-mail: <a href="mailto:wanrudee.cho@mahidol.ac.th" target="_blank" class="hyperlink">wanrudee.cho@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/budsara.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630114" target="_blank" class="hyperlink">อาจารย์บุษรา หิรัญสาโรจน์ จิรวิศัลย์</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2609<br>
-                        E-mail: <a href="mailto:budsara.hir@mahidol.ac.th" class="hyperlink">budsara.hir@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/areeya.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630310" target="_blank" class="hyperlink">อาจารย์อารียา ประเสริฐสังข์</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2609<br>
-                        E-mail: <a href="mailto:areeya.prs@mahidol.ac.th" class="hyperlink">areeya.prs@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/parpatsorn.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630392" target="_blank" class="hyperlink">อาจารย์ประภัสสร พิมพาสาร</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2606<br>
-                        E-mail: <a href="mailto:parpatsorn.pim@mahidol.ac.th" target="_blank" class="hyperlink">parpatsorn.pim@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/2567/jittima.jpg" width="200" height="250"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td colspan="3" class="line_body"><span class="txt_blue"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630408" target="_blank" class="hyperlink">อาจารย์จิตติมา  ปัญญาสราวุธ</a></span><br>
-                        <span class="txt_blue_reg">อาจารย์ประจำภาควิชาฯ</span> <br>
-                        <p>โทรศัพท์ 02-441-5333 ต่อ 2602<br>
-                        E-mail: <a href="mailto:jittima.pay@mahidol.ac.th" class="hyperlink">jittima.pay@mahidol.ac.th</a>                        </p></td>
-                    </tr>
-                  </table>
-                <p class="txt_blue">&nbsp;</p></td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-            </table>
-          <!-- InstanceEndEditable --></td>
-        </tr>
-      </table></td>
-    </tr>
-    <tr>
-      <td height="75" align="center" bgcolor="#0f8dc8"><p><span class="txt_remark">Copyright © 2026 </span><a href="https://ns.mahidol.ac.th/" target="_blank" class="hyperlink_y">Faculty of Nursing,</a> <a href="https://mahidol.ac.th/" target="_blank" class="hyperlink_y">Mahidol University. </a><span class="txt_remark">All rights reserved. <br>
-      Webmaster: </span><a href="mailto:nswww@mahidol.ac.th" target="_blank" class="hyperlink_y">nswww@mahidol.ac.th</a></p></td>
-    </tr>
-  </table>
 
 </body>
-<!-- InstanceEnd -->
-<!-- Mirrored from ns.mahidol.ac.th/department/fn_dept/staff.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jun 2026 07:11:56 GMT -->
 </html>
