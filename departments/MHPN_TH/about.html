@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เกี่ยวกับภาควิชา | ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js" defer></script>
+  
+  <style>
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .about-intro {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .heads-list {
+      list-style: none;
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .head-item {
+      display: flex;
+      flex-direction: column;
+      background: var(--background);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--secondary);
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .head-years {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .head-name {
+      font-weight: 500;
+      color: var(--text-main);
+    }
+    .building-img-container {
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>เกี่ยวกับภาควิชา</h1>
+      
+      <section class="about-intro">
+        <div>
+          <img src="img/other/pic_about.png" alt="เกี่ยวกับภาควิชา" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
+        </div>
+        <div>
+          <h2>ประวัติความเป็นมา</h2>
+          <p>ขอต้อนรับสู่ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์</p>
+          <p>การพยาบาลสุขภาพจิตและจิตเวชเป็นศาสตร์และศิลป์ในการส่งเสริม ป้องกัน บำบัด และฟื้นฟูผู้รับบริการทางด้านสุขภาพจิต เพื่อให้เกิดความสมดุลและความผาสุกในชีวิต</p>
+          <p>ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์ เดิมเป็นหน่วยการพยาบาลจิตเวชศาสตร์ สังกัดภาควิชาการพยาบาลอายุรศาสตร์และจิตเวชศาสตร์ ต่อมาได้รับอนุมัติแบ่งส่วนราชการเป็นภาควิชาหนึ่งในคณะพยาบาลศาสตร์ ตามประกาศในราชกิจจานุเบกษา ลงวันที่ 6 กุมภาพันธ์ 2529 นับเป็นภาควิชาที่ 7 ของคณะพยาบาลศาสตร์</p>
+        </div>
+      </section>
+      
+      <section class="department-heads">
+        <h2>รายนามหัวหน้าภาควิชา</h2>
+        <div class="heads-list">
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2529 – 2530</span>
+            <span class="head-name">นางสาวทัศนา บุญทอง</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2531 – 2534</span>
+            <span class="head-name">นางสมศร เชื้อหิรัญ</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2535 – 2538</span>
+            <span class="head-name">นางพวงเพ็ญ เจียมปัญญารัช</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2539 – 2542</span>
+            <span class="head-name">นางสาววาสนา แฉล้มเขตร</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2542 – 2546</span>
+            <span class="head-name">นางจารุวรรณ ต.สกุล</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2546 – 2550</span>
+            <span class="head-name">นางสาววาสนา แฉล้มเขตร</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2550 – 2559</span>
+            <span class="head-name">นางอติรัตน์ วัฒนไพลิน</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2559 – 2566</span>
+            <span class="head-name">รองศาสตราจารย์ ดร.พวงเพชร เกษรสมุทร</span>
+          </div>
+          <div class="head-item">
+            <span class="head-years">พ.ศ. 2566 – ปัจจุบัน</span>
+            <span class="head-name">รองศาสตราจารย์ ดร.นพพร ว่องสิริมาศ</span>
+          </div>
+        </div>
+      </section>
+      
+      <div class="building-img-container">
+        <img src="img/other/ns_building.png" alt="อาคารเรียน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล" style="max-width: 100%; border: 1px solid var(--surface-border); padding: 6px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

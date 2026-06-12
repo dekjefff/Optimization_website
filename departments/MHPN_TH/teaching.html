@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การเรียนการสอน | ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js" defer></script>
+  
+  <style>
+    .teaching-intro {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .teaching-intro {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary-glow);
+      color: var(--primary);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-weight: 500;
+      margin-top: 1rem;
+      border: 1px dashed var(--primary);
+      transition: var(--transition);
+    }
+    .pdf-link:hover {
+      background: var(--primary);
+      color: var(--text-inverse);
+      border-style: solid;
+    }
+    .course-section-title {
+      font-family: var(--font-heading);
+      background: var(--background);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-sm);
+      color: var(--primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      border-left: 5px solid var(--secondary);
+    }
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>การเรียนการสอน</h1>
+      
+      <section class="teaching-intro">
+        <div>
+          <img src="img/other/teaching.jpg" alt="การเรียนการสอน ภาควิชาสุขภาพจิตฯ" style="width: 100%; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--surface-border); padding: 5px;">
+        </div>
+        <div>
+          <p style="text-indent: 2.5em; font-size: 1.05rem; line-height: 1.8;">
+            ภาควิชาฯ จัดการเรียนการสอนให้กับนักศึกษาระดับปริญญาตรี และปริญญาโท สาขาการพยาบาลสุขภาพจิตและจิตเวช โดยเน้นการเรียนรู้ของผู้เรียนเป็นศูนย์กลาง พัฒนาผู้เรียนให้มีความรู้ที่ทันสมัย สามารถปฏิบัติการพยาบาลได้อย่างมีประสิทธิภาพและสอดคล้องกับบริบทของสังคมไทย มีการพัฒนาตนเองอย่างต่อเนื่องและดำรงชีวิตอย่างมีความสุข
+          </p>
+          <a href="doc/other/แผ่นพับ ภาควิชาจิตเวช_5.pdf" target="_blank" class="pdf-link">
+            แผ่นพับหลักสูตรภาคปกติและภาคพิเศษ (PDF)
+          </a>
+        </div>
+      </section>
+      
+      <section class="courses-list">
+        <h2>รายวิชาที่เปิดสอน</h2>
+        
+        <!-- 1. ปริญญาตรี -->
+        <h3 class="course-section-title">ระดับปริญญาตรี (หลักสูตรพยาบาลศาสตรบัณฑิต)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>รายวิชา</th>
+              <th style="width: 120px;" class="text-center">หน่วยกิต</th>
+              <th style="width: 120px;" class="text-center">ประเภท</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Responsible -->
+            <tr style="background: rgba(42, 137, 11, 0.05);">
+              <td colspan="3" style="font-weight: 600; color: var(--primary);">วิชาที่ภาควิชาฯ รับผิดชอบสอนหลัก</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๔๐๑ การพยาบาลบุคคลที่มีภาวะสุขภาพจิตเบี่ยงเบน</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๔๘๑ ปฏิบัติการพยาบาลบุคคลที่มีภาวะสุขภาพจิตเบี่ยงเบน</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๒๐๒ จิตวิทยาพัฒนาการและพฤติกรรมมนุษย์</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๑๐๑ การสื่อสารและการปรึกษาทางสุขภาพ</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <!-- Co-teaching -->
+            <tr style="background: rgba(42, 137, 11, 0.05);">
+              <td colspan="3" style="font-weight: 600; color: var(--primary);">วิชาที่เป็นผู้ร่วมสอน</td>
+            </tr>
+            <tr>
+              <td>พยคร ๒๑๕ การพยาบาลบุคคลและครอบครัวในภาวะสุขภาพดี</td>
+              <td class="text-center">๔</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๑๐๑ การพัฒนาตนตามหลักศาสนา</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๒๐๖ กระบวนการพยาบาลและการประเมินภาวะสุขภาพ</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๒๑๐ มโนมติพื้นฐานทางการพยาบาลและกระบวนการพยาบาล</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๓๑๓ สัมมนาประเด็นและแนวโน้มทางวิชาชีพการพยาบาล</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- 2. ปริญญาโท -->
+        <h3 class="course-section-title">ระดับปริญญาโท (หลักสูตรพยาบาลศาสตรมหาบัณฑิต)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>รายวิชา</th>
+              <th style="width: 120px;" class="text-center">หน่วยกิต</th>
+              <th style="width: 120px;" class="text-center">ประเภท</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Responsible -->
+            <tr style="background: rgba(42, 137, 11, 0.05);">
+              <td colspan="3" style="font-weight: 600; color: var(--primary);">วิชาที่ภาควิชาฯ รับผิดชอบสอนหลัก</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๖๒๑ พื้นฐานทางประสาทชีววิทยาของพฤติกรรมมนุษย์และจิตเภสัชวิทยา</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๖๓๐ การส่งเสริมสุขภาพจิตและการพยาบาลจิตเวชในชุมชน</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๖๓๑ ปฏิบัติการส่งเสริมสุขภาพจิตและป้องกันการเจ็บป่วยทางจิต</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๖๓๒ ปฏิบัติการพยาบาลจิตเวชชุมชน</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๖๓๓ การบำบัดทางการพยาบาลจิตเวชและการฟื้นฟู</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๖๓๔ ปฏิบัติการบำบัดทางการพยาบาลจิตเวชและการฟื้นฟู</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยสจ ๖๒๘ สัมมนาการวิจัยทางการพยาบาลสุขภาพจิตและจิตเวช</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๖๙๘ วิทยานิพนธ์</td>
+              <td class="text-center">๖</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <!-- Co-teaching -->
+            <tr style="background: rgba(42, 137, 11, 0.05);">
+              <td colspan="3" style="font-weight: 600; color: var(--primary);">วิชาที่เป็นผู้ร่วมสอน</td>
+            </tr>
+            <tr>
+              <td>พยคร ๖๑๐ ทฤษฎีและแนวคิดทางการพยาบาล</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๖๑๓ สถิติและการวิจัยทางการพยาบาล</td>
+              <td class="text-center">๓</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๖๒๐ การพยาบาลตามหลักฐานเชิงประจักษ์</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+            <tr>
+              <td>พยคร ๖๒๗ นโยบายสุขภาพกับภาวะผู้นำ</td>
+              <td class="text-center">๒</td>
+              <td class="text-center">หน่วยกิต</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- 3. คณะผู้รับผิดชอบหลักสูตร -->
+        <h3 class="course-section-title">คณะผู้รับผิดชอบหลักสูตร</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>รายนาม</th>
+              <th>ตำแหน่งในหลักสูตร</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>รองศาสตราจารย์ ดร.นพพร ว่องสิริมาศ</td>
+              <td style="font-weight: 500; color: var(--primary);">อาจารย์ผู้รับผิดชอบหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>รองศาสตราจารย์ ดร.วารีรัตน์ ถาน้อย</td>
+              <td style="font-weight: 500; color: var(--primary);">อาจารย์ผู้รับผิดชอบหลักสูตร</td>
+            </tr>
+            <tr style="background: rgba(0, 0, 0, 0.02);">
+              <td colspan="2" style="font-weight: 600; padding-top: 1rem; padding-bottom: 0.5rem;">อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>รองศาสตราจารย์ ดร. ยาใจ สิทธิมงคล</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>รองศาสตราจารย์ ดร.อัจฉราพร สี่หิรัญวงศ์</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>รองศาสตราจารย์ ดร.พวงเพชร เกษรสมุทร</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>ผู้ช่วยศาสตราจารย์ ดร. อทิตยา พรชัยเกตุ โอวยอง</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>ผู้ช่วยศาสตราจารย์ ดร. วิมลนันท์ พุฒิวณิชพงศ์</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>ผู้ช่วยศาสตราจารย์ ดร. สุภาภัค เภตราสุวรรณ</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>ผู้ช่วยศาสตราจารย์ ดร. วไลลักษณ์ พุ่มพวง</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>ผู้ช่วยศาสตราจารย์ ดร. สุดารัตน์ เพียรชอบ</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+            <tr>
+              <td>ผู้ช่วยศาสตราจารย์ ดร. ศิรดา เกษรศรี</td>
+              <td>อาจารย์ประจำหลักสูตร</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

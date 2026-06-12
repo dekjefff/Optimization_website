@@ -1,0 +1,8 @@
+# Ignore Photoshop source files (due to size limit on GitHub)
+*.psd
+*.psd/
+**/*.psd
+
+# Ignore system files
+Thumbs.db
+.DS_Store

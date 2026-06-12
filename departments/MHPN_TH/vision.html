@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภารกิจหลัก | ภาควิชาสุขภาพจิต และการพยาบาลจิตเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="layout.js" defer></script>
+  
+  <style>
+    .mission-intro {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-main);
+      margin-bottom: 2.5rem;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .mission-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .mission-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .mission-card h3 {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .mission-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-align: center !important;
+    }
+  </style>
+</head>
+<body>
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>ภารกิจหลัก (Missions)</h1>
+      
+      <p class="mission-intro">
+        ภาควิชาสุขภาพจิตและการพยาบาลจิตเวชศาสตร์ มุ่งเน้นภารกิจหลัก 4 ด้าน เพื่อขับเคลื่อนองค์กรสู่ความเป็นเลิศทางวิชาการและวิชาชีพพยาบาลในระดับสากล
+      </p>
+      
+      <div class="mission-grid">
+        <!-- Mission 1 -->
+        <div class="mission-card">
+          <h3>1. การจัดการเรียนการสอน</h3>
+          <p>จัดการเรียนการสอนสาขาการพยาบาลสุขภาพจิตและจิตเวชแก่นักศึกษาในระดับปริญญาตรี และบัณฑิตศึกษา ที่มีความเป็นเลิศทางวิชาการ มีคุณธรรมจริยธรรม และจรรยาบรรณวิชาชีพ</p>
+        </div>
+        
+        <!-- Mission 2 -->
+        <div class="mission-card">
+          <h3>2. งานวิจัยและสร้างสรรค์</h3>
+          <p>ผลิตผลงานวิจัยและงานสร้างสรรค์ทางวิชาการที่มีคุณภาพสูงในระดับชาติและนานาชาติ ทางด้านสุขภาพจิตและการพยาบาลสุขภาพจิตและจิตเวช</p>
+        </div>
+        
+        <!-- Mission 3 -->
+        <div class="mission-card">
+          <h3>3. การบริการวิชาการ</h3>
+          <p>ให้บริการวิชาการเพื่อส่งเสริมสุขภาพจิตแก่นักศึกษา บุคลากร และประชาชนทั่วไป พร้อมร่วมมือกับสถาบันเฉพาะทางเพื่อผลิตผู้เชี่ยวชาญการพยาบาลเฉพาะทาง</p>
+        </div>
+        
+        <!-- Mission 4 -->
+        <div class="mission-card">
+          <h3>4. ทำนุบำรุงศิลปะวัฒนธรรม</h3>
+          <p>ทำนุบำรุงศิลปวัฒนธรรมและสิ่งแวดล้อม ส่งเสริมการบูรณาการมิติทางวัฒนธรรมในการพยาบาลและการดำรงชีวิตที่เอื้อต่อการสร้างเสริมสุขภาวะ</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
