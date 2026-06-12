@@ -511,7 +511,7 @@ window.addEventListener('scroll',()=>{
   const b=document.getElementById('back-to-top');if(b)b.classList.toggle('visible',window.scrollY>300);
 },{passive:true});
 const animEls=document.querySelectorAll('.animate-in');
-if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';obs.unobserve(e.target);}});},{threshold:0.1});animEls.forEach(el=>{el.style.animationPlayState='paused';obs.observe(el);});}
+if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';obs.unobserve(e.target);}});},{threshold:0});animEls.forEach(el=>{el.style.animationPlayState='paused';obs.observe(el);});}
 </script>
 </body>
 </html>

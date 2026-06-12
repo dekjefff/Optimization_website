@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KNBKGNVR');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รางวัลแห่งความภาคภูมิใจ : ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- เรียกใช้งานสไตล์หลักของโปรเจกต์สอง -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 🌟 ADDTIONAL PREMIUM COMPONENT STYLES FOR AWARD SHOWCASE 🌟 -->
+  <style>
+    .award-page-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--mu-blue-dark);
+      margin-bottom: 35px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .award-page-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 65px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--mu-gold), var(--mu-gold-light));
+      border-radius: var(--radius-full);
+    }
+    .year-container-block {
+      margin-bottom: 45px;
+    }
+    .year-gold-badge {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--mu-blue-dark), var(--mu-blue-mid));
+      display: inline-block;
+      padding: 6px 22px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      border-left: 4px solid var(--mu-gold);
+    }
+    .award-deck-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .award-premium-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      background: var(--white);
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+      align-items: center;
+    }
+    .award-premium-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--mu-gold-light);
+    }
+    .award-image-frame {
+      width: 100%;
+      height: 165px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .award-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .award-premium-card:hover .award-image-frame img {
+      transform: scale(1.03);
+    }
+    .award-details-frame {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .award-title-text {
+      font-size: 16.5px;
+      font-weight: 600;
+      color: var(--mu-blue-dark);
+      line-height: 1.45;
+    }
+    .award-desc-text {
+      font-size: 14.5px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .divider-line-ornament {
+      height: 1px;
+      background: linear-gradient(90deg, var(--gray-100), rgba(0,0,0,0.02));
+      margin: 40px 0;
+      border: none;
+    }
+    
+    @media (max-width: 768px) {
+      .award-premium-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 16px;
+      }
+      .award-image-frame {
+        height: 170px;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      .award-title-text {
+        font-size: 15.5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── ลิ้นชักเมนูด้านข้างบนมือถือ (Mobile Responsive Control) ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">เมนูหลัก</span>
+      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link">หน้าหลัก</a>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link active" onclick="toggleMobileDropdown(this)">
+          เกี่ยวกับภาควิชา <span>▾</span>
+        </div>
+        <div class="mobile-dropdown open">
+          <a href="about.html">ประวัติและความเป็นมา</a>
+          <a href="vision.html">วิสัยทัศน์ / พันธกิจ</a>
+          <a href="award.html" class="active">รางวัลแห่งความภาคภูมิใจ</a>
+          <a href="staff.html">บุคลากร</a>
+          <a href="contact.html">ติดต่อเรา</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">การเรียนการสอน</a></div>
+      <div class="mobile-nav-item"><a href="research.html" class="mobile-nav-link">วิจัยและนวัตกรรม</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          ส่งเสริมและบริการวิชาการ <span>▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="academic_about.html">ด้านประวัติความเป็นมา</a>
+          <a href="academic.html">โครงการส่งเสริมและบริการวิชาการ</a>
+          <a href="book.html">หนังสือภาควิชาฯ</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="km.html" class="mobile-nav-link">การจัดการความรู้</a></div>
+      <div class="mobile-nav-item"><a href="excellence.html" class="mobile-nav-link">ศูนย์ความเป็นเลิศ</a></div>
+      <div class="mobile-nav-item"><a href="Activities_all.html" class="mobile-nav-link">ข่าวสาร</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          E-Learning <span>▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank">E-Learning คณะพยาบาลศาสตร์</a>
+          <a href="https://mux.mahidol.ac.th/" target="_blank">E-Learning มหาวิทยาลัยมหิดล</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          หน่วยงานที่เกี่ยวข้อง <span>▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="https://www.tnmc.or.th/" target="_blank">สภาการพยาบาล</a>
+          <a href="https://www.hsri.or.th/researcher" target="_blank">สถาบันวิจัยระบบสาธารณสุข (สวรส.)</a>
+          <a href="https://www.nrct.go.th/" target="_blank">สำนักงานคณะกรรมการวิจัยแห่งชาติ</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ── โครงสร้างหน้าเว็บหลักแบบสมบูรณ์ ── -->
+<div class="mn-wrapper">
+
+  <!-- TOP UTILITY BAR -->
+  <div class="topbar">
+    <div class="topbar-links">
+      <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+      <span class="sep">|</span>
+      <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#" title="Facebook"><img src="img/template/fb.png" alt="Facebook"></a>
+      <a href="#" title="Twitter / X"><img src="img/template/twitter.png" alt="Twitter"></a>
+      <a href="#" title="Instagram"><img src="img/template/ig.png" alt="Instagram"></a>
+    </div>
+    <div class="topbar-lang">
+      <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent" title="English version">
+        <img src="img/template/en.png" alt="EN"> EN
+      </a>
+    </div>
+  </div>
+
+  <!-- SITE HEADER BRANDING -->
+  <header class="site-header">
+    <div class="header-logo">
+      <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+    </div>
+    <div class="header-text">
+      <div class="header-dept-name">ภาควิชาการพยาบาลอายุรศาสตร์</div>
+      <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
+      <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION BAR SYSTEMS -->
+  <nav class="navbar" id="mainNav">
+    <div class="navbar-inner">
+      <span class="navbar-brand" style="display:none" id="navBrand">รางวัลแห่งความภาคภูมิใจ</span>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">หน้าหลัก</a></li>
+        <li class="nav-item">
+          <span class="nav-link active">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
+            <li><a href="vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
+            <li><a href="award.html" class="dropdown-item">รางวัลแห่งความภาคภูมิใจ</a></li>
+            <li><a href="staff.html" class="dropdown-item">บุคลากร</a></li>
+            <li><a href="contact.html" class="dropdown-item">ติดต่อเรา</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="teaching.html" class="nav-link">การเรียนการสอน</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">วิจัยและนวัตกรรม</a></li>
+        <li class="nav-item">
+          <span class="nav-link">ส่งเสริมฯ <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="academic_about.html" class="dropdown-item">ด้านประวัติความเป็นมา</a></li>
+            <li><a href="academic.html" class="dropdown-item">โครงการส่งเสริมและบริการวิชาการ</a></li>
+            <li><a href="book.html" class="dropdown-item">หนังสือภาควิชาฯ</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="km.html" class="nav-link">จัดการความรู้</a></li>
+        <li class="nav-item"><a href="excellence.html" class="nav-link">ศูนย์ความเป็นเลิศ</a></li>
+        <li class="nav-item"><a href="Activities_all.html" class="nav-link">ข่าวสาร</a></li>
+        <li class="nav-item">
+          <span class="nav-link">E-Learning <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning คณะพยาบาลศาสตร์</a></li>
+            <li><a href="https://mux.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning มหาวิทยาลัยมหิดล</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link">หน่วยงาน <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown" style="right:0;left:auto;">
+            <li><a href="https://www.tnmc.or.th/" target="_blank" class="dropdown-item">สภาการพยาบาล</a></li>
+            <li><a href="https://www.hsri.or.th/researcher" target="_blank" class="dropdown-item">สถาบันวิจัยระบบสาธารณสุข (สวรส.)</a></li>
+            <li><a href="https://www.nrct.go.th/" target="_blank" class="dropdown-item">สำนักงานคณะกรรมการวิจัยแห่งชาติ</a></li>
+          </ul>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── MAIN CONTENT SHOWCASE WRAPPER ── -->
+  <main class="main-content">
+    <div class="award-container">
+      <h2 class="award-page-title">รางวัลแห่งความภาคภูมิใจ</h2>
+
+      <!-- 📅 ปี 2568 -->
+      <div class="year-container-block">
+        <div class="year-gold-badge">ปี 2568</div>
+        <div class="award-deck-column">
+          
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/37.jpg" alt="ผศ. ดร.ศรัณยา โฆสิตะมงคล"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี แด่ ผู้ช่วยศาสตราจารย์ ดร.ศรัณยา โฆสิตะมงคล</h3>
+              <p class="award-desc-text">ในโอกาสได้รับรางวัล ศิษย์เก่าดีเด่นบัณฑิตวิทยาลัย มหาวิทยาลัยมหิดล ประจำปี 2568 ประเภทบริการ</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/36.jpg" alt="ดร.ชิดชนก เบ็ญจสิริสรรค์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี แด่ ดร.ชิดชนก เบ็ญจสิริสรรค์ สำเร็จการศึกษา</h3>
+              <p class="award-desc-text">สำเร็จการศึกษา Doctor of Philosophy in Nursing (PhD,) Johns Hopkins School of Nursing, USA</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/35.jpg" alt="ผศ.ดร.ชลธิรา เรียงคำ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี แด่ ผู้ช่วยศาสตราจารย์ ดร.ชลธิรา เรียงคำ ในโอกาสผ่านการประเมินระดับคุณภาพ ระดับ 2</h3>
+              <p class="award-desc-text">ในโอกาสผ่านการประเมินระดับคุณภาพการจัดการเรียนการสอนตามเกณฑ์มาตรฐานอาจารย์ของมหาวิทยาลัย (Mahidol University Professional Standards Framework : MUPSF) ระดับ 2</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/34.jpg" alt="รศ.ดร.พรรณิภา  บุญเทียร"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี แด่ รองศาสตราจารย์ ดร.พรรณิภา บุญเทียร ในโอกาสผ่านการประเมินระดับคุณภาพ ระดับ 2</h3>
+              <p class="award-desc-text">ในโอกาสผ่านการประเมินระดับคุณภาพการจัดการเรียนการสอนตามเกณฑ์มาตรฐานอาจารย์ของมหาวิทยาลัย (Mahidol University Professional Standards Framework : MUPSF) ระดับ 2</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/33.jpg" alt="ผศ.ดร.พิจิตรา เล็กดำรงกุล"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี ผู้ช่วยศาสตราจารย์ ดร.พิจิตรา เล็กดำรงกุล (Co-author) และ รองศาสตราจารย์ ดร.อรวมน ศรียุกตศุทธ (Corresponding author) ได้รับการตีพิมพ์ในวารสารระดับนานาชาติ TOP 10% SJR Q1</h3>
+              <p class="award-desc-text">Exploring theoretical models and frameworks used to explain factors influencing breast cancer screening participation: a scoping review<br>This summary of the models and frameworks employed to investigate factors influencing BCS over the past decade. These insights have significant implications for designing targeted healthcare interventions and informing policy changes to enhance global BCS participation and reduce disparities. Future refinements of these models are expected to improve their applicability and effectiveness across diverse populations and settings.</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/32.jpg" alt="อ.ดร.สิริกาญจน์ หาญรบ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.สิริกาญจน์ หาญรบ ในโอกาสได้รับรางวัล ผลงานด้านการจัดการเรียนการสอน ของอาจารย์ ผู้ผ่านเกณฑ์มาตรฐานคุณภาพอาจารย์ MUPSF ระดับที่ 2</h3>
+              <p class="award-desc-text">อาจารย์ ดร.สิริกาญจน์ หาญรบ ในโอกาสได้รับรางวัล ผลงานด้านการจัดการเรียนการสอน ของอาจารย์ ผู้ผ่านเกณฑ์มาตรฐานคุณภาพอาจารย์ MUPSF ระดับที่ 2 จากโครงการ MUPSF 2 Stars Awards 2025 จากมหาวิทยาลัยมหิดล</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/31.png" alt="อ.ดร.ประพัฒน์สินี ประไพวงษ์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.ประพัฒน์สินี ประไพวงษ์ (First author) รองศาสตราจารย์ ดร.อรวมน ศรียุกตศุทธ (Corresponding author) รองศาสตราจารย์ ดร.นพพร ว่องสิริมาศ (Co-author) ได้รับการตีพิมพ์ SJR Q4</h3>
+              <p class="award-desc-text">Self-management as a determinant of quality of life in Thai patients with continuous ambulatory peritoneal dialysis: A cross-sectional study<br><br>The current study aimed to determine whether certain variables, particularly self-management, were significantly associated with quality of life (QoL) among Thai patients receiving continuous ambulatory peritoneal dialysis (CAPD).<br><br>Authors: Prapatsinee Prapaiwong, Aurawamon Sriyuktasuth, Kanaungnit Pongthavornkamol, Nopporn Vongsirimas, Piyatida Chuengsaman<br>Science, Engineering and Health Studies 2025 19: 25050004</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/30.png" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ (First author, Corresponding author) อาจารย์ชิดชนก เบ็ญจสิริสรรค์ (Co-author) อาจารย์ลลิตภัทร เพียรหาสิน (Co-author) ได้รับการตีพิมพ์ SJR Q4</h3>
+              <p class="award-desc-text">Effectiveness of discharge planning interventions for stroke and heart conditions: A systematic interventional studies<br><br>This review highlights the value of structured and innovative discharge planning models for clinical practice. Incorporating patient- and caregiver-centered strategies can reduce readmissions, strengthen adherence, and improve long-term health outcomes.<br>Authors: Suebsarn Ruksakulpiwat, Chitchanok Benjasirisan, Lalipat Phianhasin, Naruebeth Koson, Nway Eint Chei, Thanin Rounratana, Pennapa Saenkla, Jai Thampakkul<br>Journal of Multidisciplinary Healthcare 2025 18: 7521-7537</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/29.jpg" alt="รศ.ดร.ศรัณยา โฆสิตะมงคล"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ขอเชิดชูเกียรติ รองศาสตราจารย์ ดร.ศรัณยา โฆสิตะมงคล ผู้นำการเปลี่ยนแปลง (Change Agent) ประจำปี 2568</h3>
+              <p class="award-desc-text">ผู้นำการเปลี่ยนแปลงและเป็นต้นแบบในการดูแลผู้ป่วยด้านโรคหลอดเลือดสมอง ความมุ่งมั่น เสียสละ และเป็นแรงบันดาลใจ ในการยกระดับคุณภาพการรักษาเพื่อชีวิตที่ดีกว่าของผู้ป่วย "Change Agent" ผู้นำการเปลี่ยนแปลงและเป็นแบบอย่างในองค์กร เป็นบุคคลที่สร้างคุณประโยชน์ต่อประเทศได้รับการยอมรับในฐานะผู้มีชื่อเสียง ที่สร้างผลงานจนเป็นที่ประจักษ์ทั้งในระดับชาติและนานาชาติ</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/28.jpg" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ และ อาจารย์เกวลิน พงษ์สุวรรณ ได้รับการตีพิมพ์ SJR Q1</h3>
+              <p class="award-desc-text">The effect of parental involvement intervention on quality of life and health outcomes among children and adolescents with chronic illness: A systematic review and meta-analysis. The study provides comprehensive evidence that parental involvement interventions significantly improve quality of life and health-related outcomes among children and adolescents with chronic illnesses, particularly when they are shorter in duration and nurse-led.</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/27.jpg" alt="รศ.ดร.ศรินรัตน์ ศรีประสงค์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">รองศาสตราจารย์ ดร.ศรินรัตน์ ศรีประสงค์ และผู้ช่วยศาสตราจารย์ ดร.วารุณี พลิกบัว ได้รับการตีพิมพ์ SJR Q3</h3>
+              <p class="award-desc-text">The influences of social determinants of health on health-related quality of life in people with hypertension: Across-sectional study<br>Nurses should promote health literacy by encouraging people to obtain information from accurate and reliable sources. Encouraging people to recognize the importance of having and using adequate resources in the neighborhood for their illness, and to identify obstacles to accessing treatment to promote a healthy quality of life in people with hypertension.</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/26.jpg" alt="ผศ.ดร.วารุณี พลิกบัว"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ผู้ช่วยศาสตราจารย์ ดร.วารุณี พลิกบัว ได้รับการตีพิมพ์ SJR Q4</h3>
+              <p class="award-desc-text">Impact of social determinants of health on postoperative health-related quality of life among patients undergoing colorectal cancer surgery<br>Nurses should develop practice guidelines to promote HRQoL in postoperative CRV patients after discharge by screening financial status, body mass index, anxiety, and family support.</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/25.jpg" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ ได้รับการตีพิมพ์ SJR Q1</h3>
+              <p class="award-desc-text">Enhancing accessibility through Nurse-Led Clinic in primary care: An integrative review of models of care<br>Nurse-led models of care are crucial for strengthening primary healthcare, particularly in underserved settings. Further research and policy support are needed to expand nurse’ roles, enhance their competencies, and promote interdisciplinary collaboration for the delivery of sustainable and equitable health services.</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/24.jpg" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ ในโอกาสได้รับการแต่งตั้งให้เป็น “Early Career Research Board”</h3>
+              <p class="award-desc-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ ในโอกาสได้รับการแต่งตั้งให้เป็น “Early Career Research Board” ของวารสาร Journal of Advanced Nursing (Scopus Q1 Top 10% Journal) วาระตั้งแต่เดือนมกราคม 2569 เป็นต้นไป</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/23.jpg" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ อาจารย์เกวลิน พงษ์สุวรรณ และอาจารย์พฤกษา จันทร์ผ่องศรี ได้รับการตีพิมพ์ในวารสารนานาชาติ SJR Q1 TOP 10%</h3>
+              <p class="award-desc-text">Nurse-Led interventions to improve health, adherence, and functional outcomes in adults and older adults with multimorbidity: A systematic review of randomized and quasi experimental studies. The results highlight nurses' key role in coordinating and delivering effective care. By promoting self-management and adherence, nurse-led models serve as a foundation for managing complex chronic conditions. Broader implementation can improve outcomes and reduce healthcare burdens. โดยอาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ (First author) อาจารย์เกวลิน พงษ์สุวรรณ (Corresponding author) อาจารย์พฤกษา จันทร์ผ่องศรี (Co-author) | Journal of Nursing Management 2025 early</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/22.JPG" alt="คณะอาจารย์อายุรศาสตร์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี รองศาสตราจารย์ ดร.พรรณิภา บุญเทียร รองศาสตราจารย์ ดร.ศรินรัตน์ ศรีประสงค์ รองศาสตราจารย์ ดร.อัจฉริยา พ่วงแก้ว อาจารย์ ดร.สิริกาญจน์ หาญรบ อาจารย์ ดร.ปวิตรา จริยสกุลวงศ์ อ.ปิโยรส เกษตรกาลาม์ และอาจารย์ ดร.วราภรณ์ พานิชปฐม</h3>
+              <p class="award-desc-text">ในโอกาสได้รับรางวัลทุนสนับสนุนการวิจัย ประจำปีการศึกษา 2569 จากกองทุน ซี.เอ็ม.บี คณะพยาบาลศาสตร์ โครงการ “ประสิทธิภาพการใช้สถานการณ์จำลองเสมือนจริงในผู้ป่วยที่มีปัญหาระบบทางเดินหายใจ ระบบหัวใจและหลอดเลือดต่อความสามารถในการแก้ปัญหาทางการพยาบาล และความเชื่อมั่นในตนเองของนักศึกษาพยาบาล” จำนวนเงิน 40,510 บาท</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/21.JPG" alt="อ.ดร.สิริกาญจน์ หาญรบ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี อาจารย์ ดร.สิริกาญจน์ หาญรบ</h3>
+              <p class="award-desc-text">ในโอกาสได้รับทุนสนับสนุนการวิจัย Fundamental Fund (FF) มหาวิทยาลัยมหิดล ประจำปีการศึกษา 2568 โครงการ “ระบบการพัฒนาศักยภาพกับนักศึกษาต่อพฤติกรรมการป้องกันการแพร่กระจายเชื้อดื้อยา : การวิจัยแบบผสมผสาน” จำนวนเงิน 390,200 บาท</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/20.jpg" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์</h3>
+              <p class="award-desc-text">ในโอกาสได้รับคัดเลือกเป็น อาจารย์ดีเด่นคณะพยาบาลศาสตร์ “สาขาวิจัย” ประจำปีการศึกษา 2567”</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/19.jpg" alt="รศ.ดร.อรวมน ศรียุกตศุทธ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">รองศาสตราจารย์ ดร.อรวมน ศรียุกตศุทธ และ ผู้ช่วยศาสตราจารย์ ดร.วารุณี พลิกบัว ได้รับการตีพิมพ์ SJR Q3</h3>
+              <p class="award-desc-text">Health-related quality of life of patients with and without diabetes on hemodialysis in China: A comparative correlational study<br>“Hemodialysis patients with diabetes face significantly poorer quality of life than those without the condition. Age, gender, and family support play critical roles, pointing to the need for targeted, family-centered interventions”</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/18.jpg" alt="ผศ.ดร.ชลธิรา เรียงคำ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ผู้ช่วยศาสตราจารย์ ดร.ชลธิรา เรียงคำ ได้รับการตีพิมพ์ SJR Q1</h3>
+              <p class="award-desc-text">Determinants of glycemic control in Thai adults with insulin-treated type 2 diabetes mellitus: A cross-sectional study<br><br>“Improving glycemic control in insulin-treated Thai adults requires strengthening self-management skills, addressing negative insulin attitudes, and promoting proper injection techniques with regular blood glucose monitoring. These strategies enhance outcomes and empower patients in managing chronic conditions"<br>Authors: Chontira Riangkam, Supaporn Sanguanthammarong, Raweewan Lertwattanarak | Patient Preference and Adherence 2025 19:1909-1922</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/17.jpg" alt="ทีมวิจัยอายุรศาสตร์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์, อาจารย์ลลิต์ภัทร เพียรหาสิน, อาจารย์ชิดชนก เบ็ญจสิริสรรค์ ผู้ช่วยศาสตราจารย์ ดร.ชลธิรา เรียงคำ และ อาจารย์เกวลิน พงษ์สุวรรณ</h3>
+              <p class="award-desc-text">ได้รับการตีพิมพ์ SJR Q1<br>Artificial intelligence in nursing research: a systematic review of applications, benefits, and challenges<br>“This review highlights how AI enhances nursing research through prediction, efficiency, and personalization. It also raises concerns about ethics, bias, and data reliability. The authors call for nurse engagement and clear governance to ensure safe integration"<br><br>Authors: Suebsarn Ruksakulpiwat, Lalipat Phianhasin, Chitchanok Benjasirisan, Tingyu Su, Chontira Riangkam, Sutthinee Thorngthip, Heba M. Aldossary, Bootan Ahmed, Kewalin Pongsuwun, Nopasit Angkaew | International Nursing Review 2025 72(3):e70080</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/16.jpg" alt="รศ.ดร.อัจฉริยา พ่วงแก้ว"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ขอแสดงความยินดี แด่ รองศาสตราจารย์ ดร.อัจฉริยา พ่วงแก้ว อาจารย์ประจำภาควิชาการพยาบาลอายุรศาสตร์</h3>
+              <p class="award-desc-text">ในโอกาสได้รับรางวัล “ศิษย์เก่าดีเด่น” สาขาการวิจัยทางการพยาบาล ประจำปี 2568 จากสมาคมศิษย์เก่าพยาบาลสภากาชาดไทย (สพส.) ในพระราชูปถัมภ์สมเด็จพระเทพรัตนราชสุดาฯ สยามบรมราชกุมารี</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/15.jpg" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสผ่านการประเมินคุณภาพการจัดการเรียนการสอนตามเกณฑ์มาตรฐานคุณภาพอาจารย์ของมหาวิทยาลัยมหิดล</h3>
+              <p class="award-desc-text">ขอแสดงความยินดี แด่ อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ อาจารย์ประจำภาควิชาการพยาบาลอายุรศาสตร์ ในโอกาสผ่านการประเมินระดับคุณภาพการจัดการเรียนการสอน ตามเกณฑ์มาตรฐานคุณภาพอาจารย์ของมหาวิทยาลัยมหิดล (MAHIDOL UNIVERSITY PROFESSIONAL STANDARD FRAMEWORK : MUPSF) ระดับ 2</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/14.jpg" alt="อ.ดร.ณัฏยา ประหา"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสผ่านการประเมินคุณภาพการจัดการเรียนการสอนตามเกณฑ์มาตรฐานคุณภาพอาจารย์ของมหาวิทยาลัยมหิดล</h3>
+              <p class="award-desc-text">ขอแสดงความยินดี แด่ อาจารย์ ดร.ณัฏยา ประหา อาจารย์ประจำภาควิชาการพยาบาลอายุรศาสตร์ ในโอกาสผ่านการประเมินระดับคุณภาพการจัดการเรียนการสอน ตามเกณฑ์มาตรฐานคุณภาพอาจารย์ของมหาวิทยาลัยมหิดล (MAHIDOL UNIVERSITY PROFESSIONAL STANDARD FRAMEWORK : MUPSF) ระดับ 2</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/13.jpg" alt="อ.ดร.ประพัฒน์สินี ประไพวงษ์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.ประพัฒน์สินี ประไพวงษ์, อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์, อาจารย์ ดร.ปวิตรา จริยสกุลวงศ์, อาจารย์ปิโยรส เกษตรกาลาม, รองศาสตราจารย์ ดร.วิมลรัตน์ ภู่วราวุฒิพานิช และ อาจารย์เกวลิน พงษ์สุวรรณ ได้รับการตีพิมพ์ SJR Q1</h3>
+              <p class="award-desc-text">Determinants of anemia among patients with chronic kidney disease: A systematic review of empirical evidence<br>“This review underscores multifaceted determinants of anemia in CKD, emphasizing comprehensive assessment and targeted interventions. Future research should explore individualized strategies addressing these diverse factors"<br>Authors: Prapatsinee Prapaiwong, Suebsarn Ruksakulpiwat, Pawitra Jariyasakulwong, Piyoros Kasetkala, Wimolrat Puwarawuttipanit, Kewalin Pongsuwun | Journal of Multidisciplinary Healthcare 2025 18: 3765-3780</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/12.jpg" alt="อ.ดร.สิริกาญจน์ หาญรบ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์ ดร.สิริกาญจน์ หาญรบ, อาจารย์ ดร.ณัฏยา ประหา, อาจารย์ลลิตภัทร เพียรหาสิน และ อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ ได้รับการตีพิมพ์ SJR Q1</h3>
+              <p class="award-desc-text">The impact of self-management interventions on behavioral and clinical outcomes in individuals with systemic lupus erythematosus: A systematic review of empirical evidence from 2003-2024<br>“Self-management interventions positively impact behavioral and clinical outcomes in individuals with SLE. Future research should explore long-term sustainability, integration of digital health strategies, and personalized approaches"<br>Authors: Sirikarn Hanrop, Nirunya Narupan, Nattaya Praha, Lalipat Phianhasin, Suebsarn Ruksakulpiwat | Patient Preference and Adherence 2025 19: 1763-1779</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/11.jpg" alt="อ.เกวลิน พงษ์สุวรรณ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">อาจารย์เกวลิน พงษ์สุวรรณ รองศาสตราจารย์ ดร.วิมลรัตน์ ภู่วราวุฒิพานิช และ ผู้ช่วยศาสตราจารย์ ดร.รัตนาภรณ์ คงคา ได้รับการตีพิมพ์ SJR Q3</h3>
+              <p class="award-desc-text">Factors predicting sleep quality in sepsis survivors: A cross-sectional study<br>“Nurses should assist sepsis survivors through psychological support, understanding, and information to reduce anxiety, depression, stress, complications, or severity of comorbidities"<br>Authors: Kewalin Pongsuwun, Wimolrat Puwarawuttipanit, Ruttanaporn Kongkar, Yong Rongrungruang | Pacific Rim International Journal of Nursing Research 2025 29(3):619-631</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/10.jpg" alt="รศ.ดร.อรวมน ศรียุกตศุทธ"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">รองศาสตราจารย์ ดร.อรวมน ศรียุกตศุทธ ได้รับการตีพิมพ์ SJR Q1</h3>
+              <p class="award-desc-text">Translation and validation of the Chinese version of quality of physician- patient interaction scale<br>"The QQPPI-C is a reliable and valid tool for assessing outpatient physician-patient interaction quality in China. Its use can support clinical communication improvement and research on patient-centered care"<br>Authors: Jing Li, Aurawamon Sriyuktasuth, Patricia M. Davidson | International Journal of Nursing Studies Advances 2025 early</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/09.jpg" alt="รศ.ดร.วิมลรัตน์ ภู่วราวุฒิพานิช"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">รองศาสตราจารย์ ดร.วิมลรัตน์ ภู่วราวุฒิพานิช อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ และ อาจารย์เกวลิน พงษ์สุวรรณ ได้รับการตีพิมพ์ SJR Q1</h3>
+              <p class="award-desc-text">A systematic review of the accuracy of machine learning models for diagnosing pulmonary tuberculosis: implications for nursing practice and implementation<br>“Machine learning is transforming tuberculosis diagnosis-enhancing accuracy, supporting nursing practice, and addressing diagnostic challenges in complex clinical cases”</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/08.jpg" alt="รศ.ดร.วิมลรัตน์ ภู่วราวุฒิพานิช"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">รองศาสตราจารย์ ดร.วิมลรัตน์ ภู่วราวุฒิพานิช และ ผู้ช่วยศาสตราจารย์ ดร.วารุณี พลิกบัว ได้รับการตีพิมพ์ SJR Q3</h3>
+              <p class="award-desc-text">Activities of daily living and determinant factors among sepsis survivors during hospitalization: a cross-sectional study<br>“Age, sleep quality, and sepsis survivors-emphasizing the need for targeted nursing care to enhance recovery”</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/07.jpg" alt="รศ.ดร.วิมลรัตน์ ภู่วราวุฒิพานิช"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">รองศาสตราจารย์ ดร.วิมลรัตน์ ภู่วราวุฒิพานิช และ ผู้ช่วยศาสตราจารย์ ดร.ชลธิรา เรียงคำ ได้รับการตีพิมพ์ SJR Q4</h3>
+              <p class="award-desc-text">Effectiveness of a brain training program on the cognitive function of sepsis survivors: a randomized controlled trial study<br>“A brain training program significantly enhances cognitive function in sepsis survivors within 12 weeks-highlighting its potential as a vital rehabilitation strategy”</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/05.png" alt="อาจารย์ปวิตรา จริยสกุลวงศ์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสบทความได้รับการตีพิมพ์ใน Scopus Indexed Journal SJR Q1</h3>
+              <p class="award-desc-text">อาจารย์ปวิตรา จริยสกุลวงศ์ ในโอกาสบทความได้รับการตีพิมพ์ใน Scopus Indexed Journal SJR Q1<br>Title: Factors Influencing Self-Practices and Blood Pressure Among Individuals with Uncontrolled Hypertension: A Cross-Sectional Study<br>Authors: Pawitra Jariyasakulwong, Doungrut Wattanakitkrilert, Kanaungnit Pongthavornkamol, Noppawan Piaseu, Weranuj Roubsanthisuk<br>Journal Name: Patient Preference and Adherence Issue: 2025 19:1-17</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/06.jpg" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสได้รับการแต่งตั้งให้เป็น “กองบรรณาธิการวารสารการพยาบาลและการดูแลสุขภาพ”</h3>
+              <p class="award-desc-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ ในโอกาสได้รับการแต่งตั้งให้เป็น “กองบรรณาธิการวารสารการพยาบาลและการดูแลสุขภาพ” TCI1 สมาคมพยาบาลแห่งประเทศไทยในพระราชูปถัมภ์ สมเด็จพระศรีนครินทราบรมราชชนนี (สำนักงานสาขาภาคตะวันออกเฉียงเหนือ) วาระ 2568-2570</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/04.png" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสบทความได้รับการตีพิมพ์ใน Scopus Indexed Journal SJR Q2</h3>
+              <p class="award-desc-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ ในโอกาสบทความได้รับการตีพิมพ์ใน Scopus Indexed Journal SJR Q2<br>Title: A concept analysis of the recurrence-related to diabetic foot ulcers<br>Authors: Bootan Hasan Ahmed, Joachim G. Voss, Stephanie Griggs, Ahmed A. Naif, Sugandha Aggarwal, Suebsarn Ruksakulpiwat & Nicholas K.Schiltz<br>Journal Name: Chronic Illness Issue: 2025 early</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/03.png" alt="อ.ดร.สืบสาน รักสกุลพิวัฒน์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสได้รับรางวัล TOP 1% RESEARCHER 2025</h3>
+              <p class="award-desc-text">อาจารย์ ดร.สืบสาน รักสกุลพิวัฒน์ ในโอกาสได้รับรางวัล TOP 1% RESEARCHER 2025</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/02.jpg" alt="ผศ.ดร.พิจิตรา เล็กดำรงกุล"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสผ่านการประเมินคุณภาพการจัดการเรียนการสอนตามเกณฑ์มาตรฐานคุณภาพอาจารย์ของมหาวิทยาลัยมหิดล</h3>
+              <p class="award-desc-text">ผู้ช่วยศาสตราจารย์ ดร.พิจิตรา เล็กดำรงกุล ในโอกาสผ่านการประเมินคุณภาพการจัดการเรียนการสอน ตามเกณฑ์มาตรฐานคุณภาพอาจารย์ของมหาวิทยาลัยมหิดล (MAHIDOL UNIVERSITY PROFESSIONAL STANDARDS FRAMEWORK : MUPSF ) ระดับ 2</p>
+            </div>
+          </div>
+
+          <div class="award-premium-card">
+            <div class="award-image-frame"><img src="img/award/68/01.jpg" alt="รศ.ดร.ศรินรัตน์ ศรีประสงค์"></div>
+            <div class="award-details-frame">
+              <h3 class="award-title-text">ในโอกาสได้รับรางวัล อาจารย์ในดวงใจ ศิษย์เก่ามหาวิทยาลัยมหิดล ประจำปี 2568</h3>
+              <p class="award-desc-text">รองศาสตราจารย์ ดร.ศรินรัตน์ ศรีประสงค์ ในโอกาสได้รับรางวัล อาจารย์ในดวงใจ ศิษย์เก่ามหาวิทยาลัยมหิดล ประจำปี 2568 จาก ศิษย์เก่ามหาวิทยาลัยมหิดล 2568 จากสมาคมศิษย์เก่ามหาวิทยาลัยมหิดล ในพระบรมราชูปถัมภ์</p>
+            </div>
+          </div>
+
+          <!-- More Button link to archive -->
+      <div class="section-footer mt-6" style="justify-content: center;">
+        <a href="award.html" class="btn-more">
+          กลับไปหน้ารางวัลแห่งความภาคภูมิใจ
+          <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+
+        </div>
+      </div>
+  </main>
+
+  <!-- SITE FOOTER SYSTEMS -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>ภาควิชาการพยาบาลอายุรศาสตร์</h3>
+        <p>
+          <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+          <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+        </p>
+        <p class="footer-copy">
+          Copyright &copy; 2021 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+          Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+        <div style="display:flex;gap:10px;">
+          <a href="#" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/fb.png" alt="Facebook" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/twitter.png" alt="Twitter" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+          <a href="#" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.1);border-radius:50%;transition:background 0.2s;">
+            <img src="img/template/ig.png" alt="Instagram" style="width:18px;height:18px;filter:brightness(0) invert(1);">
+          </a>
+        </div>
+        <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent"
+           style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+          <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;"> English
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- BACK TO TOP ACTIONS BUTTON -->
+<button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<!-- ── JAVASCRIPT CONTROLLERS SYSTEMS ── -->
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if(hamburger) hamburger.addEventListener('click', openMobileMenu);
+if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
+if(mobileMenu) {
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+function toggleMobileDropdown(el) {
+  const dropdown = el.nextElementSibling;
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+    el.classList.toggle('active');
+  }
+}
+
+const navBrand = document.getElementById('navBrand');
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+  }
+
+  const backTop = document.getElementById('back-to-top');
+  if (backTop) {
+    backTop.classList.toggle('visible', window.scrollY > 300);
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>
