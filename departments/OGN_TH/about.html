@@ -3,166 +3,308 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>เกี่ยวกับภาควิชา:  ภาควิชาการพยาบาลสูติศาสตร์ - นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <title>เกี่ยวกับภาควิชา : ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
   <link rel="stylesheet" href="style.css">
   <script src="../../components/layout.js" defer></script>
-  
-  
+  <style>
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 900px) {
+      .about-intro {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+    .about-intro img {
+      width: 100%;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+    .about-section p {
+      text-indent: 2.5em;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .heads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .head-card {
+      background: var(--background);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s;
+    }
+    .head-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .head-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid var(--surface);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .head-card-title {
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+    .head-card-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .head-card-year {
+      display: inline-block;
+      background: var(--primary-glow);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    
+    /* Center images globally */
+    .center-img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
 </head>
 <body data-dept-th="ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา" data-dept-en="Department of Obstetric-Gynecological Nursing">
   <main class="site-main container">
     <div id="page-content">
+      <h1>เกี่ยวกับภาควิชา</h1>
       
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">เกี่ยวกับภาควิชา</td>
-              </tr>
-              <tr>
-                <td height="363"><p class="txt_blue"><strong>ประวัติความเป็นมา</strong></p>
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="27%" align="center"><img src="img/other/about2.jpg" width="215" height="195"></td>
-                      <td width="73%" valign="top"><p class="txt_font" style="text-indent: 2.5em;">สืบเนื่องจากสมเด็จพระศรีพัชรินทรา-บรมราชินีนาถ ในพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว ทรงมีประสบการณ์เกี่ยวกับการ คลอดทั้งแผนโบราณและการผดุงครรภ์แผนใหม่ เมื่อพระองค์ทรงมีพระประสูติกาลพระเจ้าลูกยาเธอเจ้าฟ้าอัษฎางค์เดชาวุธ เมื่อวันที่ 17 พฤษภาคม 2431 โดยมี นายปีเตอร์ เกาแวน ถวายการดูแลตามแบบผดุงครรภ์แผนใหม่และทรงเลิกผทมเพลิง (อยู่ไฟ) ทรงตรัสว่า การไม่อยู่ไฟสบายกว่ามาก ทรงชักชวน ข้าราชบริพารมารับบริการผดุงครรภ์แผนใหม่ มีผู้หันมานิยมตามเป็นจํานวนมาก พระองค์มี พระราชดําริว่า การผดุงครรภ์ในประเทศไทยยังไม่มีแพทย์ผดุงครรภ์ ที่มีความรู้ความสามารถตามแผนใหม่ที่ถูกต้อง สตรีที่คลอดบุตร ทั่วไปได้รับการดูแลแบบโบราณ ยังนิยมการอยู่ไฟ และได้รับอันตรายมาก พระองค์จึงพระราชทานทรัพย์ส่วนพระองค์ให้จัดตั้ง โรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาลขึ้นในโรงพยาบาลศิริราช เริ่มเปิดทําการสอนเมื่อวันที่ 12 มกราคม พ.ศ. 2439 เพื่อเป็นสถาน ศึกษาแก่สตรีในการศึกษาวิชาการผดุงครรภ์และวิชาพยาบาล</p></td>
-                    </tr>
-                  </table>
-                  
-                  <p style="text-indent: 2.5em;" class="txt_font">เมื่อโรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาล ได้ก่อตั้งขึ้นเป็นครั้งแรกในประเทศไทย ถือได้ว่าวิชาการผดุงครรภ์ หรือการ พยาบาลมารดาและทารกได้ถือกําเนิดขึ้นพร้อมกับกําเนิดของโรงเรียนพยาบาล ซึ่งต่อมาได้พัฒนาเป็นคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดลในปัจจุบัน ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มีวิวัฒนาการ และได้กําเนิดมาพร้อมกับโรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาล ถือได้ว่าเป็นภาควิชาการพยาบาลแห่งแรกและมีอายุเก่าแก่ที่สุด ในประเทศไทย การดําเนินการศึกษาด้านการผดุงครรภ์หรือการพยาบาลมารดาและทารกได้มีวิวัฒนาการ มีการเปลี่ยนแปลงปรับปรุง หลักสูตรตามการเปลี่ยนแปลงของสังคมและวิทยาศาสตร์มาจนถึงปัจจุบัน ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา ได้รับการอนุมัติให้เปลี่ยนฐานะจากแผนกวิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา เป็น ภาควิชา เมื่อวันที่ 18 กุมภาพันธ์ 2517 โดบคณะกรรมการจัดตั้งคณะพยาบาลศาสตร์ ซึ่งมี อาจารย์สงวนสุข ฉันทวงค์ ผู้อ่านวยการ โรงเรียนพยาบาลผดุงครรภ์และอนามัยศิริราช ในสมัยนั้นเป็นประธาน การได้รับอนุมัติดังกล่าวประกาศลงในราชกิจจานุเบกษาฉบับ พิเศษ เล่มที่ 91 ตอน 37 หน้า 49 - 50 ลงวันที่ 28 กุมภาพันธ์ 2537                  </p>
-                  <p style="text-indent: 2.5em;" class="txt_font">ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา เป็นผู้นําทางวิชาการในการจัดการศึกษา การ วิจัย และการให้บริการทางวิชาการ เกี่ยวกับการผดุงครรภ์ การพยาบาลมารดา-ทารกแรกเกิด และครอบครัว รวมทั้งการพยาบาลสุขภาพสตรี เพื่อพัฒนาคุณภาพชีวิตของสตรี มารดาทารก แรกเกิด และครอบครัว อันจะส่งผลในระยะยาวต่อสังคม<br>
-                    โดยภาควิชาฯ มีบุคลากรทั้งหมด 29 คน ประกอบด้วยข้าราชการสายก และพนักงาน มหาวิทยาลัย ที่ปฏิบัติงานในตําแหน่งอาจารย์ 28 คน และพนักงานมหาวิทยาลัยปฏิบัติงาน ในตําแหน่งผู้ปฏเบัติงานบริหาร 1 คน<br>
-               
-                    <br>
-                    จําแนกตามตําแหน่งทางวิชาการ ประกอบด้วย<br>
-                    รองศาสตราจารย์ 4 คน<br>
-                    ผู้ช่วยศาสตราจารย์ 8 คน<br>
-                  อาจารย์ 16 คน</p> 
-                  <p align="center"><img src="img/other/about.jpg" width="980" height="220" style="border: 1px solid #ccc; padding: 5px;" align="middle"></p>
-                  <p><strong class="txt_blue">รายนามหัวหน้าภาควิชา</strong></p>
-                  <table width="80%" border="0" align="center" cellpadding="10" cellspacing="0">
-                    <tr class="line_body">
-                      <td width="40%" align="center" valign="middle" class="line_body"><img src="img/other/History/01.jpg" width="150" height="150"><br>
-                        <strong>ท่านผู้หญิงเปลี่ยน ภาสกรวงศ์</strong><br>
-                      ผู้อำนวยการโรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาล</td>
-                      <td width="40%" align="center" valign="middle" class="line_body"><img src="img/other/History/02.jpg" alt="" width="150" height="150"><br>
-                        <strong>นายแพทย์แฮนด์  อะดัมเสน</strong><br>
-ครูผู้สอนวิชาผดุงครรภ์</td>
-                      <td width="20%" align="center" valign="middle" class="line_body">พ.ศ.2439-2443</tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/black.jpg" alt="" width="150" height="150" style="border: 1px solid #ccc; padding: 5px;"><br>
-                        <strong>นางสาวผ่องศรี ซาเวียร์</strong><br>
-                      ครูผู้สอนวิชาผดุงครรภ์                      <br></td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/black.jpg" alt="" width="150" height="150" style="border: 1px solid #ccc; padding: 5px;"><br>
-                        <strong>นางสาวชะลอ บุนนาค</strong><br>
-                        ผู้ช่วยครู</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2469-2478</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/black.jpg" alt="" width="150" height="150" style="border: 1px solid #ccc; padding: 5px;"><br>
-                        <strong>อาจารย์ดวงพร อดิเรกสาร</strong><br>
-                        ครูผู้ตรวจการแผนกการพยาบาลสูติ-นรีเวชวิทยา</td>
-                      <td align="center" valign="middle" class="line_body">&nbsp;</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2478-2496</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/03.jpg" width="150" height="150"><br>
-                        <strong>อาจารย์นพรัตน์  สุรพิพิธ</strong><br>
-                      ครูผู้ตรวจการแผนกการพยาบาลสูติ-นรีเวชวิทยา</td>
-                      <td align="center" valign="middle" class="line_body">&nbsp;</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2496-2515</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/03.jpg" alt="" width="150" height="150"><br>
-                        <strong>อาจารย์นพรัตน์  สุรพิพิธ</strong><br>
-รักษาการหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/04.jpg" alt="" width="150" height="150"><br>
-                        <strong>ผศ. จินตนา  บ้านแก่ง </strong><br>
-ผู้ช่วยหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2515-2518</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/04.jpg" width="150" height="150"><br>
-                      <strong>ผศ. จินตนา  บ้านแก่ง <br>
-                      </strong>หัวหน้าภาควิชาฯ                      </td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/05.jpg" width="150" height="150"><br>                        <strong>ผศ.พูนทรัพย์ สัลลกะชาต</strong><br>
-                      ผู้ช่วยหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2518-2531</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/06.jpg" width="150" height="150"><br>
-                        <strong>รศ.สุปราณี อัทธเสรี</strong><br>
-หัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/07.jpg" width="150" height="150"><br>
-                        <strong>ผศ.ศิริรัตน์  สุกีธร</strong><br>
-                      รองหัวหน้าภาควิชาฯ </td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2531-2538</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/07.jpg" alt="" width="150" height="150"><br>
-                        <strong>ผศ.ศิริรัตน์  สุกีธร</strong><br>
-                      หัวหน้าภาควิชาฯ </td>
-                      <td align="center" valign="middle" class="line_body"><p><img src="img/other/History/09.jpg" width="150" height="150"><br>                        
-                          <strong>ผศ.ละเอียด  อุดมรัตน์ง</strong><br>
-                        รองหัวหน้าภาควิชาฯ </p></td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2539-2546</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/10.jpg" width="150" height="150"><br>                        <strong>ผศ.ธิติมา  จำปีรัตน์</strong><br>
-                      หัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/11.jpg" width="150" height="150"><br>
-                        <strong>ผศ.วชิรา วรรณสถิตย์</strong><br>
-                      รองหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2546-2550</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/12.jpg" width="150" height="150"><br>
-                        <strong>ผศ.ดร.เยาวลักษณ์  เสรีเสถียร</strong><br>
-                      หัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/13.jpg" width="150" height="150"><br>
-                        <strong>อาจารย์.ดร.อัจฉรา มาศมาลัย</strong><br>
-                      รองหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2550-2554</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/14.jpg" width="150" height="150"><br>
-                        <strong>รศ.ศิริวรรณ์ สันทัด</strong><br>
-                      หัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/15.jpg" width="150" height="150"><br>
-                        <strong>ผศ.ทัศนีย์วรรณ พฤกษาเมธานันท์</strong><br>
-                      รองหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2554-2558</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><p><img src="img/other/History/16.jpg" width="150" height="150"><br>
-                          <strong>รศ.ดร.นิตยา สินสุกใส</strong><br>
-                      หัวหน้าภาควิชาฯ</p></td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/17.jpg" width="150" height="150"><br>
-                        <strong>ผศ.วาสนา จิติมา</strong><br>
-                      รองหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2558-2562</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/18.jpg" alt="" width="150" height="150"><br>
-                        <strong>รศ.ดร.เอมพร รตินธร</strong><br>
-หัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/19.jpg" alt="" width="150" height="150"><br>
-                        <strong>รศ.ดร.ปิยะนันท์ ลิมเรืองรอง</strong><br>
-รองหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2562-2566</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/20.jpg" width="150" height="150"><br>
-                        <strong>ผู้ช่วยศาสตราจารย์ ดร.พรนภา ตั้งสุขสันต์</strong><br>
-                      หัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/History/21.jpg" width="150" height="150"><br>
-                        <strong>อาจารย์ ดร.ทิวาภรณ์ เฉลิมพิชัย</strong><br>
-                      รองหัวหน้าภาควิชาฯ</td>
-                      <td align="center" valign="middle" class="line_body">พ.ศ.2566-ปัจจุบัน</td>
-                    </tr>
-                  </table>
-                  <p align="center"><img src="img/other/about3.jpg" width="970" height="340" style="border: 1px solid #ccc; padding: 5px;"></p>
-                <p>&nbsp;</p></td>
-              </tr>
-            </table>
-          
+      <section class="about-intro">
+        <div>
+          <img src="img/other/about2.jpg" alt="ประวัติความเป็นมา">
+        </div>
+        <div class="about-section">
+          <h2>ประวัติความเป็นมา</h2>
+          <p>สืบเนื่องจากสมเด็จพระศรีพัชรินทรา-บรมราชินีนาถ ในพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว ทรงมีประสบการณ์เกี่ยวกับการ คลอดทั้งแผนโบราณและการผดุงครรภ์แผนใหม่ เมื่อพระองค์ทรงมีพระประสูติกาลพระเจ้าลูกยาเธอเจ้าฟ้าอัษฎางค์เดชาวุธ เมื่อวันที่ 17 พฤษภาคม 2431 โดยมี นายปีเตอร์ เกาแวน ถวายการดูแลตามแบบผดุงครรภ์แผนใหม่และทรงเลิกผทมเพลิง (อยู่ไฟ) ทรงตรัสว่า การไม่อยู่ไฟสบายกว่ามาก ทรงชักชวน ข้าราชบริพารมารับบริการผดุงครรภ์แผนใหม่ มีผู้หันมานิยมตามเป็นจํานวนมาก พระองค์มี พระราชดําริว่า การผดุงครรภ์ในประเทศไทยยังไม่มีแพทย์ผดุงครรภ์ ที่มีความรู้ความสามารถตามแผนใหม่ที่ถูกต้อง สตรีที่คลอดบุตร ทั่วไปได้รับการดูแลแบบโบราณ ยังนิยมการอยู่ไฟ และได้รับอันตรายมาก พระองค์จึงพระราชทานทรัพย์ส่วนพระองค์ให้จัดตั้ง โรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาลขึ้นในโรงพยาบาลศิริราช เริ่มเปิดทําการสอนเมื่อวันที่ 12 มกราคม พ.ศ. 2439 เพื่อเป็นสถาน ศึกษาแก่สตรีในการศึกษาวิชาการผดุงครรภ์และวิชาพยาบาล</p>
+          <p>เมื่อโรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาล ได้ก่อตั้งขึ้นเป็นครั้งแรกในประเทศไทย ถือได้ว่าวิชาการผดุงครรภ์ หรือการ พยาบาลมารดาและทารกได้ถือกําเนิดขึ้นพร้อมกับกําเนิดของโรงเรียนพยาบาล ซึ่งต่อมาได้พัฒนาเป็นคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดลในปัจจุบัน ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มีวิวัฒนาการ และได้กําเนิดมาพร้อมกับโรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาล ถือได้ว่าเป็นภาควิชาการพยาบาลแห่งแรกและมีอายุเก่าแก่ที่สุด ในประเทศไทย การดําเนินการศึกษาด้านการผดุงครรภ์หรือการพยาบาลมารดาและทารกได้มีวิวัฒนาการ มีการเปลี่ยนแปลงปรับปรุง หลักสูตรตามการเปลี่ยนแปลงของสังคมและวิทยาศาสตร์มาจนถึงปัจจุบัน ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา ได้รับการอนุมัติให้เปลี่ยนฐานะจากแผนกวิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา เป็น ภาควิชา เมื่อวันที่ 18 กุมภาพันธ์ 2517 โดบคณะกรรมการจัดตั้งคณะพยาบาลศาสตร์ ซึ่งมี อาจารย์สงวนสุข ฉันทวงค์ ผู้อ่านวยการ โรงเรียนพยาบาลผดุงครรภ์และอนามัยศิริราช ในสมัยนั้นเป็นประธาน การได้รับอนุมัติดังกล่าวประกาศลงในราชกิจจานุเบกษาฉบับ พิเศษ เล่มที่ 91 ตอน 37 หน้า 49 - 50 ลงวันที่ 28 กุมภาพันธ์ 2537</p>
+          <p>ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา เป็นผู้นําทางวิชาการในการจัดการศึกษา การ วิจัย และการให้บริการทางวิชาการ เกี่ยวกับการผดุงครรภ์ การพยาบาลมารดา-ทารกแรกเกิด และครอบครัว รวมทั้งการพยาบาลสุขภาพสตรี เพื่อพัฒนาคุณภาพชีวิตของสตรี มารดาทารก แรกเกิด และครอบครัว อันจะส่งผลในระยะยาวต่อสังคม<br>
+          โดยภาควิชาฯ มีบุคลากรทั้งหมด 29 คน ประกอบด้วยข้าราชการสาย ก และพนักงาน มหาวิทยาลัย ที่ปฏิบัติงานในตําแหน่งอาจารย์ 28 คน และพนักงานมหาวิทยาลัยปฏิบัติงาน ในตําแหน่งผู้ปฏิบัติงานบริหาร 1 คน<br><br>
+          <strong>จำแนกตามตำแหน่งทางวิชาการ ประกอบด้วย:</strong><br>
+          • รองศาสตราจารย์ 4 คน<br>
+          • ผู้ช่วยศาสตราจารย์ 8 คน<br>
+          • อาจารย์ 16 คน</p>
+        </div>
+      </section>
+
+      <img src="img/other/about.jpg" alt="ภาพรวมภาควิชา" class="center-img">
+
+      <h2>รายนามหัวหน้าภาควิชา</h2>
+      <div class="heads-grid">
+        <!-- 2439-2443 -->
+        <div class="head-card">
+          <img src="img/other/History/01.jpg" alt="ท่านผู้หญิงเปลี่ยน ภาสกรวงศ์" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ท่านผู้หญิงเปลี่ยน ภาสกรวงศ์</div>
+          <div class="head-card-role">ผู้อำนวยการโรงเรียนแพทย์ผดุงครรภ์และหญิงพยาบาล</div>
+          <div class="head-card-year">พ.ศ. 2439-2443</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/02.jpg" alt="นายแพทย์แฮนด์ อะดัมเสน" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">นายแพทย์แฮนด์ อะดัมเสน</div>
+          <div class="head-card-role">ครูผู้สอนวิชาผดุงครรภ์</div>
+          <div class="head-card-year">พ.ศ. 2439-2443</div>
+        </div>
+        
+        <!-- 2469-2478 -->
+        <div class="head-card">
+          <img src="img/other/History/black.jpg" alt="นางสาวผ่องศรี ซาเวียร์">
+          <div class="head-card-title">นางสาวผ่องศรี ซาเวียร์</div>
+          <div class="head-card-role">ครูผู้สอนวิชาผดุงครรภ์</div>
+          <div class="head-card-year">พ.ศ. 2469-2478</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/black.jpg" alt="นางสาวชะลอ บุนนาค">
+          <div class="head-card-title">นางสาวชะลอ บุนนาค</div>
+          <div class="head-card-role">ผู้ช่วยครู</div>
+          <div class="head-card-year">พ.ศ. 2469-2478</div>
+        </div>
+
+        <!-- 2478-2496 -->
+        <div class="head-card">
+          <img src="img/other/History/black.jpg" alt="อาจารย์ดวงพร อดิเรกสาร">
+          <div class="head-card-title">อาจารย์ดวงพร อดิเรกสาร</div>
+          <div class="head-card-role">ครูผู้ตรวจการแผนกการพยาบาลสูติ-นรีเวชวิทยา</div>
+          <div class="head-card-year">พ.ศ. 2478-2496</div>
+        </div>
+
+        <!-- 2496-2515 -->
+        <div class="head-card">
+          <img src="img/other/History/03.jpg" alt="อาจารย์นพรัตน์ สุรพิพิธ" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">อาจารย์นพรัตน์ สุรพิพิธ</div>
+          <div class="head-card-role">ครูผู้ตรวจการแผนกการพยาบาลสูติ-นรีเวชวิทยา</div>
+          <div class="head-card-year">พ.ศ. 2496-2515</div>
+        </div>
+
+        <!-- 2515-2518 -->
+        <div class="head-card">
+          <img src="img/other/History/03.jpg" alt="อาจารย์นพรัตน์ สุรพิพิธ" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">อาจารย์นพรัตน์ สุรพิพิธ</div>
+          <div class="head-card-role">รักษาการหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2515-2518</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/04.jpg" alt="ผศ. จินตนา บ้านแก่ง" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ. จินตนา บ้านแก่ง</div>
+          <div class="head-card-role">ผู้ช่วยหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2515-2518</div>
+        </div>
+
+        <!-- 2518-2531 -->
+        <div class="head-card">
+          <img src="img/other/History/04.jpg" alt="ผศ. จินตนา บ้านแก่ง" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ. จินตนา บ้านแก่ง</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2518-2531</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/05.jpg" alt="ผศ.พูนทรัพย์ สัลลกะชาต" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.พูนทรัพย์ สัลลกะชาต</div>
+          <div class="head-card-role">ผู้ช่วยหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2518-2531</div>
+        </div>
+
+        <!-- 2531-2538 -->
+        <div class="head-card">
+          <img src="img/other/History/06.jpg" alt="รศ.สุปราณี อัทธเสรี" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">รศ.สุปราณี อัทธเสรี</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2531-2538</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/07.jpg" alt="ผศ.ศิริรัตน์ สุกีธร" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.ศิริรัตน์ สุกีธร</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2531-2538</div>
+        </div>
+
+        <!-- 2539-2546 -->
+        <div class="head-card">
+          <img src="img/other/History/07.jpg" alt="ผศ.ศิริรัตน์ สุกีธร" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.ศิริรัตน์ สุกีธร</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2539-2546</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/09.jpg" alt="ผศ.ละเอียด อุดมรัตน์ง" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.ละเอียด อุดมรัตน์ง</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2539-2546</div>
+        </div>
+
+        <!-- 2546-2550 -->
+        <div class="head-card">
+          <img src="img/other/History/10.jpg" alt="ผศ.ธิติมา จำปีรัตน์" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.ธิติมา จำปีรัตน์</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2546-2550</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/11.jpg" alt="ผศ.วชิรา วรรณสถิตย์" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.วชิรา วรรณสถิตย์</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2546-2550</div>
+        </div>
+
+        <!-- 2550-2554 -->
+        <div class="head-card">
+          <img src="img/other/History/12.jpg" alt="ผศ.ดร.เยาวลักษณ์ เสรีเสถียร" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.ดร.เยาวลักษณ์ เสรีเสถียร</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2550-2554</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/13.jpg" alt="อาจารย์.ดร.อัจฉรา มาศมาลัย" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">อาจารย์.ดร.อัจฉรา มาศมาลัย</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2550-2554</div>
+        </div>
+
+        <!-- 2554-2558 -->
+        <div class="head-card">
+          <img src="img/other/History/14.jpg" alt="รศ.ศิริวรรณ์ สันทัด" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">รศ.ศิริวรรณ์ สันทัด</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2554-2558</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/15.jpg" alt="ผศ.ทัศนีย์วรรณ พฤกษาเมธานันท์" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.ทัศนีย์วรรณ พฤกษาเมธานันท์</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2554-2558</div>
+        </div>
+
+        <!-- 2558-2562 -->
+        <div class="head-card">
+          <img src="img/other/History/16.jpg" alt="รศ.ดร.นิตยา สินสุกใส" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">รศ.ดร.นิตยา สินสุกใส</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2558-2562</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/17.jpg" alt="ผศ.วาสนา จิติมา" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผศ.วาสนา จิติมา</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2558-2562</div>
+        </div>
+
+        <!-- 2562-2566 -->
+        <div class="head-card">
+          <img src="img/other/History/18.jpg" alt="รศ.ดร.เอมพร รตินธร" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">รศ.ดร.เอมพร รตินธร</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2562-2566</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/19.jpg" alt="รศ.ดร.ปิยะนันท์ ลิมเรืองรอง" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">รศ.ดร.ปิยะนันท์ ลิมเรืองรอง</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2562-2566</div>
+        </div>
+
+        <!-- 2566-ปัจจุบัน -->
+        <div class="head-card">
+          <img src="img/other/History/20.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.พรนภา ตั้งสุขสันต์" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">ผู้ช่วยศาสตราจารย์ ดร.พรนภา ตั้งสุขสันต์</div>
+          <div class="head-card-role">หัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2566-ปัจจุบัน</div>
+        </div>
+        <div class="head-card">
+          <img src="img/other/History/21.jpg" alt="อาจารย์ ดร.ทิวาภรณ์ เฉลิมพิชัย" onerror="this.src='img/other/History/black.jpg'">
+          <div class="head-card-title">อาจารย์ ดร.ทิวาภรณ์ เฉลิมพิชัย</div>
+          <div class="head-card-role">รองหัวหน้าภาควิชาฯ</div>
+          <div class="head-card-year">พ.ศ. 2566-ปัจจุบัน</div>
+        </div>
+
+      </div>
+
+      <img src="img/other/about3.jpg" alt="ทีมงานภาควิชา" class="center-img">
+
     </div>
   </main>
 </body>
