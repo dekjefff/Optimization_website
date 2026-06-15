@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>วิสัยทัศน์ / พันธกิจ:  ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="../../components/layout.js" defer></script>
+  <style>
+    /* Vision & Mission Styling */
+    .vision-hero {
+      position: relative;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: var(--text-main);
+      padding: 3.5rem 2.5rem;
+      border-radius: var(--radius-lg);
+      margin-bottom: 3rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(121, 19, 124, 0.05);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+    
+    .vision-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(121, 19, 124, 0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    
+    .vision-hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: hsl(40, 85%, 45%) !important;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+    }
+    
+    .vision-hero-desc {
+      font-size: 1.15rem;
+      max-width: 850px;
+      margin: 0 auto;
+      line-height: 1.85;
+      color: hsl(215, 60%, 25%) !important;
+      text-align: left !important;
+      font-weight: 500;
+    }
+
+    .mission-pillars-title {
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Specific Accent Colors for each Pillar Card */
+    .pillar-card.pillar-education {
+      --card-accent: hsl(200, 80%, 40%);
+      --card-accent-glow: hsla(200, 80%, 40%, 0.08);
+      --card-border-hover: hsla(200, 80%, 40%, 0.25);
+    }
+    .pillar-card.pillar-research {
+      --card-accent: hsl(150, 70%, 35%);
+      --card-accent-glow: hsla(150, 70%, 35%, 0.08);
+      --card-border-hover: hsla(150, 70%, 35%, 0.25);
+    }
+    .pillar-card.pillar-service {
+      --card-accent: hsl(38, 85%, 45%);
+      --card-accent-glow: hsla(38, 85%, 45%, 0.08);
+      --card-border-hover: hsla(38, 85%, 45%, 0.25);
+    }
+    .pillar-card.pillar-culture {
+      --card-accent: hsl(282, 70%, 25%);
+      --card-accent-glow: hsla(282, 70%, 25%, 0.08);
+      --card-border-hover: hsla(282, 70%, 25%, 0.25);
+    }
+
+    .pillar-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 1.75rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--card-border-hover, rgba(121, 19, 124, 0.15));
+    }
+
+    .pillar-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-full);
+      background: var(--card-accent-glow, var(--primary-glow));
+      color: var(--card-accent, var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .pillar-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--card-accent, var(--primary));
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+
+    .pillar-card p {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      line-height: 1.65;
+      text-align: center !important;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .vision-hero {
+        padding: 2.5rem 1.5rem;
+      }
+      .vision-hero-title {
+        font-size: 1.8rem;
+      }
+      .vision-hero-desc {
+        font-size: 1.05rem;
+        text-align: left !important;
+        text-align-last: left !important;
+      }
+    }
+  </style>
+</head>
+<body data-dept-th="ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา" data-dept-en="Department of Obstetric-Gynecological Nursing">
+  <main class="site-main container">
+    <div id="page-content">
+      
+      <!-- Heading Section (Custom styled txt_head mapped dynamically) -->
+      <div class="txt_head" style="width: 100%;">วิสัยทัศน์ / พันธกิจ</div>
+
+      <!-- Vision & Mission Hero Block -->
+      <div class="vision-hero">
+        <div class="vision-hero-title">พันธกิจหลักของภาควิชา</div>
+        <p class="vision-hero-desc">
+          ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา มีพันธกิจในการจัดการเรียนการสอนสาขาการพยาบาลสูติศาสตร์-นรีเวชวิทยาแก่นักศึกษาของคณะพยาบาลศาสตร์ ทั้งในระดับปริญญาตรีและระดับบัณฑิตศึกษาให้มีความเป็นเลิศทางวิชาการ และสอดคล้องกับความต้องการของสังคม ส่งเสริมและพัฒนาศักยภาพของอาจารย์ในด้านวิชาการ วิจัย และการแต่งตำราทางการพยาบาลสูติฯ อย่างต่อเนื่อง ให้บริการวิชาการที่มีคุณภาพทางการพยาบาลสูติฯ เพื่อส่งเสริมคุณภาพชีวิตของกลุ่มเป้าหมายและประชากรทั่วไป รวมทั้งส่งเสริมและพัฒนาความสำนึกในการทำนุบำรุงศิลปวัฒนธรรมของไทย
+        </p>
+      </div>
+
+      <!-- Core Pillars Title -->
+      <h2 class="mission-pillars-title">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+        พันธกิจหลัก (Core Missions)
+      </h2>
+
+      <!-- Pillars Bento Grid -->
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card pillar-education">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+          </div>
+          <h3>การศึกษาที่เป็นเลิศ</h3>
+          <p>จัดการศึกษาพยาบาลศาสตร์ระดับป.ตรีและบัณฑิตศึกษา มุ่งสู่ความเป็นเลิศทางวิชาการและตอบสนองความต้องการสังคม</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card pillar-research">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <h3>วิจัยและสร้างตำรา</h3>
+          <p>ส่งเสริมศักยภาพอาจารย์และวิจัยอย่างต่อเนื่อง พร้อมแต่งตำราวิชาการด้านการพยาบาลสูติ-นรีเวชกรรม</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card pillar-service">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3>บริการวิชาการคุณภาพ</h3>
+          <p>ยกระดับและส่งเสริมคุณภาพชีวิตแก่ประชากรกลุ่มเป้าหมายและประชาชนทั่วไปด้วยบริการพยาบาลที่ได้มาตรฐาน</p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card pillar-culture">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8l4 4-4 4M8 12h8"></path></svg>
+          </div>
+          <h3>สืบสานศิลปวัฒนธรรม</h3>
+          <p>ส่งเสริมและพัฒนาความสำนึกรับผิดชอบในการทำนุบำรุงและอนุรักษ์ศิลปวัฒนธรรมไทยที่ทรงคุณค่า</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

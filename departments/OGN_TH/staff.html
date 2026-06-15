@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คณาจารย์และบุคลากร | ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="../../components/layout.js" defer></script>
+  
+  <style>
+    .staff-intro {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--secondary);
+      padding-left: 1rem;
+    }
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .faculty-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .faculty-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .image-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 125%; /* 4:5 aspect ratio */
+      overflow: hidden;
+      background: var(--background);
+      border-bottom: 1px solid var(--surface-border);
+    }
+    .faculty-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition);
+    }
+    .faculty-card:hover .faculty-img {
+      transform: scale(1.03);
+    }
+    .faculty-info {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .faculty-name {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+    .faculty-name a:hover {
+      color: var(--secondary);
+    }
+    .faculty-role {
+      font-size: 0.85rem;
+      color: var(--text-inverse);
+      background: var(--primary);
+      padding: 0.2rem 0.75rem;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .faculty-role.head-role {
+      background: var(--secondary);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    .contact-details {
+      margin-top: auto;
+      font-size: 0.85rem;
+      border-top: 1px solid var(--surface-border);
+      padding-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      color: var(--text-muted);
+    }
+    .contact-details span strong {
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body data-dept-th="ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา" data-dept-en="Department of Obstetric-Gynecological Nursing">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>คณาจารย์และบุคลากร</h1>
+      <p class="staff-intro">คณาจารย์ประจำภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</p>
+      
+      <div class="staff-grid">
+        
+        <!-- 1. รองศาสตราจารย์ ดร.เอมพร รตินธร -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/เอมพร รตินธร.jpg" alt="รองศาสตราจารย์ ดร.เอมพร รตินธร" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630314" target="_blank">รองศาสตราจารย์ ดร.เอมพร รตินธร</a>
+            </h3>
+            <span class="faculty-role head-role">คณบดี</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> ameporn.rat@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1201</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. รองศาสตราจารย์ ดร.ศศิธารา น่วมภา -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/ศศิธารา น่วมภา.png" alt="รองศาสตราจารย์ ดร.ศศิธารา น่วมภา" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630229" target="_blank">รองศาสตราจารย์ ดร.ศศิธารา น่วมภา</a>
+            </h3>
+            <span class="faculty-role head-role">รองคณบดีฝ่ายทรัพยากรบุคคล</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> sasitara.nua@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1805</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. ผู้ช่วยศาสตราจารย์ ดร.พุทธิราภรณ์ หังสวนัส -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/พุทธิราภรณ์ หังสวนัส.jpg" alt="ผู้ช่วยศาสตราจารย์ ดร.พุทธิราภรณ์ หังสวนัส" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630158" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.พุทธิราภรณ์ หังสวนัส</a>
+            </h3>
+            <span class="faculty-role head-role">ผู้ช่วยคณบดีฝ่ายการศึกษา</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> puttiraporn.hun@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1811</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. ผู้ช่วยศาสตราจารย์ ดร.พรนภา ตั้งสุขสันต์ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/พรนภา ตั้งสุขสันต์.png" alt="ผู้ช่วยศาสตราจารย์ ดร.พรนภา ตั้งสุขสันต์" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630140" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.พรนภา ตั้งสุขสันต์</a>
+            </h3>
+            <span class="faculty-role head-role">หัวหน้าภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> pornnapa.tan@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1804</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. อาจารย์ ดร.ทิวาภรณ์ เฉลิมพิชัย -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/ทิวาภรณ์ เฉลิมพิชัย.png" alt="อาจารย์ ดร.ทิวาภรณ์ เฉลิมพิชัย" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630083" target="_blank">อาจารย์ ดร.ทิวาภรณ์ เฉลิมพิชัย</a>
+            </h3>
+            <span class="faculty-role head-role">รองหัวหน้าภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> thiwarphorn.cha@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1810-11</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. รองศาสตราจารย์ ดร.ปิยะนันท์ ลิมเรืองรอง -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/ปิยะนันท์ ลิมเรืองรอง.png" alt="รองศาสตราจารย์ ดร.ปิยะนันท์ ลิมเรืองรอง" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630131" target="_blank">รองศาสตราจารย์ ดร.ปิยะนันท์ ลิมเรืองรอง</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> piyanun.lim@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1808-9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. รองศาสตราจารย์ ดร.นันทนา ธนาโนวรรณ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/นันทนา ธนาโนวรรณ.png" alt="รองศาสตราจารย์ ดร.นันทนา ธนาโนวรรณ" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630097" target="_blank">รองศาสตราจารย์ ดร.นันทนา ธนาโนวรรณ</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> nanthana.tha@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1812-13</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. ผู้ช่วยศาสตราจารย์ ดร.วรรณา พาหุวัฒนกร -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/วรรณา พาหุวัฒนกร.png" alt="ผู้ช่วยศาสตราจารย์ ดร.วรรณา พาหุวัฒนกร" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630201" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.วรรณา พาหุวัฒนกร</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> wanna.pha@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1805</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. ผู้ช่วยศาสตราจารย์ ดร.จรรยา จันทร์ผ่อง -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/จรรยา จันทร์ผ่อง.png" alt="ผู้ช่วยศาสตราจารย์ ดร.จรรยา จันทร์ผ่อง" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630032" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.จรรยา จันทร์ผ่อง</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> janya.che@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1808-9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. ผู้ช่วยศาสตราจารย์ ดร.ฤดี ปุงบางกะดี่ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/ฤดี ปุงบางกะดี่.png" alt="ผู้ช่วยศาสตราจารย์ ดร.ฤดี ปุงบางกะดี่" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630191" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.ฤดี ปุงบางกะดี่</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> rudee.pun@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1810-11</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. ผู้ช่วยศาสตราจารย์ ดร.กุลธิดา ทรัพย์สมบูรณ์ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/กุลธิดา ทรัพย์สมบูรณ์.png" alt="ผู้ช่วยศาสตราจารย์ ดร.กุลธิดา ทรัพย์สมบูรณ์" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630020" target="_blank">ผู้ช่วยศาสตราจารย์ ดร.กุลธิดา ทรัพย์สมบูรณ์</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> kultida.hat@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1808-9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. ผู้ช่วยศาสตราจารย์ จิตต์ระพี บูรณศักดิ์ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/จิตต์ระพี บูรณศักดิ์.png" alt="ผู้ช่วยศาสตราจารย์ จิตต์ระพี บูรณศักดิ์" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630037" target="_blank">ผู้ช่วยศาสตราจารย์ จิตต์ระพี บูรณศักดิ์</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> jitrapee.bur@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1806-7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. ผู้ช่วยศาสตราจารย์ รุ่งทิพย์ กาศักดิ์ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/รุ่งทิพย์ กาศักดิ์.png" alt="ผู้ช่วยศาสตราจารย์ รุ่งทิพย์ กาศักดิ์" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630187" target="_blank">ผู้ช่วยศาสตราจารย์ รุ่งทิพย์ กาศักดิ์</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> rungtip.kas@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. อาจารย์ ดร.รุ่งนภา รู้ชอบ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/รุ่งนภา รู้ชอบ.png" alt="อาจารย์ ดร.รุ่งนภา รู้ชอบ" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630189" target="_blank">อาจารย์ ดร.รุ่งนภา รู้ชอบ</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> rungnapa.ruc@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1806-7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. อาจารย์ ดร.มนัสวีร์ ศรีมรกต -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/มนัสวีร์ ศรีมรกต.png" alt="อาจารย์ ดร.มนัสวีร์ ศรีมรกต" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630168" target="_blank">อาจารย์ ดร.มนัสวีร์ ศรีมรกต</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> manassawee.sri@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1808-9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16. อาจารย์ ดร.อัจฉรีญา จิระมณี -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/อัจฉรีญา จิระมณี.png" alt="อาจารย์ ดร.อัจฉรีญา จิระมณี" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630304" target="_blank">อาจารย์ ดร.อัจฉรีญา จิระมณี</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> atchareya.jir@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17. อาจารย์ ดร.อัญทิตา กาญจนแก้ว -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/อัญทิตา กาญจนแก้ว.png" alt="อาจารย์ ดร.อัญทิตา กาญจนแก้ว" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630306" target="_blank">อาจารย์ ดร.อัญทิตา กาญจนแก้ว</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> antita.kan@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1808-9</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 18. อาจารย์นัยนา แขดกิ่ง -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/นัยนา แขดกิ่ง.png" alt="อาจารย์นัยนา แขดกิ่ง" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630102" target="_blank">อาจารย์นัยนา แขดกิ่ง</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> naiyana.kha@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1806-7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 19. อาจารย์อรวรรณ พินิจเลิศสกุล -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/อรวรรณ พินิจเลิศสกุล.png" alt="อาจารย์อรวรรณ พินิจเลิศสกุล" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630297" target="_blank">อาจารย์อรวรรณ พินิจเลิศสกุล</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> orrawan.pit@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 20. อาจารย์กรกนก เกื้อสกุล -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/กรกนก เกื้อสกุล.png" alt="อาจารย์กรกนก เกื้อสกุล" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630004" target="_blank">อาจารย์กรกนก เกื้อสกุล</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> kornkanok.kue@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 21. อาจารย์เสาวรส แพงทรัพย์ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/เสาวรส แพงทรัพย์.png" alt="อาจารย์เสาวรส แพงทรัพย์" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630285" target="_blank">อาจารย์เสาวรส แพงทรัพย์</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> saowaros.paz@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 22. อาจารย์สุดหทัย ศิริเทพมนตรี -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/สุดหทัย ศิริเทพมนตรี.png" alt="อาจารย์สุดหทัย ศิริเทพมนตรี" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630262" target="_blank">อาจารย์สุดหทัย ศิริเทพมนตรี</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> sudhathai.pra@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1806-7</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 23. อาจารย์กิตตินันท์ เสขะพันธ์ -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/กิตตินันท์ เสขะพันธ์.jpg" alt="อาจารย์กิตตินันท์ เสขะพันธ์" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630453" target="_blank">อาจารย์กิตตินันท์ เสขะพันธ์</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> kittinun.sek@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1805</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 24. อาจารย์พรณิศา แสนบุญส่ง -->
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/พรณิศา แสนบุญส่ง.png" alt="อาจารย์พรณิศา แสนบุญส่ง" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="#" target="_blank">อาจารย์พรณิศา แสนบุญส่ง</a>
+            </h3>
+            <span class="faculty-role">อาจารย์ประจำภาควิชาฯ</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> pornnisa.san@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ -</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

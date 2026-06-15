@@ -3,18 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>หน้าหลัก | ภาควิชาการพยาบาลสาธารณสุขศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
-  
+  <title>ภาควิชาการพยาบาลสาธารณสุขศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
   <link rel="stylesheet" href="style.css">
-  <script src="layout.js" defer></script>
+  <script src="../../components/layout.js" defer></script>
+  
+  <!-- Inline Script for homepage slideshow -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      if (slides.length === 0) return;
+      
+      slides[currentSlide].classList.add('active');
+      
+      setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+      }, 6000);
+    });
+  </script>
+  <style>
+    /* Hero Slider */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 2.5rem;
+      border: 1px solid var(--surface-border);
+    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .slider-container {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
-<body>
+<body data-dept-th="ภาควิชาการพยาบาลสาธารณสุขศาสตร์" data-dept-en="Department of Public Health Nursing">
   <main class="site-main container">
     <div id="page-content">
-      <h1>ภาควิชาการพยาบาลสาธารณสุขศาสตร์</h1>
-      <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
-        ยินดีต้อนรับสู่ภาควิชาการพยาบาลสาธารณสุขศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล หน้านี้ได้รับการอัปเกรดโครงสร้างพื้นฐานให้ทันสมัย เรียบร้อยแล้ว
-      </p>
+      
+      <!-- Homepage Slideshow -->
+      <div class="slider-container">
+        <div class="slide" style="background-image: url('img/slide/01.jpg');"></div>
+        <div class="slide" style="background-image: url('img/slide/02.jpg');"></div>
+        <div class="slide" style="background-image: url('img/slide/03.jpg');"></div>
+      </div>
+
+      <!-- News and PR Row Layout -->
+      <div class="phn-news-row">
+        <!-- สาระน่ารู้ -->
+        <div class="phn-news-col">
+          <h2 class="news-section-title">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            สาระน่ารู้
+          </h2>
+          <div class="quick-link-list">
+            <a href="doc/content/E-book-E Clinic แนวทางการปฏิบัติสำหรับพยาบาลฯ.pdf" target="_blank" class="quick-link-card">
+              <div class="quick-link-icon">PDF</div>
+              <div class="quick-link-text">แนวทางการปฏิบัติสำหรับพยาบาล ในการดูแลผู้ที่มีอาการหลงเหลือหลังติดเชื้อ COVID-19 (Long COVID)</div>
+            </a>
+            <a href="img/content/66/02/สาระหน้ารู้ PM.jpg" target="_blank" class="quick-link-card">
+              <div class="quick-link-icon">IMG</div>
+              <div class="quick-link-text">วิธีสังเกตอาการเบื้องต้นจากการได้รับสัมผัสฝุ่น PM2.5</div>
+            </a>
+            <a href="img/content/66/02/สาระหน้ารู้ บุหรี่.jpg" target="_blank" class="quick-link-card">
+              <div class="quick-link-icon">IMG</div>
+              <div class="quick-link-text">5 วิธีเลิกบุหรี่ อย่างมีประสิทธิภาพ</div>
+            </a>
+          </div>
+        </div>
+        
+        <!-- ประชาสัมพันธ์ -->
+        <div class="phn-news-col">
+          <h2 class="news-section-title">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            ประชาสัมพันธ์
+          </h2>
+          <div class="quick-link-list">
+            <a href="pr/66/02/pr_02_01_1.html" target="_parent" class="quick-link-card">
+              <div class="quick-link-icon">PR</div>
+              <div class="quick-link-text">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล เปิด “คลินิกการพยาบาลและการผดุงครรภ์”</div>
+            </a>
+            <a href="pr/66/02/pr_02_01_2.html" target="_parent" class="quick-link-card">
+              <div class="quick-link-icon">PR</div>
+              <div class="quick-link-text">เวลาทำการคลินิก คลินิกการพยาบาลและการผดุงครรภ์ ณ หอพักคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล บางขุนนนท์</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links & Related Sites -->
+      <div class="phn-sitemap-section" style="margin-top: 4rem; margin-bottom: 2rem;">
+        <h2 class="news-section-title" style="margin-bottom: 2rem;">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+          ลิงก์ด่วนและเว็บไซต์ที่เกี่ยวข้อง
+        </h2>
+        <div class="sitemap-grid">
+          <div class="sitemap-col">
+            <h3>เมนูหลัก</h3>
+            <ul>
+              <li><a href="about.html">เกี่ยวกับภาควิชาฯ</a></li>
+              <li><a href="teaching.html">การศึกษา</a></li>
+              <li><a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" target="_blank">วิจัยและนวัตกรรม</a></li>
+              <li><a href="academic.html">บริการวิชาการ</a></li>
+              <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-col">
+            <h3>ข้อมูลภาควิชา</h3>
+            <ul>
+              <li><a href="#">รู้จักองค์กร</a></li>
+              <li><a href="http://www.lib.ns.mahidol.ac.th/ns-expert/main.nsp" target="_blank">ค้นหาอาจารย์และผู้บริหาร</a></li>
+              <li><a href="#">คลินิกการพยาบาลและการผดุงครรภ์</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-col">
+            <h3>สำหรับบุคลากร</h3>
+            <ul>
+              <li><a href="#">ประกาศ</a></li>
+              <li><a href="https://ns.mahidol.ac.th/nurse_th/download.html" target="_blank">ดาวน์โหลดเอกสาร</a></li>
+              <li><a href="http://nurseintranet.mahidol/doc_n/Phone_book_PDF.pdf" target="_blank">ค้นหาเบอร์ภายใน</a></li>
+              <li><a href="https://mail.mahidol.ac.th/" target="_blank">Mail Mahidol</a></li>
+              <li><a href="https://ns.mahidol.ac.th/nurse_th/logo_nursingmu.html" target="_blank">Download NS logo</a></li>
+              <li><a href="https://e-payroll.mahidol.ac.th/" target="_blank">MU e-payroll</a></li>
+            </ul>
+          </div>
+          <div class="sitemap-col">
+            <h3>เว็บไซต์ภายนอก</h3>
+            <ul>
+              <li><a href="http://nurseintranet.mahidol/" target="_blank">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</a></li>
+              <li><a href="https://mahidol.ac.th/th/" target="_blank">มหาวิทยาลัยมหิดล</a></li>
+              <li><a href="https://www.tnmc.or.th/" target="_blank">สภาการพยาบาล</a></li>
+              <li><a href="https://www.thainurse.org/" target="_blank">สมาคมพยาบาลแห่งประเทศไทยฯ</a></li>
+              <li><a href="https://www.si.mahidol.ac.th/th/" target="_blank">คณะแพทยศาสตร์ศิริราชพยาบาล</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 </body>

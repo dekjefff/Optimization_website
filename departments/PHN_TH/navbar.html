@@ -1,0 +1,83 @@
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">เมนูหลัก</span>
+      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link active">หน้าหลัก</a>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          เกี่ยวกับภาควิชา <span>▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="about.html">เกี่ยวกับภาควิชาฯ</a>
+          <a href="staff.html">บุคลากร</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="teaching.html" class="mobile-nav-link">การศึกษา</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" target="_blank" class="mobile-nav-link">วิจัยและนวัตกรรม</a>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          บริการวิชาการ <span>▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="academic.html">การบริการวิชาการ</a>
+          <a href="COE.html">ศูนย์ความเป็นเลิศทางวิชาการ</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.html" target="_blank" class="mobile-nav-link">การจัดการความรู้</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="contact.html" class="mobile-nav-link">ติดต่อภาควิชา</a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<nav class="navbar" id="mainNav">
+  <div class="navbar-inner">
+    <span class="navbar-brand" style="display:none" id="navBrand">{{DEPT_TH}}</span>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link active">หน้าหลัก</a>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+        <ul class="dropdown">
+          <li><a href="about.html" class="dropdown-item">เกี่ยวกับภาควิชาฯ</a></li>
+          <li><a href="staff.html" class="dropdown-item">บุคลากร</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="teaching.html" class="nav-link">การศึกษา</a>
+      </li>
+      <li class="nav-item">
+        <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" target="_blank" class="nav-link">วิจัยและนวัตกรรม</a>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link">บริการวิชาการ <span class="nav-arrow">▾</span></span>
+        <ul class="dropdown">
+          <li><a href="academic.html" class="dropdown-item">การบริการวิชาการ</a></li>
+          <li><a href="COE.html" class="dropdown-item">ศูนย์ความเป็นเลิศทางวิชาการ</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.html" target="_blank" class="nav-link">การจัดการความรู้</a>
+      </li>
+      <li class="nav-item">
+        <a href="contact.html" class="nav-link">ติดต่อภาควิชา</a>
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
