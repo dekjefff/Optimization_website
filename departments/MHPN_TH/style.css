@@ -143,7 +143,7 @@ a {
 /* Content Area */
 main.site-main {
   flex-grow: 1;
-  padding: 3rem 0;
+  padding: 3rem 24px;
 }
 
 /* Page content wrapper styles */
