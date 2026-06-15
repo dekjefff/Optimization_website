@@ -340,13 +340,13 @@ ul { list-style: none; }
 
 .navbar-brand {
   color: var(--white); /* บังคับให้เป็นสีขาวพรีเมียมตลอดเวลา */
-  font-size: 16px;
+  font-size: 14px;
   font-family: var(--font-base);
   font-weight: 400;               
   letter-spacing: 0.3px;
 
   line-height: 1.2;    /* บีบระยะห่างบรรทัดให้กระชับสมส่วน ไม่ถ่างลอยเคว้งคว้าง */
-  margin-right: 20px;/* เพิ่มระยะห่างขวาให้โลโก้กับเมนูหลัก เพื่อความสมดุลและไม่ติดกันจนเกินไป */
+  margin-right: 10px;/* เพิ่มระยะห่างขวาให้โลโก้กับเมนูหลัก เพื่อความสมดุลและไม่ติดกันจนเกินไป */
 }
 
 /* Desktop Nav */
@@ -372,8 +372,8 @@ ul { list-style: none; }
   height: 100%;
   color: rgba(255,255,255,0.88);
   font-family: var(--font-base);
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   white-space: nowrap;
   transition: all var(--transition-fast);
   position: relative;
@@ -598,7 +598,7 @@ ul { list-style: none; }
   justify-content: space-between;
   padding: var(--space-4) var(--space-5);
   color: rgba(255,255,255,0.85);
-  font-size: 15px;
+  font-size: 14px;
   font-family: var(--font-base);
   cursor: pointer;
   transition: all var(--transition-fast);

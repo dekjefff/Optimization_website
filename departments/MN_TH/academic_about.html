@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
+  <link rel="icon" type="image/png" href="img/logo/favicon.png">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNBKGNVR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -316,7 +317,7 @@ window.addEventListener('scroll',()=>{
   const b=document.getElementById('back-to-top');if(b)b.classList.toggle('visible',window.scrollY>300);
 },{passive:true});
 const animEls=document.querySelectorAll('.animate-in');
-if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';obs.unobserve(e.target);}});},{threshold:0.1});animEls.forEach(el=>{el.style.animationPlayState='paused';obs.observe(el);});}
+if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';obs.unobserve(e.target);}});},{threshold:0});animEls.forEach(el=>{el.style.animationPlayState='paused';obs.observe(el);});}
 </script>
 </body>
 </html>
