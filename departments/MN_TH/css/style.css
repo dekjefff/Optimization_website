@@ -342,7 +342,7 @@ ul { list-style: none; }
   color: var(--white); /* บังคับให้เป็นสีขาวพรีเมียมตลอดเวลา */
   font-size: 14px;
   font-family: var(--font-base);
-  font-weight: 400;               
+  font-weight: 500;               
   letter-spacing: 0.3px;
 
   line-height: 1.2;    /* บีบระยะห่างบรรทัดให้กระชับสมส่วน ไม่ถ่างลอยเคว้งคว้าง */

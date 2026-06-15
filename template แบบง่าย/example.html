@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภาควิชาการพยาบาลอายุรศาสตร์ : คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- ดึงไฟล์ CSS เทมเพลตที่เราแยกออกมาเฉพาะส่วน -->
+  <link rel="stylesheet" href="css/template.css">
+</head>
+<body>
+
+  <!-- ===================================================
+       [TEMPLATE] ปุ่ม BACK TO TOP & MOBILE MENU OVERLAY
+       (ส่วนนี้คงไว้สําหรับควบคุมเมนูเวลาเปิดบนมือถือ)
+       =================================================== -->
+  <button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+  </button>
+
+  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">เมนูหลัก</span>
+      <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item">
+        <a href="index.html" class="mobile-nav-link active">หน้าหลัก</a>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="about.html">ประวัติและความเป็นมา</a>
+          <a href="vision.html">วิสัยทัศน์ / พันธกิจ</a>
+          <a href="award.html">รางวัลแห่งความภาคภูมิใจ</a>
+          <a href="staff.html">บุคลากร</a>
+          <a href="contact.html">ติดต่อเรา</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="teaching.html" class="mobile-nav-link">การเรียนการสอน</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="research.html" class="mobile-nav-link">วิจัยและนวัตกรรม</a>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          ส่งเสริมและบริการวิชาการ <span class="nav-arrow">▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="academic_about.html">ด้านประวัติความเป็นมา</a>
+          <a href="academic.html">โครงการส่งเสริมและบริการวิชาการ</a>
+          <a href="book.html">หนังสือภาควิชาฯ</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="km.html" class="mobile-nav-link">การจัดการความรู้</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="excellence.html" class="mobile-nav-link">ศูนย์ความเป็นเลิศ</a>
+      </div>
+      <div class="mobile-nav-item">
+        <a href="Activities_all.html" class="mobile-nav-link">ข่าวสารภาควิชา</a>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          E-Learning <span class="nav-arrow">▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank">E-Learning คณะพยาบาลศาสตร์</a>
+          <a href="https://mux.mahidol.ac.th/" target="_blank">E-Learning มหาวิทยาลัยมหิดล</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+          หน่วยงานที่เกี่ยวข้อง <span class="nav-arrow">▾</span>
+        </div>
+        <div class="mobile-dropdown">
+          <a href="https://www.tnmc.or.th/" target="_blank">สภาการพยาบาล</a>
+          <a href="https://www.hsri.or.th/researcher" target="_blank">สถาบันวิจัยระบบสาธารณสุข (สวรส.)</a>
+          <a href="https://www.nrct.go.th/" target="_blank">สำนักงานคณะกรรมการวิจัยแห่งชาติ</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+  <!-- โครงสร้างหลักตัวเว็บ (Wrapper) -->
+  <div class="mn-wrapper">
+
+    <!-- ===================================================
+         PART 1: HEADER & TOPBAR (ส่วนหัวเว็บไซต์)
+         =================================================== -->
+    <div class="topbar">
+      <div class="topbar-links">
+        <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+        <span class="sep">|</span>
+        <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+      </div>
+      <div class="topbar-lang">
+        <a href="#" title="English version"><img src="img/template/en.png" alt="EN"> EN</a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="header-logo">
+        <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+      </div>
+      <div class="header-text">
+        <div class="header-dept-name">ภาควิชาการพยาบาลอายุรศาสตร์</div>
+        <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
+        <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
+      </div>
+    </header>
+
+
+    <!-- ===================================================
+         PART 2: NAVBAR & DROPDOWN (แถบเมนูหลัก)
+         =================================================== -->
+    <nav class="navbar" id="mainNav">
+      <div class="navbar-inner">
+        <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลอายุรศาสตร์</span>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link active">หน้าหลัก</a></li>
+          <li class="nav-item">
+            <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+            <ul class="dropdown">
+              <li><a href="about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
+              <li><a href="vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
+              <li><a href="award.html" class="dropdown-item">รางวัลแห่งความภาคภูมิใจ</a></li>
+              <li><a href="staff.html" class="dropdown-item">บุคลากร</a></li>
+              <li><a href="contact.html" class="dropdown-item">ติดต่อเรา</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="teaching.html" class="nav-link">การเรียนการสอน</a></li>
+          <li class="nav-item"><a href="research.html" class="nav-link">วิจัยและนวัตกรรม</a></li>
+          <li class="nav-item">
+            <span class="nav-link">ส่งเสริมฯ <span class="nav-arrow">▾</span></span>
+            <ul class="dropdown">
+              <li><a href="academic_about.html" class="dropdown-item">ด้านประวัติความเป็นมา</a></li>
+              <li><a href="academic.html" class="dropdown-item">โครงการส่งเสริมและบริการวิชาการ</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===================================================
+         PART 3: MAIN CONTENT (เนื้อหาเฉพาะหน้า)
+         พี่เลี้ยงจะทำหน้าใหม่ ให้มาเปลี่ยนเนื้อหาเฉพาะตรงโซนนี้ยาวลงไปครับ
+         =================================================== -->
+    <main class="main-content">
+      <div style="padding:60px 0; text-align:center; font-family:'Sarabun',sans-serif;">
+        <h2>พื้นที่สำหรับใส่เนื้อหาของแต่ละหน้า</h2>
+        <p style="color:#6b7280; margin-top:10px;">พี่สามารถใช้และแก้ไขเทมเพลตได้เลยครับ ลองใช้ AI ช่วยแก้ไขได้ครับ</p>
+      </div>
+    </main>
+
+
+    <!-- ===================================================
+         PART 4: SITE FOOTER (ส่วนท้ายเว็บไซต์)
+         =================================================== -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-info">
+          <h3>ภาควิชาการพยาบาลอายุรศาสตร์</h3>
+          <p>
+            <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+            <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+          </p>
+          <p class="footer-copy">
+            Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+            Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /.mn-wrapper -->
+
+
+  <!-- ===================================================
+       PART 5: SCRIPT (ระบบควบคุมเมนูและปุ่มกด)
+       รวมสคริปต์เปิดปิดเมนูมือถือจากไฟล์ต้นฉบับไว้ให้ทำงานได้ทันที
+       =================================================== -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const navBrand = document.getElementById('navBrand');
+
+    // เปิด-ปิด เมนูมือถือ
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        hamburger.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    if (mobileClose) {
+      mobileClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+
+    // [📌โค้ดสำหรับเปิด-ปิด เมนูย่อยในมือถือ (Dropdown)
+    function toggleMobileDropdown(el) {
+      const dropdown = el.nextElementSibling;
+      if (dropdown) {
+        dropdown.classList.toggle('open');
+        el.classList.toggle('active');
+      }
+    }
+
+    // ตรวจจับการเลื่อนจอ เพื่อโชว์ชื่อภาควิชาขนาดเล็ก และปุ่ม Back to top
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.site-header');
+      if (header && navBrand) {
+        const headerBottom = header.getBoundingClientRect().bottom;
+        navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+      }
+      const backTop = document.getElementById('back-to-top');
+      if (backTop) {
+        backTop.classList.toggle('visible', window.scrollY > 300);
+      }
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
