@@ -1,434 +1,579 @@
-<!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+﻿<!DOCTYPE html>
+<html lang="th">
 
-<!-- Mirrored from ns.mahidol.ac.th/department/fn_dept/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jun 2026 07:11:49 GMT -->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>เกี่ยวกับภาควิชา:  ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
-<!-- InstanceEndEditable -->
-<style type="text/css">
-body {
-	
-	
-	
-	
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	background-color: #083A6F;
-	background-image: url(img/template/bg2.jpg);
-	background-repeat: no-repeat;
-}
-</style>
-<style type="text/css" media="all">
-@import url("css/menu_style.css");
-</style>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-<link href="css/font.css" rel="stylesheet" type="text/css" media="all">
-<style type="text/css">
-body,td,th {
-	font-family: tahoma;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับภาควิชา : ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+    <meta name="description"
+        content="ภาควิชาการพยาบาลรากฐาน คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล — ประวัติความเป็นมาและรายนามหัวหน้าภาควิชา">
 
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KNBKGNVR');</script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
 
+    <style>
+        /* --- Clean Header --- */
+        .clean-header {
+            text-align: center;
+            padding: 40px 20px 25px;
+            margin-bottom: 20px;
+        }
+        .clean-header h1 {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .clean-divider {
+            width: 40px;
+            height: 4px;
+            background: var(--mu-gold);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+        .breadcrumb-clean {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14.5px;
+            color: var(--gray-500);
+        }
+        .breadcrumb-clean a {
+            color: var(--mu-blue);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .breadcrumb-clean a:hover { opacity: 0.7; }
+        .breadcrumb-clean .current { color: var(--gray-800); font-weight: 500; }
 
+        /* --- History Article Layout (Enhanced Original) --- */
+        .history-article-container {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            margin-bottom: 70px;
+            border: 1px solid rgba(0,0,0,0.02);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .history-image-wrapper {
+            margin-bottom: 40px;
+            position: relative;
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+        }
+        .history-image-wrapper img.article-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+        .history-image-wrapper:hover img.article-image {
+            transform: scale(1.05);
+        }
+        
+        .history-content {
+            padding: 0 70px 60px 70px;
+        }
+        .history-content p {
+            font-size: 16.5px;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 24px;
+            text-indent: 3em;
+            text-align: justify;
+        }
+        .history-content p:last-child {
+            margin-bottom: 0;
+        }
+        /* ไฮไลต์ตกแต่งตัวหนังสือ */
+        .highlight-year {
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            background: rgba(25, 68, 136, 0.05);
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin: 0 2px;
+            border-bottom: 2px solid var(--mu-gold);
+        }
+        .text-bold-gold {
+            color: var(--mu-gold-dark);
+            font-weight: 600;
+        }
 
+        /* --- Leaders Section (Enhanced Table) --- */
+        .leaders-section {
+            padding: 0 15px;
+            margin-bottom: 80px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-heading {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .section-heading::before,
+        .section-heading::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--mu-gold));
+            border-radius: 2px;
+        }
+        .section-heading::after {
+            background: linear-gradient(to left, transparent, var(--mu-gold));
+        }
 
+        .leaders-table-container {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(25, 68, 136, 0.08);
+        }
+        .leaders-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .leaders-table th {
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 24px 20px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .leaders-table td {
+            font-size: 17px;
+            color: var(--gray-800);
+            padding: 20px 20px;
+            border-bottom: 1px solid var(--gray-100);
+            line-height: 1.6;
+            transition: all 0.3s ease;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .leaders-table tr:last-child td {
+            border-bottom: none;
+        }
+        .leaders-table tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+        .leaders-table tr:hover td {
+            background-color: #f0f4f8;
+        }
+        
+        /* สไตล์คอลัมน์ปี พ.ศ. */
+        .col-year {
+            font-weight: 600;
+            color: var(--mu-blue);
+            white-space: nowrap;
+        }
+        /* สไตล์ไฮไลต์คนปัจจุบัน */
+        .leaders-table tr.current-row td {
+            background: linear-gradient(to right, rgba(25,68,136,0.03), rgba(234,170,0,0.06), rgba(25,68,136,0.03));
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            border-bottom: none;
+        }
+        .leaders-table tr.current-row .col-year {
+            color: var(--mu-blue-dark);
+        }
+        .status-tag {
+            display: inline-block;
+            font-size: 13px;
+            background: linear-gradient(135deg, var(--mu-gold) 0%, var(--mu-gold-dark) 100%);
+            color: var(--white);
+            padding: 4px 16px;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-weight: 600;
+            vertical-align: middle;
+            box-shadow: 0 4px 10px rgba(234, 170, 0, 0.3);
+            letter-spacing: 0.5px;
+        }
 
-
-
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
- 
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com/"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com/"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&amp;display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- 1. START Styling Cookie | cookieconsent.css -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="cookie/cookieconsent.css"
-    />
-    <!-- 1. END Styling Cookie | cookieconsent.css -->
-
-
-
-
-
-
-
+        /* Responsive */
+        @media (max-width: 768px) {
+            .history-article-container { border-radius: 16px; margin-bottom: 40px; }
+            .history-image-wrapper { height: 250px; margin-bottom: 30px; }
+            .history-content { padding: 0 20px 30px 20px; }
+            .history-content p { font-size: 15.5px; text-indent: 2em; }
+            .section-heading { font-size: 24px; }
+            .section-heading::before, .section-heading::after { width: 30px; }
+            .leaders-table th { padding: 16px 10px; font-size: 15px; }
+            .leaders-table td { padding: 16px 10px; font-size: 15px; }
+            .status-tag { display: block; margin-left: 0; margin-top: 8px; width: fit-content; margin-right: auto; margin-left: auto; }
+        }
+    </style>
 </head>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <body>
 
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-title">เมนูหลัก</span>
+                <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+            </div>
+            <nav class="mobile-nav-list">
+                <div class="mobile-nav-item">
+                    <a href="index.html" class="mobile-nav-link">หน้าหลัก</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link active" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="about.html">ประวัติและความเป็นมา</a>
+                        <a href="vision.html">วิสัยทัศน์ / พันธกิจ</a>
+                        <a href="staff.html">บุคลากร</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="teaching.html" class="mobile-nav-link">การเรียนการสอน</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="mobile-nav-link"
+                        target="_blank" rel="noopener noreferrer">การวิจัย</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+                        การบริการวิชาการ <span>▾</span>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <a href="academic.html">การบริการวิชาการ</a>
+                        <a href="textbook.html">ตำราของภาควิชา</a>
+                        <a href="COE.html">ศูนย์ความเป็นเลิศทางวิชาการ</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="km.html" class="mobile-nav-link">การจัดการความรู้</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="Activities.html" class="mobile-nav-link">ข่าวสาร</a>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="contact.html" class="mobile-nav-link">ติดต่อภาควิชา</a>
+                </div>
+            </nav>
+        </div>
+    </div>
 
+    <div class="mn-wrapper">
 
+        <div class="topbar">
+            <div class="topbar-links">
+                <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+                <span class="sep">|</span>
+                <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+            </div>
+            <div class="topbar-social" style="display:flex; gap:8px; align-items:center;">
+                <a href="facebook.html" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/facebook.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                </div>
+            <div class="topbar-lang">
+                <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent" title="English version">
+                    <img src="img/template/en.png" alt="EN"> EN
+                </a>
+            </div>
+        </div>
 
+        <header class="site-header">
+            <div class="header-logo">
+                <img src="img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+            </div>
+            <div class="header-text">
+                <div class="header-dept-name">ภาควิชาการพยาบาลรากฐาน</div>
+                <div class="header-faculty-name">คณะพยาบาลศาสตร์</div>
+                <div class="header-univ-name">มหาวิทยาลัยมหิดล &nbsp;·&nbsp; Mahidol University</div>
+            </div>
+        </header>
 
+        <nav class="navbar" id="mainNav">
+            <div class="navbar-inner">
+                <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลรากฐาน</span>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link active">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
+                            <li><a href="vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
+                            <li><a href="staff.html" class="dropdown-item">บุคลากร</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="teaching.html" class="nav-link">การเรียนการสอน</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" class="nav-link"
+                            target="_blank" rel="noopener noreferrer">การวิจัย</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">การบริการวิชาการ <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="academic.html" class="dropdown-item">การบริการวิชาการ</a></li>
+                            <li><a href="textbook.html" class="dropdown-item">ตำราของภาควิชา</a></li>
+                            <li><a href="COE.html" class="dropdown-item">ศูนย์ความเป็นเลิศทางวิชาการ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="km.html" class="nav-link">การจัดการความรู้</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Activities.html" class="nav-link">ข่าวสาร</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">ติดต่อภาควิชา</a>
+                    </li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+        <div id="header-placeholder"></div>
 
+        <main class="content-area">
 
+            <div class="clean-header">
+                <h1>ประวัติและความเป็นมา</h1>
+            </div>
 
+            <div class="history-article-container">
+                <div class="history-image-wrapper">
+                    <img src="img/other/ns_building.png" alt="อาคารคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล" class="article-image">
+                </div>
+                
+                <div class="history-content">
+                    <p>
+                        ภาควิชาการพยาบาลรากฐานเป็นภาควิชาหนึ่งในคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มีหน้าที่รับผิดชอบสอนวิชาในระดับปรีคลินิก (Pre-Clinic) เป็นส่วนใหญ่ ในสมัยที่คุณหญิงพิณพากย์พิทยาเภท ดำรงตำแหน่งหัวหน้าพยาบาลและผู้อำนวยการโรงเรียนพยาบาลฯ ในระหว่าง <span class="highlight-year">พ.ศ. 2478 – 2505</span> นั้น ภาควิชาการพยาบาลรากฐานใช้ชื่อว่า <strong>"แผนกครูฝึกหัดพยาบาล"</strong> มีหน้าที่รับผิดชอบสอนและรับภาระดูแลทุกข์สุขของนักเรียนพยาบาลที่เข้าเรียนใหม่ทั้งหมด วิชาต่างๆ ที่สอนมีวิชาในหมวดวิทยาศาสตร์ และวิชาเสริมวิชาชีพหลายวิชา วิชาการพยาบาลโดยตรงมีวิชาศิลปการพยาบาล ซึ่งวิธีสอนในสมัยนั้นจะเป็นการบรรยายให้นักเรียนเข้าใจทฤษฎีก่อน แล้วครูจึงสาธิตวิธีทำการพยาบาลให้ดู หลังจากนั้นนักเรียนจะได้ฝึกหัดทำกับเพื่อนๆ หรือหุ่นในห้องฝึกปฏิบัติการพยาบาลก่อนทุกครั้งแล้วจึงจะทำการพยาบาลกับผู้ป่วยบนหอผู้ป่วย
+                    </p>
+                    <p>
+                        ในปี <span class="highlight-year">พ.ศ. 2499</span> คุณหญิงพิณพากย์พิทยาเภท ได้เปิดรับนักศึกษาในหลักสูตรวิทยาศาสตรบัณฑิต (พยาบาล) ขึ้นอีกหลักสูตรหนึ่ง เพิ่มจากหลักสูตรอนุปริญญาพยาบาลผดุงครรภ์และอนามัย
+                    </p>
+                    <p>
+                        ต่อมาในช่วงระหว่าง <span class="highlight-year">พ.ศ. 2501 – 2515</span> จากเดิมที่โรงเรียนพยาบาลผดุงครรภ์และอนามัยเคยรับนักศึกษาหลักสูตรอนุปริญญาปีละไม่เกิน 100 คน เพิ่มเป็นปีละ 100 คน ตั้งแต่ปี พ.ศ. 2501 และเป็นปีละ 200 คน ในระยะต่อมา โดยรับเข้าศึกษาต้นปีการศึกษา 100 คน และกลางปีการศึกษาอีก 100 คน แผนกครูฝึกหัดพยาบาลจึงต้องการครูและห้องที่ใช้ฝึกปฏิบัติศิลปการพยาบาลเพิ่มขึ้น ซึ่งเดิมเป็นห้องขนาดเล็ก บรรจุเตียงได้เพียง 8 – 9 เตียง จำเป็นต้องเพิ่มจำนวนเตียงเป็น 12 เตียง มีการจัดห้องฝึกปฏิบัติการพยาบาลเลียนแบบหอผู้ป่วยของโรงพยาบาลให้มากที่สุด เพื่อให้นักเรียนเกิดความคุ้นเคยกับสถานที่ก่อนขึ้นปฏิบัติงานจริง แต่เนื่องจากครูประจำวิชามีไม่กี่คน และนักเรียนต้องกระจายขึ้นฝึกปฏิบัติการพยาบาลหลายหอผู้ป่วย ดังนั้นในช่วงฝึกปฏิบัติ จึงจำเป็นต้องอาศัยครูผู้ตรวจการ หัวหน้าและพยาบาลประกาศนียบัตรประจำหอผู้ป่วยต่างๆ ช่วยสอน ให้คำแนะนำและดูแลนักเรียนด้วย
+                    </p>
+                    <p>
+                        ในปี <span class="highlight-year">พ.ศ. 2502</span> ได้ปรับปรุงการบริหารงานแผนกครูฝึกหัดพยาบาลใหม่ โดยแยกเป็น 2 แผนก คือ <strong>แผนกศิลปการพยาบาล</strong> และ <strong>แผนกวิทยาศาสตร์รากฐาน</strong> วิชาต่างๆ ที่ 2 แผนก รับผิดชอบดำเนินการสอนนั้นจะใช้ครูร่วมกัน ต่อมาในปี พ.ศ. 2515 โรงเรียนพยาบาลผดุงครรภ์และอนามัย คณะแพทยศาสตร์ศิริราชพยาบาล ได้รับอนุมัติให้ยกวิทยฐานะเป็นคณะพยาบาลศาสตร์ เมื่อวันที่ 23 มิถุนายน พ.ศ. 2515 และได้รวมแผนกศิลปการพยาบาลกับแผนกวิทยาศาสตร์รากฐาน เป็น <span class="text-bold-gold">"ภาควิชาการพยาบาลรากฐาน"</span>
+                    </p>
+                    <p>
+                        ในปี <span class="highlight-year">พ.ศ. 2519 – 2524</span> คณะพยาบาลศาสตร์ร่วมมือกับกระทรวงสาธารณสุขจัดหลักสูตร การอบรม การบริหารการพยาบาลแก่พยาบาลจากโรงพยาบาลต่างๆ ทั้งในส่วนกลางและส่วนภูมิภาค โดยทางกองการพยาบาล กระทรวงสาธารณสุข เป็นผู้คัดเลือกพยาบาลในระดับบริหารและเตรียมที่จะเป็นผู้บริหารมารับการอบรมที่คณะพยาบาลศาสตร์ ใช้เวลาอบรม 8 – 12 สัปดาห์
+                    </p>
+                    <p>
+                        ต่อมา ในปี <span class="highlight-year">พ.ศ. 2525</span> คณะพยาบาลศาสตร์ได้ปรับปรุงหลักสูตรการอบรม การบริหารการพยาบาล ให้มีความทันสมัยขึ้น เป็นหลักสูตรการพยาบาลเฉพาะทาง สาขาการบริหารการพยาบาล ใช้ระยะเวลาอบรม 12 สัปดาห์ โดยทางคณะเป็นผู้สอบคัดเลือกจากพยาบาลทั่วไปทั้งส่วนกลางและส่วนภูมิภาค รับนักศึกษาประมาณรุ่นละ 20 – 25 คน
+                    </p>
+                    <p>
+                        ในปี <span class="highlight-year">พ.ศ. 2527</span> ได้เปิดหลักสูตรการพยาบาลเฉพาะทางเพิ่มอีก 1 สาขา คือ สาขาการพยาบาลผู้สูงอายุ จำนวนนักศึกษาที่รับในแต่ละรุ่นประมาณ 20 คน หลักสูตรการพยาบาลเฉพาะทางทั้ง 2 สาขา อยู่ในความรับผิดชอบของคณาจารย์ภาควิชาการพยาบาลรากฐาน เป็นหลักสูตรที่เปิดต่อเนื่องทุกปี และต่อมาปี พ.ศ. 2532 ได้เพิ่มระยะเวลาในการอบรมจาก 12 สัปดาห์ เป็น 16 สัปดาห์ และในปี พ.ศ. 2542 เปลี่ยนหน่วยกิต จากจำนวน 13 หน่วยกิต เป็น 15 หน่วยกิต ในปี พ.ศ. 2546 ได้ปรับปรุงหลักสูตรการพยาบาลเฉพาะทางให้สอดคล้องกับแนวทางของสภาการพยาบาล และเพื่อให้งานด้านการพยาบาลผู้สูงอายุครบวงจร ภาควิชาการพยาบาลรากฐาน ได้เล็งเห็นความจำเป็นในด้านการดูแลและส่งเสริมสุขภาพของประชาชนกลุ่มผู้สูงอายุ จึงได้จัดตั้ง <strong>"โครงการส่งเสริมสุขภาพผู้สูงอายุ คณะพยาบาลศาสตร์"</strong> เมื่อวันที่ 23 สิงหาคม 2531 เพื่อให้บริการทางวิชาการแก่สังคมและเป็นแหล่งฝึกปฏิบัติของนักศึกษา
+                    </p>
+                    <p>
+                        ปี <span class="highlight-year">พ.ศ. 2530</span> คณะฯ ได้ตั้งสำนักงานเสริมศึกษาและสาธิตทางการพยาบาล (L.R.C.) เริ่มให้บริการแก่อาจารย์และนักศึกษาทุกหลักสูตรในการยืมสื่อ อุปกรณ์ และใช้ห้องปฏิบัติการ จนกระทั่งในปี พ.ศ. 2535 มติคณะรัฐมนตรีได้กำหนดวิชาชีพการพยาบาลเป็นวิชาชีพสาขาขาดแคลน และให้สถาบันการศึกษาผลิตพยาบาลเพิ่มมากขึ้นอีกหนึ่งเท่า (จาก 200 เป็น 400 คน) จำนวนนักศึกษาที่เพิ่มขึ้นทำให้โอกาสที่นักศึกษาพยาบาลจะมีประสบการณ์จริงในการฝึกปฏิบัติบนหอผู้ป่วยน้อยลง คณะพยาบาลศาสตร์จึงแก้ปัญหาโดยจัดให้มีอาจารย์ประจำสำนักงานเสริมศึกษาฯ เพื่อเป็นแหล่งฝึกปฏิบัติทักษะทางการพยาบาลจำลองสถานการณ์
+                    </p>
+                    <p>
+                        คณะฯ แบ่งส่วนราชการภายในตามคำสั่งลงวันที่ 16 กันยายน 2536 โดยแบ่งบุคลากรเป็น 3 หน่วยงาน (หน่วยสาธิตฯ, หน่วยบริหารการพยาบาล, หน่วยการพยาบาลรากฐาน) ภายใต้การบังคับบัญชาของหัวหน้าภาควิชาฯ ต่อมามีการปรับเปลี่ยนนโยบายหลายครั้งเพื่อบูรณาการการทำงาน จนกระทั่งวันที่ 27 พฤศจิกายน <span class="highlight-year">พ.ศ. 2543</span> ได้ยกเลิกการแบ่งเป็น 3 หน่วยงาน ให้อาจารย์ทุกคนกลับมาทำงานร่วมกันในภาควิชาฯ อย่างเป็นปึกแผ่น และต่อมาในปี <span class="highlight-year">พ.ศ. 2549</span> ได้มีการปรับโครงสร้างภายในและจัดตั้ง "สำนักพัฒนานวัตกรรมเทคโนโลยีทางการศึกษา สารสนเทศ และการสื่อสาร" ขึ้นมารองรับการเปลี่ยนแปลง
+                    </p>
+                    <p>
+                        ในปี <span class="highlight-year">พ.ศ. 2558</span> ภาควิชาฯ มีบุคลากรทั้งหมด 20 คน ประกอบด้วย ข้าราชการ สาย ก. ปฏิบัติงานในตำแหน่งอาจารย์ 1 คน พนักงานมหาวิทยาลัย สายวิชาการ 18 คน และเจ้าหน้าที่สายสนับสนุนวิชาการ 2 คน คณาจารย์ประกอบด้วยรองศาสตราจารย์ 5 คน ผู้ช่วยศาสตราจารย์ 5 คน อาจารย์ 3 คน และผู้ช่วยอาจารย์ 5 คน แยกตามวุฒิการศึกษา จบปริญญาโท 11 คน และปริญญาเอก 7 คน
+                    </p>
+                </div>
+            </div>
 
+            <div class="leaders-section">
+                <h2 class="section-heading">รายนามหัวหน้าภาควิชา</h2>
+                
+                <div class="leaders-table-container">
+                    <table class="leaders-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%;">ลำดับ</th>
+                                <th style="width: 35%;">วาระการดำรงตำแหน่ง</th>
+                                <th style="width: 50%;">รายนามหัวหน้าภาควิชา</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="col-year">พ.ศ. 2502 – 2516</td>
+                                <td>ผู้ช่วยศาสตราจารย์ปราณี ผลพันธิน</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="col-year">พ.ศ. 2516 – 2521</td>
+                                <td>รองศาสตราจารย์ลออ หุตางกูร</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="col-year">พ.ศ. 2521 – 2530</td>
+                                <td>ผู้ช่วยศาสตราจารย์จำเรียง กูรมะสุวรรณ</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="col-year">พ.ศ. 2530 – 2535</td>
+                                <td>ผู้ช่วยศาสตราจารย์ปราณี จาติเกตุ</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="col-year">พ.ศ. 2535 – 2538</td>
+                                <td>ผู้ช่วยศาสตราจารย์จรัสวรรณ เทียนประภาส</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="col-year">พ.ศ. 2538 – 2541</td>
+                                <td>รองศาสตราจารย์สุลักษณ์ มีชูทรัพย์</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="col-year">พ.ศ. 2541 – 2543</td>
+                                <td>ผู้ช่วยศาสตราจารย์ทองกษัตริย์ ศลโกสุม</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="col-year">พ.ศ. 2543 – 2546</td>
+                                <td>รองศาสตราจารย์ฉวีวรรณ โพธิ์ศรี</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td class="col-year">พ.ศ. 2546 – 2549</td>
+                                <td>รองศาสตราจารย์ผจงพร สุภาวิตา</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td class="col-year">พ.ศ. 2549 – 2557</td>
+                                <td>รองศาสตราจารย์จันทนา รณฤทธิวิชัย</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td class="col-year">พ.ศ. 2557 – 2561</td>
+                                <td>ผู้ช่วยศาสตราจารย์ ดร.นารีรัตน์ จิตรมนตรี</td>
+                            </tr>
+                            <tr class="current-row">
+                                <td>12</td>
+                                <td class="col-year">พ.ศ. 2561 - ปัจจุบัน</td>
+                                <td>รองศาสตราจารย์ ดร.วิราพรรณ วิโรจน์รัตน์ <span class="status-tag">ปัจจุบัน</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
+        </main>
 
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h3>ภาควิชาการพยาบาลรากฐาน</h3>
+                    <p>
+                        <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+                        <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+                    </p>
+                    <p class="footer-copy">
+                        Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+                        Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+                    </p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="facebook.html" title="Facebook"
+                            style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <img src="img/template/facebook.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                        </a>
+                        </div>
+                    <a href="https://ns.mahidol.ac.th/department/mn - Eng/index.html" target="_parent"
+                        style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+                        <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
+                        English
+                    </a>
+                </div>
+            </div>
+        </footer>
 
+    </div>
 
-
-
-
- <!-- 2. START Reconsent Button -->
-    <button
-      data-cc="c-settings"
-      class="cc-link cc-reconsent"
-      style="
-        position: fixed;
-        left: 8px;
-        bottom: 16px;
-        border-radius: 999px;
-        padding: 4px;
-        display: grid;
-        place-items: center;
-        width: 40px;
-        height: 40px;
-        box-shadow: rgb(204 204 204 / 50%) 0 2px
-          10px 0;
-        border: 1px solid #e8e8e8;
-        background-color: #fff;
-      "
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#0a0b0c"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path
-          d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"
-        ></path>
-        <path d="M8.5 8.5v.01"></path>
-        <path d="M16 15.5v.01"></path>
-        <path d="M12 12v.01"></path>
-        <path d="M11 17v.01"></path>
-        <path d="M7 14v.01"></path>
-      </svg>
-    </button>
-    <!-- 2. END Reconsent Button -->
-
-    <!-- 3. START CookieConsent | cookieconsent.js -->
-    <script
-      defer
-      src="cookie/cookieconsent.js"
-    ></script>
-    <!-- 3. END CookieConsent | cookieconsent.js -->
-
-    <!-- 4. START CookieConsent Customization  | consent-init.js -->
-    <script
-      defer
-      src="cookie/consent-init.js"
-    ></script>
-    <!-- 4. END CookieConsent Customization  | consent-init.js -->
-
-    <!-- 5. START Script Blocking Analytics -->
-    <script
-      async
-      type="text/plain"
-      data-cookiecategory="analytics"
-      src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"
-    ></script>
-
-    <script
-      type="text/plain"
-      data-cookiecategory="analytics"
-    >
-      console.log('"analytics" category accepted');
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-C0VND84NRS');
+    <script async type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"></script>
+    <script type="text/plain" data-cookiecategory="analytics">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C0VND84NRS');
     </script>
-    <!-- 5. END Script Blocking Analytics -->
 
-    <!-- 6. START Script Blocking Marketing -->
-    <script
-      type="text/plain"
-      data-cookiecategory="marketing"
-    >
-      console.log('"ads" category accepted');
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        function toggleMobileDropdown(el) {
+            const dropdown = el.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+                el.classList.toggle('active');
+            }
+        }
+
+        const navBrand = document.getElementById('navBrand');
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (header) {
+                const headerBottom = header.getBoundingClientRect().bottom;
+                if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+            }
+        }, { passive: true });
     </script>
-    <!-- 6. END Script Blocking Marketing -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
-    <tr>
-      <td height="40" bgcolor="#ffffff"><table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="38%" valign="middle" class="txt_font"><a href="https://ns.mahidol.ac.th/" target="_blank" class="hyperlink">&nbsp;&nbsp;คณะพยาบาลศาสตร์</a> |<a href="https://mahidol.ac.th/" target="_blank" class="hyperlink"> มหาวิทยาลัยมหิดล </a>| <a href="http://ns.mahidol.ac.th/Department/FN_dept_en/index.html" target="_blank"><img src="img/template/en.png" width="28" height="20"></a></td>
-          <td width="43%">&nbsp;</td>
-          <td width="19%"><table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
-            <tr>
-              <td align="center"><a href="facebook.html" target="_parent"><img src="img/template/fb.png" width="35" height="35"></a></td>
-              <td align="center"><img src="img/template/twitter.png" width="35" height="35"></td>
-              <td align="center"><img src="img/template/ig.png" alt="" width="35" height="35"></td>
-            </tr>
-          </table></td>
-        </tr>
-      </table></td>
-    </tr>
-    <tr>
-      <td><img src="img/template/head.jpg" width="1020" height="168"></td>
-    </tr>
-    <tr>
-      <td bgcolor="#085180"><div class="menu">
-		<ul>
-        
-        
-        
-        
-        
-        <li><a href="index-2.html" target="_parent" class="head_menu">หน้าหลัก</a> </li>
-        
-        
-        
-        
-        
-		  <li><a href="#" class="head_menu">เกี่ยวกับภาควิชา</a>
-				<ul>
-					<li><a href="about.html" class="line_menublue">เกี่ยวกับภาควิชา</a></li>
-					<li><a href="vision.html" target="_parent" class="line_menublue">วิสัยทัศน์ / พันธกิจ
-</a></li>
-					<li><a href="staff.html" target="_parent" class="line_menublue">บุคลากร</a></li>
-			   
-               
-              		
-			  </ul> 
-          </li>
-          
-          
-          
-		  <li><a href="teaching.html" target="_parent" class="head_menu">การเรียนการสอน</a> </li>
-            
-          
-          
-          
-		  <li><a href="https://sites.google.com/view/nsresearchpaper/year_1?authuser=0" target="_blank"  class="head_menu">การวิจัย</a> </li>
-          
-          
-          
-          
-          
-          <li><a href="#" class="head_menu">การบริการวิชาการ</a>
-				<ul>
-					<li><a href="academic.html" target="_parent" class="line_menublue">การบริการวิชาการ</a></li>
-					<li><a href="textbook.html" target="_parent" class="line_menublue">ตำราของภาควิชา
-</a></li>
-					<li><a href="COE.html" target="_parent" class="line_menublue">ศูนย์ความเป็นเลิศทางวิชาการ</a></li>
-			   
-               
-              		
-			  </ul> 
-          </li>
-                
-                
-                
-                
-                
-                  
-                  
-                  <li><a href="km.html" target="_blank" class="head_menu">การจัดการความรู้</a> </li>
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                   <li><a href="#" class="head_menu">ข่าวสาร</a>
-				<ul>
-					<li><a href="Activities.html" target="_blank" class="line_menublue">ประมวลภาพกิจกรรม</a></li>
-					
-                    
-                    
-                    <!--<li><a href="../congrat.html" target="_parent" class="line_menublue">ข่าวแสดงความยินดี
-</a></li> -->
-					
-			   
-               
-              		
-			  </ul> 
-          </li>
-          
-          
-          
-          
-          
-                  
-                  
-                  
-                  
-                  
-              
-              
-                
-                     <li><a href="contact.html" class="head_menu">ติดต่อภาควิชา</a></li></ul></div></td>
-    </tr>
-    <tr>
-      <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="10" cellpadding="0">
-        <tr>
-          <td><!-- InstanceBeginEditable name="body" -->
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">เกี่ยวกับภาควิชา</td>
-              </tr>
-              <tr>
-                <td height="363"><p class="txt_blue"><strong>ประวัติความเป็นมา</strong></p>
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="27%" align="center"><img src="img/other/pic_about.jpg" width="215" height="195"></td>
-                      <td width="73%" valign="top"><p class="txt_font" style="text-indent: 2.5em;">ภาควิชาการพยาบาลรากฐานเป็นภาควิชาหนึ่งในคณะพยาบาลศาสตร์  มหาวิทยาลัยมหิดล   มีหน้าที่รับผิดชอบสอนวิชาในระดับปรีคลินิก (Pre-Clinic) เป็นส่วนใหญ่ ในสมัยที่คุณหญิงพิณพากย์พิทยาเภท ดำรงตำแหน่งหัวหน้าพยาบาลและผู้อำนวยการโรงเรียนพยาบาลฯ ในระหว่าง พ.ศ.2478–2505 นั้น  ภาควิชาการพยาบาลรากฐานใช้ชื่อว่าแผนกครูฝึกหัดพยาบาล มีหน้าที่รับผิดชอบสอนและรับภาระดูแลทุกข์สุขของนักเรียนพยาบาลที่เข้าเรียนใหม่ทั้งหมด วิชาต่างๆ ที่สอนมีวิชาในหมวดวิทยาศาสตร์  และวิชาเสริมวิชาชีพหลายวิชา วิชาการพยาบาลโดยตรงมีวิชาศิลปการพยาบาล ซึ่งวิธีสอนในสมัยนั้นจะเป็นการบรรยายให้นักเรียนเข้าใจทฤษฎีก่อน แล้วครูจึงสาธิตวิธีทำการพยาบาลให้ดู หลังจากนั้นนักเรียนจะได้ฝึกหัดทำกับเพื่อนๆ หรือหุ่นในห้องฝึกปฏิบัติการพยาบาลก่อนทุกครั้งแล้วจึงจะทำการพยาบาลกับผู้ป่วยบนหอผู้ป่วย</p>
-                      <p class="txt_font" style="text-indent: 2.5em;">ในปี พ.ศ.2499 คุณหญิงพิณพากย์พิทยาเภท ได้เปิดรับนักศึกษาในหลักสูตรวิทยาศาสตรบัณฑิต (พยาบาล) ขึ้นอีกหลักสูตรหนึ่ง เพิ่มจากหลักสูตรอนุปริญญาพยาบาลผดุงครรภ์และอนามัย</p></td>
-                    </tr>
-                  </table>
-                  
-                  <p style="text-indent: 2.5em;" class="txt_font">ต่อมาในช่วงระหว่าง พ.ศ.2501 – 2515 จากเดิมที่โรงเรียนพยาบาลผดุงครรภ์และอนามัยเคยรับนักศึกษาหลักสูตรอนุปริญญาปีละไม่เกิน 100 คน  เพิ่มเป็นปีละ 100 คน  ตั้งแต่ปี พ.ศ. 2501  และเป็นปีละ 200 คน  ในระยะต่อมา  โดยรับเข้าศึกษาต้นปีการศึกษา 100 คน และกลางปีการศึกษาอีก 100 คน  แผนกครูฝึกหัดพยาบาลจึงต้องการครูและห้องที่ใช้ฝึกปฏิบัติศิลปการพยาบาลเพิ่มขึ้น ซึ่งเดิมเป็นห้องขนาดเล็ก บรรจุเตียงได้เพียง  8 – 9 เตียง  จำเป็นต้องเพิ่มจำนวนเตียงเป็น 12 เตียง มีการจัดห้องฝึกปฏิบัติการพยาบาลเลียนแบบหอผู้ป่วยของโรงพยาบาลให้มากที่สุด เพื่อให้นักเรียนเกิดความคุ้นเคยกับสถานที่ก่อนขึ้นปฏิบัติงานจริง แต่เนื่องจากครูประจำวิชามีไม่กี่คน และนักเรียนต้องกระจายขึ้นฝึกปฏิบัติการพยาบาลหลายหอผู้ป่วย ดังนั้นในช่วงฝึกปฏิบัติ  จึงจำเป็นต้องอาศัยครูผู้ตรวจการ หัวหน้าและพยาบาลประกาศนียบัตรประจำหอผู้ป่วยต่างๆช่วยสอน ให้คำแนะนำและดูแลนักเรียนด้วย</p>
-                  <p style="text-indent: 2.5em;" class="txt_font">ในปี พ.ศ.2502 ได้ปรับปรุงการบริหารงานแผนกครูฝึกหัดพยาบาลใหม่   โดยแยกเป็น 2 แผนก  คือ  แผนกศิลปการพยาบาล   และแผนกวิทยาศาสตร์รากฐาน  วิชาต่างๆ ที่ 2 แผนก รับผิดชอบดำเนินการสอนนั้นจะใช้ครูร่วมกัน ต่อมาในปี พ.ศ.2515 โรงเรียนพยาบาลผดุงครรภ์และอนามัย คณะแพทยศาสตร์ศิริราชพยาบาล ได้รับอนุมัติให้ยกวิทยฐานะเป็นคณะพยาบาลศาสตร์ เมื่อวันที่ 23 มิถุนายน พ.ศ.2515 และได้รวมแผนกศิลปการพยาบาลกับแผนกวิทยาศาสตร์รากฐาน เป็นภาควิชาการพยาบาลรากฐาน </p>
-                  <p style="text-indent: 2.5em;" class="txt_font">ในปี พ.ศ. 2519 – 2524 คณะพยาบาลศาสตร์ร่วมมือกับกระทรวงสาธารณสุขจัดหลักสูตร การอบรม การบริหารการพยาบาลแก่พยาบาลจากโรงพยาบาลต่างๆ  ทั้งในส่วนกลางและส่วนภูมิภาค  โดยทางกองการพยาบาล  กระทรวงสาธารณสุข  เป็นผู้คัดเลือกพยาบาลในระดับบริหารและเตรียมที่จะเป็นผู้บริหารมารับการอบรมที่คณะพยาบาลศาสตร์  ใช้เวลาอบรม 8 – 12 สัปดาห์</p>
-                  <p style="text-indent: 2.5em;" class="txt_font">ต่อมา  ในปี พ.ศ. 2525  คณะพยาบาลศาสตร์ได้ปรับปรุงหลักสูตรการอบรม  การบริหารการพยาบาล  ให้มีความทันสมัยขึ้น เป็นหลักสูตรการพยาบาลเฉพาะทาง  สาขาการบริหารการพยาบาล  ใช้ระยะเวลาอบรม 12 สัปดาห์    โดยทางคณะเป็นผู้สอบคัดเลือกจากพยาบาลทั่วไปทั้งส่วนกลางและส่วนภูมิภาค   รับนักศึกษาประมาณรุ่นละ 20 – 25 คน</p>
-                  <p style="text-indent: 2.5em;" class="txt_font">ในปี พ.ศ. 2527  ได้เปิดหลักสูตรการพยาบาลเฉพาะทางเพิ่มอีก 1 สาขา  คือ  สาขาการพยาบาลผู้สูงอายุ จำนวนนักศึกษาที่รับในแต่ละรุ่นประมาณ 20 คน หลักสูตรการพยาบาลเฉพาะทางทั้ง 2 สาขา อยู่ในความรับผิดชอบของคณาจารย์ภาควิชาการพยาบาลรากฐาน เป็นหลักสูตรที่เปิดต่อเนื่องทุกปี และต่อมาปี พ.ศ.2532 ได้เพิ่มระยะเวลาในการอบรมจาก 12 สัปดาห์ เป็น 16 สัปดาห์ และในปี พ.ศ.2542 เปลี่ยนหน่วยกิต จากจำนวน 13 หน่วยกิต เป็น 15 หน่วยกิต ในปี พ.ศ.2546 ได้ปรับปรุงหลักสูตรการพยาบาลเฉพาะทางให้สอดคล้องกับแนวทางของสภาการพยาบาล โดยมีวิชาแกน 2 หน่วยกิต วิชาเฉพาะสาขา 13 หน่วยกิต และเพื่อให้งานด้านการพยาบาลผู้สูงอายุครบวงจร ภาควิชาการพยาบาลรากฐาน ได้เล็งเห็นความจำเป็นและความต้องการในด้านการดูแลและส่งเสริมสุขภาพของประชาชนกลุ่มผู้สูงอายุ จึงได้จัดตั้งโครงการส่งเสริมสุขภาพผู้สูงอายุ คณะพยาบาลศาสตร์ เมื่อวันที่ 23 สิงหาคม 2531  เพื่อให้บริการทางวิชาการแก่สังคมและเป็นแหล่งฝึกปฏิบัติของนักศึกษาหลักสูตรการพยาบาลเฉพาะทาง สาขาการพยาบาลผู้สูงอายุ</p>
-                  <p style="text-indent: 2.5em;" class="txt_font">ปี พ.ศ. 2530 คณะฯ ได้แบ่งส่วนราชการเป็นการภายใน โดยตั้งสำนักงานเสริมศึกษาและสาธิตทางการพยาบาล (Learning Resource Center = L.R.C.)  มีผู้แทนคณาจารย์จากภาควิชาต่างๆ เป็นคณะทำงาน สำนักงานฯ เริ่มให้บริการแก่อาจารย์และนักศึกษาทุกหลักสูตรในการยืมสื่อ อุปกรณ์ และใช้ห้องปฏิบัติการเพื่อการเรียนการสอน จนกระทั่งในปี พ.ศ. 2535 มติคณะรัฐมนตรีได้กำหนดวิชาชีพการพยาบาลเป็นวิชาชีพสาขาขาดแคลนสาขาหนึ่ง และให้สถาบันการศึกษาพยาบาลผลิตพยาบาลเพิ่มมากขึ้นอีกหนึ่งเท่าของที่มีอยู่ (จาก 200 เป็น 400 คน)  จำนวนนักศึกษาที่เพิ่มขึ้น  ทำให้เกิดปัญหาและอุปสรรคในการจัดประสบการณ์การเรียนการสอน   พบว่าโอกาสที่นักศึกษาพยาบาลจะมีประสบการณ์จริงในการฝึกปฏิบัติทักษะทางการพยาบาลบนหอผู้ป่วยน้อยลง คณะพยาบาลศาสตร์จึงพิจารณาหาแนวทางในการแก้ไขปัญหาการจัดการศึกษาภาคปฏิบัติดังกล่าว  ให้มีอาจารย์และเจ้าหน้าที่ประจำสำนักงานเสริมศึกษาและสาธิตทางการพยาบาล เพื่อรวบรวมสื่อและอุปกรณ์การพยาบาล ผลิตคู่มือเพื่อประกอบการเรียนการสอน เป็นแหล่งฝึกปฏิบัติทักษะทางการพยาบาล อาทิ การพยาบาลพื้นฐาน การประเมินภาวะสุขภาพ โดยจัดจำลอง สถานการณ์บางอย่างที่จำเป็นให้นักศึกษาได้ทดลองฝึกปฏิบัติ ทั้งนี้เพื่อป้องกันความผิดพลาดที่อาจจะเกิดขึ้นเมื่อนักศึกษาขึ้นไปปฏิบัติการพยาบาลกับผู้ป่วย  คณะฯจึงแบ่งส่วนราชการเป็นการภายใน ตามคำสั่งคณะพยาบาลศาสตร์ที่ 80/2536  ลงวันที่ 16 กันยายน 2536  โดยแบ่งส่วนราชการของภาควิชาการพยาบาลรากฐานมาเป็นอาจารย์ประจำสำนักงานเสริมศึกษาและสาธิตทางการพยาบาล  จำนวน 10 คน โดยมีอาจารย์เสาวนีย์  สุบรรณรัตน์ เป็นหัวหน้าหน่วย  หน่วยวิชาบริหารการพยาบาล จำนวน 6 คน โดยมี รองศาสตราจารย์สุลักษณ์  มีชูทรัพย์ เป็นหัวหน้าหน่วย และหน่วยการพยาบาลรากฐาน 12 คน โดยมี ผู้ช่วยศาสตราจารย์จรัสวรรณ เทียนประภาส เป็นหัวหน้าหน่วย สายการบังคับบัญชาทั้ง 3 หน่วยงาน อยู่ภายใต้การบังคับบัญชาของหัวหน้าภาควิชาการพยาบาลรากฐาน ขณะนั้นคือ ผู้ช่วยศาสตราจารย์จรัสวรรณ  เทียนประภาส แต่การบริหารงานภายในหน่วยขึ้นกับหัวหน้าหน่วย  ต่อมาในปี พ.ศ.2538 รองศาสตราจารย์สุลักษณ์  มีชูทรัพย์ ดำรงตำแหน่งหัวหน้าภาควิชาการพยาบาลรากฐาน และเป็นหัวหน้าหน่วยบริหารการพยาบาลด้วย ได้มีนโยบายที่จะรวมการบริหารงานทั้ง 3 หน่วยงานเข้าด้วยกัน โดยให้อาจารย์ทั้ง 3 หน่วยงาน เป็นคณะกรรมการภาควิชาฯ ร่วมกัน แต่ยังคงแยกการจัดการเรียนการสอนเฉพาะหน่วยอยู่  ต่อมาในปีพ.ศ.2542 ผู้ช่วยศาสตราจารย์ทองกษัตริย์  ศลโกสุม ดำรงตำแหน่งหัวหน้าภาควิชาการพยาบาลรากฐาน ได้มีนโยบายกระจายภาระงานให้อาจารย์ทุกคนในภาควิชาฯ และร่วมกันสอนในวิชาที่ภาควิชาฯ รับผิดชอบบางวิชาร่วมกัน  ในปี พ.ศ.2543 รองศาสตราจารย์ฉวีวรรณ  โพธิ์ศรี ดำรงตำแหน่งหัวหน้าภาควิชาการพยาบาลรากฐาน ได้ดำเนินนโยบายให้อาจารย์ทั้ง 3 หน่วยงาน ปฏิบัติงานร่วมกัน กระจายภาระงานการเรียนการสอนและการเป็นกรรมการชุดต่างๆ ของภาควิชาฯ ต่อมาคณะพยาบาลศาสตร์ มีคำสั่งที่ 191/2543  ลงวันที่ 27 พฤศจิกายน 2543 ยกเลิกคำสั่งคณะพยาบาลศาสตร์ ที่ 80/2536   ลงวันที่ 4 สิงหาคม 2536 นั่นคือภาควิชาฯ ไม่แยกเป็น 3 หน่วยงาน อาจารย์ทุกคนกลับมาทำงานร่วมกันในภาควิชาฯ และขอตัวรองศาสตราจารย์ผจงพร  สุภาวิตา  อาจารย์ในภาควิชาฯ ไปปฏิบัติงานตำแหน่งหัวหน้าสำนักงานเสริมศึกษาและสาธิตทางการพยาบาล  ต่อมาในปี พ.ศ. 2546 รองศาสตราจารย์ผจงพร  สุภาวิตาได้รับเลือกตั้งให้ดำรงตำแหน่งหัวหน้าภาควิชาการพยาบาลรากฐาน  จึงได้รักษาการตำแหน่งหัวหน้าสำนักงานเสริมศึกษาและสาธิตทางการพยาบาลอีก 1 ตำแหน่ง  ในปี พ.ศ. 2549 ได้มีการปรับโครงสร้างภายในคณะพยาบาลศาสตร์และจัดตั้ง สำนักพัฒนานวัตกรรมเทคโนโลยีทางการศึกษา สารสนเทศ และการสื่อสาร โดยแต่งตั้งให้อาจารย์วรวรรณ  วาณิชย์เจริญชัย  อาจารย์ในภาควิชาฯเป็นหัวหน้าสำนักงานฯ</p>
-                  <p style="text-indent: 2.5em;" class="txt_font">ในปี พ.ศ.2558 ภาควิชาฯ มีบุคลากรทั้งหมด 20 คน ประกอบด้วย ข้าราชการ สาย ก. ปฏิบัติงานในตำแหน่งอาจารย์ 1 คน พนักงานมหาวิทยาลัย สายวิชาการ 18 คน และเจ้าหน้าที่สายสนับสนุนวิชาการ ปฏิบัติงานในตำแหน่งเจ้าหน้าที่บริหารงานทั่วไป 2 คน คณาจารย์ของภาควิชาฯ เมื่อจำแนกตามตำแหน่งทางวิชาการ ประกอบด้วยรองศาสตราจารย์ 5 คน ผู้ช่วยศาสตราจารย์ 5 คน อาจารย์ 3 คน และผู้ช่วยอาจารย์ 5 คน แยกตามวุฒิการศึกษา จบปริญญาโท 11 คน ปริญญาเอก 7 คน</p>
-                  <p align="center"><img src="img/other/building2.jpg" width="980" height="250" style="border: 1px solid #ccc; padding: 5px;"></p>
-                  <p><strong class="txt_blue">รายนามหัวหน้าภาควิชา</strong></p>
-                  <table width="80%" border="0" align="center" cellpadding="10" cellspacing="0">
-                    <tr class="line_body">
-                      <td width="11%" align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td width="23%" valign="middle" class="line_body">พ.ศ. 2502 – 2516                       
-                      <td width="66%" valign="middle" class="line_body"> ผู้ช่วยศาสตราจารย์ปราณี	ผลพันธิน                     
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2516 – 2521</td>
-                      <td valign="middle" class="line_body">รองศาสตราจารย์ลออ	หุตางกูร</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2521 – 2530</td>
-                      <td valign="middle" class="line_body">ผู้ช่วยศาสตราจารย์จำเรียง	กูรมะสุวรรณ</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2530 – 2535</td>
-                      <td valign="middle" class="line_body">ผู้ช่วยศาสตราจารย์ปราณี 	จาติเกตุ</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2535 – 2538</td>
-                      <td valign="middle" class="line_body">ผู้ช่วยศาสตราจารย์จรัสวรรณ   	เทียนประภาส</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2538 – 2541</td>
-                      <td valign="middle" class="line_body">รองศาสตราจารย์สุลักษณ์	มีชูทรัพย์</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2541 – 2543</td>
-                      <td valign="middle" class="line_body">	ผู้ช่วยศาสตราจารย์ทองกษัตริย์ 	ศลโกสุม</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2543 – 2546</td>
-                      <td valign="middle" class="line_body">	รองศาสตราจารย์ฉวีวรรณ	โพธิ์ศรี</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2546 – 2549 </td>
-                      <td valign="middle" class="line_body">รองศาสตราจารย์ผจงพร    	สุภาวิตา</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2549 – 2557</td>
-                      <td valign="middle" class="line_body">รองศาสตราจารย์จันทนา   	รณฤทธิวิชัย</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2557 – 2561</td>
-                      <td valign="middle" class="line_body">	ผู้ช่วยศาสตราจารย์ ดร.นารีรัตน์	จิตรมนตรี</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body">พ.ศ. 2561 - ปัจจุบัน</td>
-                      <td valign="middle" class="line_body">รองศาสตราจารย์ ดร.วิราพรรณ	วิโรจน์รัตน์ </td>
-                    </tr>
-                  </table>
-                  <p align="center"><img src="img/other/ns_building.png" width="970" height="339" style="border: 1px solid #ccc; padding: 5px;"></p>
-                <p>&nbsp;</p></td>
-              </tr>
-            </table>
-          <!-- InstanceEndEditable --></td>
-        </tr>
-      </table></td>
-    </tr>
-    <tr>
-      <td height="75" align="center" bgcolor="#0f8dc8"><p><span class="txt_remark">Copyright © 2026 </span><a href="https://ns.mahidol.ac.th/" target="_blank" class="hyperlink_y">Faculty of Nursing,</a> <a href="https://mahidol.ac.th/" target="_blank" class="hyperlink_y">Mahidol University. </a><span class="txt_remark">All rights reserved. <br>
-      Webmaster: </span><a href="mailto:nswww@mahidol.ac.th" target="_blank" class="hyperlink_y">nswww@mahidol.ac.th</a></p></td>
-    </tr>
-  </table>
 
 </body>
-<!-- InstanceEnd -->
-<!-- Mirrored from ns.mahidol.ac.th/department/fn_dept/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jun 2026 07:11:50 GMT -->
 </html>
