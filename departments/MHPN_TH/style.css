@@ -1,4 +1,4 @@
-/* Liquid Glass & Organic Green Theme - MHPN Department */
+﻿/* Liquid Glass & Organic Green Theme - MHPN Department */
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap');
 
 :root {
@@ -250,4 +250,10 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 }
 .navbar.scrolled .navbar-brand {
   color: #344e41 !important;
+}
+
+/* Adjust Header Text Size */
+.header-dept-name { 
+  font-size: clamp(16px, 2vw, 22px) !important; 
+  font-weight: 500 !important;
 }
