@@ -222,17 +222,18 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 
 /* Liquid Glass Header */
 .site-header, .navbar {
-  background: rgba(244, 246, 244, 0.75) !important;
+  background: rgba(88, 129, 87, 0.85) !important;
   backdrop-filter: blur(16px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .site-header::after { display: none !important; }
-.header-dept-name { color: var(--text-main) !important; text-shadow: none !important; }
-.header-faculty-name, .header-univ-name { color: var(--text-muted) !important; }
-.nav-link { color: var(--text-main) !important; font-weight: 600 !important; }
-.nav-link:hover, .nav-link.active { color: var(--primary) !important; background: rgba(88, 129, 87, 0.1) !important; }
-.nav-link::after { background: var(--primary) !important; }
-.navbar-brand { color: var(--primary) !important; text-shadow: none !important; }
+.header-dept-name { color: #ffffff !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important; }
+.header-faculty-name, .header-univ-name { color: rgba(255,255,255,0.85) !important; }
+.nav-link { color: #ffffff !important; font-weight: 500 !important; }
+.nav-link:hover, .nav-link.active { color: #ffffff !important; background: rgba(255, 255, 255, 0.15) !important; }
+.nav-link::after { background: #ffffff !important; }
+.navbar-brand { color: #ffffff !important; text-shadow: 0 1px 4px rgba(0,0,0,0.2) !important; }
 .bento-card { background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--surface-border); box-shadow: var(--shadow-glass); }
 .slider-container { background: #ffffff; border: 1px solid var(--surface-border); box-shadow: var(--shadow-glass); }
+
