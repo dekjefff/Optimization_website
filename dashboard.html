@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบตรวจสอบภาควิชา (Mockup) | คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;600&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --surface: rgba(17, 24, 39, 0.7);
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --mahidol-blue: #002d62;
+      --mahidol-gold: #f1a400;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Prompt', sans-serif;
+      background: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, hsla(220, 80%, 15%, 0.5) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(160, 80%, 12%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, hsla(340, 80%, 10%, 0.3) 0px, transparent 50%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-container {
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--mahidol-blue), #004b93);
+      border: 2px solid var(--mahidol-gold);
+      color: #fff;
+      font-family: 'Mitr', sans-serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(241, 164, 0, 0.3);
+    }
+
+    h1 {
+      font-family: 'Mitr', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      background: linear-gradient(to right, #ffffff, #93c5fd, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      flex-grow: 1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--surface);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--accent, #64748b);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 40px var(--accent-glow, rgba(99, 102, 241, 0.15));
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .dept-code {
+      font-family: 'Mitr', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-bg);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-md);
+      letter-spacing: 0.5px;
+    }
+
+    .dept-status {
+      font-size: 0.75rem;
+      color: #34d399;
+      background: rgba(52, 211, 153, 0.1);
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .dept-status::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #34d399;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dept-title {
+      font-family: 'Mitr', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .dept-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1.2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #0b0f19;
+      font-weight: 600;
+      transform: translateX(4px);
+    }
+
+    .btn.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    .arrow-icon {
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+
+    .btn:hover .arrow-icon {
+      transform: translateX(4px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Accent colors definition */
+    .dept-fn {
+      --accent: #3b82f6;
+      --accent-bg: rgba(59, 130, 246, 0.1);
+      --accent-glow: rgba(59, 130, 246, 0.25);
+    }
+    .dept-mhpn {
+      --accent: #10b981;
+      --accent-bg: rgba(16, 185, 129, 0.1);
+      --accent-glow: rgba(16, 185, 129, 0.25);
+    }
+    .dept-mn {
+      --accent: #0ea5e9;
+      --accent-bg: rgba(14, 165, 233, 0.1);
+      --accent-glow: rgba(14, 165, 233, 0.25);
+    }
+    .dept-ogn {
+      --accent: #ec4899;
+      --accent-bg: rgba(236, 72, 153, 0.1);
+      --accent-glow: rgba(236, 72, 153, 0.25);
+    }
+    .dept-phn {
+      --accent: #f43f5e;
+      --accent-bg: rgba(244, 63, 94, 0.1);
+      --accent-glow: rgba(244, 63, 94, 0.25);
+    }
+    .dept-pn {
+      --accent: #8b5cf6;
+      --accent-bg: rgba(139, 92, 246, 0.1);
+      --accent-glow: rgba(139, 92, 246, 0.25);
+    }
+    .dept-sn {
+      --accent: #eab308;
+      --accent-bg: rgba(234, 179, 8, 0.1);
+      --accent-glow: rgba(234, 179, 8, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <div class="logo-badge">NS</div>
+    </div>
+    <h1>ระบบตรวจสอบความคืบหน้าภาควิชา (Mockup)</h1>
+    <p class="subtitle">คลิกเข้าชมโครงสร้างการรีแฟกเตอร์ของแต่ละภาควิชาที่ปรับโฉมใหม่แบบ Bento/Responsive</p>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      
+      <!-- FN_TH -->
+      <div class="card dept-fn">
+        <div class="card-header">
+          <span class="dept-code">FN</span>
+          <span class="dept-status">Ready</span>
+        </div>
+        <h2 class="dept-title">การพยาบาลพื้นฐาน</h2>
+        <p class="dept-desc">Fundamentals of Nursing</p>
+        <div class="btn-group">
+          <a href="departments/FN_TH/index.html" class="btn"><span>หน้าแรก</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/FN_TH/staff.html" class="btn"><span>คณาจารย์ / บุคลากร</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/FN_TH/teaching.html" class="btn"><span>วิชาการ / วิจัย</span> <span class="arrow-icon">→</span></a>
+        </div>
+      </div>
+
+      <!-- MHPN_TH -->
+      <div class="card dept-mhpn">
+        <div class="card-header">
+          <span class="dept-code">MHPN</span>
+          <span class="dept-status">Ready</span>
+        </div>
+        <h2 class="dept-title">สุขภาพจิต & จิตเวชศาสตร์</h2>
+        <p class="dept-desc">Mental Health & Psychiatric Nursing</p>
+        <div class="btn-group">
+          <a href="departments/MHPN_TH/index.html" class="btn"><span>หน้าแรก</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/MHPN_TH/staff.html" class="btn"><span>คณาจารย์ / บุคลากร</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/MHPN_TH/academic.html" class="btn"><span>วิชาการ / วิจัย</span> <span class="arrow-icon">→</span></a>
+        </div>
+      </div>
+
+      <!-- MN_TH -->
+      <div class="card dept-mn">
+        <div class="card-header">
+          <span class="dept-code">MN</span>
+          <span class="dept-status">Ready</span>
+        </div>
+        <h2 class="dept-title">การพยาบาลอายุรศาสตร์</h2>
+        <p class="dept-desc">Medical Nursing</p>
+        <div class="btn-group">
+          <a href="departments/MN_TH/index.html" class="btn"><span>หน้าแรก</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/MN_TH/staff.html" class="btn"><span>คณาจารย์ / บุคลากร</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/MN_TH/academic.html" class="btn"><span>วิชาการ / วิจัย</span> <span class="arrow-icon">→</span></a>
+        </div>
+      </div>
+
+      <!-- OGN_TH -->
+      <div class="card dept-ogn">
+        <div class="card-header">
+          <span class="dept-code">OGN</span>
+          <span class="dept-status">Ready</span>
+        </div>
+        <h2 class="dept-title">สูติศาสตร์-นรีเวชวิทยา</h2>
+        <p class="dept-desc">Obstetric & Gynecological Nursing</p>
+        <div class="btn-group">
+          <a href="departments/OGN_TH/index.html" class="btn"><span>หน้าแรก</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/OGN_TH/staff.html" class="btn"><span>คณาจารย์ / บุคลากร</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/OGN_TH/academic.html" class="btn"><span>วิชาการ / วิจัย</span> <span class="arrow-icon">→</span></a>
+        </div>
+      </div>
+
+      <!-- PHN_TH -->
+      <div class="card dept-phn">
+        <div class="card-header">
+          <span class="dept-code">PHN</span>
+          <span class="dept-status">Ready</span>
+        </div>
+        <h2 class="dept-title">การพยาบาลสาธารณสุขศาสตร์</h2>
+        <p class="dept-desc">Public Health Nursing</p>
+        <div class="btn-group">
+          <a href="departments/PHN_TH/index.html" class="btn"><span>หน้าแรก</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/PHN_TH/staff.html" class="btn"><span>คณาจารย์ / บุคลากร</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/PHN_TH/academic.html" class="btn"><span>วิชาการ / วิจัย</span> <span class="arrow-icon">→</span></a>
+        </div>
+      </div>
+
+      <!-- PN_TH -->
+      <div class="card dept-pn">
+        <div class="card-header">
+          <span class="dept-code">PN</span>
+          <span class="dept-status">Ready</span>
+        </div>
+        <h2 class="dept-title">การพยาบาลกุมารเวชศาสตร์</h2>
+        <p class="dept-desc">Pediatric Nursing</p>
+        <div class="btn-group">
+          <a href="departments/PN_TH/index.html" class="btn"><span>หน้าแรก</span> <span class="arrow-icon">→</span></a>
+          <a href="#" class="btn disabled"><span>ไม่มีหน้าบุคลากรแยก</span> <span class="arrow-icon">✕</span></a>
+          <a href="#" class="btn disabled"><span>ไม่มีหน้าวิชาการแยก</span> <span class="arrow-icon">✕</span></a>
+        </div>
+      </div>
+
+      <!-- SN_TH -->
+      <div class="card dept-sn">
+        <div class="card-header">
+          <span class="dept-code">SN</span>
+          <span class="dept-status">Ready</span>
+        </div>
+        <h2 class="dept-title">การพยาบาลศัลยศาสตร์</h2>
+        <p class="dept-desc">Surgical Nursing</p>
+        <div class="btn-group">
+          <a href="departments/SN_TH/index.html" class="btn"><span>หน้าแรก</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/SN_TH/staff.html" class="btn"><span>คณาจารย์ / บุคลากร</span> <span class="arrow-icon">→</span></a>
+          <a href="departments/SN_TH/academic.html" class="btn"><span>วิชาการ / วิจัย</span> <span class="arrow-icon">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล © 2026 (ระบบตรวจสอบความคืบหน้าภายในโครงการรีแฟกเตอร์)</p>
+  </footer>
+
+</body>
+</html>
