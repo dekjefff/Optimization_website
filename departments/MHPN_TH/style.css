@@ -1,4 +1,4 @@
-﻿/* Liquid Glass & Organic Green Theme - MHPN Department */
+/* Liquid Glass & Organic Green Theme - MHPN Department */
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap');
 
 :root {
@@ -76,8 +76,6 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 /* Liquid Glass Classes */
 .liquid-glass {
   background: var(--surface);
-  /* backdrop-filter: blur(8px); removed for perf */
-  -webkit-/* backdrop-filter: blur(8px); removed for perf */
   border: 1px solid var(--surface-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-glass);
