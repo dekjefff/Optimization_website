@@ -273,3 +273,54 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 
 
 
+
+/* High-End Table Styling for teaching.html */
+.courses-list table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 2.5rem;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.courses-list th {
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 500;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 3px solid var(--secondary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+.courses-list td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.courses-list tr:last-child td {
+  border-bottom: none;
+}
+
+.courses-list tbody tr {
+  transition: background 0.2s ease;
+}
+
+.courses-list tbody tr:hover {
+  background: rgba(45, 74, 62, 0.03);
+}
+
+/* For the sub-headers inside the table */
+.courses-list tr.table-section-header td {
+  background: rgba(184, 157, 112, 0.1); /* Sand/Bronze tint */
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(184, 157, 112, 0.2);
+}
