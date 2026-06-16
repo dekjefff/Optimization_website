@@ -9,7 +9,7 @@
   --primary: #588157; /* Deep sage */
   --primary-light: #a3b18a; /* Soft sage */
   --primary-glow: rgba(163, 177, 138, 0.3);
-  --secondary: #dad7cd; /* Warm earthy accent */
+  --secondary: hsl(42, 85%, 52%); /* Gold Accent */ /* Warm earthy accent */
   
   --background: #f4f6f4; /* Very soft green-tinted white */
   --surface: rgba(255, 255, 255, 0.6); /* Glass surface */
@@ -237,3 +237,19 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 .bento-card { background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--surface-border); box-shadow: var(--shadow-glass); }
 .slider-container { background: #ffffff; border: 1px solid var(--surface-border); box-shadow: var(--shadow-glass); }
 
+
+/* Scrolled Navbar Text Colors (White Glass Background) */
+.navbar.scrolled .nav-link {
+  color: #344e41 !important; /* Forest green */
+  text-shadow: none !important;
+}
+.navbar.scrolled .nav-link:hover, .navbar.scrolled .nav-link.active {
+  color: #588157 !important;
+  background: rgba(88, 129, 87, 0.1) !important;
+}
+.navbar.scrolled .nav-link::after {
+  background: #588157 !important;
+}
+.navbar.scrolled .navbar-brand {
+  color: #344e41 !important;
+}
