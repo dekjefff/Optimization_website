@@ -3,15 +3,17 @@
    ======================================================== */
 
 :root {
-  /* Mahidol Brand Colors Token */
-  --mu-blue: #194488;
-  --mu-blue-dark: #102d5e;
-  --mu-blue-mid: #1d549c;
-  --mu-blue-light: #2a6fc4;
-  --mu-blue-pale: #e8f0fb;
-  --mu-gold: #C8A84B;
-  --mu-gold-light: #e8ca70;
-  --mu-gold-dark: #a08030;
+  /* Mahidol Brand Colors Token -> Customized for SN_TH Navy & Sky Blue Theme */
+  --mu-blue: #194488;       /* Navy Blue */
+  --mu-blue-dark: #102d5e;  /* Deep Navy */
+  --mu-blue-mid: #1d549c;   /* Slate Blue */
+  --mu-blue-light: #2a6fc4; /* Medium Royal Blue */
+  --mu-blue-pale: #e0f2fe;  /* Soft Ice Blue / Sky Blue Pale */
+  --mu-gold: #0284c7;       /* Vibrant Sky Blue Accent */
+  --mu-gold-light: #38bdf8; /* Light Sky Blue Accent */
+  --mu-gold-dark: #0369a1;  /* Dark Sky Blue Accent */
+
+
 
   /* Neutrals */
   --white: #ffffff;
@@ -72,7 +74,8 @@ ul { list-style: none; }
 .topbar-links a { color: rgba(255,255,255,0.75); font-size: 13px; padding: 4px 8px; border-radius: var(--radius-sm); }
 .topbar-links a:hover { color: var(--mu-gold-light); }
 .topbar-links .sep { color: rgba(255,255,255,0.25); font-size: 12px; margin: 0 4px; }
-.topbar-social { display: flex; align-items: center; gap: 8px; }
+/* ลบหรือคอมเม้นต์บรรทัด display: none; ด้านล่างออกเมื่อต้องการเปิดใช้งาน Facebook Link */
+.topbar-social { display: none; align-items: center; gap: 8px; }
 .topbar-social a { display: flex; align-items: center; justify-content: center;}
 .topbar-social a:hover { transform: translateY(-1px); cursor: pointer; }
 .topbar-social img { width: 30px; height: 30px; }
@@ -169,7 +172,9 @@ ul { list-style: none; }
 .footer-info a:hover { color: var(--mu-gold); }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); }
 .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
-.footer-social { display: flex; gap: 10px; }
+/* ลบหรือคอมเม้นต์บรรทัด display: none; ด้านล่างออกเมื่อต้องการเปิดใช้งาน Facebook Link */
+.footer-social { display: none; gap: 10px; } /* <<<< ตรงนี้ */
+
 .footer-social a { display: flex; align-items: center; justify-content: center;}
 .footer-social a:hover { transform: translateY(-2px); }
 .footer-social img { width: 30px; height: 30px; object-fit: cover; }
@@ -195,7 +200,8 @@ ul { list-style: none; }
   .navbar-brand { color: white; font-size: 16px; font-weight: 600; display: block; }
   .footer-inner { grid-template-columns: 1fr; gap: 24px; }
   .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
-  .footer-social { display: flex; gap: 10px; }
+  /* ลบหรือคอมเม้นต์บรรทัด display: none; ด้านล่างออกเมื่อต้องการเปิดใช้งาน Facebook Link */
+  .footer-social { display: none; gap: 10px; }
   .footer-social a { display: flex; align-items: center; justify-content: center;}
   .footer-social a:hover { transform: translateY(-2px); }
   .footer-social img { width: 30px; height: 30px; object-fit: cover; }
@@ -228,7 +234,8 @@ ul { list-style: none; }
 table { width: 100% !important; border-collapse: collapse; background: white; }
 td { vertical-align: top; }
 img { max-width: 100%; height: auto; border-radius: 8px; }
-.bg_blue { background: var(--mu-blue); color: white; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+.bg_blue { background: var(--mu-blue); color: white; }
+tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
 
 /* =========================================
    STAFF GRID LAYOUT
@@ -280,8 +287,13 @@ img { max-width: 100%; height: auto; border-radius: 8px; }
     color: var(--mu-blue-light);
 }
 .staff-position {
-    font-size: 14px;
+    display: inline-block;
+    font-size: 13px;
     color: var(--mu-gold-dark);
+    background: var(--mu-blue-pale);
+    border: 1px solid var(--mu-gold-light);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
     font-weight: 600;
     margin-bottom: 16px;
     line-height: 1.4;
@@ -302,3 +314,92 @@ img { max-width: 100%; height: auto; border-radius: 8px; }
 .staff-contact a:hover {
     text-decoration: underline;
 }
+
+/* =========================================
+   PAGE TITLE BANNER
+   ========================================= */
+.page-title-banner {
+  background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 3px solid var(--mu-gold);
+  margin-bottom: 24px;
+  border-radius: var(--radius-md);
+}
+
+.page-title-text {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 700;
+  color: white;
+  font-family: var(--font-base);
+}
+
+.page-title-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(200,168,75,0.4);
+}
+
+.page-title-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+}
+
+/* =========================================
+   BREADCRUMB
+   ========================================= */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+  font-size: 13px;
+  color: var(--gray-400);
+  font-family: var(--font-base);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb a:hover { color: var(--mu-blue); }
+
+.breadcrumb .sep {
+  color: var(--gray-200);
+  font-size: 12px;
+}
+
+.breadcrumb .current {
+  color: var(--mu-blue);
+  font-weight: 500;
+}
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+.animate-in {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
