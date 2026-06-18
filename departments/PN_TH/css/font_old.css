@@ -1,0 +1,318 @@
+@charset "utf-8";
+@import url("main_menu.css");
+
+
+
+
+
+
+
+
+.txt_font {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+}
+.txt_s_font {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #666666;
+	text-decoration: none;
+}
+
+
+.txt_red {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+.txt_red_b {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #FF0000;
+	text-decoration: none;
+}
+
+.txt_head {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #68108c;
+	text-decoration: none;
+	
+}
+
+.txt_remark {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.txt_purple {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #de5c8e;
+	text-decoration: none;
+}
+.txt_white {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.txt_name_bold{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	color: #813040;
+	font-weight:bold;
+	text-decoration: none;
+}
+
+
+a.m_menu:link 		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+
+a.m_menu:visited		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+
+a.m_menu:active		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#0D304D;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+
+a.m_menu:hover		{
+	font-family:  Tahoma, Geneva, sans-serif;
+	color:#0D304D;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+
+
+
+
+
+.txt_font_button{
+	font-family: tahoma, kodchiangUPC;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+
+
+
+
+a.hyperlink:link 		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #0675AA;
+	text-decoration: none;
+	font-size: 16px;
+
+}
+
+a.hyperlink:visited		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #0675AA;
+	text-decoration: none;
+	font-size: 16px;
+
+}
+
+a.hyperlink:active		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#E54414;
+	text-decoration: none;
+	font-size: 16px;
+
+}
+
+a.hyperlink:hover		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#E54414;
+	text-decoration: none;
+	font-size: 16px;
+
+}
+.border {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #FFFFFF;
+}
+
+
+.txt_blue_reg{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	color: #185A8F;
+	text-decoration: none;
+}
+
+
+
+
+
+.head_blue{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 18px;
+	color: #185A8F;
+	text-decoration: none;
+	font-weight:bold;
+	
+}
+
+
+
+
+
+
+a.hyperlink_y:link 		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #FFFF33;
+	text-decoration: none;
+	font-size: 12px;
+
+}
+
+a.hyperlink_y:visited		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #FFFF33;
+	text-decoration: none;
+	font-size: 12px;
+
+}
+
+a.hyperlink_y:active		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#8EFDFD;
+	text-decoration: none;
+	font-size: 12px;
+
+}
+
+a.hyperlink_y:hover		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#8EFDFD;
+	text-decoration: none;
+	font-size: 12px;
+
+}
+
+
+.txt_yellow {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: #FFFF00;
+	text-decoration: none;
+}
+.txt_footer {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+
+
+a.hyperlink_menu:link 		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+
+}
+
+a.hyperlink_menu:visited		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+
+}
+
+a.hyperlink_menu:active		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#FFFF00;
+	text-decoration: none;
+	font-size: 14px;
+
+}
+
+a.hyperlink_menu:hover		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#FFFF00;
+	text-decoration: none;
+	font-size: 14px;
+
+}
+
+
+
+
+a.hyperlink_subject:link 		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #0675AA;
+	font-size: 14px;
+	text-decoration:underine;
+
+}
+
+a.hyperlink_subject:visited		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #0675AA;
+	font-size: 14px;
+	text-decoration:underine;
+
+}
+
+a.hyperlink_subject:active		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#E54414;
+	font-size: 14px;
+	text-decoration:underine;
+
+}
+
+a.hyperlink_subject:hover		{
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#E54414;
+	font-size: 14px;
+	text-decoration:underine;
+
+}
+
+
+
+body {
+background-attachment: fixed;
+} 

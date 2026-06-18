@@ -1,204 +1,537 @@
 ﻿<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
-  
-  <link rel="stylesheet" href="../../components/style.css">
-  <script src="../../components/layout.js" defer></script>
-  
-  <!-- Inline Script for homepage slideshow -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      let currentSlide = 0;
-      const slides = document.querySelectorAll('.slide');
-      if (slides.length === 0) return;
-      
-      // Show first slide
-      slides[currentSlide].classList.add('active');
-      
-      setInterval(() => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-      }, 6000);
-    });
-  </script>
-  <style>
-    /* Hero Slider */
-    .slider-container {
-      position: relative;
-      width: 100%;
-      height: 450px;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 2.5rem;
-      border: 1px solid var(--surface-border);
-    }
-    .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1.2s ease-in-out;
-      background-size: cover;
-      background-position: center;
-    }
-    .slide.active {
-      opacity: 1;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาควิชาการพยาบาลกุมารเวชศาสตร์ : คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+    <meta name="description" content="ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล">
 
-    /* Soft UI Bento Grid */
-    .home-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-      margin-bottom: 4rem;
-    }
-    
-    .bento-card {
-      background: var(--surface);
-      border: 1px solid var(--surface-border);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
-      transition: transform var(--transition), box-shadow var(--transition);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-decoration: none !important;
-    }
-    
-    .bento-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    /* Icon Badges */
-    .icon-badge {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-    
-    .icon-badge svg {
-      width: 28px;
-      height: 28px;
-    }
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="cookie/cookieconsent.css">
 
-    /* Card Themes */
-    .theme-blue .icon-badge {
-      background-color: #eef5ff;
-      color: #3b82f6;
-    }
-    .theme-blue .subtitle { color: #3b82f6; }
+    <style>
+        /* --- Clean Header --- */
+        .clean-header {
+            text-align: center;
+            padding: 40px 20px 25px;
+            margin-bottom: 20px;
+        }
+        .clean-header h1 {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
 
-    .theme-green .icon-badge {
-      background-color: #ecfdf5;
-      color: #10b981;
-    }
-    .theme-green .subtitle { color: #10b981; }
-
-    .theme-orange .icon-badge {
-      background-color: #fff7ed;
-      color: #f97316;
-    }
-    .theme-orange .subtitle { color: #f97316; }
-
-    /* Typography inside card */
-    .bento-card h3 {
-      color: var(--text-main);
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.3rem;
-      margin-bottom: 0.25rem;
-      margin-top: 0;
-    }
-    
-    .bento-card .subtitle {
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 1.25rem;
-      font-family: var(--font-body);
-    }
-    
-    .bento-card p {
-      color: var(--text-muted);
-      line-height: 1.7;
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 768px) {
-      .slider-container {
-        height: 250px;
-      }
-      .home-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+        /* --- Content Layout --- */
+        .academic-wrapper {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .intro-text-elegant {
+            font-size: 17.5px;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 50px;
+            text-align: justify;
+        }
+        .intro-text-elegant p {
+            text-indent: 2.5em;
+            margin: 0;
+        }
+    </style>
 </head>
-<body data-dept-en="Pediatric Nursing Department" data-dept-th="ภาควิชาการพยาบาลกุมารเวชศาสตร์">
-  <main class="site-main container">
+<body>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-title">เมนูหลัก</span>
+                <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+            </div>
+            <nav class="mobile-nav-list">
+                <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">หน้าหลัก</a></div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
+                    <div class="mobile-dropdown">
+                        <a href="about.html">ประวัติและความเป็นมา</a>
+                        <a href="vision.html">วิสัยทัศน์ / พันธกิจ</a>
+                        <a href="head_dept.html">ทำเนียบหัวหน้าภาค</a>
+                        <a href="staff.html">บุคลากร</a>
+                        <a href="contact.html">ติดต่อเรา</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">การศึกษา <span>▾</span></div>
+                    <div class="mobile-dropdown">
+                        <a href="degree_bns.html">หลักสูตรปริญญาตรี</a>
+                        <a href="degree_mns.html">หลักสูตรปริญญาโท</a>
+                        <a href="degree_phd.html">หลักสูตรปริญญาเอก</a>
+                        <a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank">หลักสูตรการพยาบาลเฉพาะทาง</a>
+                        <a href="scholarship.html">ทุนการศึกษา</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item"><a href="research.html" class="mobile-nav-link">วิจัยและนวัตกรรม</a></div>
+                <div class="mobile-nav-item"><a href="academic.html" class="mobile-nav-link">บริการวิชาการ</a></div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">การจัดการความรู้ <span>▾</span></div>
+                    <div class="mobile-dropdown">
+                        <a href="km/km_PN.html">การจัดการความรู้ของภาควิชาฯ</a>
+                        <a href="km.html">วัตถุประสงค์ / กระบวนการ</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item"><a href="activities.html" class="mobile-nav-link">ภาพกิจกรรม</a></div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="mn-wrapper">
+
+        <div class="topbar">
+            <div class="topbar-links">
+                <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+                <span class="sep">|</span>
+                <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+            </div>
+            <div class="topbar-social" style="display:flex; gap:8px; align-items:center;">
+                <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+            </div>
+            <div class="topbar-lang">
+                <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" title="English version">
+                    <img src="img/template/en.png" alt="EN"> EN
+                </a>
+            </div>
+        </div>
+
+        <header class="site-header">
+            <div class="header-logo">
+                <img src="../FN_TH/img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
+            </div>
+            <div class="header-text" style="text-align: right;">
+                <div class="header-dept-name">ภาควิชาการพยาบาลกุมารเวชศาสตร์</div>
+                <div class="header-faculty-name" style="font-size: 16px;">Department of Pediatric Nursing</div>
+            </div>
+        </header>
+
+        <nav class="navbar" id="mainNav">
+            <div class="navbar-inner">
+                <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลกุมารเวชศาสตร์</span>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">หน้าหลัก</a></li>
+                    <li class="nav-item">
+                        <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
+                            <li><a href="vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
+                            <li><a href="head_dept.html" class="dropdown-item">ทำเนียบหัวหน้าภาค</a></li>
+                            <li><a href="staff.html" class="dropdown-item">บุคลากร</a></li>
+                            <li><a href="contact.html" class="dropdown-item">ติดต่อเรา</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">การศึกษา <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="degree_bns.html" class="dropdown-item">หลักสูตรปริญญาตรี</a></li>
+                            <li><a href="degree_mns.html" class="dropdown-item">หลักสูตรปริญญาโท</a></li>
+                            <li><a href="degree_phd.html" class="dropdown-item">หลักสูตรปริญญาเอก</a></li>
+                            <li><a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank" class="dropdown-item">หลักสูตรการพยาบาลเฉพาะทาง</a></li>
+                            <li><a href="scholarship.html" class="dropdown-item">ทุนการศึกษา</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="research.html" class="nav-link">วิจัยและนวัตกรรม</a></li>
+                    <li class="nav-item"><a href="academic.html" class="nav-link">บริการวิชาการ</a></li>
+                    <li class="nav-item">
+                        <span class="nav-link">การจัดการความรู้ <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="km/km_PN.html" class="dropdown-item">การจัดการความรู้ของภาควิชาฯ</a></li>
+                            <li><a href="km.html" class="dropdown-item">วัตถุประสงค์ / กระบวนการ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="activities.html" class="nav-link">ภาพกิจกรรม</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+        <div id="header-placeholder"></div>
+
+        <main class="content-area legacy-content">
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="33" align="center" valign="top" class="txt_head">
+                
+                
+                
+ 
+                
+<!-- Slide Show -->           
+                 
+          <!--                    
+                   <script language="JavaScript1.2" type="text/javascript">
+
+var slideshow_width='988px' // ? WIDTH ??
+var slideshow_height='325px' // ? HEIGHT ??
+var pause=6000 // ??? (1000 = 1 ??)
+var slidebgcolor="white"
+
+var dropimages=new Array()
+//  URL ??? SLIDE ????? 
+
+
+
+
+
+dropimages[0]="img/slide/2567/ff.jpg"
+dropimages[1]="img/slide/2567/ff2.jpg"
+dropimages[2]="img/slide/2567/mupsf.jpg"
+dropimages[3]="img/slide/2565/05.jpg"
+dropimages[4]="img/slide/04.jpg"
+dropimages[5]="img/slide/03.jpg"
+
+
+					   
+					   
+
+
+
+
+
+
+
+
+var droplinks=new Array()
+//  LINK ???? ? LINK ? URL ???
+
+droplinks[0]="#" 
+droplinks[1]="#" 
+droplinks[2]="#" 
+droplinks[3]="#" 
+droplinks[4]="#" 
+droplinks[5]="#" 
+
+
+
+
+              
+              
+              
+              
+
+
+////NO need to edit beyond here/////////////
+
+var preloadedimages=new Array()
+for (p=0;p<dropimages.length;p++){
+preloadedimages[p]=new Image()
+preloadedimages[p].src=dropimages[p]
+}
+
+var ie4=document.all
+var dom=document.getElementById
+
+if (ie4||dom)
+document.write('<div style="position:relative;width:'+slideshow_width+';height:'+slideshow_height+';overflow:hidden"><div id="canvas0" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';background-color:'+slidebgcolor+';left:-'+slideshow_width+'"></div><div id="canvas1" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';background-color:'+slidebgcolor+';left:-'+slideshow_width+'"></div></div>')
+else
+document.write('<a href="javascript:rotatelink()"><img name="defaultslide" src="'+dropimages[0]+'" border=0></a>')
+
+var curpos=parseInt(slideshow_width)*(-1)
+var degree=10
+var curcanvas="canvas0"
+var curimageindex=linkindex=0
+var nextimageindex=1
+
+
+function movepic(){
+if (curpos<0){
+curpos=Math.min(curpos+degree,0)
+tempobj.style.left=curpos+"px"
+}
+else{
+
+clearInterval(dropslide)
+nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
+tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+var slideimage='<img src="'+dropimages[curimageindex]+'" border=0>'
+tempobj.innerHTML=(droplinks[curimageindex]!="")? '<a href="'+droplinks[curimageindex]+'">'+slideimage+'</a>' : slideimage
+nextimageindex=(nextimageindex<dropimages.length-1)? nextimageindex+1 : 0
+setTimeout("rotateimage()",pause)
+}
+}
+
+function rotateimage(){
+if (ie4||dom){
+resetit(curcanvas)
+var crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.style.zIndex++
+var temp='setInterval("movepic()",50)'
+dropslide=eval(temp)
+curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
+}
+else
+document.images.defaultslide.src=dropimages[curimageindex]
+linkindex=curimageindex
+curimageindex=(curimageindex<dropimages.length-1)? curimageindex+1 : 0
+}
+
+function rotatelink(){
+if (droplinks[linkindex]!="")
+window.location=droplinks[linkindex]
+}
+
+function resetit(what){
+curpos=parseInt(slideshow_width)*(-1)
+var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
+crossobj.style.left=curpos+"px"
+}
+
+function startit(){
+var crossobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.innerHTML='<a href="'+droplinks[curimageindex]+'"><img src="'+dropimages[curimageindex]+'" border=0></a>'
+rotateimage()
+}
+
+if (ie4||dom)
+window.onload=startit
+else
+setInterval("rotateimage()",pause)
+
+</script>
     
-    <!-- Image Slider -->
-    <div class="slider-container">
-      <div class="slide" style="background-image: url('img/slide/slide1.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide2.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide3.jpg');"></div>
-      <div class="slide" style="background-image: url('img/slide/slide4.jpg');"></div>
-    </div>
     
-    <!-- Intro Content without white box background -->
-    <div style="margin-bottom: 3rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
-      <h1 style="font-family: var(--font-heading); color: var(--primary); font-size: 2.2rem; margin-bottom: 1rem;">ภาควิชาการพยาบาลกุมารเวชศาสตร์</h1>
-      <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">ยินดีต้อนรับสู่ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ภาควิชาของเรามุ่งเน้นการผลิตบัณฑิตพยาบาลที่มีความเชี่ยวชาญด้านสุขภาพจิตและจิตเวช พร้อมทั้งบริการวิชาการแก่สังคมและวิจัยเพื่อพัฒนาองค์ความรู้ทางพยาบาลศาสตร์ในระดับสากล</p>
+    
+    -->
+    
+    
+    
+    
+    
+    
+    
+   
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                </td>
+              </tr>
+              
+              
+             
+              <tr>
+                <td height="363">
+                
+                
+                
+                
+                
+                
+                <div><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQRM67VmM0XnnFKySr41BSFyccAdonaHHvj0Oh2OJnNAGq6xew4lciVswZFb-sg09ymdBtg7oPM1dKS/pubembed?start=true&loop=true&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                
+                
+                  <table width="100%" border="0" cellspacing="4" cellpadding="0">
+                    <tr>
+                      <td class="bg_purple" ><strong>VDO หลักสูตรพยาบาลศาสตรมหาบัณฑิต <br>
+                        <span class="txt_font">สาขาวิชาการพยาบาลเด็ก</span></strong></td>
+                      <td class="bg_purple"><strong>ข่าวประชาสัมพันธ์</strong></td>
+                    </tr>
+                    <tr>
+                      <td width="51%" align="center" bgcolor="#FBECF2" ><a href="https://www.youtube.com/embed/ppUGGnmDLGw" target="_blank"><img src="img/other/youtube.jpg" width="495" height="280"></a>
+                   
+                   
+                    <!--  <iframe width="495" height="280" src="https://www.youtube.com/embed/4usxikmUJd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  -->    
+                      
+                      
+                      <br>
+                      <br></td>
+                      <td width="49%"><table width="97%" border="0" align="center" cellpadding="5" cellspacing="2">
+                        <tr>
+                          <td valign="top" ><img src="img/news/icon_logons.jpg" alt="" width="120" height="80" style="border: 1px solid #ccc; padding: 5px;"></td>
+                          <td valign="top" class="line_body"><a href="news/2568/research3.html" target="_parent" class="hyperlink">ขอเชิญชวนอ่านบทความที่ได้รับการตีพิมพ์ในวารสารระดับนานาชาติ The effectiveness of telehealth on glycemic stability and quality of life among patients with type 1 and type 2 diabetes: A systematic review and meta-analysis</a></td>
+                        </tr>
+                        <tr>
+                          <td width="24%" valign="top" ><img src="img/news/icon_logons.jpg" alt="" width="120" height="80" style="border: 1px solid #ccc; padding: 5px;"></td>
+                          <td width="76%" valign="top" class="line_body"><a href="news/2568/research1.html" target="_parent" class="hyperlink">ขอเชิญชวนอ่านบทความที่ได้รับการตีพิมพ์ในวารสารระดับนานาชาติ Exploring self-management among adolescents with type 2 diabetes mellitus: A descriptive-qualitative study </a></td>
+                        </tr>
+                        <tr>
+                          <td valign="top" >&nbsp;</td>
+                          <td align="right" valign="top" >&nbsp;</td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="235" background="img/other/bg_first.jpg" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center"><a href="education.html" target="_parent"><img src="img/other/banner_edu.jpg" width="251" height="174"  style="border: 1px solid #fff; padding: 5px;"></a>
+                      <script>
+  /* Demo purposes only */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+                      </script></td>
+                    <td align="center"><a href="research.html" target="_parent"><img src="img/other/banner_research_inno.jpg" alt="" width="251" height="174"  style="border: 1px solid #fff; padding: 5px;"></a></td>
+                    <td align="center"><a href="academic.html" target="_parent"><img src="img/other/banner_academic.jpg" alt="" width="251" height="174"  style="border: 1px solid #fff; padding: 5px;"></a></td>
+                    </tr>
+              </table>
+                
+                
+
+
+                </td>
+              </tr>
+              <tr>
+                <td height="235" align="left"  bgcolor="#FFFFFF"><p><strong><span class="txt_head">Knowledge Management</span></strong></p>
+                  <table width="97%" border="0" align="center" cellpadding="5" cellspacing="2">
+                    <tr>
+                      <td align="center" valign="middle" ><img src="img/KM/2569/02.jpg" alt="" width="200" height="133" style="border: 1px solid #ccc; padding: 5px;"></td>
+                      <td valign="top" class="line_body"><p class="head_blue"><a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-ภาควิชาการพยาบาลกุมารเวชศาสตร์/424-software-proficiency-sprint-r-stata-for-meta-analysis-2569.html" target="_blank" class="hyperlink"> ครั้งที่ 2 Software Proficiency Sprint: R/Stata for Meta-Analysis</a></p>
+                        <p>คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรม เรื่อง Elevating Research Impact: The Q1 Journey (ขับเคลื่อนงานวิจัยสู่ความเป็นเลิศ: เส้นทางพิชิต Q1) ในวันที่ 18 กุมภาพันธ์ 2569 เวลา 12.45 - 13.35 น.</p></td>
+                    </tr>
+                    <tr>
+                      <td align="center" valign="middle" ><img src="img/KM/2569/03.jpg" alt="" width="200" height="133" style="border: 1px solid #ccc; padding: 5px;"></td>
+                      <td valign="top" class="line_body"><p class="head_blue"><a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-" target="_blank" class="hyperlink"> ครั้งที่ 3 Research Funding Talk</a></p>
+                        <p>คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์
+                          คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรมแลกเปลี่ยนเรียนรู้ ในวันที่ 18 มีนาคม 2569
+                          เวลา 13.00 – 13.45 น.</p></td>
+                    </tr>
+                    <tr>
+                      <td width="24%" valign="top" >&nbsp;</td>
+                      <td width="76%" align="right" valign="top" ><table width="250" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td height="28" align="center" bgcolor="#b24697"><span class="txt_white"><a href="km/km_PN.html" target="_parent" class="hyperlink_menu">Read More &gt;&gt;</a></span></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="235" align="left"  bgcolor="#FFFFFF"><strong><span class="txt_head"><br>
+                  Tips & Tricks for Kids </span></strong><br>
+                  <br>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center"><a href="https://mahidolnursing-my.sharepoint.com/:v:/g/personal/nsmu_it_nursingmu_org/EaPpEA9B9LdLu8qXrQ8PALkBrC8Co79Njy5jaPlYJd1e3g?e=EySpfQ" target="_blank"><img src="img/tip/2565/tip1.jpg" alt="" width="249" height="250"  style="border: 1px solid #ccc; padding: 5px;"></a></td>
+                    <td align="center"><a href="doc/tip_trick/2564/tip07.pdf" target="_blank"><img src="img/tip/2564/tip7.jpg" alt="" width="249" height="250"  style="border: 1px solid #ccc; padding: 5px;"></a></td>
+                    <td width="32%" align="center"><a href="https://www.posttoday.com/politic/columnist/661787" target="_blank"><img src="img/tip/2564/tip8.jpg" alt="" width="249" height="250"  style="border: 1px solid #ccc; padding: 5px;"></a></td>
+                    </tr>
+                  <tr>
+                    <td align="center"><a href="https://mahidolnursing-my.sharepoint.com/:v:/g/personal/nsmu_it_nursingmu_org/EaPpEA9B9LdLu8qXrQ8PALkBrC8Co79Njy5jaPlYJd1e3g?e=EySpfQ" target="_blank" class="hyperlink">การส่งเสริมสุขภาพเพื่อสู้โรคโควิด</a></td>
+                    <td align="center"><a href="doc/tip_trick/2564/tip07.pdf" target="_blank" class="hyperlink">10 เรื่องที่พ่อแม่ต้องรู้ เมื่อลูกเรียนออนไลน์</a></td>
+                    <td align="center"><a href="https://www.posttoday.com/politic/columnist/661787" target="_blank" class="hyperlink">พ่อแม่ ผู้ปกครอง : <br>
+                      ปัจจัยสู่ความสำเร็จการเรียนออนไลน์<br>
+                      ในช่วงโควิด-19</a></td>
+                    </tr>
+                  <tr>
+                    <td align="center">&nbsp;</td>
+                    <td align="center">&nbsp;</td>
+                    <td align="right"><br>
+                      <table width="250" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td height="28" align="center" bgcolor="#b24697"><span class="txt_white"><a href="tip.html" target="_parent" class="hyperlink_menu">Read More &gt;&gt;</a></span></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table>
+              <div align="center"><a href="https://sites.google.com/mahidol.ac.th/pediatric-pr" target="_blank"><img src="img/other/banner_pn_pr.png" width="1004" height="191"></a></div></td>
+              </tr>
+              
+            </table>
+          
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h3>ภาควิชาการพยาบาลกุมารเวชศาสตร์</h3>
+                    <p>
+                        <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+                        <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+                    </p>
+                    <p class="footer-copy">
+                        Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+                        Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+                    </p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                    </div>
+                    <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+                        <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
+                        English
+                    </a>
+                </div>
+            </div>
+        </footer>
     </div>
-      
-    <!-- Soft UI Bento Grid (Directly on background) -->
-    <div class="home-grid">
-      
-      <!-- Card 1: Teaching (Blue Theme) -->
-      <a href="teaching.html" class="bento-card theme-blue">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-        </div>
-        <h3>หลักสูตรการเรียนการสอน</h3>
-        <div class="subtitle">Academic Programs</div>
-        <p>เปิดสอนทั้งในระดับปริญญาตรีและระดับบัณฑิตศึกษา มุ่งเน้นการเรียนรู้แบบลงมือปฏิบัติจริงในคลินิกและชุมชนเพื่อเพิ่มสมรรถนะในการดูแลผู้รับบริการ</p>
-      </a>
 
-      <!-- Card 2: Research (Green Theme) -->
-      <a href="research.html" class="bento-card theme-green">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-        </div>
-        <h3>การวิจัยและนวัตกรรม</h3>
-        <div class="subtitle">Research & Innovation</div>
-        <p>ส่งเสริมการทำงานวิจัยและนวัตกรรมด้านสุขภาพจิต เพื่อสนับสนุนการสร้างนโยบายสาธารณะและการพัฒนาสุขภาพจิตของประชากรในทุกช่วงวัย</p>
-      </a>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
 
-      <!-- Card 3: Academic Services (Orange Theme) -->
-      <a href="academic.html" class="bento-card theme-orange">
-        <div class="icon-badge">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-        </div>
-        <h3>การบริการวิชาการ</h3>
-        <div class="subtitle">Academic Services</div>
-        <p>มีศูนย์ความเป็นเลิศทางวิชาการและจัดอบรมหลักสูตรระยะสั้นเพื่อเพิ่มพูนความรู้แก่พยาบาลวิชาชีพและบุคลากรทางการแพทย์ทั่วประเทศ</p>
-      </a>
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
 
-    </div>
-  </main>
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        function toggleMobileDropdown(el) {
+            const dropdown = el.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+                el.classList.toggle('active');
+            }
+        }
+
+        const navBrand = document.getElementById('navBrand');
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (header) {
+                const headerBottom = header.getBoundingClientRect().bottom;
+                if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+            }
+        }, { passive: true });
+    </script>
 </body>
 </html>
