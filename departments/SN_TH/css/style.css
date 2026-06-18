@@ -74,8 +74,10 @@ ul { list-style: none; }
 .topbar-links a { color: rgba(255,255,255,0.75); font-size: 13px; padding: 4px 8px; border-radius: var(--radius-sm); }
 .topbar-links a:hover { color: var(--mu-gold-light); }
 .topbar-links .sep { color: rgba(255,255,255,0.25); font-size: 12px; margin: 0 4px; }
+
 /* ลบหรือคอมเม้นต์บรรทัด display: none; ด้านล่างออกเมื่อต้องการเปิดใช้งาน Facebook Link */
-.topbar-social { display: none; align-items: center; gap: 8px; }
+.topbar-social { display: none; align-items: center; gap: 8px; } /* <<<< ตรงนี้ */
+
 .topbar-social a { display: flex; align-items: center; justify-content: center;}
 .topbar-social a:hover { transform: translateY(-1px); cursor: pointer; }
 .topbar-social img { width: 30px; height: 30px; }
@@ -200,8 +202,10 @@ ul { list-style: none; }
   .navbar-brand { color: white; font-size: 16px; font-weight: 600; display: block; }
   .footer-inner { grid-template-columns: 1fr; gap: 24px; }
   .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+
   /* ลบหรือคอมเม้นต์บรรทัด display: none; ด้านล่างออกเมื่อต้องการเปิดใช้งาน Facebook Link */
-  .footer-social { display: none; gap: 10px; }
+  .footer-social { display: none; gap: 10px; } /* <<<< ตรงนี้ */
+
   .footer-social a { display: flex; align-items: center; justify-content: center;}
   .footer-social a:hover { transform: translateY(-2px); }
   .footer-social img { width: 30px; height: 30px; object-fit: cover; }
@@ -223,7 +227,7 @@ ul { list-style: none; }
 /* Modern Enhancements for Content */
 .txt_head { font-family: 'Sarabun', sans-serif; font-size: 22px; color: var(--mu-blue); margin-bottom: 20px; font-weight: 600; border-bottom: 2px solid var(--mu-gold); padding-bottom: 10px; display: inline-block; }
 .txt_blue { font-family: 'Sarabun', sans-serif; font-size: 18px; color: var(--mu-blue-light); font-weight: 600; margin-top: 15px; margin-bottom: 10px; }
-.txt_font { font-family: 'Sarabun', sans-serif; text-indent: 2.5em; text-align: left; line-height: 1.6; margin-bottom: 15px; }
+.txt_font { font-family: 'Sarabun', sans-serif; margin-left: 2.5em; text-align: left; line-height: 1.6; margin-bottom: 15px; }
 .txt_name_bold { font-family: 'Sarabun', sans-serif; font-weight: 700; color: var(--gray-800); }
 .txt_blue_reg { font-family: 'Sarabun', sans-serif; color: var(--mu-blue); }
 .line_body { padding: 12px; border-bottom: 1px solid var(--gray-100); }

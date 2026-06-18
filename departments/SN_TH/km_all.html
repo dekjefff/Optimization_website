@@ -11,11 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .bg_grey { background-color: #f1f5f9; padding: 12px; border-radius: 8px; font-weight: 600; color: var(--mu-blue-dark); text-align: center; }
     .bg_blue { background: var(--mu-blue); color: white; }
     .txt_white { color: white; }
+    .hover-row { transition: all 0.2s ease; cursor: pointer; }
+    .hover-row:hover { background-color: #e2e8f0 !important; transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
   </style>
 </head>
 <body>
@@ -132,16 +134,16 @@
                     <tr class="bg_blue">
                       <td colspan="2" align="center" valign="middle" class="txt_white">ประจำปี</td>
                     </tr>
-                    <tr class="line_body" style="background-color: var(--gray-50);">
-                      <td width="5%" align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                    <tr class="line_body hover-row" style="background-color: var(--gray-50);" onclick="window.location.href='km.html'">
+                      <td width="5%" align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
                       <td width="95%" valign="top" class="line_body"><a href="km.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2564</a></td>
                     </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                    <tr class="line_body hover-row" onclick="window.location.href='km2563.html'">
+                      <td align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
                       <td valign="top" class="line_body"><a href="km2563.html" target="_parent" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2563</a></td>
                     </tr>
-                    <tr class="line_body" style="background-color: var(--gray-50);">
-                      <td align="center" valign="top" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11" style="margin-top: 6px;"></td>
+                    <tr class="line_body hover-row" style="background-color: var(--gray-50);" onclick="window.open('https://ns.mahidol.ac.th/english/th/departments/SN/km57-62.html', '_blank')">
+                      <td align="center" valign="top" class="line_body"><i class="fas fa-file-alt" style="color: var(--mu-blue); font-size: 1.5em; margin-top: 4px;"></i></td>
                       <td valign="top" class="line_body"><a href="https://ns.mahidol.ac.th/english/th/departments/SN/km57-62.html" target="_blank" class="hyperlink">กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปี 2557-2562</a></td>
                     </tr>
                   </table>
