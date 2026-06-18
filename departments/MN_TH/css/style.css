@@ -835,6 +835,7 @@ ul { list-style: none; }
   color: var(--gray-700);
   line-height: 1.5;
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -981,6 +982,11 @@ ul { list-style: none; }
   stroke: var(--mu-gold-light);
 }
 
+.page-title-icon i {
+  font-size: 20px;
+  color: var(--mu-gold-light);
+}
+
 /* =========================================
    CONTENT STYLES (for body pages)
    ========================================= */
@@ -1086,7 +1092,7 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   padding: var(--space-4) var(--space-5);
-  background: var(--mu-blue-dark);
+  background: orange;
   color: white;
   border-radius: var(--radius-md);
   transition: all var(--transition-base);

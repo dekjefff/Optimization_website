@@ -217,6 +217,7 @@ ul { list-style: none; }
   .header-dept-name { font-size: 16px; }
   .header-faculty-name { font-size: 12px; }
   .main-content { padding: 20px 16px; }
+  .head-page .breadcrumb { justify-content: flex-start; }
 }
 
 /* Modern Enhancements for Content */
@@ -236,6 +237,139 @@ td { vertical-align: top; }
 img { max-width: 100%; height: auto; border-radius: 8px; }
 .bg_blue { background: var(--mu-blue); color: white; }
 tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
+
+/* =========================================
+   HEAD PAGE
+   ========================================= */
+.head-page {
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.head-page .page-title-banner {
+  margin-bottom: 18px;
+}
+
+.head-page .breadcrumb {
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.head-page .txt_font {
+  text-indent: 0;
+  text-align: center;
+  color: var(--gray-600);
+  margin-bottom: 18px;
+}
+
+.head-page .staff-container {
+  padding-top: 4px;
+}
+
+.head-page .staff-grid {
+  max-width: 1040px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.head-page .staff-card {
+  min-height: 100%;
+}
+
+.head-page .staff-img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--white);
+}
+
+.head-page .staff-name {
+  min-height: 3.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* New CSS Grid and Card Styles for Head of Department list */
+.head-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+}
+
+.head-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 24px 20px;
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--gray-100);
+  position: relative;
+  overflow: hidden;
+}
+
+.head-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--mu-blue-light);
+}
+
+.head-img-wrapper {
+  width: 150px;
+  height: 185px;
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  transition: transform var(--transition-base);
+  background-color: var(--gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-card:hover .head-img-wrapper {
+  transform: scale(1.03);
+}
+
+.head-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.head-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 6px;
+  line-height: 1.4;
+  min-height: 2.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head-position {
+  font-size: 13px;
+  color: var(--gray-500);
+  font-weight: 500;
+}
 
 /* =========================================
    STAFF GRID LAYOUT
@@ -402,4 +536,177 @@ tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
     transform: translateY(0);
   }
 }
+
+/* =========================================
+   VISION / MISSION / PHILOSOPHY PAGE STYLES
+   ========================================= */
+.content-body {
+  font-family: var(--font-base);
+  font-size: 16px;
+  color: var(--gray-700);
+  line-height: 1.85;
+}
+
+.content-body p {
+  margin-bottom: 20px;
+  text-indent: 2.5em;
+}
+
+.content-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--mu-blue-dark);
+  font-family: var(--font-base);
+  padding: 12px 20px;
+  background: var(--mu-blue-pale);
+  border-left: 4px solid var(--mu-blue-light);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 32px 0 16px;
+}
+
+/* Mission list custom styles */
+.mission-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.mission-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--mu-blue-light);
+  transition: transform var(--transition-base), background var(--transition-base);
+}
+
+.mission-item:hover {
+  background: var(--mu-blue-pale);
+  transform: translateX(4px);
+}
+
+.mission-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: var(--mu-blue-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.mission-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.mission-text {
+  font-size: 15.5px;
+  color: var(--gray-700);
+  font-family: var(--font-base);
+  line-height: 1.7;
+}
+
+/* Philosophy & Vision Cards */
+.vision-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .vision-cards-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+.philosophy-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-100);
+  border-top: 4px solid var(--mu-blue);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.philosophy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.philosophy-card::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 120px;
+  font-family: serif;
+  color: var(--mu-blue-pale);
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.philosophy-card h3.txt_blue {
+  color: var(--mu-blue-dark);
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.vision-card {
+  background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.vision-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.vision-card::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+}
+
+.vision-card h3 {
+  color: var(--mu-gold-light) !important;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.vision-card p {
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+  margin-bottom: 0;
+  text-indent: 0 !important;
+}
+
+
 
