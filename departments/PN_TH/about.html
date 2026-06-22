@@ -28,24 +28,94 @@
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
+        .clean-divider {
+            width: 40px;
+            height: 4px;
+            background: var(--mu-gold);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+        .breadcrumb-clean {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14.5px;
+            color: var(--gray-500);
+        }
+        .breadcrumb-clean a {
+            color: var(--mu-blue);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .breadcrumb-clean a:hover { opacity: 0.7; }
+        .breadcrumb-clean .current { color: var(--gray-800); font-weight: 500; }
 
-        /* --- Content Layout --- */
-        .academic-wrapper {
-            max-width: 900px;
-            margin: 0 auto 80px;
-            padding: 0 20px;
+        /* --- History Article Layout (Enhanced Original) --- */
+        .history-article-container {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            margin-bottom: 70px;
+            border: 1px solid rgba(0,0,0,0.02);
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+        .history-image-wrapper {
+            margin-bottom: 40px;
+            position: relative;
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+        }
+        .history-image-wrapper img.article-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+        .history-image-wrapper:hover img.article-image {
+            transform: scale(1.05);
         }
         
-        .intro-text-elegant {
-            font-size: 17.5px;
-            color: var(--gray-700);
+        .history-content {
+            padding: 0 70px 60px 70px;
+        }
+        .history-content p {
+            font-size: 16.5px;
             line-height: 1.8;
-            margin-bottom: 50px;
+            color: var(--gray-700);
+            margin-bottom: 24px;
+            text-indent: 3em;
             text-align: justify;
         }
-        .intro-text-elegant p {
-            text-indent: 2.5em;
-            margin: 0;
+        .history-content p:last-child {
+            margin-bottom: 0;
+        }
+        /* ไฮไลต์ตกแต่งตัวหนังสือ */
+        .highlight-year {
+            color: var(--mu-blue-dark);
+            font-weight: 700;
+            background: rgba(25, 68, 136, 0.05);
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin: 0 2px;
+            border-bottom: 2px solid var(--mu-gold);
+        }
+        .text-bold-gold {
+            color: var(--mu-gold-dark);
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .history-article-container { border-radius: 16px; margin-bottom: 40px; }
+            .history-image-wrapper { height: 250px; margin-bottom: 30px; }
+            .history-content { padding: 0 20px 30px 20px; }
+            .history-content p { font-size: 15.5px; text-indent: 2em; }
         }
     </style>
 </head>
@@ -167,21 +237,27 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">ประวัติความเป็นมา</td>
-              </tr>
-              <tr>
-                <td height="363"><p class="txt_font" style="text-indent: 2.5em;">“....บ้านเมืองที่มีการพยาบาลดี ย่อมเป็นประโยชน์สำคัญอย่างหนึ่ง เพราะถ้าการพยาบาลดีและเลี้ยงเด็กดีก็ย่อมทำให้พลเมืองมากขึ้นเป็นธรรมดา เมื่อพลเมืองมากขึ้นเพียงไรก็เป็นทางเจริญและเป็นกำลังของบ้านเมืองของชาติเรา....” พระราชดำรัสบางตอนของสมเด็จพระศรีพัชรินทราบรมราชินีนาถที่พระราชทานแก่นักเรียนแพทย์ผดุงครรภ์ ในพิธีพระราชทานประกาศนียบัตร เมื่อวันที่ ๑๐ พฤษภาคม ร.ศ. ๑๓๐ ณ พระตำหนักพญาไท จากพระราชดำรัสดังกล่าวแสดงให้เห็นว่าสมเด็จพระศรีพัชรินทราบรมราชินีนาถ ทรงเล็งเห็นความสำคัญในการดูแลและการพัฒนาเด็กเพื่อให้เติบโตเป็นพลเมืองที่ดี มีคุณภาพของชาติ ดังนั้นจึงอาจกล่าวได้ว่าการเรียนการสอนเกี่ยวกับการพยาบาลเด็กเริ่มมีบทาทสำคัญตั้งแต่บัดนั้นเป็นต้นมา</p>
-                  <p class="txt_font" style="text-indent: 2.5em;">โรงเรียนพยาบาลผดุงครรภ์และอนามัย คณะแพทยศาสตร์ศิริราชพยาบาล ได้รับอนุมัติให้จัดตั้งเป็น คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ในวันที่ ๒๓ มิถุนายน ๒๕๑๕ มีอาจารย์สงวนสุข ฉันทวงศ์ ได้รับแต่งตั้งเป็นคณบดีคนแรก และได้รับแต่งตั้งให้ดำรงตำแหน่งหัวหน้าภาควิชาการพยาบาลกุมารเวชศาสตร์ อีกตำแหน่งหนึ่ง จนถึง ปี พ.ศ. ๒๕๑๘ อาจารย์สงวนสุข ฉันทวงศ์ เกษียณอายุราชการ จึงได้แต่งตั้งให้รองศาสตราจารย์ฉลองรัฐ อินทรีย์ เป็นหัวหน้าภาควิชาการพยาบาลกุมารเวชศาสตร์</p>
-                  <p class="txt_font" style="text-indent: 2.5em;">&nbsp;</p>
-                  <p align="center"><img src="img/other/ns_building.png" width="970" height="339" style="border: 1px solid #ccc; padding: 5px;"></p>
-                <p>&nbsp;</p></td>
-              </tr>
-            </table>
-          
+            <div class="clean-header">
+                <h1>ประวัติและความเป็นมา</h1>
+            </div>
+
+            <div class="history-article-container">
+                <div class="history-image-wrapper">
+                    <img src="img/other/ns_building.png" alt="อาคารคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล" class="article-image">
+                </div>
+                
+                <div class="history-content">
+                    <p>
+                        “....บ้านเมืองที่มีการพยาบาลดี ย่อมเป็นประโยชน์สำคัญอย่างหนึ่ง เพราะถ้าการพยาบาลดีและเลี้ยงเด็กดีก็ย่อมทำให้พลเมืองมากขึ้นเป็นธรรมดา เมื่อพลเมืองมากขึ้นเพียงไรก็เป็นทางเจริญและเป็นกำลังของบ้านเมืองของชาติเรา....” พระราชดำรัสบางตอนของสมเด็จพระศรีพัชรินทราบรมราชินีนาถที่พระราชทานแก่นักเรียนแพทย์ผดุงครรภ์ ในพิธีพระราชทานประกาศนียบัตร เมื่อวันที่ ๑๐ พฤษภาคม ร.ศ. ๑๓๐ ณ พระตำหนักพญาไท จากพระราชดำรัสดังกล่าวแสดงให้เห็นว่าสมเด็จพระศรีพัชรินทราบรมราชินีนาถ ทรงเล็งเห็นความสำคัญในการดูแลและการพัฒนาเด็กเพื่อให้เติบโตเป็นพลเมืองที่ดี มีคุณภาพของชาติ ดังนั้นจึงอาจกล่าวได้ว่าการเรียนการสอนเกี่ยวกับการพยาบาลเด็กเริ่มมีบทบาทสำคัญตั้งแต่บัดนั้นเป็นต้นมา
+                    </p>
+                    <p>
+                        โรงเรียนพยาบาลผดุงครรภ์และอนามัย คณะแพทยศาสตร์ศิริราชพยาบาล ได้รับอนุมัติให้จัดตั้งเป็น คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ในวันที่ <span class="highlight-year">๒๓ มิถุนายน ๒๕๑๕</span> มีอาจารย์สงวนสุข ฉันทวงศ์ ได้รับแต่งตั้งเป็นคณบดีคนแรก และได้รับแต่งตั้งให้ดำรงตำแหน่งหัวหน้าภาควิชาการพยาบาลกุมารเวชศาสตร์ อีกตำแหน่งหนึ่ง จนถึง ปี <span class="highlight-year">พ.ศ. ๒๕๑๘</span> อาจารย์สงวนสุข ฉันทวงศ์ เกษียณอายุราชการ จึงได้แต่งตั้งให้รองศาสตราจารย์ฉลองรัฐ อินทรีย์ เป็นหัวหน้าภาควิชาการพยาบาลกุมารเวชศาสตร์
+                    </p>
+                </div>
+            </div>
+
         </main>
 
         <footer class="site-footer">
@@ -198,8 +274,12 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
                     <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
@@ -257,4 +337,7 @@
     </script>
 </body>
 </html>
+
+
+
 
