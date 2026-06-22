@@ -47,6 +47,114 @@
             text-indent: 2.5em;
             margin: 0;
         }
+            /* --- KM PN Layout --- */
+        .academic-container {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .activity-group {
+            margin-bottom: 50px;
+        }
+        .activity-group-year {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--mu-blue-dark);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-200);
+            display: inline-block;
+            padding-right: 40px;
+        }
+
+        .activity-card {
+            display: flex;
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 20px;
+        }
+        .activity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(25, 68, 136, 0.08);
+            border-color: var(--mu-blue-pale);
+        }
+        .activity-img {
+            flex: 0 0 280px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gray-50);
+        }
+        .activity-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .activity-card:hover .activity-img img {
+            transform: scale(1.05);
+        }
+        .activity-content {
+            padding: 25px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .activity-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--mu-blue-dark);
+            line-height: 1.5;
+            transition: color 0.2s;
+            margin-bottom: 10px;
+        }
+        .activity-card:hover .activity-title {
+            color: var(--mu-blue);
+        }
+        .activity-desc {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .view-all-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .view-all-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            color: white;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(25, 68, 136, 0.3);
+        }
+        .view-all-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(25, 68, 136, 0.4);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .activity-card { flex-direction: column; }
+            .activity-img { flex: 0 0 200px; }
+            .activity-content { padding: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -167,53 +275,67 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
+            <div class="clean-header">
+                <h1>การจัดการความรู้</h1>
+            </div>
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">การจัดการความรู้</td>
-              </tr>
-              <tr>
-                <td> 
-                <table width="94%" border="0" align="center" cellpadding="5" cellspacing="0">
-                  <tr>
-                    <td colspan="2" align="center" valign="top"  class="bg_blue"><span class="txt_white">ประจำปี 2569</span></td>
-                  </tr>
-                  <tr>
-                    <td width="15%" align="center" valign="middle" ><img src="../img/KM/2569/190268.png" alt="" width="200" height="133" style="border: 1px solid #ccc; padding: 5px;"></td>
-                    <td width="61%" valign="top" class="line_body"><p class="head_blue"><a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-" target="_blank" class="hyperlink">                        ครั้งที่ 1 From Evidence to Excellence: จุดเริ่มต้นสู่การตีพิมพ์ Q1 ด้วย Systematic Review และ Meta-analysis</a></p>
-                      <p>คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรม เรื่อง Elevating Research Impact: The Q1 Journey (ขับเคลื่อนงานวิจัยสู่ความเป็นเลิศ: เส้นทางพิชิต Q1) ในวันที่ 17 ธันวาคม 2568 เวลา 12.45 - 13.45 น.</p></td>
-                  </tr>
-                  <tr>
-                    <td align="center" valign="middle" ><img src="../img/KM/2569/02.jpg" alt="" width="200" height="133" style="border: 1px solid #ccc; padding: 5px;"></td>
-                    <td valign="top" class="line_body"><p class="head_blue"><a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-ภาควิชาการพยาบาลกุมารเวชศาสตร์/424-software-proficiency-sprint-r-stata-for-meta-analysis-2569.html" target="_blank" class="hyperlink"> ครั้งที่ 2 Software Proficiency Sprint: R/Stata for Meta-Analysis</a></p>
-                      <p>คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรม เรื่อง Elevating Research Impact: The Q1 Journey (ขับเคลื่อนงานวิจัยสู่ความเป็นเลิศ: เส้นทางพิชิต Q1) ในวันที่ 18 กุมภาพันธ์ 2569 เวลา 12.45 - 13.35 น.</p></td>
-                  </tr>
-                  <tr>
-                    <td align="center" valign="middle" ><img src="../img/KM/2569/03.jpg" alt="" width="200" height="133" style="border: 1px solid #ccc; padding: 5px;"></td>
-                    <td valign="top" class="line_body"><p class="head_blue"><a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-" target="_blank" class="hyperlink"> ครั้งที่ 3 Research Funding Talk</a></p>
-                      <p>คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์
-คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรมแลกเปลี่ยนเรียนรู้ ในวันที่ 18 มีนาคม 2569
-เวลา 13.00 – 13.45 น.</p></td>
-                  </tr>
-                </table>
-                <p>&nbsp;</p>
-               <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="100%" height="36" align="center" valign="top" class="txt_font"><table width="50%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td height="28" align="center" bgcolor="#b24697"><span class="txt_white"><a href="km_PN_all.html" target="_parent" class="hyperlink_menu">More+</a></span></td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr>
-                <td height="36" align="center" valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-            </table>
-                <p class="txt_font">&nbsp;</p></td>
-              </tr>
-            </table>
-          
+            <div class="academic-container">
+                <div class="activity-group">
+                    <div class="activity-group-year">ประจำปี 2569</div>
+                    
+                    <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-" target="_blank" class="activity-card">
+                        <div class="activity-img">
+                            <img src="../img/KM/2569/190268.png" alt="กิจกรรม KM">
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">
+                                ครั้งที่ 1 From Evidence to Excellence: จุดเริ่มต้นสู่การตีพิมพ์ Q1 ด้วย Systematic Review และ Meta-analysis
+                            </div>
+                            <div class="activity-desc">
+                                คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรม เรื่อง Elevating Research Impact: The Q1 Journey (ขับเคลื่อนงานวิจัยสู่ความเป็นเลิศ: เส้นทางพิชิต Q1) ในวันที่ 17 ธันวาคม 2568 เวลา 12.45 - 13.45 น.
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-ภาควิชาการพยาบาลกุมารเวชศาสตร์/424-software-proficiency-sprint-r-stata-for-meta-analysis-2569.html" target="_blank" class="activity-card">
+                        <div class="activity-img">
+                            <img src="../img/KM/2569/02.jpg" alt="กิจกรรม KM">
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">
+                                ครั้งที่ 2 Software Proficiency Sprint: R/Stata for Meta-Analysis
+                            </div>
+                            <div class="activity-desc">
+                                คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรม เรื่อง Elevating Research Impact: The Q1 Journey (ขับเคลื่อนงานวิจัยสู่ความเป็นเลิศ: เส้นทางพิชิต Q1) ในวันที่ 18 กุมภาพันธ์ 2569 เวลา 12.45 - 13.35 น.
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/22-cops/km/km-" target="_blank" class="activity-card">
+                        <div class="activity-img">
+                            <img src="../img/KM/2569/03.jpg" alt="กิจกรรม KM">
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">
+                                ครั้งที่ 3 Research Funding Talk
+                            </div>
+                            <div class="activity-desc">
+                                คณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ โดยภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ได้จัดกิจกรรมแลกเปลี่ยนเรียนรู้ ในวันที่ 18 มีนาคม 2569 เวลา 13.00 – 13.45 น.
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="view-all-container">
+                    <a href="km_PN_all.html" class="view-all-link-btn">
+                        ดูข่าวการจัดการความรู้ทั้งหมด
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 18px; height: 18px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </main>
 
         <footer class="site-footer">
@@ -230,8 +352,12 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:12px;align-items:center;">
+                                        <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
                     <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="../img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
@@ -289,4 +415,6 @@
     </script>
 </body>
 </html>
+
+
 

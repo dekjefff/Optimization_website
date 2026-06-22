@@ -47,6 +47,105 @@
             text-indent: 2.5em;
             margin: 0;
         }
+            /* --- KM Layout --- */
+        .km-container {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .km-section {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+        
+        .km-header {
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            padding: 20px 30px;
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .km-header svg {
+            width: 26px;
+            height: 26px;
+            color: var(--mu-gold);
+        }
+        
+        .km-body {
+            padding: 30px;
+        }
+        
+        .km-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .km-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        .km-list li:last-child {
+            margin-bottom: 0;
+        }
+        .km-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: var(--mu-blue);
+            font-size: 14px;
+        }
+        
+        .km-paragraph {
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-indent: 2.5em;
+            text-align: justify;
+        }
+        
+        .km-image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--gray-50);
+            border-radius: 12px;
+        }
+        .km-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .km-link {
+            color: var(--mu-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .km-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .km-header { padding: 16px 20px; font-size: 18px; }
+            .km-body { padding: 20px; }
+            .km-list li { font-size: 15px; }
+            .km-paragraph { font-size: 15px; }
+        }
     </style>
 </head>
 <body>
@@ -167,113 +266,136 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
+            <div class="clean-header">
+                <h1>การจัดการความรู้</h1>
+            </div>
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">การจัดการความรู้</td>
-              </tr>
-              <tr>
-                <td height="363" align="left" valign="top"><p class="bg_purple"><strong>วัตถุประสงค์</strong></p>
-                  <ol start="1" type="1">
-                    <li class="txt_font">เพื่อส่งเสริมกระบวนการการจัดการความรู้กับการดำเนินงานตามพันธกิจการศึกษา       การวิจัย บริการวิชาการ บริหารจัดการ และการประกันคุณภาพของคณะพยาบาลศาสตร์ </li>
-                    <li class="txt_font">เพื่อสร้างวัฒนธรรมองค์กรของการถ่ายทอดความรู้ผู้เกษียณอายุราชการ </li>
-                    <li class="txt_font">เพื่อให้บุคลากรสายสนับสนุนมีความรู้       ความเข้าใจในการวิเคราะห์สาเหตุของปัญหา ลดขั้นตอนการปฏิบัติงาน       และการจัดทำแผนผัง Flowchart</li>
-                    <li class="txt_font">เพื่อแลกเปลี่ยนเรียนรู้ระหว่างกลุ่มงาน       ค้นหาแนวแนวปฏิบัติที่ดี (Best       Practice) และเผยแพร่ไปสู่บุคลากรของคณะพยาบาลศาสตร์และบุคคลภายนอก</li>
-                    <li class="txt_font">เพื่อถอดบทเรียน/ความรู้ที่ได้จากกระบวนการการจัดการความรู้กับการดำเนินงานตามพันธกิจต่างๆ       ของคณะพยาบาลศาสตร์ และจากการถ่ายทอดความรู้ผู้เกษียณอายุราชการ </li>
-                    <li class="txt_font">เพื่อเกิดการนำความรู้จากการจัดการความรู้ไปใช้ในหน่วยงาน </li>
-                  </ol>
-
-
-
-
-<p class="bg_purple"><strong>นโยบายการดำเนินงานด้านการจัดการความรู้</strong></p>
-               <p class="txt_font" style="text-indent: 2.5em;" >งานพัฒนาคุณภาพและบริหารความเสี่ยง  ได้วางนโยบายการดำเนินงานด้านการจัดการความรู้ของ คณะพยาบาลศาสตร์ ไว้ดังนี้</p>
-                <ol start="1" type="1">
-                  <li class="txt_font">สร้างระบบการจัดการความรู้ด้วยการส่งเสริมกระบวนการการจัดการความรู้       การสร้างองค์ความรู้ การจัดเก็บความรู้ รวมทั้งการนำความรู้ไปใช้ประโยชน์       ให้เป็นเครื่องมือพัฒนางานอย่างต่อเนื่องอันนำไปสู่การสร้างองค์ความรู้และนวัตกรรมใหม่ </li>
-                  <li class="txt_font">สนับสนุนให้ทุกหน่วยงาน/ภาควิชาฯ       มีการดำเนินงานด้านการจัดการความรู้       รวมทั้งการนำองค์ความรู้ที่ได้จากการแลกเปลี่ยนเรียนรู้ไปประยุกต์ใช้ในการดำเนินงานของหน่วยงาน/ภาควิชา       เพื่อให้เกิดการปรับปรุงกระบวนการปฏิบัติงานให้มีประสิทธิภาพมากขึ้น </li>
-                  <li class="txt_font">เสริมสร้างวัฒนธรรมการแลกเปลี่ยนเรียนรู้ของการถ่ายทอดความรู้ผู้เกษียณอายุราชการ       ทั้งในระดับภาควิชาฯ และระดับคณะฯ       เพื่อให้เกิดการถ่ายโอนความรู้จากรุ่นพี่สู่รุ่นน้อง </li>
-                </ol>
-<p class="bg_purple"><strong>กลไกการดำเนินงานด้านการจัดการความรู้</strong></p>
-                <p class="txt_font" style="text-indent: 2.5em;" >กลไกการดำเนินงานด้านการจัดการความรู้คณะพยาบาลศาสตร์  มหาวิทยาลัยมหิดลที่สำคัญ มีดังนี้ </p>
-                <ol start="1" type="1">
-                  <li class="txt_font">มีคณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ </li>
-                  <li class="txt_font">มีหน่วยงานพัฒนาคุณภาพและบริหารความเสี่ยง       เป็นผู้ดำเนินงานด้านการจัดการความรู้ </li>
-                  </ol>
-                <p class="txt_font" style="text-indent: 2.5em;" >จากกลไกการดำเนินงานด้านการจัดการความรู้ดังกล่าว คณะพยาบาลศาสตร์  มหาวิทยาลัยมหิดล นำไปสู่การปฏิบัติ โดยมีระบบ  และกลไกการดำเนินงานด้านการจัดการความรู้ภายในคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล  ดังนี้</p>
-                <ol start="1" type="1">
-                  <li class="txt_font">แต่งตั้งคณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้       เพื่อพัฒนาคณะพยาบาลศาสตร์ให้เป็นองค์กรแห่งการเรียนรู้       สร้างวัฒนธรรมขององค์กรแห่งการเรียนรู้ให้เกิดขึ้นในคณะฯ       รวมถึงการจัดกิจกรรมแลกเปลี่ยนเรียนรู้ทั้งในระดับภาควิชา และหน่วยงาน </li>
-                  <li class="txt_font">จัดกิจกรรมการจัดการความรู้กับการดำเนินงานตามพันธกิจต่างๆ       ทั้งในระดับภาควิชาฯ หน่วยงาน และระดับคณะฯ </li>
-                  <li class="txt_font">จัดกิจกรรมถ่ายทอดความรู้ผู้เกษียณอายุราชการ </li>
-                  <li class="txt_font">ถอดบทเรียน/ความรู้ที่ได้จากการจัดการความรู้กับการดำเนินงานตามพันธกิจต่างๆ       ของ คณะพยาบาลศาสตร์ และจากถ่ายทอดความรู้ผู้เกษียณอายุราชการ </li>
-                  <li class="txt_font">เผยแพร่ความรู้ผ่านทางเว็บไซต์การจัดการความรู้และเว็บไซต์ของภาควิชาฯ </li>
-                  <li class="txt_font">สนับสนุนให้มีการนำความรู้จากการจัดการความรู้ไปใช้ในหน่วยงานอย่างต่อเนื่อง </li>
-                  <li class="txt_font">ดำเนินการจัดโครงการ/กิจกรรมให้เป็นไปตามแผนยุทธศาสตร์เพื่อให้บรรลุวิสัยทัศน์ของคณะพยาบาลศาสตร์ </li>
-                </ol>
-
-
-
-
-<p class="bg_purple"><strong>ยุทธศาสตร์ด้านการจัดการความรู้ของคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</strong></p>
-
-
-
-                <p class="txt_font"><strong>ยุทธศาสตร์ที่ 1</strong>&nbsp;พัฒนาทิศทางและกลไกสนับสนุนและส่งเสริมการจัดการความรู้<br>
-                    <strong>ยุทธศาสตร์ที่ 2</strong>&nbsp;การส่งเสริมและพัฒนาองค์ความรู้ด้านการจัดการความรู้<br>
-                    <strong>ยุทธศาสตร์ที่ 3</strong>&nbsp;ส่งเสริมการมีส่วนร่วมของบุคลากรทุกระดับในการจัดการความรู้<br>
-                  <strong>ยุทธศาสตร์ที่ 4</strong>&nbsp;สร้างบรรยากาศที่เอื้อต่อการจัดการความรู้</p>
-                  
-                  
-                  
-                  
-                  <p class="bg_purple"><strong>แผนกลยุทธ์ที่สอดคล้องกับการดำเนินงานด้านการจัดการความรู้</strong></p>
-
-                  
-                  
-                  
-<p class="txt_font"><strong>ยุทธศาสตร์ที่ 4</strong><br>
-  กลยุทธ์ที่ 4.5 พัฒนาระบบและกลไก  เพื่อให้ได้องค์ความรู้ของสถาบันจากการจัดการความรู้</p>
-  
-  
-  
-  
-  
-     <p class="bg_purple"><strong>แผนที่การดำเนินงานด้านการจัดการความรู้ (KM Map)</strong></p>
-  
-  
-  
-<p class="txt_font">งานพัฒนาคุณภาพและบริหารความเสี่ยง คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล  มีแผนที่การดำเนินงานด้านการจัดการความรู้ (KM Map) โดยเป็นการจัดเก็บในรูปแบบของคลังความรู้ที่เกิดจากการ  จัดกิจกรรมแลกเปลี่ยนเรียนรู้ สามารถเข้าไปได้ที่ Website KM&nbsp;<a href="http://www.elearning.ns.mahidol.ac.th/km/" title="การจัดการรความรู้ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล" target="_blank" class="hyperlink">http://www.elearning.ns.mahidol.ac.th/km</a>&nbsp;ซึ่งได้จัดเก็บแบ่งเป็น  5 ด้าน ดังนี้</p>
-
-
-
-<div align="center"><img src="img/other/diagram.png" width="800" height="280"></div>
+            <div class="km-container">
                 
-                
-                
-                <p class="bg_purple"><strong>กระบวนการขั้นตอนสู่ความสำเร็จด้านการจัดการความรู้ของ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มี 7 ขั้นตอน ดังนี้</strong></p>
-                
-                
-                
-                
-                <div align="center"><img src="img/other/7step.png" alt="" width="800" height="303"></div>
-               
-               
-               
-               
-               
-               
-               <p class="bg_purple"><strong>KM Road Map</strong></p>
-               
-               
-               
-               
-               
-               
-                <div align="center"><img src="img/other/road_map.png" alt="" width="800" height="385"></div>
-                <p>&nbsp;</p></td>
-              </tr>
-            </table>
-          
+                <div class="km-section">
+                    <div class="km-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        วัตถุประสงค์
+                    </div>
+                    <div class="km-body">
+                        <ul class="km-list">
+                            <li>เพื่อส่งเสริมกระบวนการการจัดการความรู้กับการดำเนินงานตามพันธกิจการศึกษา การวิจัย บริการวิชาการ บริหารจัดการ และการประกันคุณภาพของคณะพยาบาลศาสตร์</li>
+                            <li>เพื่อสร้างวัฒนธรรมองค์กรของการถ่ายทอดความรู้ผู้เกษียณอายุราชการ</li>
+                            <li>เพื่อให้บุคลากรสายสนับสนุนมีความรู้ ความเข้าใจในการวิเคราะห์สาเหตุของปัญหา ลดขั้นตอนการปฏิบัติงาน และการจัดทำแผนผัง Flowchart</li>
+                            <li>เพื่อแลกเปลี่ยนเรียนรู้ระหว่างกลุ่มงาน ค้นหาแนวแนวปฏิบัติที่ดี (Best Practice) และเผยแพร่ไปสู่บุคลากรของคณะพยาบาลศาสตร์และบุคคลภายนอก</li>
+                            <li>เพื่อถอดบทเรียน/ความรู้ที่ได้จากกระบวนการการจัดการความรู้กับการดำเนินงานตามพันธกิจต่างๆ ของคณะพยาบาลศาสตร์ และจากการถ่ายทอดความรู้ผู้เกษียณอายุราชการ</li>
+                            <li>เพื่อเกิดการนำความรู้จากการจัดการความรู้ไปใช้ในหน่วยงาน</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="km-section">
+                    <div class="km-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        นโยบายการดำเนินงานด้านการจัดการความรู้
+                    </div>
+                    <div class="km-body">
+                        <p class="km-paragraph">งานพัฒนาคุณภาพและบริหารความเสี่ยง ได้วางนโยบายการดำเนินงานด้านการจัดการความรู้ของ คณะพยาบาลศาสตร์ ไว้ดังนี้</p>
+                        <ul class="km-list">
+                            <li>สร้างระบบการจัดการความรู้ด้วยการส่งเสริมกระบวนการการจัดการความรู้ การสร้างองค์ความรู้ การจัดเก็บความรู้ รวมทั้งการนำความรู้ไปใช้ประโยชน์ ให้เป็นเครื่องมือพัฒนางานอย่างต่อเนื่องอันนำไปสู่การสร้างองค์ความรู้และนวัตกรรมใหม่</li>
+                            <li>สนับสนุนให้ทุกหน่วยงาน/ภาควิชาฯ มีการดำเนินงานด้านการจัดการความรู้ รวมทั้งการนำองค์ความรู้ที่ได้จากการแลกเปลี่ยนเรียนรู้ไปประยุกต์ใช้ในการดำเนินงานของหน่วยงาน/ภาควิชา เพื่อให้เกิดการปรับปรุงกระบวนการปฏิบัติงานให้มีประสิทธิภาพมากขึ้น</li>
+                            <li>เสริมสร้างวัฒนธรรมการแลกเปลี่ยนเรียนรู้ของการถ่ายทอดความรู้ผู้เกษียณอายุราชการ ทั้งในระดับภาควิชาฯ และระดับคณะฯ เพื่อให้เกิดการถ่ายโอนความรู้จากรุ่นพี่สู่รุ่นน้อง</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="km-section">
+                    <div class="km-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        กลไกการดำเนินงานด้านการจัดการความรู้
+                    </div>
+                    <div class="km-body">
+                        <p class="km-paragraph">กลไกการดำเนินงานด้านการจัดการความรู้คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดลที่สำคัญ มีดังนี้</p>
+                        <ul class="km-list" style="margin-bottom: 20px;">
+                            <li>มีคณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้</li>
+                            <li>มีหน่วยงานพัฒนาคุณภาพและบริหารความเสี่ยง เป็นผู้ดำเนินงานด้านการจัดการความรู้</li>
+                        </ul>
+                        <p class="km-paragraph">จากกลไกการดำเนินงานด้านการจัดการความรู้ดังกล่าว คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล นำไปสู่การปฏิบัติ โดยมีระบบ และกลไกการดำเนินงานด้านการจัดการความรู้ภายในคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ดังนี้</p>
+                        <ul class="km-list">
+                            <li>แต่งตั้งคณะกรรมการพัฒนาองค์กรแห่งการเรียนรู้และการจัดการความรู้ เพื่อพัฒนาคณะพยาบาลศาสตร์ให้เป็นองค์กรแห่งการเรียนรู้ สร้างวัฒนธรรมขององค์กรแห่งการเรียนรู้ให้เกิดขึ้นในคณะฯ รวมถึงการจัดกิจกรรมแลกเปลี่ยนเรียนรู้ทั้งในระดับภาควิชา และหน่วยงาน</li>
+                            <li>จัดกิจกรรมการจัดการความรู้กับการดำเนินงานตามพันธกิจต่างๆ ทั้งในระดับภาควิชาฯ หน่วยงาน และระดับคณะฯ</li>
+                            <li>จัดกิจกรรมถ่ายทอดความรู้ผู้เกษียณอายุราชการ</li>
+                            <li>ถอดบทเรียน/ความรู้ที่ได้จากการจัดการความรู้กับการดำเนินงานตามพันธกิจต่างๆ ของ คณะพยาบาลศาสตร์ และจากถ่ายทอดความรู้ผู้เกษียณอายุราชการ</li>
+                            <li>เผยแพร่ความรู้ผ่านทางเว็บไซต์การจัดการความรู้และเว็บไซต์ของภาควิชาฯ</li>
+                            <li>สนับสนุนให้มีการนำความรู้จากการจัดการความรู้ไปใช้ในหน่วยงานอย่างต่อเนื่อง</li>
+                            <li>ดำเนินการจัดโครงการ/กิจกรรมให้เป็นไปตามแผนยุทธศาสตร์เพื่อให้บรรลุวิสัยทัศน์ของคณะพยาบาลศาสตร์</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="km-section">
+                    <div class="km-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                        </svg>
+                        ยุทธศาสตร์ด้านการจัดการความรู้ของคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล
+                    </div>
+                    <div class="km-body">
+                        <ul class="km-list" style="margin-bottom: 30px;">
+                            <li><strong>ยุทธศาสตร์ที่ 1</strong> พัฒนาทิศทางและกลไกสนับสนุนและส่งเสริมการจัดการความรู้</li>
+                            <li><strong>ยุทธศาสตร์ที่ 2</strong> การส่งเสริมและพัฒนาองค์ความรู้ด้านการจัดการความรู้</li>
+                            <li><strong>ยุทธศาสตร์ที่ 3</strong> ส่งเสริมการมีส่วนร่วมของบุคลากรทุกระดับในการจัดการความรู้</li>
+                            <li><strong>ยุทธศาสตร์ที่ 4</strong> สร้างบรรยากาศที่เอื้อต่อการจัดการความรู้</li>
+                        </ul>
+                        
+                        <h3 style="font-size: 18px; color: var(--mu-blue-dark); margin-bottom: 15px; border-top: 1px solid var(--gray-200); padding-top: 20px;">แผนกลยุทธ์ที่สอดคล้องกับการดำเนินงานด้านการจัดการความรู้</h3>
+                        <p class="km-paragraph" style="text-indent: 0;">
+                            <strong>ยุทธศาสตร์ที่ 4</strong><br>
+                            กลยุทธ์ที่ 4.5 พัฒนาระบบและกลไก เพื่อให้ได้องค์ความรู้ของสถาบันจากการจัดการความรู้
+                        </p>
+                    </div>
+                </div>
+
+                <div class="km-section">
+                    <div class="km-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                        </svg>
+                        แผนที่การดำเนินงานด้านการจัดการความรู้ (KM Map)
+                    </div>
+                    <div class="km-body">
+                        <p class="km-paragraph">งานพัฒนาคุณภาพและบริหารความเสี่ยง คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มีแผนที่การดำเนินงานด้านการจัดการความรู้ (KM Map) โดยเป็นการจัดเก็บในรูปแบบของคลังความรู้ที่เกิดจากการ จัดกิจกรรมแลกเปลี่ยนเรียนรู้ สามารถเข้าไปได้ที่ Website KM <a href="http://www.elearning.ns.mahidol.ac.th/km/" target="_blank" class="km-link">http://www.elearning.ns.mahidol.ac.th/km</a> ซึ่งได้จัดเก็บแบ่งเป็น 5 ด้าน ดังนี้</p>
+                        
+                        <div class="km-image-container">
+                            <img src="img/other/diagram.png" alt="KM Map Diagram">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="km-section">
+                    <div class="km-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                        กระบวนการขั้นตอนสู่ความสำเร็จ และ KM Road Map
+                    </div>
+                    <div class="km-body">
+                        <h3 style="font-size: 18px; color: var(--mu-blue-dark); margin-bottom: 15px;">กระบวนการขั้นตอนสู่ความสำเร็จด้านการจัดการความรู้ของ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มี 7 ขั้นตอน</h3>
+                        <div class="km-image-container">
+                            <img src="img/other/7step.png" alt="7 Steps to KM Success">
+                        </div>
+                        
+                        <h3 style="font-size: 18px; color: var(--mu-blue-dark); margin-bottom: 15px; border-top: 1px solid var(--gray-200); padding-top: 30px;">KM Road Map</h3>
+                        <div class="km-image-container" style="margin-bottom: 0;">
+                            <img src="img/other/road_map.png" alt="KM Road Map">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </main>
 
         <footer class="site-footer">
@@ -290,8 +412,12 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
                     <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
@@ -349,4 +475,7 @@
     </script>
 </body>
 </html>
+
+
+
 

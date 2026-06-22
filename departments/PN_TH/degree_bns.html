@@ -47,6 +47,138 @@
             text-indent: 2.5em;
             margin: 0;
         }
+            /* --- Teaching Layout --- */
+                        /* --- BNS Layout --- */
+        .teaching-intro {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .teaching-intro-img {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            line-height: 0;
+            text-align: center;
+            background: #fff;
+        }
+        .teaching-intro-img img {
+            width: 100%;
+            max-width: 990px;
+            height: auto;
+            object-fit: contain;
+            display: inline-block;
+        }
+        .teaching-intro-text {
+            font-size: 16px;
+            color: var(--gray-700);
+            line-height: 1.8;
+            text-align: justify;
+        }
+        .teaching-intro-text p {
+            text-indent: 2.5em;
+            margin-bottom: 15px;
+        }
+        .intro-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        .view-all-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            color: white;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(25, 68, 136, 0.3);
+        }
+        .view-all-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(25, 68, 136, 0.4);
+            color: white;
+        }
+        .btn-secondary {
+            background: var(--mu-blue-pale);
+            color: var(--mu-blue-dark);
+            box-shadow: none;
+        }
+        .btn-secondary:hover {
+            background: #e0f0ff;
+            color: var(--mu-blue-dark);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+.curriculum-section {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        .course-group {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+        .course-group-header {
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            padding: 20px 30px;
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .course-group-header svg {
+            width: 24px;
+            height: 24px;
+            color: var(--mu-gold);
+        }
+        
+        .course-subgroup {
+            background: var(--mu-blue-pale);
+            padding: 12px 30px;
+            font-weight: 600;
+            color: var(--mu-blue-dark);
+            border-bottom: 1px solid var(--gray-100);
+            border-top: 1px solid var(--gray-100);
+        }
+        .course-group > .course-subgroup:first-child { border-top: none; }
+
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .course-table td {
+            padding: 18px 30px;
+            border-bottom: 1px solid var(--gray-100);
+            transition: background-color 0.2s;
+        }
+        .course-table tr:last-child td { border-bottom: none; }
+        .course-table tr:hover td { background-color: #fcfcfc; }
+        .course-name { width: 100%; }
+        .course-code { font-weight: 700; color: var(--mu-blue); margin-right: 8px; }
+        .course-desc { font-size: 14px; color: var(--gray-500); display: block; margin-top: 8px; line-height: 1.6; }
+
+        @media (max-width: 768px) {
+            .teaching-intro { flex-direction: column; gap: 25px; }
+            .teaching-intro-img { flex: 0 0 auto; width: 100%; }
+            .course-group-header { padding: 16px 20px; font-size: 18px; }
+            .course-table td { padding: 16px 20px; }
+            .course-subgroup { padding: 10px 20px; }
+        }
     </style>
 </head>
 <body>
@@ -167,23 +299,83 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
+            <div class="clean-header">
+                <h1>หลักสูตรปริญญาตรี</h1>
+            </div>
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">หลักสูตรปริญญาตรี</td>
-              </tr>
-              <tr>
-                <td height="363" align="left" valign="top"><p class="head_blue">หลักสูตรพยาบาลศาสตรบัณฑิต</p>
-                <p class="txt_font" style="text-indent: 2.5em;" >หลักสูตรพยาบาลศาสตรบัณฑิต คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มุ่งผลิตบัณฑิตที่มีสมรรถนะตามมาตรฐานวิชาชีพและมาตรฐานระดับสากล รู้ลึกในสาขาวิชาชีพการพยาบาลและการผดุงครรภ์ รู้กว้างในการเปลี่ยนแปลงของประเด็นและแนวโน้มสุขภาพโลก มีทักษะในการดูแลผู้รับบริการที่ได้รับการรักษาด้วยเทคโนโลยีขั้นสูง มีภาวะผู้นำ มีทักษะด้านเทคโนโลยีและการสื่อสาร ใฝ่เรียนรู้ตลอดชีวิต มีจิตบริการ คิดอย่างมีวิจารณญาณ สร้างสรรค์นวัตกรรม รับผิดชอบต่อสังคม ปรับตัวในสังคมที่เปลี่ยนแปลง คุณลักษณะที่โดดเด่นของบัณฑิตคณะพยาบาลศาสตร์ คือ “มุ่งมั่นคุณธรรม เลิศล้ำทางปัญญา สร้างคุณค่าต่อสังคม ”</p>
-                <div align="left"><a href="https://ns.mahidol.ac.th/nurse_th/bns/bns2560.html" target="_blank"><img src="img/other/more.png" width="240" height="34"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="degree_bns2.html" target="_parent"><img src="img/other/pn_more.png" width="240" height="34"></a></div><br>
+                                    <div class="teaching-intro">
+                <div class="teaching-intro-img">
+                    <img src="img/other/bns1.png" alt="บรรยากาศการเรียนการสอน">
+                </div>
+                
+                <div class="teaching-intro-text">
+                    <p>หลักสูตรพยาบาลศาสตรบัณฑิต คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล มุ่งผลิตบัณฑิตที่มีสมรรถนะตามมาตรฐานวิชาชีพและมาตรฐานระดับสากล รู้ลึกในสาขาวิชาชีพการพยาบาลและการผดุงครรภ์ รู้กว้างในการเปลี่ยนแปลงของประเด็นและแนวโน้มสุขภาพโลก มีทักษะในการดูแลผู้รับบริการที่ได้รับการรักษาด้วยเทคโนโลยีขั้นสูง มีภาวะผู้นำ มีทักษะด้านเทคโนโลยีและการสื่อสาร ใฝ่เรียนรู้ตลอดชีวิต มีจิตบริการ คิดอย่างมีวิจารณญาณ สร้างสรรค์นวัตกรรม รับผิดชอบต่อสังคม ปรับตัวในสังคมที่เปลี่ยนแปลง คุณลักษณะที่โดดเด่นของบัณฑิตคณะพยาบาลศาสตร์ คือ “มุ่งมั่นคุณธรรม เลิศล้ำทางปัญญา สร้างคุณค่าต่อสังคม”</p>
+                    
+                    <div class="intro-buttons">
+                        <a href="https://ns.mahidol.ac.th/nurse_th/bns/bns2560.html" target="_blank" class="view-all-link-btn">
+                            ข้อมูลหลักสูตรพยาบาลศาสตรบัณฑิต
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 16px; height: 16px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                <div align="left"></div>
-                <p>&nbsp;</p>
-                <p><img src="img/other/bns1.png" alt="" width="990" height="222"  style="border: 1px solid #ccc; padding: 5px;"></p></td>
-              </tr>
-            </table>
-          
+            <div class="curriculum-section">
+                <div class="course-group">
+                    <div class="course-group-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        รายวิชาที่ภาควิชาการพยาบาลกุมารเวชศาสตร์รับผิดชอบ
+                    </div>
+                    
+                    <div class="course-subgroup">รายวิชาหลัก</div>
+                    <table class="course-table">
+                        <tr>
+                            <td class="course-name"><span class="course-code">พยกม ๓๐๓</span> การพยาบาลเด็กและวัยรุ่น
+                                <span class="course-desc">หลักการพยาบาลเด็กและครอบครัวแบบองค์รวม ตั้งแต่แรกเกิดจนถึงวัยรุ่น การสร้างเสริมสุขภาพและการป้องกันโรค การพยาบาลผู้ป่วยเด็ก โรคระบบทางเดินอาหาร ระบบทางเดินหายใจ ระบบหัวใจและหลอดเลือด ระบบทางเดินปัสสาวะ ระบบต่อมไร้ท่อ ระบบประสาท ระบบโลหิตวิทยาและมะเร็ง และโรคติดเชื้อ</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="course-name"><span class="course-code">พยกม ๓๘๑</span> ปฏิบัติการพยาบาลเด็กและวัยรุ่น
+                                <span class="course-desc">ปฏิบัติการพยาบาลแบบองค์รวมโดยยึดครอบครัวเป็นศูนย์กลาง ในทารก เด็กและวัยรุ่น ทั้งที่มีสุขภาพดี และเจ็บป่วย ในโรคระบบทางเดินอาหาร ระบบหายใจ ระบบหัวใจและหลอดเลือด ระบบโลหิตวิทยามะเร็ง ระบบทางเดินปัสสาวะ ระบบต่อมไร้ท่อ ระบบประสาท และโรคติดเชื้อ ที่ได้รับการรักษาด้วยเทคโนโลยีขั้นสูง โดยนำกระบวนการพยาบาลและหลักฐานเชิงประจักษ์มาใช้ โดยคำนึงถึงสิทธิความปลอดภัยของผู้ป่วย จริยธรรม จรรยาบรรณวิชาชีพ</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="course-subgroup">รายวิชาร่วม</div>
+                    <table class="course-table">
+                        <tr>
+                            <td class="course-name"><span class="course-code">พยคร ๒๘๒</span> ปฏิบัติทักษะพื้นฐานทางการพยาบาล
+                                <span class="course-desc">ปฏิบัติทักษะการพยาบาลพื้นฐาน การดูแลสุขอนามัยส่วนบุคคล การตอบสนองความต้องการพื้นฐานของบุคคล การป้องกันการติดเชื้อ ความปลอดภัยของผู้ป่วย พยาบาลและสิ่งแวดล้อม การบำบัดรักษาทางการพยาบาลคำนึงถึงสิทธิของผู้ป่วย และจรรยาบรรณวิชาชีพ</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="course-name"><span class="course-code">พยคร ๔๙๒</span> ปฏิบัติผู้นำการพยาบาลทางคลินิก
+                                <span class="course-desc">การปฏิบัติบริหารจัดการในคลินิก ผู้นำทางคลินิก การจัดระบบการให้การพยาบาล การนำทีมการพยาบาล การวางแผน การมอบหมายงาน การประสานงาน การนิเทศโดยใช้หลักฐานเชิงประจักษ์ในการพยาบาล การประเมินผลงาน การตัดสินใจทางการพยาบาล คำนึงถึงคุณธรรม จริยธรรม จรรยาบรรณวิชาชีพ</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="course-name"><span class="course-code">พยคร ๔๙๓</span> ปฏิบัติการพยาบาลเพื่อเตรียมเข้าสู่วิชาชีพ
+                                <span class="course-desc">ปฏิบัติการพยาบาลในสาขาทางคลินิกที่สนใจ ฝึกการวิเคราะห์สถานการณ์ทางคลินิก และวิเคราะห์โครงสร้างหน่วยงาน ฝึกทักษะการพยาบาลเฉพาะด้านในผู้ป่วยที่ได้รับการรักษาด้วยเทคโนโลยีขั้นสูง ฝึกการทำงานเป็นทีมร่วมกับทีมสุขภาพ คำนึงถึงขอบเขต ข้อบังคับ คุณธรรม จริยธรรมและจรรยาบรรณวิชาชีพ</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="course-name"><span class="course-code">พยคร ๓๓๐</span> โครงการพัฒนานวัตกรรมทางสุขภาพ
+                                <span class="course-desc">วิเคราะห์ปัญหาสุขภาพในคลินิกหรือชุมชน ระบุประเด็นปัญหาที่ต้องการพัฒนา พัฒนาโครงการนวัตกรรมเพื่อแก้ไขปัญหาหรือพัฒนาคุณภาพการบริการในคลินิกหรือชุมชน ประสานความร่วมมือกับทีมพยาบาลและทีมสุขภาพ สร้างนวัตกรรม นำไปใช้ ประเมินผล และเผยแพร่</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="course-name"><span class="course-code">พยคร ๒๒๓</span> การพัฒนาตนตามหลักพุทธศาสนา
+                                <span class="course-desc">กระบวนการและทักษะการพัฒนาตน เป้าหมายของชีวิต หลักพุทธธรรมที่พึงรู้ พึงละ พึงทำให้เจริญ พึงปฏิบัติดำเนินชีวิตให้งอกงามบรรลุประโยชน์สุข</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </main>
 
         <footer class="site-footer">
@@ -200,8 +392,12 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
                     <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
@@ -259,4 +455,9 @@
     </script>
 </body>
 </html>
+
+
+
+
+
 

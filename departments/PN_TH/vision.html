@@ -28,26 +28,164 @@
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
+        .clean-divider {
+            width: 40px;
+            height: 4px;
+            background: var(--mu-gold);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
 
-        /* --- Content Layout --- */
-        .academic-wrapper {
+        /* --- Vision / Mission Styles --- */
+        .vision-container {
             max-width: 900px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+        .vision-card {
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            border-radius: 24px;
+            padding: 50px 40px;
+            text-align: center;
+            color: var(--white);
+            box-shadow: 0 20px 40px rgba(25, 68, 136, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .vision-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .vision-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .vision-icon svg {
+            width: 40px;
+            height: 40px;
+            color: var(--white);
+        }
+        .vision-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+        .vision-text {
+            font-size: 19px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .mission-section {
+            max-width: 1000px;
             margin: 0 auto 80px;
             padding: 0 20px;
         }
-        
-        .intro-text-elegant {
-            font-size: 17.5px;
+        .mission-heading {
+            font-size: 32px;
+            color: var(--mu-blue-dark);
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .mission-heading::before,
+        .mission-heading::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, var(--mu-gold));
+            border-radius: 2px;
+        }
+        .mission-heading::after {
+            background: linear-gradient(to left, transparent, var(--mu-gold));
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .mission-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .mission-card::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: linear-gradient(to right, var(--mu-gold), var(--mu-gold-dark));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .mission-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(25, 68, 136, 0.08);
+        }
+        .mission-card:hover::after {
+            opacity: 1;
+        }
+        .mission-number {
+            font-size: 50px;
+            font-weight: 800;
+            color: var(--mu-blue-pale);
+            line-height: 1;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        .mission-card:hover .mission-number {
+            color: var(--mu-gold);
+        }
+        .mission-card p {
+            font-size: 16.5px;
             color: var(--gray-700);
-            line-height: 1.8;
-            margin-bottom: 50px;
-            text-align: justify;
-        }
-        .intro-text-elegant p {
-            text-indent: 2.5em;
+            line-height: 1.7;
             margin: 0;
+            flex-grow: 1;
         }
-    </style>
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .vision-card { padding: 40px 25px; }
+            .vision-title { font-size: 24px; }
+            .vision-text { font-size: 17px; }
+            .mission-heading { font-size: 26px; }
+            .mission-heading::before, .mission-heading::after { width: 30px; }
+            .mission-grid { gap: 20px; }
+            .mission-card { padding: 30px 20px; }
+            .mission-number { font-size: 40px; }
+        }
+</style>
 </head>
 <body>
 
@@ -167,46 +305,65 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">วิสัยทัศน์ / พันธกิจ</td>
-              </tr>
-              <tr>
-                <td height="363"><p class="txt_purple"><strong>วิสัยทัศน์</strong></p>
-                  <p style="text-indent: 2.5em;" class="txt_font">เป็นผู้นำทางการวิจัยและวิชาการด้านการพยาบาลเด็กในระดับประเทศและภูมิภาคเอเชียอาคเนย์ ภายในปี ๒๕๖๔</p>
-                  <p style="text-indent: 2.5em;" class="txt_font">&nbsp;</p>
-                  <p><strong class="txt_purple">พันธกิจ</strong></p>
-                  <table width="80%" border="0" align="center" cellpadding="10" cellspacing="0">
-                    <tr class="line_body">
-                      <td width="13%" align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                    <td width="87%" valign="middle" class="line_body"> <span class="txt_font">จัดการเรียนการสอนสาขาการพยาบาลเด็กแก่นักศึกษา ทุกหลักสูตรของคณะพยาบาลศาสตร์</span></tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body"> <span class="txt_font">วิจัยและใช้ผลงานวิจัยทางการพยาบาลเด็ก</span></td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body"> <span class="txt_font">บริการวิชาการ ทางการพยาบาลเด็ก</span></td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body"> <span class="txt_font">ทำนุบำรุงศิลปวัฒนธรรม</span></td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body"> <span class="txt_font">พัฒนาระบบบริหารจัดการภาควิชาฯ </span></td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" class="line_body"><img src="img/other/bullet3.png" alt="" width="11" height="11"></td>
-                      <td valign="middle" class="line_body"> <span class="txt_font">สร้างเครือข่ายวิจัยและวิชาการทั้งในและต่างประเทศ </span></td>
-                    </tr>
-                  </table>
-                <p>&nbsp;</p></td>
-              </tr>
-            </table>
-          
+            <div class="clean-header">
+                <h1>วิสัยทัศน์ / พันธกิจ</h1>
+            </div>
+
+            <!-- Vision Section -->
+            <div class="vision-container">
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <h2 class="vision-title">วิสัยทัศน์</h2>
+                    <p class="vision-text">
+                        เป็นผู้นำทางการวิจัยและวิชาการด้านการพยาบาลเด็กในระดับประเทศและภูมิภาคเอเชียอาคเนย์ ภายในปี ๒๕๖๔
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="mission-section">
+                <h2 class="mission-heading">พันธกิจ</h2>
+                <div class="mission-grid">
+                    <!-- Item 1 -->
+                    <div class="mission-card">
+                        <div class="mission-number">01</div>
+                        <p>จัดการเรียนการสอนสาขาการพยาบาลเด็กแก่นักศึกษา ทุกหลักสูตรของคณะพยาบาลศาสตร์</p>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="mission-card">
+                        <div class="mission-number">02</div>
+                        <p>วิจัยและใช้ผลงานวิจัยทางการพยาบาลเด็ก</p>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="mission-card">
+                        <div class="mission-number">03</div>
+                        <p>บริการวิชาการ ทางการพยาบาลเด็ก</p>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="mission-card">
+                        <div class="mission-number">04</div>
+                        <p>ทำนุบำรุงศิลปวัฒนธรรม</p>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="mission-card">
+                        <div class="mission-number">05</div>
+                        <p>พัฒนาระบบบริหารจัดการภาควิชาฯ</p>
+                    </div>
+                    <!-- Item 6 -->
+                    <div class="mission-card">
+                        <div class="mission-number">06</div>
+                        <p>สร้างเครือข่ายวิจัยและวิชาการทั้งในและต่างประเทศ</p>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
         <footer class="site-footer">
@@ -223,8 +380,12 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
                     <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
@@ -282,4 +443,8 @@
     </script>
 </body>
 </html>
+
+
+
+
 

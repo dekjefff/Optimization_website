@@ -28,26 +28,100 @@
             margin-bottom: 12px;
             letter-spacing: -0.5px;
         }
-
-        /* --- Content Layout --- */
-        .academic-wrapper {
-            max-width: 900px;
-            margin: 0 auto 80px;
-            padding: 0 20px;
+        
+        /* --- Leaders Section (Enhanced Table) --- */
+        .leaders-section {
+            padding: 0 15px;
+            margin-bottom: 80px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .leaders-table-container {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(25, 68, 136, 0.08);
+        }
+        .leaders-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .leaders-table th {
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 24px 20px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        .leaders-table td {
+            font-size: 17px;
+            color: var(--gray-800);
+            padding: 20px 20px;
+            border-bottom: 1px solid var(--gray-100);
+            line-height: 1.6;
+            transition: all 0.3s ease;
+            vertical-align: middle;
+        }
+        .leaders-table td.center-td {
+            text-align: center;
+        }
+        .leaders-table tr:last-child td {
+            border-bottom: none;
+        }
+        .leaders-table tr:nth-child(even) td {
+            background-color: #f8fafc;
+        }
+        .leaders-table tr:hover td {
+            background-color: #f0f4f8;
         }
         
-        .intro-text-elegant {
-            font-size: 17.5px;
-            color: var(--gray-700);
-            line-height: 1.8;
-            margin-bottom: 50px;
-            text-align: justify;
+        .head-img {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .intro-text-elegant p {
-            text-indent: 2.5em;
-            margin: 0;
+        
+        .head-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--mu-blue-dark);
+            margin-bottom: 8px;
         }
-    </style>
+        
+        .head-year {
+            font-weight: 600;
+            color: var(--mu-blue);
+        }
+        
+        .status-tag {
+            display: inline-block;
+            font-size: 13px;
+            background: linear-gradient(135deg, var(--mu-gold) 0%, var(--mu-gold-dark) 100%);
+            color: var(--white);
+            padding: 4px 16px;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-weight: 600;
+            vertical-align: middle;
+            box-shadow: 0 4px 10px rgba(234, 170, 0, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .leaders-table th { padding: 16px 10px; font-size: 15px; }
+            .leaders-table td { padding: 16px 10px; font-size: 15px; }
+            .head-img { width: 80px; height: 100px; }
+            .head-name { font-size: 18px; }
+        }
+</style>
 </head>
 <body>
 
@@ -167,201 +241,69 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">ทำเนียบหัวหน้าภาค</td>
-              </tr>
-              <tr>
-                <td height="33" valign="top" class="txt_font" >รายนามหัวหน้าภาควิชาการพยาบาลกุมารเวชศาสตร์</td>
-              </tr>
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              
-              <!--
-              <tr>
-                <td height="33" valign="top" class="txt_head">           
-                
-       
-                
-                   <script language="JavaScript1.2" type="text/javascript">
+            <div class="clean-header">
+                <h1>ทำเนียบหัวหน้าภาค</h1>
+            </div>
 
-var slideshow_width='988px' // ? WIDTH ??
-var slideshow_height='325px' // ? HEIGHT ??
-var pause=6000 // ??? (1000 = 1 ??)
-var slidebgcolor="white"
+            <div class="leaders-section">
+                <div class="leaders-table-container">
+                    <table class="leaders-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">รูปภาพ</th>
+                                <th style="width: 75%;">รายละเอียด</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="center-td"><img src="img/staff/head/charongrat.jpg" alt="รองศาสตราจารย์ฉลองรัฐ อินทรีย์" class="head-img"></td>
+                                <td>
+                                    <div class="head-name">รองศาสตราจารย์ฉลองรัฐ อินทรีย์</div>
+                                    <div class="head-year">วาระหัวหน้าภาควิชา: พ.ศ. 2518 - พ.ศ. 2539</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-td"><img src="img/staff/head/ratchanee.jpg" alt="รองศาสตราจารย์รัชนี สีดา" class="head-img"></td>
+                                <td>
+                                    <div class="head-name">รองศาสตราจารย์รัชนี สีดา</div>
+                                    <div class="head-year">วาระหัวหน้าภาควิชา: 9 กุมภาพันธ์ 2539 - 8 กุมภาพันธ์ 2547</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-td"><img src="img/staff/head/boonpean.jpg" alt="รองศาสตราจารย์บุญเพียร จันทวัฒนา" class="head-img"></td>
+                                <td>
+                                    <div class="head-name">รองศาสตราจารย์บุญเพียร จันทวัฒนา</div>
+                                    <div class="head-year">วาระหัวหน้าภาควิชา: 9 กุมภาพันธ์ 2547 - 15 ธันวาคม 2550</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-td"><img src="img/staff/head/wilai.jpg" alt="รองศาสตราจารย์วิไล เลิศธรรมเทวี" class="head-img"></td>
+                                <td>
+                                    <div class="head-name">รองศาสตราจารย์วิไล เลิศธรรมเทวี</div>
+                                    <div class="head-year">วาระหัวหน้าภาควิชา: 16 ธันวาคม 2550 - 15 ธันวาคม 2558</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-td"><img src="img/staff/weeraya.jpg" alt="รองศาสตราจารย์วีรยา จึงสมเจตไพศาล" class="head-img"></td>
+                                <td>
+                                    <div class="head-name">รองศาสตราจารย์วีรยา จึงสมเจตไพศาล</div>
+                                    <div class="head-year">วาระหัวหน้าภาควิชา: 16 ธันวาคม 2558 - 15 ธันวาคม 2562</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="center-td"><img src="img/staff/arunrat.jpg" alt="รองศาสตราจารย์ ดร.อรุณรัตน์ ศรีจันทรนิตย์" class="head-img"></td>
+                                <td>
+                                    <div class="head-name">รองศาสตราจารย์ ดร.อรุณรัตน์ ศรีจันทรนิตย์ <span class="status-tag">ปัจจุบัน</span></div>
+                                    <div class="head-year">วาระหัวหน้าภาควิชา: 16 ธันวาคม 2562 - ปัจจุบัน</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-var dropimages=new Array()
-//  URL ??? SLIDE ????? 
-
-
-
-dropimages[0]="img/slide/slide.png"
-dropimages[1]="img/slide/slide.png"
-dropimages[2]="img/slide/slide.png"
-dropimages[3]="img/slide/slide.png"
-
-
-
-
-
-
-var droplinks=new Array()
-//  LINK ???? ? LINK ? URL ???
-
-droplinks[0]="#" 
-droplinks[1]="#" 
-droplinks[2]="#" 
-droplinks[3]="#" 
-
-
-
-              
-              
-              
-              
-
-
-////NO need to edit beyond here/////////////
-
-var preloadedimages=new Array()
-for (p=0;p<dropimages.length;p++){
-preloadedimages[p]=new Image()
-preloadedimages[p].src=dropimages[p]
-}
-
-var ie4=document.all
-var dom=document.getElementById
-
-if (ie4||dom)
-document.write('<div style="position:relative;width:'+slideshow_width+';height:'+slideshow_height+';overflow:hidden"><div id="canvas0" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';background-color:'+slidebgcolor+';left:-'+slideshow_width+'"></div><div id="canvas1" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';background-color:'+slidebgcolor+';left:-'+slideshow_width+'"></div></div>')
-else
-document.write('<a href="javascript:rotatelink()"><img name="defaultslide" src="'+dropimages[0]+'" border=0></a>')
-
-var curpos=parseInt(slideshow_width)*(-1)
-var degree=10
-var curcanvas="canvas0"
-var curimageindex=linkindex=0
-var nextimageindex=1
-
-
-function movepic(){
-if (curpos<0){
-curpos=Math.min(curpos+degree,0)
-tempobj.style.left=curpos+"px"
-}
-else{
-
-clearInterval(dropslide)
-nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
-tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
-var slideimage='<img src="'+dropimages[curimageindex]+'" border=0>'
-tempobj.innerHTML=(droplinks[curimageindex]!="")? '<a href="'+droplinks[curimageindex]+'">'+slideimage+'</a>' : slideimage
-nextimageindex=(nextimageindex<dropimages.length-1)? nextimageindex+1 : 0
-setTimeout("rotateimage()",pause)
-}
-}
-
-function rotateimage(){
-if (ie4||dom){
-resetit(curcanvas)
-var crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
-crossobj.style.zIndex++
-var temp='setInterval("movepic()",50)'
-dropslide=eval(temp)
-curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
-}
-else
-document.images.defaultslide.src=dropimages[curimageindex]
-linkindex=curimageindex
-curimageindex=(curimageindex<dropimages.length-1)? curimageindex+1 : 0
-}
-
-function rotatelink(){
-if (droplinks[linkindex]!="")
-window.location=droplinks[linkindex]
-}
-
-function resetit(what){
-curpos=parseInt(slideshow_width)*(-1)
-var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
-crossobj.style.left=curpos+"px"
-}
-
-function startit(){
-var crossobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
-crossobj.innerHTML='<a href="'+droplinks[curimageindex]+'"><img src="'+dropimages[curimageindex]+'" border=0></a>'
-rotateimage()
-}
-
-if (ie4||dom)
-window.onload=startit
-else
-setInterval("rotateimage()",pause)
-
-</script>
-    </td>
-              </tr>
-              
-              
-              -->
-              
-              
-              
-              
-              
-              
-              
-              <tr>
-                <td valign="top" class="txt_font">
-                  <table width="95%" border="0" align="center" cellpadding="5" cellspacing="2">
-                    <tr>
-                      <td width="14%" valign="top" ><img src="img/staff/head/charongrat.jpg" alt="" width="123" height="155"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td width="86%" class="line_body"><span class="head_blue"><strong>รองศาสตราจารย์ฉลองรัฐ     อินทรีย์</strong></span><br>
-                        <p><span class="txt_font">วาระหัวหน้าภาควิชา: พ.ศ. 2518 - พ.ศ. 2539  </span><br>
-                      </p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/head/ratchanee.jpg" alt="" width="123" height="155"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td class="line_body"><span class="head_blue"><strong>รองศาสตราจารย์รัชนี  สีดา</strong></span><br>
-                      <p class="txt_font">วาระหัวหน้าภาควิชา:  9 กุมภาพันธ์ 2539 - 8 กุมภาพันธ์ 2547</p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/head/boonpean.jpg" alt="" width="123" height="155"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td class="line_body"><span class="head_blue"><strong>รองศาสตราจารย์บุญเพียร จันทวัฒนา</strong></span><br>
-                      <p class="txt_font">วาระหัวหน้าภาควิชา:  9 กุมภาพันธ์ 2547 - 15 ธันวาคม 2550                        </p>                        <p>&nbsp;</p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/head/wilai.jpg" alt="" width="123" height="155"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td class="line_body"><span class="head_blue"><strong>รองศาสตราจารย์วิไล เลิศธรรมเทวี</strong></span><br>
-                      <p class="txt_font">วาระหัวหน้าภาควิชา:  16 ธันวาคม 2550 - 15 ธันวาคม 2558</p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/weeraya.jpg" alt="" width="123" height="155"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td class="line_body"><span class="head_blue"><strong>รองศาสตราจารย์วีรยา จึงสมเจตไพศาล</strong></span><br>
-                      <p class="txt_font">วาระหัวหน้าภาควิชา:  16 ธันวาคม 2558 - 15 ธันวาคม 2562</p></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" ><img src="img/staff/arunrat.jpg" alt="" width="123" height="155"  style="border: 1px solid #ccc; padding: 5px;"></td>
-                      <td class="line_body"><span class="head_blue"><strong>รองศาสตราจารย์ ดร.อรุณรัตน์ ศรีจันทรนิตย์</strong></span><br>
-                      <p class="txt_font">วาระหัวหน้าภาควิชา:  16 ธันวาคม 2562 - ปัจจุบัน</p></td>
-                    </tr>
-                  </table>
-                <p class="txt_blue">&nbsp;</p></td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-            </table>
-          
         </main>
 
         <footer class="site-footer">
@@ -378,8 +320,12 @@ setInterval("rotateimage()",pause)
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
                     <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
@@ -437,4 +383,7 @@ setInterval("rotateimage()",pause)
     </script>
 </body>
 </html>
+
+
+
 

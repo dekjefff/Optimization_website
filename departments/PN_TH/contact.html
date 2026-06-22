@@ -21,6 +21,7 @@
             padding: 40px 20px 25px;
             margin-bottom: 20px;
         }
+
         .clean-header h1 {
             font-size: 32px;
             color: var(--mu-blue-dark);
@@ -29,25 +30,131 @@
             letter-spacing: -0.5px;
         }
 
-        /* --- Content Layout --- */
-        .academic-wrapper {
-            max-width: 900px;
+        /* --- Contact Styles --- */
+        .contact-container {
+            max-width: 1000px;
             margin: 0 auto 80px;
             padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
         }
-        
-        .intro-text-elegant {
-            font-size: 17.5px;
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-card h2 {
+            font-size: 24px;
+            color: var(--mu-blue-dark);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-card h2 svg {
+            width: 28px;
+            height: 28px;
+            color: var(--mu-gold);
+        }
+
+        .contact-info-block {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-block svg {
+            width: 24px;
+            height: 24px;
+            color: var(--mu-blue);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .contact-info-text {
+            font-size: 16px;
             color: var(--gray-700);
-            line-height: 1.8;
-            margin-bottom: 50px;
-            text-align: justify;
+            line-height: 1.6;
         }
-        .intro-text-elegant p {
-            text-indent: 2.5em;
-            margin: 0;
+
+        .contact-person {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            gap: 25px;
+            align-items: center;
         }
-    </style>
+
+        .contact-person img {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-person-details h3 {
+            font-size: 19px;
+            color: var(--mu-blue-dark);
+            margin-bottom: 5px;
+        }
+
+        .contact-person-details .position {
+            font-size: 15px;
+            color: var(--mu-gold-dark);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .contact-person-details p {
+            font-size: 14.5px;
+            color: var(--gray-600);
+            margin-bottom: 5px;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-card {
+                padding: 30px 20px;
+            }
+
+            .contact-person {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .map-container {
+                min-height: 300px;
+            }
+        }
+</style>
 </head>
 <body>
 
@@ -167,49 +274,57 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">ติดต่อภาควิชา</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font"><p class="txt_purple">ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล<br>
-                    <span class="txt_font"><br>
-                    ตั้งอยู่เลขที่ 2 อาคารพระศรีพัชรินทร์ ชั้น 8
-ถนนวังหลัง แขวงศิริราช เขตบางกอกน้อย
-กรุงเทพฯ 10700</span></p>
-                  <table width="70%" border="0" align="center" cellpadding="5" cellspacing="2">
-                    <tr>
-                      <td width="27%" valign="top" ><img src="img/staff/sangduan.jpg" alt="" width="128" height="162" ></td>
-                      <td width="73%" class="line_body"><p><span class="txt_purple">นางสาวแสงเดือน พรหมจันทร์<br>
-                        </span><span class="txt_blue_reg">เจ้าหน้าที่บริหารงานทั่วไป</span></p>
-                        <p>โทรศัพท์:	02-419-7466-80 ต่อ 1850-1851<br>
-                          โทรสาร 02-411-325812-8415<br>
-							
-							
-							<!--
-                        E-mail:</span> <a href="mailto:sangduan.pro@mahidol.ac.th" target="_blank" class="hyperlink">sangduan.pro@mahidol.ac.th</a>
--->
-							
-							
+            <div class="clean-header">
+                <h1>ติดต่อภาควิชา</h1>
+            </div>
 
-                      </p></td>
-                      </tr>
-                  </table>
-                  <p class="txt_purple">แผนที่</p>
-                  <table width="80%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.8698020783886!2d100.48438884641337!3d13.75624908226011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2990aee691ef9%3A0xc47e5165edc7f13!2z4LiE4LiT4Liw4Lie4Lii4Liy4Lia4Liy4Lil4Lio4Liy4Liq4LiV4Lij4LmMIOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4oeC4q-C4tOC4lOC4pQ!5e0!3m2!1sth!2sth!4v1517385479891" width="800" height="350" frameborder="0" style="border:0" allowfullscreen></iframe></td>
-                    </tr>
-                  </table>
-                  <p>&nbsp;</p></td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-            </table>
-          
+            <div class="contact-container">
+                <!-- Contact Details -->
+                <div class="contact-card">
+                    <h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        สถานที่ตั้ง
+                    </h2>
+
+                    <div class="contact-info-block">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <div class="contact-info-text">
+                            <strong>ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</strong><br>
+                            ตั้งอยู่เลขที่ 2 อาคารพระศรีพัชรินทร์ ชั้น 8<br>
+                            ถนนวังหลัง แขวงศิริราช เขตบางกอกน้อย<br>
+                            กรุงเทพฯ 10700
+                        </div>
+                    </div>
+
+                    <div class="contact-person">
+                        <img src="img/staff/sangduan.jpg" alt="นางสาวแสงเดือน พรหมจันทร์">
+                        <div class="contact-person-details">
+                            <h3>นางสาวแสงเดือน พรหมจันทร์</h3>
+                            <div class="position">เจ้าหน้าที่บริหารงานทั่วไป</div>
+                            <p>📞 <strong>โทรศัพท์:</strong> 02-419-7466-80 ต่อ 1850-1851</p>
+                            <p>📠 <strong>โทรสาร:</strong> 02-411-3258</p>
+                            <p>✉️ <strong>E-mail:</strong> <a href="mailto:sangduan.pro@mahidol.ac.th"
+                                    style="color:var(--mu-blue);">sangduan.pro@mahidol.ac.th</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.8698020783886!2d100.48438884641337!3d13.75624908226011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2990aee691ef9%3A0xc47e5165edc7f13!2z4LiE4LiT4Liw4Lie4Lii4Liy4Lia4Liy4Lil4Lio4Liy4Liq4LiV4Lij4LmMIOC4oeC4q-C4suC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC4oeC4q-C4tOC4lOC4pQ!5e0!3m2!1sth!2sth!4v1517385479891" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+
         </main>
 
         <footer class="site-footer">
@@ -226,8 +341,12 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                    <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                     </div>
                     <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
                         <img src="img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
@@ -285,4 +404,7 @@
     </script>
 </body>
 </html>
+
+
+
 
