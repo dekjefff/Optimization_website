@@ -3,122 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ข่าวสารภาควิชาฯ:  ภาควิชาการพยาบาลสูติศาสตร์ - นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <title>ข่าวสารภาควิชาฯ | ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
   <link rel="stylesheet" href="style.css">
   <script src="../../components/layout.js" defer></script>
   
-  
+  <style>
+    .news-section {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    .section-title {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .news-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
+    }
+    .news-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--surface-border);
+    }
+    .news-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .news-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--text-main);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .news-card:hover .news-title {
+      color: var(--primary);
+    }
+    .news-read-more {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--secondary);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .news-read-more svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .news-card:hover .news-read-more svg {
+      transform: translateX(4px);
+    }
+    .more-btn-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--primary);
+      color: var(--text-inverse);
+      text-decoration: none;
+      border-radius: var(--radius-full);
+      font-weight: 500;
+      font-family: var(--font-heading);
+      transition: background var(--transition);
+    }
+    .more-btn:hover {
+      background: var(--primary-dark);
+    }
+  </style>
 </head>
-<body data-dept-th="ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา" data-dept-en="Department of Obstetric-Gynecological Nursing">
+<body data-dept-th="ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา" data-dept-en="OGN Department">
   <main class="site-main container">
     <div id="page-content">
       
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" colspan="3" valign="top" class="txt_head">ข่าวกิจกรรม ประจำปี 2569</td>
-                <td width="3%" align="right" valign="middle" class="txt_remark">&nbsp;</td>
-                </tr>
-              <tr>
-                <td width="4%" valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2569/03/31/cover.jpg" alt="" width="85" height="57" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/69/Activities_5.html" target="_blank" class="txt_font">คณะพยาบาลศาสตร์ มหาวิทยาลัย มหิดล ร่วมกับ บริษัทแม๊ทซ์แม็กซ์ จำกัด ให้บริการวิชาการอบรมเพื่อเพิ่มพูนความรู้และทักษะของพยาบาลในการดูแลสตรีตั้งครรภ์ ระยะคลอด และหลังคลอด ให้แก่พยาบาลผดุงครรภ์ ประเทศสาธารณรัฐประชาธิปไตยประชาชนลาว ณ นครหลวงเวียงจันทร์ สปป.</a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2569/03/02/cover.jpg" alt="" width="85" height="57" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/69/Activities_4.html" target="_blank" class="txt_font">การประชุมภาคีเครือข่ายขับเคลื่อนการเลี้ยงลูกด้วยนมแม่อย่างเดียว 6 เดือน (Together for Breastfeeding Thailand) “สร้างเด็กไทยคุณภาพ รองรับวิกฤตเด็กเกิดน้อย”</a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2569/03/01/cover.jpg" alt="" width="85" height="58" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/69/Activities_3.html" target="_blank" class="txt_font">รับรางวัลการปฏิบัติงานบรรลุตามข้อตกลงการปฏิบัติงานด้านการวิจัยฯ</a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2569/01/2/cover.jpg" alt="" width="85" height="66" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/69/Activities_2.html" target="_blank" class="txt_font">บริการวิชาการงาน “มหิดล เกษตรแฟร์ 2569”</a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th width="10%" bgcolor="#FFECFF" scope="col"><img src="img/news/2569/01/1/cover.jpg" alt="" width="85" height="58" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/69/Activities_1.html" target="_blank" class="txt_font">ค่ายมหิดลร่วมใจ สานสายใย น้ำใจสู่ชุมชน</a></p>
-                      </blockquote></td>
-                  </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td width="9%" align="center" valign="top" class="txt_font">&nbsp;</td>
-                <td width="84%" class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <td height="28" align="center" bgcolor="#9999FF"><a href="Activities_all.html"><span class="txt_white">More+</span></a></td>
-                    </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td align="center" valign="top" class="txt_font">&nbsp;</td>
-                <td class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              
-              <tr>
-                 <td height="33" colspan="3" valign="top" class="txt_head">ข่าวประชาสัมพันธ์ ประจำปี 2569</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <th bgcolor="#FFEAEA" scope="col"><img src="img/PR/2569/cover.jpg" alt="" width="100" height="137" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFEAEA" scope="col"><blockquote>
-                      <p><a href="img/PR/2569/04.jpg" target="_blank" class="txt_font">คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ร่วมกับกรมอนามัย และองค์การยูนิเซฟ ประเทศไทย เป็นแกนนำในการขับเคลื่อน การพัฒนาสื่อซีรีส์ออนไลน์ "ชุดครอบครัวสุขสันต์"(สนับสนุนโดยกองทุนพัฒนาสื่อปลอดภัยและสร้างสรรค์) ซีรีส์ที่ช่วยให้พ่อแม่เรียนรู้ ตั้งแต่ก่อนลูกเกิด ไปจนถึงการเติบโตในทุกช่วงวัย เริ่ม 16 พฤษภาคม 2569 เพราะการเติบโตที่ดี ไม่ได้เกิดขึ้นแค่วันเดียว แต่เกิดจาก “ความเข้าใจที่สม่ำเสมอ” ของครอบครัว</a><a href="PR/01/การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์.pdf" target="_blank" class="txt_font"></a><a href="PR/01/การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์.pdf" target="_blank"></a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th width="10%" bgcolor="#FFEAEA" scope="col"><img src="img/PR/2565/01/cover - pr1.jpg" alt="" width="84" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFEAEA" scope="col"><blockquote>
-                      <p><a href="PR/01/การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์.pdf" target="_blank" class="txt_font">การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์</a><a href="PR/01/การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์.pdf" target="_blank"></a></p>
-                    </blockquote></td>
-                  </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td align="center" valign="top" class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <td height="28" align="center" bgcolor="#9999FF"><a href="Activities_all.html"><span class="txt_white">More+</span></a></td>
-                    </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td height="36" align="center" valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-          </table>
-                  
+      <div class="news-section">
+        <h2 class="section-title">ข่าวกิจกรรม ประจำปี 2569</h2>
+        
+        <div class="news-grid">
+          <a href="activities/69/Activities_5.html" target="_blank" class="news-card">
+            <img src="img/news/2569/03/31/Picture5.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">คณะพยาบาลศาสตร์ มหาวิทยาลัย มหิดล ร่วมกับ บริษัทแม๊ทซ์แม็กซ์ จำกัด ให้บริการวิชาการอบรมเพื่อเพิ่มพูนความรู้และทักษะของพยาบาล...</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
           
+          <a href="activities/69/Activities_4.html" target="_blank" class="news-card">
+            <img src="img/news/2569/03/02/Picture3.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">การประชุมภาคีเครือข่ายขับเคลื่อนการเลี้ยงลูกด้วยนมแม่อย่างเดียว 6 เดือน (Together for Breastfeeding Thailand)</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          
+          <a href="activities/69/Activities_3.html" target="_blank" class="news-card">
+            <img src="img/news/2569/03/01/Picture1.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">รับรางวัลการปฏิบัติงานบรรลุตามข้อตกลงการปฏิบัติงานด้านการวิจัยฯ</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          
+          <a href="activities/69/Activities_2.html" target="_blank" class="news-card">
+            <img src="img/news/2569/01/2/Picture3.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">บริการวิชาการงาน “มหิดล เกษตรแฟร์ 2569”</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          
+          <a href="activities/69/Activities_1.html" target="_blank" class="news-card">
+            <img src="img/news/2569/01/1/Picture1.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ค่ายมหิดลร่วมใจ สานสายใย น้ำใจสู่ชุมชน</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="more-btn-container">
+          <a href="Activities_all.html" class="more-btn">ดูข่าวกิจกรรมทั้งหมด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+        </div>
+      </div>
+      
+      <div class="news-section">
+        <h2 class="section-title">ข่าวประชาสัมพันธ์ ประจำปี 2569</h2>
+        
+        <div class="news-grid">
+          <a href="img/PR/2569/04.jpg" target="_blank" class="news-card">
+            <img src="img/PR/2569/04.jpg" alt="PR" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">คณะพยาบาลศาสตร์ ร่วมขับเคลื่อน การพัฒนาสื่อซีรีส์ออนไลน์ "ชุดครอบครัวสุขสันต์"</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          
+          <a href="PR/01/การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์.pdf" target="_blank" class="news-card">
+            <img src="img/PR/2565/01/cover_highres.png" alt="PR" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">การให้คำปรึกษาการเลี้ยงลูกด้วยนมแม่ทางโทรศัพท์</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="more-btn-container">
+          <a href="Activities_all.html" class="more-btn">ดูข่าวประชาสัมพันธ์ทั้งหมด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
+        </div>
+      </div>
+
     </div>
   </main>
 </body>
