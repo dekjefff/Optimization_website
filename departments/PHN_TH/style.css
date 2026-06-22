@@ -1,4 +1,4 @@
-﻿/* Vibrant Red & Cream Theme - PHN Department */
+/* Vibrant Red & Cream Theme - PHN Department */
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&family=Prompt:wght@300;400;500;600&display=swap');
 
 :root {
@@ -34,12 +34,12 @@
 body { font-family: var(--font-body); color: var(--text-main); background-color: var(--background); overflow-x: hidden; }
 
 /* Override Centralized Header Color for PHN */
-.site-header, .navbar {
+.site-header, .navbar, .site-footer {
   background: linear-gradient(135deg, #7a1212 0%, #a31d1d 100%) !important;
   border-bottom: none !important;
 }
-.site-header::after { display: none !important; }
-.header-dept-name { color: #ffffff !important; font-size: clamp(16px, 2vw, 22px) !important; font-weight: 500 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important; display: inline-block !important; padding: 10px 24px !important; background: rgba(255, 255, 255, 0.15) !important; backdrop-filter: blur(8px) !important; border: 1px solid rgba(255, 255, 255, 0.2) !important; border-radius: var(--radius-full) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important; }
+.site-header::after, .site-footer::before { display: none !important; }
+.header-dept-name { text-align: center !important; color: #ffffff !important; font-size: clamp(16px, 2vw, 22px) !important; font-weight: 500 !important; text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important; display: inline-block !important; text-align: center !important; padding: 10px 24px !important; background: rgba(255, 255, 255, 0.15) !important; backdrop-filter: blur(8px) !important; border: 1px solid rgba(255, 255, 255, 0.2) !important; border-radius: var(--radius-full) !important; box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important; }
 .header-faculty-name, .header-univ-name { color: rgba(255,255,255,0.85) !important; }
 .nav-link { color: #ffffff !important; font-weight: 500 !important; text-shadow: 0 1px 4px rgba(0,0,0,0.2) !important; }
 .nav-link:hover, .nav-link.active { color: #ffffff !important; background: rgba(255, 255, 255, 0.2) !important; }
@@ -459,3 +459,76 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 }
 
 
+
+
+/* Responsive Mobile Menu matching Header */
+.mobile-nav-panel {
+  background: linear-gradient(135deg, #7a1212 0%, #a31d1d 100%) !important;
+}
+.mobile-nav-header {
+  background: rgba(0,0,0,0.1) !important;
+}
+
+/* High-End Table Styling for teaching.html */
+.courses-list table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 2.5rem;
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.courses-list th {
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 500;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  border-bottom: 3px solid var(--secondary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+.courses-list td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.courses-list tr:last-child td {
+  border-bottom: none;
+}
+
+.courses-list tbody tr {
+  transition: background 0.2s ease;
+}
+
+.courses-list tbody tr:hover {
+  background: rgba(163, 29, 29, 0.03); /* Ruby Red tint */
+}
+
+/* For the sub-headers inside the table */
+.courses-list tr.table-section-header td {
+  background: rgba(232, 168, 56, 0.1); /* Mustard Gold tint */
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(232, 168, 56, 0.2);
+}
+
+.course-section-title {
+  font-family: var(--font-heading);
+  background: var(--surface);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  color: var(--primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  border-left: 5px solid var(--secondary);
+  box-shadow: var(--shadow-sm);
+}

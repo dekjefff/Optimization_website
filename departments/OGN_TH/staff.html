@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <meta charset="UTF-8">
@@ -18,9 +18,18 @@
     }
     .staff-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
       margin-top: 2rem;
+    }
+    @media (max-width: 1024px) {
+      .staff-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .staff-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .staff-grid { grid-template-columns: 1fr; }
     }
     .faculty-card {
       background: var(--surface);
@@ -75,8 +84,8 @@
     }
     .faculty-role {
       font-size: 0.85rem;
-      color: var(--text-inverse);
-      background: var(--primary);
+      color: var(--primary);
+      background: var(--primary-glow);
       padding: 0.2rem 0.75rem;
       border-radius: var(--radius-full);
       display: inline-block;
@@ -520,8 +529,24 @@
           </div>
         </div>
 
+        <div class="faculty-card">
+          <div class="image-wrapper">
+            <img src="img/staff/ประสิตา อภิรมย์.png" alt="ประสิตา อภิรมย์" class="faculty-img">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">
+              <a href="#" target="_blank">ประสิตา อภิรมย์</a>
+            </h3>
+            <span class="faculty-role">เจ้าหน้าที่บริหารงานทั่วไป</span>
+            <div class="contact-details">
+              <span><strong>อีเมล:</strong> prasita.api@mahidol.ac.th</span>
+              <span><strong>โทรศัพท์:</strong> 0-2419-7466-80 ต่อ 1801, 1802</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 </body>
 </html>
+

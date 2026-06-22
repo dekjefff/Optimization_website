@@ -8,16 +8,10 @@
   <script src="../../components/layout.js" defer></script>
   <style>
     .teaching-intro { margin-bottom: 2rem; text-indent: 2.5em; line-height: 1.8; }
-    .course-table { width: 100%; border-collapse: collapse; margin-bottom: 3rem; background: var(--surface); box-shadow: var(--shadow-sm); border-radius: var(--radius-sm); overflow: hidden; }
-    .course-table th, .course-table td { padding: 1rem; border: 1px solid var(--surface-border); text-align: left; }
-    .course-table th { background-color: var(--primary); color: #fff; font-weight: 600; font-family: var(--font-heading); }
-    .course-table tr:nth-child(even) td { background-color: var(--background); }
-    .course-table .section-header { background-color: var(--primary-light); color: #fff; font-weight: 600; font-family: var(--font-heading); padding: 0.75rem 1rem; }
     .text-center { text-align: center !important; }
-    
     @media (max-width: 768px) {
       .table-responsive { overflow-x: auto; display: block; width: 100%; }
-      .course-table { min-width: 500px; }
+      .courses-list table { min-width: 500px; }
     }
   </style>
 </head>
@@ -26,128 +20,178 @@
     <div id="page-content">
       <h1>การเรียนการสอน</h1>
       
-      <p class="teaching-intro">Department of Public Health Nursing provides required courses (theory and practice) for <strong>undergraduate students</strong>, i.e.</p>
+      <p class="teaching-intro">ภาควิชาการพยาบาลสาธารณสุขศาสตร์ จัดการเรียนการสอนทั้งภาคทฤษฎีและภาคปฏิบัติ สำหรับนักศึกษาหลักสูตรต่างๆ ดังนี้</p>
 
-      <div class="table-responsive">
-        <table class="course-table">
-          <thead>
-            <tr>
-              <th>Undergraduate Students</th>
-              <th class="text-center" width="15%">Credits</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Community health nursing</td>
-              <td class="text-center">3</td>
-            </tr>
-            <tr>
-              <td>Nursing care to the person in the family and community practicum</td>
-              <td class="text-center">3</td>
-            </tr>
-            <tr>
-              <td>Primary medical care</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Primary medical care practicum</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Health and health promotion</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Nursing practicum for health promotion</td>
-              <td class="text-center">3</td>
-            </tr>
+      <section class="courses-list">
+        <h2>รายวิชาที่เปิดสอน</h2>
 
-            <tr>
-              <td colspan="2" class="section-header">NP Training Courses: 16-18 credits</td>
-            </tr>
-            <tr>
-              <td>Health Policy and Nursing</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Primary care services management</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Health Assessment</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Primary Medical Care</td>
-              <td class="text-center">4</td>
-            </tr>
-            <tr>
-              <td>Accident and Emergency care</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Primary Medical Care Practicum</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Nurse Practitioner Practicum</td>
-              <td class="text-center">2</td>
-            </tr>
+        <h3 class="course-section-title">Undergraduate students</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th style="width: 120px;" class="text-center">Credits</th>
+                <th style="width: 120px;" class="text-center">Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Community health nursing</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Nursing care to the person in the family and community practicum</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Primary medical care</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Primary medical care practicum</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Health and health promotion</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Nursing practicum for health promotion</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-            <tr>
-              <td colspan="2" class="section-header">Master of Nursing Science (Family Nurse Practitioner)</td>
-            </tr>
-            <tr>
-              <td><strong>FNP courses 46 credits</strong></td>
-              <td class="text-center"></td>
-            </tr>
-            <tr>
-              <td>Core Courses</td>
-              <td class="text-center">14</td>
-            </tr>
-            <tr>
-              <td>Specialty Courses</td>
-              <td class="text-center">17</td>
-            </tr>
-            <tr>
-              <td>Selected Courses</td>
-              <td class="text-center">3</td>
-            </tr>
-            <tr>
-              <td>Thesis</td>
-              <td class="text-center">12</td>
-            </tr>
-            
-            <tr>
-              <td colspan="2" class="section-header">Specialty courses, i.e.</td>
-            </tr>
-            <tr>
-              <td>Advanced Health Assessment and Primary Medical Care</td>
-              <td class="text-center">3</td>
-            </tr>
-            <tr>
-              <td>Pharmacology for Family Nurse Practitioner</td>
-              <td class="text-center">2</td>
-            </tr>
-            <tr>
-              <td>Family Nurse Practitioner I</td>
-              <td class="text-center">3</td>
-            </tr>
-            <tr>
-              <td>Family Nurse Practitioner Practicum I</td>
-              <td class="text-center">3</td>
-            </tr>
-            <tr>
-              <td>Family Nurse Practitioner II</td>
-              <td class="text-center">3</td>
-            </tr>
-            <tr>
-              <td>Family Nurse Practitioner Practicum II</td>
-              <td class="text-center">3</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <h3 class="course-section-title">NP Training Courses: 16-18 credits</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th style="width: 120px;" class="text-center">Credits</th>
+                <th style="width: 120px;" class="text-center">Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Health Policy and Nursing</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Primary care services management</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Health Assessment</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Primary Medical Care</td>
+                <td class="text-center">4</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Accident and Emergency care</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Primary Medical Care Practicum</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Nurse Practitioner Practicum</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="course-section-title">Master of Nursing Science (Family Nurse Practitioner)</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th style="width: 120px;" class="text-center">Credits</th>
+                <th style="width: 120px;" class="text-center">Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-section-header">
+                <td colspan="3">FNP courses 46 credits</td>
+              </tr>
+              <tr>
+                <td>Core Courses</td>
+                <td class="text-center">14</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Specialty Courses</td>
+                <td class="text-center">17</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Selected Courses</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Thesis</td>
+                <td class="text-center">12</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr class="table-section-header">
+                <td colspan="3">Specialty courses, i.e.</td>
+              </tr>
+              <tr>
+                <td>Advanced Health Assessment and Primary Medical Care</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Pharmacology for Family Nurse Practitioner</td>
+                <td class="text-center">2</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Family Nurse Practitioner I</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Family Nurse Practitioner Practicum I</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Family Nurse Practitioner II</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+              <tr>
+                <td>Family Nurse Practitioner Practicum II</td>
+                <td class="text-center">3</td>
+                <td class="text-center">Credits</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
 
       <p class="teaching-intro"><strong>Community Health Nurse Practitioner</strong><br>
       (New curriculum plan to provide in 2009)</p>

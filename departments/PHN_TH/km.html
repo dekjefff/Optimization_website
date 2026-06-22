@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การจัดการความรู้ | ภาควิชาการพยาบาลสาธารณสุขศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="../../components/layout.js" defer></script>
+  
+  <style>
+    .km-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .km-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .km-item:hover {
+      transform: translateX(5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .km-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .km-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      color: var(--primary);
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .km-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .km-download {
+      background: var(--primary-glow);
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background var(--transition);
+    }
+    .km-download:hover {
+      background: var(--primary);
+      color: var(--text-inverse);
+    }
+    .km-download svg {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body data-dept-th="ภาควิชาการพยาบาลสาธารณสุขศาสตร์" data-dept-en="PHN Department">
+  <main class="site-main container">
+    <div id="page-content">
+      <h1>การจัดการความรู้ (Knowledge Management)</h1>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 2rem;">
+        รวบรวมองค์ความรู้ ทักษะ และแนวปฏิบัติที่เป็นเลิศจากการปฏิบัติงานของคณาจารย์และบุคลากรภายในภาควิชาการพยาบาลสาธารณสุขศาสตร์ เพื่อนำมาแลกเปลี่ยนเรียนรู้และพัฒนาต่อยอด
+      </p>
+      
+      <h2 style="font-family: var(--font-heading); color: var(--primary); margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.5rem; display: inline-block;">
+        กิจกรรมแลกเปลี่ยนเรียนรู้ ประจำปีล่าสุด (2568)
+      </h2>
+      
+      <div class="km-list">
+        <!-- Item 1 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title">เทคนิคการทำ Systematic Review และ Meta-Analysis อย่างมีคุณภาพ</span>
+            <span class="km-date">เขียนโดย: อ.ดร.สืบสาน รักสกุลพิวัฒน์</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาการพยาบาลสาธารณสุขศาสตร์/186-2568/422-systematic-review-meta-analysis-2568.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            อ่านรายละเอียด
+          </a>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title">งานวิจัยข้ามประเทศ โดยใช้ Big Data เพื่อสนับสนุนผลลัพธ์ด้านการพยาบาลสุขภาพ</span>
+            <span class="km-date">เขียนโดย: ผศ.ดร.ฐิติพงษ์ ตันคําปวน</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาการพยาบาลสาธารณสุขศาสตร์/186-2568/423-big-data-2568.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            อ่านรายละเอียด
+          </a>
+        </div>
+      </div>
+
+      <h2 style="font-family: var(--font-heading); color: var(--primary); margin-top: 3.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.5rem; display: inline-block;">
+        กิจกรรมแลกเปลี่ยนเรียนรู้ ปีก่อนหน้า
+      </h2>
+      
+      <div class="km-list">
+        <!-- Item 3 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title">การกำหนดประชากรและกลุ่มตัวอย่าง N และ n ในรายวิชา พยสธ 482</span>
+            <span class="km-date">เขียนโดย: ผู้ช่วยอาจารย์สุรัสวดี ไวว่อง (ประจำปี 2566)</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาการพยาบาลสาธารณสุขศาสตร์/163-2566/349-n-n-482.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            อ่านรายละเอียด
+          </a>
+        </div>
+        
+        <!-- Item 4 -->
+        <div class="km-item">
+          <div class="km-info">
+            <span class="km-title">ถอดบทเรียนคลินิกการพยาบาลและการผดุงครรภ์ (คลินิกพยาบาลชุมชนอบอุ่น)</span>
+            <span class="km-date">เขียนโดย: ผู้ช่วยอาจารย์ปกครอง พงษ์พัฒนพิสิฐ (ประจำปี 2566)</span>
+          </div>
+          <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/ภาควิชาการพยาบาลสาธารณสุขศาสตร์/163-2566/348-2024-07-10-06-22-55.html" target="_blank" class="km-download">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            อ่านรายละเอียด
+          </a>
+        </div>
+      </div>
+      
+      <div style="margin-top: 3rem; text-align: center;">
+        <a href="http://www.elearning.ns.mahidol.ac.th/km/index.php/2023-10-26-08-25-47/km/%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%A5%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.html" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: var(--primary); color: var(--text-inverse); text-decoration: none; border-radius: var(--radius-sm); font-weight: 500; font-family: var(--font-heading); transition: background var(--transition);">
+          ดูเอกสารในคลัง KM ปีอื่นๆ เพิ่มเติม
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+      
+    </div>
+  </main>
+</body>
+</html>
