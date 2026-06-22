@@ -243,8 +243,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="slide-item"><img src="img/slide/slide4.png" alt="ภาพสไลด์ 4" loading="lazy"></div>
           <div class="slide-item"><img src="img/slide/slide5.png" alt="ภาพสไลด์ 5" loading="lazy"></div>
         </div>
-        <button class="slide-btn prev" id="slidePrev" aria-label="สไลด์ก่อนหน้า">&#8592;</button>
-        <button class="slide-btn next" id="slideNext" aria-label="สไลด์ถัดไป">&#8594;</button>
         <div class="slide-dots" id="slideDots"></div>
       </div>
     </div>
@@ -303,33 +301,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </p>
           </div>
         </div>
-        <!-- ข่าว 3 -->
-        <div class="news-card">
-          <div class="news-card-img">
-            <img src="img/activities/2567/07/17/IMG_8505.jpg" alt="ข่าวสาร" loading="lazy">
-          </div>
-          <div class="news-card-body">
-            <p class="news-card-title">
-              <a href="activities/2567/activities_07_17.html" target="_blank">
-                ภาควิชาการพยาบาลอายุรศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดการประชุมพัฒนาประสิทธิภาพการจัดการเรียนการสอนภาคปฏิบัติ ประจำปีการศึกษา 2567
-              </a>
-            </p>
-          </div>
-        </div>
-        <!-- ข่าว 4 -->
-        <div class="news-card">
-          <div class="news-card-img">
-            <img src="img/activities/2566/08/08/Picture5.jpg" alt="ข่าวสาร" loading="lazy">
-          </div>
-          <div class="news-card-body">
-            <p class="news-card-title">
-              <a href="activities/2566/activities_08_8.html" target="_blank">
-                จัดการประชุมร่วมระหว่างภาควิชาการพยาบาลอายุรศาสตร์ และหัวหน้างาน ผู้ตรวจการพยาบาล และหัวหน้าหอผู้ป่วยงานการพยาบาลอายุรศาสตร์และจิตเวชศาสตร์ ฝ่ายการพยาบาล โรงพยาบาลศิริราช ประจำปี 2566
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
       <div class="section-footer">
         <a href="Activities_all.html" class="btn-more">
           ข่าวสารทั้งหมด
@@ -418,9 +389,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     clearInterval(autoTimer);
     autoTimer = setInterval(next, 3000);
   }
-
-  document.getElementById('slideNext').addEventListener('click', next);
-  document.getElementById('slidePrev').addEventListener('click', prev);
 
   // Touch / Swipe
   let touchStartX = 0;
