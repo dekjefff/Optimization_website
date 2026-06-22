@@ -3,163 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ข่าวสารภาควิชาฯ:  ภาควิชาการพยาบาลสูติศาสตร์ - นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
+  <title>ข่าวสารภาควิชาฯ | ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</title>
   <link rel="stylesheet" href="style.css">
   <script src="../../components/layout.js" defer></script>
   
-  
+  <style>
+    .news-section {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    .section-title {
+      font-family: var(--font-heading);
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--secondary);
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .news-card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
+    }
+    .news-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--surface-border);
+    }
+    .news-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .news-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--text-main);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+    .news-card:hover .news-title {
+      color: var(--primary);
+    }
+    .news-read-more {
+      margin-top: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--secondary);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .news-read-more svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+    .news-card:hover .news-read-more svg {
+      transform: translateX(4px);
+    }
+    .more-btn-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 2rem;
+      background: var(--secondary);
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-family: var(--font-heading);
+      transition: transform var(--transition);
+    }
+    .more-btn:hover {
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
-<body data-dept-th="ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา" data-dept-en="Department of Obstetric-Gynecological Nursing">
+<body data-dept-th="ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา" data-dept-en="OGN Department">
   <main class="site-main container">
     <div id="page-content">
       
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" colspan="3" valign="top" class="txt_head">ข่าวกิจกรรม ประจำปี 2554 - 2564</td>
-                <td width="3%" align="right" valign="middle" class="txt_remark">&nbsp;</td>
-                </tr>
-              <tr>
-                <td width="4%" valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/11/06/2.jpg" width="84" height="55"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/11/Activities_1106.html" target="_blank"><span class="line_body">อาจารย์ ดร.พุทธิราภรณ์ หังสวนัส เข้าร่วมเป็นวิทยากรบรรยายในงานประชุมนานาชาติ The APAHL 2021 Online Forum (กิจกรรมครั้งที่ 2)</span></a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/10/30/1636531261034.jpg" width="84" height="55"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/10/Activities_1030.html" target="_blank"><span class="line_body">สมาคมพยาบาลนมแม่ประเทศไทยจัดการประชุมใหญ่สามัญประจำปี พ.ศ. 2564</span></a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/09/27/0927 - i.jpg" width="84" height="55"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/09/Activities_0927.html" target="_blank"><span class="line_body">โครงการ "พยาบาลมหิดลร่วมใจ...ช่วยคนไทยปลอดภัยจากโควิด-19" โดยวันนี้เป็นการถ่ายทอดสดเป็นครั้งที่ 17</span></a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/09/18/01- s.jpg" width="84" height="55"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/09/Activities_0918.html" target="_blank"><span class="line_body">ศูนย์ส่งเสริมการเลี้ยงลูกด้วยนมเเม่เเละสุขภาพเด็กปฐมวัย คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล จัดประชุมวิชาการในหัวข้อ "การจัดการน้ำนมเเม่ไม่เพียงพอ : ความรู้สู่การปฏิบัติ" ในวันที่ 18 กันยายน 2564</span></a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th width="9%" bgcolor="#FFECFF" scope="col"><img src="img/news/2564/09/05/05 - 1.png" alt="" width="84" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/09/Activities_0905.html" target="_blank"><span class="line_body">โครงการ "การเข้าถึงและเผยแพร่ข้อมูลความรู้ด้านสาธารณสุขสู่ชุมชนแรงงานข้ามชาติในสถานกาณ์การแพร่ระบาดของไวรัสโคโรนา (covid-19" วันอาทิตย์ที่ 5 กันยายน  2564</span></a></p>
-                    </blockquote></td>
-                    </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/09/03/03 - 4.png" alt="" width="84" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/09/Activities_0903.html" target="_blank"><span class="line_body">งานประชุมวิชาการประจำปี 2564 คณะพยาบาลศาสตร์มหาวิทยาลัยราชภัฏสุราษฎร์ธานี "ก้าวทันการพยาบาลสูติศาสตร์ภายใต้สถานการณ์การแพร่ระบาดของโรคโควิด-19</span></a></p></blockquote></td>
-                    </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/08/31/31 - 1.png" alt="" width="84" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/08/Activities_0831.html" target="_blank"><span class="line_body">การพัฒนาประสิทธิภาพการจัดการเรียนการสอนภาคปฏิบัติ หลักสูตรพยาบาลศาสตรบัณฑิต ประจำปีการศึกษา 2564 ผ่านโปรแกรม zoom</span></a></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/ex_news.jpg" alt="" width="70" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><span class="line_body">ภาควิชาการพยาบาลสูติศาสตร์-นรีเวชวิทยา ร่วมกับ ภาควิชาการพยาบาลกุมารเวชศาสตร์ ได้จัดให้มีการทำบุญของทั้ง 2 ภาควิชาฯ</span></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/ex_news.jpg" alt="" width="70" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><span class="line_body">ภาควิชาฯได้จัดให้มีการประชุมร่วมกับ แหล่งฝึกการเรียนการสอนของภาควิชาฯ เรื่อง “การพัฒนาการจัดการเรียนการสอน ภาคปฏิบัติหลักสูตรพยาบาลศาสตรบัณฑิต”</span></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/ex_news.jpg" alt="" width="70" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><span class="line_body">อาจารย์ในภาควิชาฯ เข้าร่วมประชุม ร่วมเป็นวิทยากร และกรรมการจัดการประชุมเชิงปฏิบัติการ ซึ่งจัดโดยคณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล ร่วมกับองค์การทุนเพื่อเด็ก แห่งสหประชาชาติ (UNICEF) เรื่อง “Update on Breastfeeding: Application for Nursing Education”</span></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFECFF" scope="col"><img src="img/news/2564/ex_news.jpg" alt="" width="70" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFECFF" scope="col"><blockquote>
-                      <p><a href="activities/64/08/Activities_0831.html" target="_blank"></a><span class="line_body">ภาควิชาการพยาบาลสูติศาตร์นรีเวชวิทยา ได้จัดสัมมนาภาควิชาฯ ประจำปี 2554</span></p>
-                    </blockquote></td>
-                    </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td width="9%" align="center" valign="top" class="txt_font">&nbsp;</td>
-                <td width="84%" class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <td height="28" align="center" bgcolor="#9999FF"><a href="Activities_all.html"><span class="txt_white">More+</span></a></td>
-                    </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td align="center" valign="top" class="txt_font">&nbsp;</td>
-                <td class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              
-              <tr>
-                 <td height="33" colspan="3" valign="top" class="txt_head">ข่าวประชาสัมพันธ์ ประจำปี 2554 - 2564</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <th width="10%" bgcolor="#FFEAEA" scope="col"><img src="img/news/2564/ex_news.jpg" alt="" width="70" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFEAEA" scope="col"><blockquote>
-                      <p><span class="line_body">xxxxxxxxxxxxxxx</span></p>
-                    </blockquote></td>
-                  </tr>
-                  <tr>
-                    <th bgcolor="#FFEAEA" scope="col"><img src="img/news/2564/ex_news.jpg" alt="" width="70" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFEAEA" scope="col"><blockquote>
-                      <p><span class="line_body">xxxxxxxxxxxxxxx</span></p>
-                    </blockquote></td>
-                    </tr>
-                  <tr>
-                    <th bgcolor="#FFEAEA" scope="col"><img src="img/news/2564/ex_news.jpg" alt="" width="70" height="55" style="border: 1px solid #ccc; padding: 5px;"></th>
-                    <td align="left" bgcolor="#FFEAEA" scope="col"><blockquote>
-                      <p><span class="line_body">xxxxxxxxxxxxxxx</span></p>
-                    </blockquote></td>
-                    </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td align="center" valign="top" class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td valign="top" class="txt_font">&nbsp;</td>
-                <td colspan="2" align="center" valign="top" class="txt_font"><table width="100%" border="1">
-                  <tr>
-                    <td height="28" align="center" bgcolor="#9999FF"><a href="Activities_all.html"><span class="txt_white">More+</span></a></td>
-                    </tr>
-                </table></td>
-                <td valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-              <tr>
-                <td height="36" align="center" valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-          </table>
-                  
-          
+      <div class="news-section">
+        <h2 class="section-title">ข่าวกิจกรรม ประจำปี 2554 - 2564</h2>
+        <div class="news-grid">
+          <a href="activities/64/11/Activities_1106.html" target="_blank" class="news-card">
+            <img src="img/news/2564/11/06/2-2.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/10/Activities_1030.html" target="_blank" class="news-card">
+            <img src="img/news/2564/10/30/1636531262663.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0927.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/27/Untitled-1.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0918.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/18/07.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0905.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/05/05 - 2.png" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/09/Activities_0903.html" target="_blank" class="news-card">
+            <img src="img/news/2564/09/03/03 - 1.png" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/08/Activities_0831.html" target="_blank" class="news-card">
+            <img src="img/news/2564/08/31/31 - 2.png" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+          <a href="activities/64/08/Activities_0831.html" target="_blank" class="news-card">
+            <img src="img/news/2564/ex_news.jpg" alt="ข่าว" class="news-img" onerror="this.src='../../img/placeholder.jpg'">
+            <div class="news-content">
+              <h3 class="news-title">ไม่ระบุชื่อเรื่อง</h3>
+              <div class="news-read-more">อ่านรายละเอียด <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+
+
+      <div class="more-btn-container">
+        <a href="Activities_all.html" class="more-btn">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 18px; height: 18px;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"></path></svg>
+          ย้อนกลับ
+        </a>
+      </div>
+
     </div>
   </main>
 </body>
