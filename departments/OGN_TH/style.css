@@ -459,15 +459,26 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   padding: 0 1rem;
 }
 
+}
+
 
 
 
 /* Responsive Mobile Menu matching Header */
 .mobile-nav-panel {
-  background: linear-gradient(135deg, #4a1966 0%, #702996 100%) !important;
+  background: linear-gradient(135deg, rgba(74, 25, 102, 0.7) 0%, rgba(112, 41, 150, 0.7) 100%) !important;
+  backdrop-filter: blur(25px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
 }
 .mobile-nav-header {
   background: rgba(0,0,0,0.1) !important;
+}
+
+.header-dept-name {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  max-width: 100%;
 }
 
 

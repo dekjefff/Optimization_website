@@ -270,7 +270,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 /* === Navbar Hover Transition === */
 /* Scrolled Navbar Text Colors */
 .navbar.scrolled .nav-link {
-  color: var(--primary) !important;
+  color: #6d4c41 !important; /* Brown */
   text-shadow: none !important;
 }
 .navbar.scrolled .nav-link:hover, .navbar.scrolled .nav-link.active {
@@ -278,7 +278,7 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   background: rgba(186, 31, 51, 0.05) !important;
 }
 .navbar.scrolled .navbar-brand {
-  color: var(--primary) !important;
+  color: #6d4c41 !important; /* Brown */
   text-shadow: none !important;
 }
 .nav-link { transition: color var(--transition), background var(--transition) !important; }
@@ -463,10 +463,19 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
 
 /* Responsive Mobile Menu matching Header */
 .mobile-nav-panel {
-  background: linear-gradient(135deg, #7a1212 0%, #a31d1d 100%) !important;
+  background: linear-gradient(135deg, rgba(122, 18, 18, 0.7) 0%, rgba(163, 29, 29, 0.7) 100%) !important;
+  backdrop-filter: blur(25px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
 }
 .mobile-nav-header {
   background: rgba(0,0,0,0.1) !important;
+}
+
+.header-dept-name {
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  max-width: 100%;
 }
 
 /* High-End Table Styling for teaching.html */
