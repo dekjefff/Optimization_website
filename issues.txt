@@ -1,8 +1,0 @@
-#8 - Dev jefff (State: closed)
-#7 - fix: ดาวน์โหลดรูปลงมาไว้ที่โปรเจกต์เพื่อแก้ปัญหาภาพแตกจาก Vercel CORS… (State: closed)
-#6 - Update fn th pages (State: closed)
-#5 - chore: เปลี่ยนชื่อ dashboard.html เป็น index.html เพื่อใช้เป็นหน้าแรก… (State: closed)
-#4 - Dev jefff (State: closed)
-#3 - Dev jefff (State: closed)
-#2 - Dev jefff (State: closed)
-#1 - restuctered mhpn already (State: closed)
