@@ -1,0 +1,116 @@
+.menu{
+	border:none;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	font: bold tahoma;
+	font-size:14px;
+	font-weight:bold;
+	}
+.menu ul{
+
+	background: #060E4Fa; 
+	height:40px;
+	list-style:none;
+	margin:0;
+	padding:0;
+	}
+.line_menublue {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #f0f0f0;
+	list-style-type: disc;
+}
+
+
+.head_menu {
+	border-bottom-style: none;
+	list-style-type: none;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #2351b9;
+}
+	.menu li{
+		float:left;
+		padding:0px;
+		}
+	.menu li a{
+		background: #085180; /* Old browsers */
+		color:#ffffff;
+		display:block;
+		font-weight:normal;
+		line-height:40px;
+		margin:0px;
+		padding:0px 16px;
+		text-align:center;
+		text-decoration:none;
+		}
+		.menu li a:hover, .menu ul li:hover a{
+			background: #1f8ee0; /* Old browsers */
+			color:#FFFFFF;
+			text-decoration:none;
+			}
+	.menu li ul{
+		background: #085180; /* Old browsers */
+		display:none;
+		height:auto;
+		padding:0px;
+		margin:0px;
+		border:0px;
+		position:absolute;
+		width:210px;
+		z-index:210;
+		/*top:1em;
+		/*left:0;*/
+		}
+	.menu li:hover ul{
+		display:block;
+		
+		}
+	.menu li li {
+		background: #085180; /* Old browsers */
+		display:block;
+		float:none;
+		margin:0px;
+		padding:0px;
+		width:210px;
+		}
+	.menu li:hover li a{
+		background:none;
+		
+		}
+	.menu li ul a{
+		display:block;
+		height:35px;
+		font-size:13px;
+		font-style:normal;
+		margin:0px;
+		padding:0px 10px 0px 15px;
+		text-align:left;
+		}
+		.menu li ul a:hover, .menu li ul li:hover a{
+			background: #1f8ee0; /* Old browsers */
+			border:0px;
+			color:#ffffff;
+			text-decoration:none;
+			}
+	.menu p{
+		clear:left;
+		}	
+
+		
+/* แถบ title */		
+		
+.bg_blue{color:#FFFFFF; background-color:#56AED4;  font-family: tahoma; font-size:16px; font-weight: bold; padding: 5px;}
+.bg_green{
+	color: #FFFFFF;
+	background-color: #30880B;
+	height: 25px;
+	font-family: tahoma;
+}
+.bg_grey{color:#053f96; background-color:#d1d1d5; font-family: tahoma; font-size:16px; font-weight: bold; padding: 5px;}
+.bg_dkgrey{color:#FFFFFF; background-color:#333333; }
+.bg_orange{color:#FFFFFF; background-color:#FF9900; font-family: tahoma; font-size:16px; font-weight: bold; padding: 10px;}
+.bg_purple{color:#FFFFFF; background-color:#9F81A9; font-family: tahoma; font-size:16px; font-weight: bold;padding: 10px;}
+.bg_red{color:#FFFFFF; background-color:#D54346; font-family: tahoma;}
+.bg_yellow{color:#666666; background-color:#FDE803; font-family: tahoma;}
