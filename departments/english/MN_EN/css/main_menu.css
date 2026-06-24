@@ -1,0 +1,77 @@
+@charset "utf-8";
+.line {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #FAF0CB;
+	font-family: tahoma;
+	font-size: 14px;
+	color: #FFF;
+}
+
+.line_body {
+	border-bottom-width: 1px;
+	border-bottom-style:dashed;
+	border-bottom-color: #e38902;
+	font-family: tahoma;
+	font-size: 14px;
+	font-size: 14px;
+	color: #666666;
+}
+
+
+
+
+
+.line_section {
+	border-bottom-width: 1px;
+	border-bottom-style:groove;
+	border-bottom-color: #f6d1df;
+	font-family: tahoma;
+	font-size: 14px;
+	font-size: 14px;
+	color: #666666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+a.m_hyperlink:link 		{
+	font-family: Tahoma;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 14px;
+
+}
+
+a.m_hyperlink:visited		{
+	font-family: Tahoma;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 14px;
+
+}
+
+a.m_hyperlink:active		{
+	font-family: Tahoma;
+	color:#9FD2F4;
+	text-decoration: none;
+	font-size: 14px;
+
+}
+
+a.m_hyperlink:hover		{
+	font-family:  Tahoma;
+	color:#9FD2F4;
+	text-decoration: none;
+	font-size: 14px;
+
+}
