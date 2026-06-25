@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Surgical Nursing, Faculty of Nursing, Mahidol University</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo/favicon.png" type="image/png">
+  <style>
+    .slider-container { position:relative; width:100%; max-width:988px; height:325px; margin:0 auto; overflow:hidden; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.1); margin-bottom:40px; }
+    .slider-canvas { position:absolute; width:100%; height:100%; background-color:white; transition:opacity 1s ease-in-out; opacity:0; }
+    .slider-canvas.active { opacity:1; z-index:2; }
+    .slider-canvas img { width:100%; height:100%; object-fit:cover; }
+  </style>
+
+  <!-- 1. START Styling Cookie | cookieconsent.css -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://ns.mahidol.ac.th/Department/SN_dept_en/cookie/cookieconsent.css"
+  />
+  <!-- 1. END Styling Cookie | cookieconsent.css -->
+</head>
+<body>
+
+  <!-- 2. START Reconsent Button -->
+  <button
+    data-cc="c-settings"
+    class="cc-link cc-reconsent"
+    style="
+      position: fixed;
+      left: 8px;
+      bottom: 16px;
+      border-radius: 999px;
+      padding: 4px;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      box-shadow: rgb(204 204 204 / 50%) 0 2px
+        10px 0;
+      border: 1px solid #e8e8e8;
+      background-color: #fff;
+      z-index: 9999;
+    "
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#0a0b0c"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path
+        d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"
+      ></path>
+      <path d="M8.5 8.5v.01"></path>
+      <path d="M16 15.5v.01"></path>
+      <path d="M12 12v.01"></path>
+      <path d="M11 17v.01"></path>
+      <path d="M7 14v.01"></path>
+    </svg>
+  </button>
+  <!-- 2. END Reconsent Button -->
+
+  <!-- 3. START CookieConsent | cookieconsent.js -->
+  <script
+    defer
+    src="https://ns.mahidol.ac.th/Department/SN_dept_en/cookie/cookieconsent.js"
+  ></script>
+  <!-- 3. END CookieConsent | cookieconsent.js -->
+
+  <!-- 4. START CookieConsent Customization  | consent-init.js -->
+  <script
+    defer
+    src="https://ns.mahidol.ac.th/Department/SN_dept_en/cookie/consent-init.js"
+  ></script>
+  <!-- 4. END CookieConsent Customization  | consent-init.js -->
+
+  <!-- 5. START Script Blocking Analytics -->
+  <script
+    async
+    type="text/plain"
+    data-cookiecategory="analytics"
+    src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"
+  ></script>
+
+  <script
+    type="text/plain"
+    data-cookiecategory="analytics"
+  >
+    console.log('"analytics" category accepted');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-C0VND84NRS');
+  </script>
+  <!-- 5. END Script Blocking Analytics -->
+
+  <!-- 6. START Script Blocking Marketing -->
+  <script
+    type="text/plain"
+    data-cookiecategory="marketing"
+  >
+    console.log('"ads" category accepted');
+  </script>
+  <!-- 6. END Script Blocking Marketing -->
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">Main Menu</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link active">Home</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">About us <span>▾</span></div>
+        <div class="mobile-dropdown">
+            <a href="about.html">About us</a>
+            <a href="staff.html">Staff</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">Teaching</a></div>
+      <div class="mobile-nav-item"><a href="research.html" class="mobile-nav-link">Research</a></div>
+      <div class="mobile-nav-item"><a href="academic.html" class="mobile-nav-link">Academic Services</a></div>
+      <div class="mobile-nav-item"><a href="COE.html" class="mobile-nav-link">Center of Excellence</a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></div>
+    </nav>
+  </div>
+</div>
+
+<div class="mn-wrapper">
+
+  <div class="topbar">
+    <div class="topbar-links">
+      <a href="https://ns.mahidol.ac.th/nurse_en/" target="_blank">Faculty of Nursing</a>
+      <span class="sep">|</span>
+      <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#" title="Facebook">
+        <img src="img/template/fb.png" alt="Facebook">
+      </a>
+    </div>
+    <div class="topbar-lang">
+      <a href="../SN_TH/index.html" target="_parent" title="Thai version">
+        <img src="img/template/th.jpg" alt="TH"> TH
+      </a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">
+      <img src="img/logo/logo.png" alt="Mahidol University Logo">
+    </div>
+    <div class="header-text">
+      <div class="header-dept-name">Department of Surgical Nursing</div>
+      <div class="header-faculty-name">Faculty of Nursing, Mahidol University</div>
+    </div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+    <div class="navbar-inner">
+      <span class="navbar-brand" style="display:none" id="navBrand">Department of Surgical Nursing</span>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="nav-item">
+          <span class="nav-link">About us <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="about.html" class="dropdown-item">About us</a></li>
+            <li><a href="staff.html" class="dropdown-item">Staff</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="teaching.html" class="nav-link">Teaching</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="academic.html" class="nav-link">Academic Services</a></li>
+        <li class="nav-item"><a href="COE.html" class="nav-link">Center of Excellence</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open/Close Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+            
+            <div class="slider-container" id="slideshow">
+               <div class="slider-canvas active"><img src="img/slide/slide5.jpg" alt="Slide 5"></div>
+               <div class="slider-canvas"><img src="img/slide/slide6.jpg" alt="Slide 6"></div>
+               <div class="slider-canvas"><img src="img/slide/slide7.jpg" alt="Slide 7"></div>
+               <div class="slider-canvas"><img src="img/slide/slide8.jpg" alt="Slide 8"></div>
+               <div class="slider-canvas"><img src="img/slide/s1.jpg" alt="Slide S1"></div>
+               <div class="slider-canvas"><img src="img/slide/slide1.jpg" alt="Slide 1"></div>
+            </div>
+              
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>Department of Surgical Nursing</h3>
+        <p>
+          <a href="https://ns.mahidol.ac.th/nurse_en/" target="_blank">Faculty of Nursing</a> &nbsp;·&nbsp;
+          <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+        </p>
+        <p class="footer-copy">
+          Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+          Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="#" title="Facebook">
+            <img src="img/template/fb.png" alt="Facebook">
+          </a>
+        </div>
+        <a href="../SN_TH/index.html" target="_parent" class="footer-lang-btn">
+          <img src="img/template/th.jpg" alt="TH"> Thai
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if(hamburger) hamburger.addEventListener('click', openMobileMenu);
+if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
+if(mobileMenu) {
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+function toggleMobileDropdown(el) {
+  const dropdown = el.nextElementSibling;
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+    el.classList.toggle('active');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('#slideshow .slider-canvas');
+                let currentSlide = 0;
+                
+                if (slides.length > 0) {
+                    setInterval(function() {
+                        slides[currentSlide].classList.remove('active');
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        slides[currentSlide].classList.add('active');
+                    }, 3000);
+                }
+            }); 
+
+const navBrand = document.getElementById('navBrand');
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+  }
+
+  const backTop = document.getElementById('back-to-top');
+  if (backTop) {
+    backTop.classList.toggle('visible', window.scrollY > 300);
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>

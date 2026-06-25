@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff - Department of Surgical Nursing, Faculty of Nursing, Mahidol University</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo/favicon.png" type="image/png">
+
+  <!-- 1. START Styling Cookie | cookieconsent.css -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://ns.mahidol.ac.th/Department/SN_dept_en/cookie/cookieconsent.css"
+  />
+  <!-- 1. END Styling Cookie | cookieconsent.css -->
+</head>
+<body>
+
+  <!-- 2. START Reconsent Button -->
+  <button
+    data-cc="c-settings"
+    class="cc-link cc-reconsent"
+    style="
+      position: fixed;
+      left: 8px;
+      bottom: 16px;
+      border-radius: 999px;
+      padding: 4px;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      box-shadow: rgb(204 204 204 / 50%) 0 2px
+        10px 0;
+      border: 1px solid #e8e8e8;
+      background-color: #fff;
+      z-index: 9999;
+    "
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#0a0b0c"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path
+        d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"
+      ></path>
+      <path d="M8.5 8.5v.01"></path>
+      <path d="M16 15.5v.01"></path>
+      <path d="M12 12v.01"></path>
+      <path d="M11 17v.01"></path>
+      <path d="M7 14v.01"></path>
+    </svg>
+  </button>
+  <!-- 2. END Reconsent Button -->
+
+  <!-- 3. START CookieConsent | cookieconsent.js -->
+  <script
+    defer
+    src="https://ns.mahidol.ac.th/Department/SN_dept_en/cookie/cookieconsent.js"
+  ></script>
+  <!-- 3. END CookieConsent | cookieconsent.js -->
+
+  <!-- 4. START CookieConsent Customization  | consent-init.js -->
+  <script
+    defer
+    src="https://ns.mahidol.ac.th/Department/SN_dept_en/cookie/consent-init.js"
+  ></script>
+  <!-- 4. END CookieConsent Customization  | consent-init.js -->
+
+  <!-- 5. START Script Blocking Analytics -->
+  <script
+    async
+    type="text/plain"
+    data-cookiecategory="analytics"
+    src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"
+  ></script>
+
+  <script
+    type="text/plain"
+    data-cookiecategory="analytics"
+  >
+    console.log('"analytics" category accepted');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-C0VND84NRS');
+  </script>
+  <!-- 5. END Script Blocking Analytics -->
+
+  <!-- 6. START Script Blocking Marketing -->
+  <script
+    type="text/plain"
+    data-cookiecategory="marketing"
+  >
+    console.log('"ads" category accepted');
+  </script>
+  <!-- 6. END Script Blocking Marketing -->
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">Main Menu</span>
+      <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
+    </div>
+    <nav class="mobile-nav-list">
+      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></div>
+      <div class="mobile-nav-item">
+        <div class="mobile-nav-link active" onclick="toggleMobileDropdown(this)">About us <span>▾</span></div>
+        <div class="mobile-dropdown open">
+            <a href="about.html">About us</a>
+            <a href="staff(1).html">Staff</a>
+        </div>
+      </div>
+      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">Teaching</a></div>
+      <div class="mobile-nav-item"><a href="research.html" class="mobile-nav-link">Research</a></div>
+      <div class="mobile-nav-item"><a href="academic.html" class="mobile-nav-link">Academic Services</a></div>
+      <div class="mobile-nav-item"><a href="COE.html" class="mobile-nav-link">Center of Excellence</a></div>
+      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></div>
+    </nav>
+  </div>
+</div>
+
+<div class="mn-wrapper">
+
+  <div class="topbar">
+    <div class="topbar-links">
+      <a href="https://ns.mahidol.ac.th/nurse_en/" target="_blank">Faculty of Nursing</a>
+      <span class="sep">|</span>
+      <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+    </div>
+    <div class="topbar-social">
+      <a href="#" title="Facebook">
+        <img src="img/template/fb.png" alt="Facebook">
+      </a>
+    </div>
+    <div class="topbar-lang">
+      <a href="../SN_TH/index.html" target="_parent" title="Thai version">
+        <img src="img/template/th.jpg" alt="TH"> TH
+      </a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-logo">
+      <img src="img/logo/logo.png" alt="Mahidol University Logo">
+    </div>
+    <div class="header-text">
+      <div class="header-dept-name">Department of Surgical Nursing</div>
+      <div class="header-faculty-name">Faculty of Nursing, Mahidol University</div>
+    </div>
+  </header>
+
+  <nav class="navbar" id="mainNav">
+    <div class="navbar-inner">
+      <span class="navbar-brand" style="display:none" id="navBrand">Department of Surgical Nursing</span>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item">
+          <span class="nav-link active">About us <span class="nav-arrow">▾</span></span>
+          <ul class="dropdown">
+            <li><a href="about.html" class="dropdown-item">About us</a></li>
+            <li><a href="staff(1).html" class="dropdown-item">Staff</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="teaching.html" class="nav-link">Teaching</a></li>
+        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
+        <li class="nav-item"><a href="academic.html" class="nav-link">Academic Services</a></li>
+        <li class="nav-item"><a href="COE.html" class="nav-link">Center of Excellence</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open/Close Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="txt_head">Staff</div>
+    <p class="txt_font">Faculty Members of Department of Surgical Nursing</p>
+
+    <div class="staff-container">
+      <div class="staff-grid">
+        
+        <div class="staff-card">
+          <img src="img/staff/65/rattima.jpg" alt="Assistant Professor Dr.Rattima Sirihorachai" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630184" target="_blank">Assistant Professor Dr.Rattima Sirihorachai</a></div>
+          <div class="staff-position">Head of Department</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1752</p>
+            <p><strong>E-mail:</strong> <a href="mailto:headnssu@mahidol.ac.th">headnssu@mahidol.ac.th</a><br><a href="mailto:rattima.sir@mahidol.ac.th">rattima.sir@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/pichet.png" alt="Assistant Professor Phichet Wongrot" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630154" target="_blank">Assistant Professor Phichet Wongrot</a></div>
+          <div class="staff-position">Associate Dean for Academic Services and Policy Advocacy</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> Bangkoknoi: 02-419-7466 ext. 1763<br>Salaya: 02-441-5333 ext. 2416</p>
+            <p><strong>E-mail:</strong> <a href="mailto:phichet.won@mahidol.ac.th">phichet.won@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/natma.jpg" alt="Assistant Professor Dr.Natma Thongteratham" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630070" target="_blank">Assistant Professor Dr.Natma Thongteratham</a></div>
+          <div class="staff-position">Deputy of Department</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1761</p>
+            <p><strong>E-mail:</strong> <a href="mailto:natma.the@mahidol.ac.th">natma.the@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/thirawan.png" alt="Assistant Professor Thirawan Chuetalen" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630089" target="_blank">Assistant Professor Thirawan Chuetalen</a></div>
+          <div class="staff-position">Associate Dean for Student Development</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> Bangkoknoi: 02-419-7466 ext. 1759<br>Salaya: 02-441-5333 ext. 2510</p>
+            <p><strong>E-mail:</strong> <a href="mailto:thirawan.chu@mahidol.ac.th">thirawan.chu@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/usawadee.jpg" alt="Professor Dr.Usavadee Asdornwised" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630313" target="_blank">Professor Dr.Usavadee Asdornwised</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1761</p>
+            <p><strong>E-mail:</strong> <a href="mailto:usavadee.asd@mahidol.ac.th">usavadee.asd@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/thitipong.jpg" alt="Assistant Professor Dr.Thitipong Tankumpuan" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630063" target="_blank">Assistant Professor Dr.Thitipong Tankumpuan</a></div>
+          <div class="staff-position">Associate Dean for Research</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> Bangkoknoi: 02-419-7466 ext. 1756<br>Salaya: 02-441-5333 ext. 2473</p>
+            <p><strong>E-mail:</strong> <a href="mailto:thitipong.tan@mahidol.ac.th">thitipong.tan@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/prangtip.jpg" alt="Associate Professor Dr.Prangtip Chayaput" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630125" target="_blank">Associate Professor Dr.Prangtip Chayaput</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1757</p>
+            <p><strong>E-mail:</strong> <a href="mailto:prangtip.cha@mahidol.ac.th">prangtip.cha@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/ketsarin.jpg" alt="Associate Professor Dr.Ketsarin Utriyaprasit" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630021" target="_blank">Associate Professor Dr.Ketsarin Utriyaprasit</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1759</p>
+            <p><strong>E-mail:</strong> <a href="mailto:ketsarin.utr@mahidol.ac.th">ketsarin.utr@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/chophaka.jpg" alt="Assistant Professor Dr.Chophaka Suttipong" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630055" target="_blank">Assistant Professor Dr.Chophaka Suttipong</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1756</p>
+            <p><strong>E-mail:</strong> <a href="mailto:chophaka.sut@mahidol.ac.th">chophaka.sut@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/ketsiri.jpg" alt="Assistant Professor Dr.Kessiri Wongkongkam" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630022" target="_blank">Assistant Professor Dr.Kessiri Wongkongkam</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1757</p>
+            <p><strong>E-mail:</strong> <a href="mailto:kessiri.won@mahidol.ac.th">kessiri.won@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/ornchuma.jpg" alt="Assistant Professor Dr.Onchuma Nakon" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630293" target="_blank">Assistant Professor Dr.Onchuma Nakon</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1759</p>
+            <p><strong>E-mail:</strong> <a href="mailto:onchuma.nak@mahidol.ac.th">onchuma.nak@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/pornsinee.jpg" alt="Assistant Professor Pornsinee Tengpanichkul" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630144" target="_blank">Assistant Professor Pornsinee Tengpanichkul</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1761</p>
+            <p><strong>E-mail:</strong> <a href="mailto:pornsinee.ten@mahidol.ac.th">pornsinee.ten@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/sakunrat.jpg" alt="Assistant Professor Sakunrat Tiewwanich" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630240" target="_blank">Assistant Professor Sakunrat Tiewwanich</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1761</p>
+            <p><strong>E-mail:</strong> <a href="mailto:sakunrat.tie@mahidol.ac.th">sakunrat.tie@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/patcharee.jpg" alt="Lecturer Dr.Patcharee Sanehjaroen" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630147" target="_blank">Lecturer Dr.Patcharee Sanehjaroen</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1757</p>
+            <p><strong>E-mail:</strong> <a href="mailto:patcharee.san@mahidol.ac.th">patcharee.san@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/khuttaleeya.jpg" alt="Lecturer Khuttaleeya Khongpet" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630028" target="_blank">Lecturer Khuttaleeya Khongpet</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1759</p>
+            <p><strong>E-mail:</strong> <a href="mailto:khuttaleeya.kho@mahidol.ac.th">khuttaleeya.kho@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/pornthip.jpg" alt="Lecturer Dr.Pornthip Suyasith" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630162" target="_blank">Lecturer Dr.Pornthip Suyasith</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1763</p>
+            <p><strong>E-mail:</strong> <a href="mailto:pornthip.suy@mahidol.ac.th">pornthip.suy@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/suratsawadee.jpg" alt="Lecturer Dr.Suratsawadee Kruahong" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630278" target="_blank">Lecturer Dr.Suratsawadee Kruahong</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1761</p>
+            <p><strong>E-mail:</strong> <a href="mailto:suratsawadee.kru@mahidol.ac.th">suratsawadee.kru@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/yuttapichai.jpg" alt="Lecturer Dr.Yoottapichai Phosri" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630175" target="_blank">Lecturer Dr.Yoottapichai Phosri</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1757</p>
+            <p><strong>E-mail:</strong> <a href="mailto:yoottapichai.pho@mahidol.ac.th">yoottapichai.pho@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/pinyapat.jpg" alt="Lecturer Pinyapat Kitthanyateerakul" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630383" target="_blank">Lecturer Pinyapat Kitthanyateerakul</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1759</p>
+            <p><strong>E-mail:</strong> <a href="mailto:pinyapat.kit@mahidol.ac.th">pinyapat.kit@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/pramkamol.jpg" alt="Lecturer Premgamon Kuntajak" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630134" target="_blank">Lecturer Premgamon Kuntajak</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1763</p>
+            <p><strong>E-mail:</strong> <a href="mailto:premgamon.kun@mahidol.ac.th">premgamon.kun@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/nalintip.jpg" alt="Lecturer Nalinthip Niruntaweechai" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630385" target="_blank">Lecturer Nalinthip Niruntaweechai</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466 ext. 1763</p>
+            <p><strong>E-mail:</strong> <a href="mailto:nalinthip.nir@mahidol.ac.th">nalinthip.nir@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/68/chanut.jpg" alt="Lecturer Chanut Teerarojanarat" class="staff-img">
+          <div class="staff-name"><a href="https://ns-mahidol.iserl.org/index.php/profile/new_profile#/instructor_detail/630450" target="_blank">Lecturer Chanut Teerarojanarat</a></div>
+          <div class="staff-position">Department Lecturer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466</p>
+            <p><strong>E-mail:</strong> <a href="mailto:chanut.tee@mahidol.ac.th">chanut.tee@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+        <div class="staff-card">
+          <img src="img/staff/67/kanoktip.jpg" alt="Ms.Kanoktip Booncharoen" class="staff-img">
+          <div class="staff-name"><a href="contact.html" target="_blank">Ms.Kanoktip Booncharoen</a></div>
+          <div class="staff-position">General Administrative Officer</div>
+          <div class="staff-contact">
+            <p><strong>Tel:</strong> 02-419-7466-80 ext. 1750-1751</p>
+            <p><strong>E-mail:</strong> <a href="mailto:kanoktip.bun@mahidol.ac.th">kanoktip.bun@mahidol.ac.th</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <h3>Department of Surgical Nursing</h3>
+        <p>
+          <a href="https://ns.mahidol.ac.th/nurse_en/" target="_blank">Faculty of Nursing</a> &nbsp;·&nbsp;
+          <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
+        </p>
+        <p class="footer-copy">
+          Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+          Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+        </p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="#" title="Facebook">
+            <img src="img/template/fb.png" alt="Facebook">
+          </a>
+        </div>
+        <a href="../SN_TH/index.html" target="_parent" class="footer-lang-btn">
+          <img src="img/template/th.jpg" alt="TH"> Thai
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+
+function openMobileMenu() {
+  mobileMenu.classList.add('open');
+  hamburger.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  hamburger.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+if(hamburger) hamburger.addEventListener('click', openMobileMenu);
+if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
+
+if(mobileMenu) {
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) closeMobileMenu();
+  });
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+function toggleMobileDropdown(el) {
+  const dropdown = el.nextElementSibling;
+  if (dropdown) {
+    dropdown.classList.toggle('open');
+    el.classList.toggle('active');
+  }
+}
+
+const navBrand = document.getElementById('navBrand');
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    const headerBottom = header.getBoundingClientRect().bottom;
+    if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+  }
+
+  const backTop = document.getElementById('back-to-top');
+  if (backTop) {
+    backTop.classList.toggle('visible', window.scrollY > 300);
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>
