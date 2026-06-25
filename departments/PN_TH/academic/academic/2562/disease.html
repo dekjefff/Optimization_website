@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การสร้างเสริมสุขวิทยาส่วนบุคคล แก่สามเณร ในหัวข้อ “โรคน่ารู้”</title>
+    <meta name="description" content="การสร้างเสริมสุขวิทยาส่วนบุคคล แก่สามเณร ในหัวข้อ “โรคน่ารู้”">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../cookie/cookieconsent.css">
+
+    <style>
+        body {
+            background-color: #fcfcfd;
+        }
+
+        .academic-wrapper {
+            max-width: 1000px;
+            margin: 50px auto 80px;
+            padding: 0 20px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 36, 84, 0.1);
+        }
+
+        .category-name {
+            display: inline-block;
+            font-size: 14px;
+            color: #c49a45; /* MU Gold */
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            padding: 4px 15px;
+            background: rgba(196, 154, 69, 0.08);
+            border-radius: 20px;
+        }
+        
+        .news-title-elegant {
+            font-size: 18px;
+            color: #002454; /* MU Blue Dark */
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .intro-text-elegant {
+            font-size: 16px;
+            color: #374151;
+            line-height: 1.85;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        
+        .intro-text-elegant p {
+            text-indent: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        /* --- Elegant Gallery --- */
+        .elegant-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .elegant-gallery img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 36, 84, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+
+        .elegant-gallery img:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0, 36, 84, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .elegant-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .elegant-gallery img {
+                aspect-ratio: 4 / 3;
+            }
+            .news-title-elegant {
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-nav-panel">
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-title">เมนูหลัก</span>
+                <button class="mobile-close" id="mobileClose" aria-label="ปิดเมนู">×</button>
+            </div>
+            <nav class="mobile-nav-list">
+                <div class="mobile-nav-item"><a href="../../../index.html" class="mobile-nav-link">หน้าหลัก</a></div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
+                    <div class="mobile-dropdown">
+                        <a href="../../../about.html">ประวัติและความเป็นมา</a>
+                        <a href="../../../vision.html">วิสัยทัศน์ / พันธกิจ</a>
+                        <a href="../../../head_dept.html">ทำเนียบหัวหน้าภาค</a>
+                        <a href="../../../staff.html">บุคลากร</a>
+                        <a href="../../../contact.html">ติดต่อเรา</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">การศึกษา <span>▾</span></div>
+                    <div class="mobile-dropdown">
+                        <a href="../../../degree_bns.html">หลักสูตรปริญญาตรี</a>
+                        <a href="../../../degree_mns.html">หลักสูตรปริญญาโท</a>
+                        <a href="../../../degree_phd.html">หลักสูตรปริญญาเอก</a>
+                        <a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank">หลักสูตรการพยาบาลเฉพาะทาง</a>
+                        <a href="../../../scholarship.html">ทุนการศึกษา</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item"><a href="../../../research.html" class="mobile-nav-link">วิจัยและนวัตกรรม</a></div>
+                <div class="mobile-nav-item"><a href="../../../academic.html" class="mobile-nav-link">บริการวิชาการ</a></div>
+                <div class="mobile-nav-item">
+                    <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">การจัดการความรู้ <span>▾</span></div>
+                    <div class="mobile-dropdown">
+                        <a href="../../../km/km_PN.html">การจัดการความรู้ของภาควิชาฯ</a>
+                        <a href="../../../km.html">วัตถุประสงค์ / กระบวนการ</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item"><a href="../../../activities.html" class="mobile-nav-link">ภาพกิจกรรม</a></div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="mn-wrapper">
+
+        <div class="topbar">
+            <div class="topbar-links">
+                <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
+                <span class="sep">|</span>
+                <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+            </div>
+            <div class="topbar-social" style="display:flex; gap:8px; align-items:center;">
+                <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/fb.png" alt="Facebook" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/twitter.png" alt="Twitter" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/ig.png" alt="Instagram" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/line.png" alt="Line" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+                <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="transition:transform 0.2s; background:transparent !important;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/youtube.png" alt="Youtube" style="width:24px; height:24px; border-radius:50%; object-fit:cover; filter:none !important;"></a>
+            </div>
+            <div class="topbar-lang">
+                <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" title="English version">
+                    <img src="../../../img/template/en.png" alt="EN"> EN
+                </a>
+            </div>
+        </div>
+
+        <header class="site-header">
+            <div class="header-logo">
+                <img src="../../../../FN_TH/img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล" onerror="this.src='../img/logo/logo.png'">
+            </div>
+            <div class="header-text" style="text-align: right;">
+                <div class="header-dept-name">ภาควิชาการพยาบาลกุมารเวชศาสตร์</div>
+            </div>
+        </header>
+
+        <nav class="navbar" id="mainNav">
+            <div class="navbar-inner">
+                <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลกุมารเวชศาสตร์</span>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../../../index.html" class="nav-link">หน้าหลัก</a></li>
+                    <li class="nav-item">
+                        <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="../../../about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
+                            <li><a href="../../../vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
+                            <li><a href="../../../head_dept.html" class="dropdown-item">ทำเนียบหัวหน้าภาค</a></li>
+                            <li><a href="../../../staff.html" class="dropdown-item">บุคลากร</a></li>
+                            <li><a href="../../../contact.html" class="dropdown-item">ติดต่อเรา</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link">การศึกษา <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="../../../degree_bns.html" class="dropdown-item">หลักสูตรปริญญาตรี</a></li>
+                            <li><a href="../../../degree_mns.html" class="dropdown-item">หลักสูตรปริญญาโท</a></li>
+                            <li><a href="../../../degree_phd.html" class="dropdown-item">หลักสูตรปริญญาเอก</a></li>
+                            <li><a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank" class="dropdown-item">หลักสูตรการพยาบาลเฉพาะทาง</a></li>
+                            <li><a href="../../../scholarship.html" class="dropdown-item">ทุนการศึกษา</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../../research.html" class="nav-link">วิจัยและนวัตกรรม</a></li>
+                    <li class="nav-item"><a href="../../../academic.html" class="nav-link">บริการวิชาการ</a></li>
+                    <li class="nav-item">
+                        <span class="nav-link">การจัดการความรู้ <span class="nav-arrow">▾</span></span>
+                        <ul class="dropdown">
+                            <li><a href="../../../km/km_PN.html" class="dropdown-item">การจัดการความรู้ของภาควิชาฯ</a></li>
+                            <li><a href="../../../km.html" class="dropdown-item">วัตถุประสงค์ / กระบวนการ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../../activities.html" class="nav-link">ภาพกิจกรรม</a></li>
+                </ul>
+                <button class="hamburger" id="hamburger" aria-label="เปิด/ปิดเมนู">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+        <div id="header-placeholder"></div>
+
+        <main class="content-area">
+            <div class="academic-wrapper">
+                <div class="article-header">
+                    <div class="category-name">งานบริการวิชาการ</div>
+                    <h1 class="news-title-elegant">การสร้างเสริมสุขวิทยาส่วนบุคคล แก่สามเณร ในหัวข้อ “โรคน่ารู้”</h1>
+                </div>
+                
+                <div class="intro-text-elegant">
+                    <p>วันเสาร์ที่ 15 มิถุนายน 2562 เวลา 9.00-16.00 น. ภาควิชาการพยาบาลกุมารเวชศาสตร์ ได้ฐานการเรียนรู้เรื่อง “โรคน่ารู้” แก่สามเณร จำนวน 250 รูป ณ วัดไผ่ดำ จังหวัดสิงห์บุรี</p>
+                    <p>วิทยากร อ.เบ็ญจมาศ โอฬารรัตน์มณี อ.ภัทรนุช ภูมิพาน อ.กรรณิการ์ ชัยลี อ.ลัดดาวัลย์ ทรัพย์เจริญมาก</p>
+                    <p>ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</p>
+                    <p>ตั้งอยู่เลขที่ 2 อาคารพระศรีพัชรินทร์ ชั้น 8 ถนนวังหลัง แขวงศิริราช เขตบางกอกน้อย กรุงเทพฯ 10700</p>
+                </div>
+
+                <div class="elegant-gallery">
+                    <img src="../../../img/academic/2562/disease/01.jpg" alt="Image">
+                    <img src="../../../img/academic/2562/disease/02.jpg" alt="Image">
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-info">
+                    <h3>ภาควิชาการพยาบาลกุมารเวชศาสตร์</h3>
+                    <p>
+                        <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a> &nbsp;·&nbsp;
+                        <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
+                    </p>
+                    <p class="footer-copy">
+                        Copyright &copy; 2026 Faculty of Nursing, Mahidol University. All rights reserved.<br>
+                        Webmaster: <a href="mailto:nswww@mahidol.ac.th">nswww@mahidol.ac.th</a>
+                    </p>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+                    <div style="display:flex;gap:12px;align-items:center;">
+                        <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://lin.ee/EuSGVWA" target="_blank" title="Line" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/line.png" alt="Line" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                        <a href="https://www.youtube.com/channel/UCrVgXKB_J63NwayAdfOH-2A" target="_blank" title="Youtube" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="../../../img/template/youtube.png" alt="Youtube" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
+                    </div>
+                    <a href="https://ns.mahidol.ac.th/department/pn_dept_en/" target="_parent" style="display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);font-size:13px;font-family:'Sarabun',sans-serif;padding:6px 14px;border:1px solid rgba(255,255,255,0.2);border-radius:999px;transition:all 0.2s;">
+                        <img src="../../../img/template/en.png" alt="EN" style="width:22px;height:15px;border-radius:2px;">
+                        English
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            hamburger.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        mobileClose.addEventListener('click', closeMobileMenu);
+
+        mobileMenu.addEventListener('click', function (e) {
+            if (e.target === mobileMenu) closeMobileMenu();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeMobileMenu();
+        });
+
+        function toggleMobileDropdown(el) {
+            const dropdown = el.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+                el.classList.toggle('active');
+            }
+        }
+
+        const navBrand = document.getElementById('navBrand');
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.site-header');
+            if (header) {
+                const headerBottom = header.getBoundingClientRect().bottom;
+                if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
+            }
+        }, { passive: true });
+    </script>
+</body>
+</html>

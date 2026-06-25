@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -46,6 +46,162 @@
         .intro-text-elegant p {
             text-indent: 2.5em;
             margin: 0;
+        }
+        /* --- Premium List View (Compact Size) --- */
+        .page-header-left {
+            max-width: 1000px;
+            margin: 40px auto 25px;
+            padding: 0 20px;
+        }
+        .page-header-left h1 {
+            font-size: 22px;
+            color: var(--mu-blue-dark, #002454);
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            padding-left: 15px;
+        }
+        .page-header-left h1::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background-color: var(--mu-gold, #c49a45);
+            border-radius: 4px;
+        }
+
+        .activity-list {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-list-item {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 20px 10px;
+            border-bottom: 1px dashed rgba(0, 36, 84, 0.15);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .activity-list-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-list-item:hover {
+            background-color: rgba(25, 68, 136, 0.03);
+            transform: translateX(4px);
+            border-bottom-color: transparent;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+        }
+
+        .activity-thumbnail {
+            flex: 0 0 200px;
+            height: 135px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.04);
+            position: relative;
+        }
+
+        .activity-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .activity-list-item:hover .activity-thumbnail img {
+            transform: scale(1.05);
+        }
+
+        .activity-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .activity-meta {
+            margin-bottom: 8px;
+        }
+
+        .activity-date-badge {
+            display: inline-block;
+            background: rgba(196, 154, 69, 0.1);
+            color: var(--mu-gold, #c49a45);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .activity-title {
+            font-size: 15px;
+            color: var(--mu-blue-dark, #002454);
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0 0 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .activity-list-item:hover .activity-title {
+            color: var(--mu-blue, #194488);
+        }
+
+        .activity-readmore {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--mu-gold, #c49a45);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.3s ease;
+        }
+
+        .activity-readmore svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .activity-list-item:hover .activity-readmore {
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .activity-list-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+                padding: 20px 10px;
+            }
+            .activity-list-item:hover {
+                transform: none;
+            }
+            .activity-thumbnail {
+                width: 100%;
+                flex: auto;
+                height: 180px;
+            }
+            .page-header-left h1 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -167,59 +323,84 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
-
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="73%" height="33" valign="top" class="txt_head">การบริการวิชาการ</td>
-                <td width="27%" align="right" valign="middle" class="txt_remark">&nbsp;</td>
-                </tr>
-              <tr>
-                <td colspan="2" valign="top" class="txt_font"><br>
-                  <table width="94%" border="0" align="center" cellpadding="5" cellspacing="0">
-                  <tr>
-                    <td colspan="2" align="center" valign="top"  class="bg_blue"><span class="txt_white">ประจำปี 2568</span></td>
-                  </tr>
-                  <tr>
-                    <td valign="top" ><img src="img/activities/2568/diabetes/01.jpg" alt="" width="120" height="80" style="border: 1px solid #ccc; padding: 5px;"></td>
-                    <td valign="top" class="line_body"><a href="activities/2568/diabetes.html" target="_parent" class="hyperlink">สรุปข่าวลงสื่อภายนอก
+                <main class="content-area">
+            <div class="page-header-left">
+                <h1>การบริการวิชาการ &#3611;&#3619;&#3632;&#3592;&#3635;&#3611;&#3637; 2568</h1>
+            </div>
+            
+            <div class="activity-list">
+                <a href="activities/2568/diabetes.html" class="activity-list-item" target="_parent">
+                    <div class="activity-thumbnail">
+                        <img src="img/staff/2024/sathima.jpg" alt="image">
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-meta">
+                            <span class="activity-date-badge">2568</span>
+                        </div>
+                        <h3 class="activity-title">สรุปข่าวลงสื่อภายนอก
   เรื่อง “เตือนใจพ่อแม่…เบาหวานในเด็กใกล้ตัวกว่าที่คิด”
 ผู้ช่วยศาสตราจารย์ ดร.สาธิมา สุระธรรม ภาควิชาการพยาบาลกุมารเวชศาสตร์
-คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</a></td>
-                  </tr>
-                  <tr>
-                    <td valign="top" ><img src="img/activities/2568/nurse_day2/s2.jpg" alt="" width="120" height="80" style="border: 1px solid #ccc; padding: 5px;"></td>
-                    <td valign="top" class="line_body"><a href="activities/2568/nurse_day2.html" target="_parent" class="hyperlink">การเข้าร่วมกิจกรรมวันพยาบาลแห่งชาติ วันที่ 21 ตุลาคม 2568</a></td>
-                  </tr>
-                  <tr>
-                    <td valign="top" ><img src="img/activities/2568/nurse_day/s2.jpg" alt="" width="120" height="80" style="border: 1px solid #ccc; padding: 5px;"></td>
-                    <td valign="top" class="line_body"><a href="activities/2568/nurse_day.html" target="_parent" class="hyperlink">เข้าร่วมงานวันพยาบาลสากล จัดโดยฝ่ายการพยาบาล โรงพยาบาลศิริราช ร่วมกับคณะพยาบาลศาสตร์ฯ </a></td>
-                  </tr>
-                  <tr>
-                    <td width="12%" valign="top" ><img src="https://ns.mahidol.ac.th/nurse_th/images/annual_activities/2568/07/PN/s2.jpg" alt="" width="120" height="80" style="border: 1px solid #ccc; padding: 5px;"></td>
-                    <td width="88%" valign="top" class="line_body"><a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2568/07/PN.html" target="_blank" class="hyperlink">ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ ม.มหิดล จัดประชุมฟื้นฟูวิชาการประจำปี 2568</a></td>
-                  </tr>
-                  </table>
-                  <p class="txt_font">&nbsp;</p>
-                  <p class="txt_font">&nbsp;</p>
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td width="100%" height="36" align="center" valign="top" class="txt_font"><table width="50%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td height="28" align="center" bgcolor="#b24697"><span class="txt_white"><a href="academic_all.html" target="_parent" class="hyperlink_menu">More+</a></span></td>
-                    </tr>
-                  </table></td>
-              </tr>
-              <tr>
-                <td height="36" align="center" valign="top" class="txt_font">&nbsp;</td>
-              </tr>
-            </table>
-                  <p class="txt_blue">&nbsp;</p>
-                <p class="txt_blue_reg">&nbsp;</p></td>
-              </tr>
-            </table>
-          
+คณะพยาบาลศาสตร์ มหาวิทยาลัยมหิดล</h3>
+                        <div class="activity-readmore">
+                            &#3629;&#3656;&#3634;&#3609;&#3619;&#3634;&#3618;&#3621;&#3632;&#3648;&#3629;&#3637;&#3618;&#3604;
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="activities/2568/nurse_day2.html" class="activity-list-item" target="_parent">
+                    <div class="activity-thumbnail">
+                        <img src="img/activities/2568/nurse_day2/01.jpg" alt="image">
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-meta">
+                            <span class="activity-date-badge">2568</span>
+                        </div>
+                        <h3 class="activity-title">การเข้าร่วมกิจกรรมวันพยาบาลแห่งชาติ วันที่ 21 ตุลาคม 2568</h3>
+                        <div class="activity-readmore">
+                            &#3629;&#3656;&#3634;&#3609;&#3619;&#3634;&#3618;&#3621;&#3632;&#3648;&#3629;&#3637;&#3618;&#3604;
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="activities/2568/nurse_day.html" class="activity-list-item" target="_parent">
+                    <div class="activity-thumbnail">
+                        <img src="img/activities/2568/nurse_day/01.jpg" alt="image">
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-meta">
+                            <span class="activity-date-badge">2568</span>
+                        </div>
+                        <h3 class="activity-title">เข้าร่วมงานวันพยาบาลสากล จัดโดยฝ่ายการพยาบาล โรงพยาบาลศิริราช ร่วมกับคณะพยาบาลศาสตร์ฯ</h3>
+                        <div class="activity-readmore">
+                            &#3629;&#3656;&#3634;&#3609;&#3619;&#3634;&#3618;&#3621;&#3632;&#3648;&#3629;&#3637;&#3618;&#3604;
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://ns.mahidol.ac.th/nurse_th/annual_activities/2568/07/PN.html" class="activity-list-item" target="_parent">
+                    <div class="activity-thumbnail">
+                        <img src="https://ns.mahidol.ac.th/nurse_th/images/annual_activities/2568/07/PN/01.jpg" alt="image">
+                    </div>
+                    <div class="activity-info">
+                        <div class="activity-meta">
+                            <span class="activity-date-badge">2568</span>
+                        </div>
+                        <h3 class="activity-title">ภาควิชาการพยาบาลกุมารเวชศาสตร์ คณะพยาบาลศาสตร์ ม.มหิดล จัดประชุมฟื้นฟูวิชาการประจำปี 2568</h3>
+                        <div class="activity-readmore">
+                            &#3629;&#3656;&#3634;&#3609;&#3619;&#3634;&#3618;&#3621;&#3632;&#3648;&#3629;&#3637;&#3618;&#3604;
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div style="text-align: right; margin: 30px auto 40px; max-width: 1000px; padding: 0 20px;">
+                <a href="academic_all.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; background: var(--mu-blue); color: white; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 15px; box-shadow: 0 4px 15px rgba(229, 129, 168, 0.3); transition: all 0.3s ease;" onmouseover="this.style.background='var(--mu-blue-dark)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--mu-blue)'; this.style.transform='translateY(0)';">
+                    &#3604;&#3641;&#3586;&#3656;&#3634;&#3623;&#3610;&#3619;&#3636;&#3585;&#3634;&#3619;&#3623;&#3636;&#3594;&#3634;&#3585;&#3634;&#3619;&#3607;&#3633;&#3657;&#3591;&#3627;&#3617;&#3604;
+                    <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
         </main>
+
 
         <footer class="site-footer">
             <div class="footer-inner">
@@ -235,7 +416,7 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                                        <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                         <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                         <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
@@ -298,6 +479,7 @@
     </script>
 </body>
 </html>
+
 
 
 

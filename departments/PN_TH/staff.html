@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -63,7 +63,7 @@
             box-shadow: 0 20px 40px rgba(25, 68, 136, 0.1);
         }
         .staff-img-wrapper {
-            width: 170px;
+            width: 210px;
             aspect-ratio: 3 / 4;
             margin: 25px auto 0;
             border-radius: 12px;
@@ -144,7 +144,68 @@
         @media (max-width: 480px) {
             .staff-grid { grid-template-columns: 1fr; }
         }
-</style>
+        .staff-expertise {
+            margin-top: 15px;
+            text-align: left;
+            width: 100%;
+            font-size: 13px;
+        }
+        .staff-expertise summary {
+            cursor: pointer;
+            color: var(--mu-blue);
+            font-weight: 600;
+            padding: 8px 10px;
+            background: rgba(25, 68, 136, 0.05);
+            border-radius: 8px;
+            transition: background 0.2s;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .staff-expertise summary::-webkit-details-marker {
+            display: none;
+        }
+        .staff-expertise summary::after {
+            content: 'â–¼';
+            font-size: 10px;
+            transition: transform 0.3s;
+        }
+        .staff-expertise[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .staff-expertise summary:hover {
+            background: rgba(25, 68, 136, 0.1);
+        }
+        .expertise-content {
+            padding: 12px 10px;
+            color: var(--gray-700);
+            background: #fff;
+            border: 1px solid rgba(0,0,0,0.05);
+            border-top: none;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            margin-top: -4px;
+        }
+        .expertise-title {
+            color: var(--mu-gold-dark);
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .expertise-title:first-child {
+            margin-top: 0;
+        }
+        .expertise-content ul {
+            padding-left: 20px;
+            margin: 0 0 10px 0;
+        }
+        .expertise-content li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+    </style>
 </head>
 <body>
 
@@ -284,6 +345,26 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1864, 1865</span><br>
                                 ✉️ <a href="mailto:pattaranuch.poo@mahidol.ac.th">pattaranuch.poo@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Critical care </li>
+                          <li >Infectious diseases and  infection control </li>
+                          <li >Palliative and End-of-life care</li>
+                          <li >Respiratory care</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Critical care </li>
+                          <li >Infection control</li>
+                          <li >End-of-life  care for children and family</li>
+                          <li >Nursing care for patients with respiratory problem</li>
+                          <li >Qualitative research</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -297,6 +378,22 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1206</span><br>
                                 ✉️ <a href="mailto:weeraya.jug@mahidol.ac.th">weeraya.jug@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li > Diabetic Child Care </li>
+                          <li >Child Play</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li > Health Promotion in Chronically-ill  Children and Families: Diabetes Mellitus and Cerebral  Palsy </li>
+                          <li >Development and Psychosocial Care in Children  and Families </li>
+                          <li >Play &amp; Development </li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -310,6 +407,21 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1216, 1857</span><br>
                                 ✉️ <a href="mailto:somsiri.run@mahidol.ac.th">somsiri.run@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li > High risk newborn </li>
+                          <li >Health promotion in  early childhood</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li > Nursing care in high-risk newborn </li>
+                          <li >Health promotion in  early childhood</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -323,6 +435,20 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1215, 1858</span><br>
                                 ✉️ <a href="mailto:yuwadee.pon@mahidol.ac.th">yuwadee.pon@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li > Health Promotion in early Childhood </li>
+                          <li >Pediatric Surgical  Nursing</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Child Growth and Development</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -336,6 +462,22 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1863</span><br>
                                 ✉️ <a href="mailto:tassanee.pra@mahidol.ac.th">tassanee.pra@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Neonatal Nursing</li>
+                          <li >Developmental Screening</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Parenting &amp; Child  Development </li>
+                          <li >Self-Efficacy </li>
+                          <li >Tool Development </li>
+                      </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -349,6 +491,21 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1859</span><br>
                                 ✉️ <a href="mailto:wanlaya.tha@mahidol.ac.th">wanlaya.tha@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Care of chronic illness in children and families</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >HIV/AIDS in children and  families </li>
+                          <li >Stress and coping in children and families                          </li>
+                          <li >Qualitative research</li>
+                      </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -362,6 +519,25 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:apawan.noo@mahidol.ac.th">apawan.noo@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Respiratory care for children and families </li>
+                          <li >Obesity and Metabolic syndrome in children </li>
+                          <li >Health promotion, executive function in early childhood </li>
+                          <li > at-risk children and families </li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li > Respiratory care for  children and families </li>
+                          <li >Obesity and Metabolic  syndrome in children</li>
+                          <li >Health promotion,  executive function in early childhood </li>
+                          <li >at-risk  children and families </li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -375,6 +551,25 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:sudaporn.pay@mahidol.ac.th">sudaporn.pay@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Neonatal nursing </li>
+                          <li >Pediatric surgical  nursing </li>
+                          <li >Pediatric critical care  nursing </li>
+                          <li >Breastfeeding </li>
+                          <li >Clinical Judgment</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Pain Management in Children </li>
+                          <li >Health promotion in early childhood                          </li>
+                          <li >Breastfeeding</li>
+                      </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -388,6 +583,23 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ -</span><br>
                                 ✉️ <a href="mailto:parnnarat.san@mahidol.ac.th">parnnarat.san@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                                    <ul>
+                                      <li>Breastfeeding</li>
+                                      <li>Nutrition promoting in children</li>
+                                      <li>Infection diseases and control</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                      <li>Breastfeeding</li>
+                                      <li>Nutrition promoting in children</li>
+                                      <li>Infection diseases and control</li>
+                                    </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -401,6 +613,25 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1864, 1865</span><br>
                                 ✉️ <a href="mailto:chayapa.cha@mahidol.ac.th">chayapa.cha@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Breastfeeding </li>
+                          <li >Social support </li>
+                          <li >Health promotion in children </li>
+                          <li >Critical thinking </li>
+                          <li >Nursing education</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Breastfeeding </li>
+                          <li >Health promotion in children </li>
+                          <li >Nursing education</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -414,6 +645,24 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1850, 1858</span><br>
                                 ✉️ <a href="mailto:kanjana.kro@mahidol.ac.th">kanjana.kro@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Chronic illness: Hematology and Malignancies </li>
+                          <li >Health promotion: yoka </li>
+                          <li >Psychosocial care </li>
+                          <li >Palliative care</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Chronic illness: Hematology  and Malignancies </li>
+                          <li >Psychosocial care </li>
+                          <li >Nursing education</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -427,6 +676,22 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1861</span><br>
                                 ✉️ <a href="mailto:sathima.son@mahidol.ac.th">sathima.son@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Nursing care of chronic illness in children and  families: type 1 diabetes mellitus  and congenital heart disease (CHD)</li>
+                          <li >Diabetes Self-Management  Education and Support: DSMES</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Health promotion in  children with congenital heart disease (CHD) and families</li>
+                          <li >Health promotion in  children with type 1 diabetes mellitus and families</li>
+                          <li >Diabetes Self-Management  Education and Support: DSMES</li>
+                      </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -440,6 +705,21 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1857, 1859</span><br>
                                 ✉️ <a href="mailto:benjamat.han@mahidol.ac.th">benjamat.han@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Health promotion </li>
+                          <li >Infectious disease</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Sexuality education in child and adolescent</li>
+                          <li >Health promotion in child and adolescent</li>
+                      </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -453,6 +733,21 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1864, 1865</span><br>
                                 ✉️ <a href="mailto:jintana.sag@mahidol.ac.th">jintana.sag@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Nursing Care of The Pediatric Surgical Patient </li>
+                          <li >Nursing Care of The Child with Respiratory Disorder</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Asthma Self-and Family  Management </li>
+                          <li >Pediatric Surgical Nursing</li>
+                      </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -479,6 +774,19 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1857, 1859</span><br>
                                 ✉️ <a href="mailto:katteya.pen@mahidol.ac.th">katteya.pen@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Critical care in newborn </li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Nursing care in preterm infant</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -492,6 +800,19 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:wanida.jai@mahidol.ac.th">wanida.jai@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Nephrology nursing</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Healthcare transition in adolescents</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -505,6 +826,19 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1858</span><br>
                                 ✉️ <a href="mailto:manutsawin.kun@mahidol.ac.th">manutsawin.kun@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                        <ul>
+                          <li >Self-management in adolescents with type 1 diabetes</li>
+                        </ul>
+                        <p class="expertise-title">Research area:</p>
+                        <ul>
+                          <li >Self-management in adolescents with type 1 diabetes</li>
+                        </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">
@@ -518,6 +852,19 @@
                                 <span style="white-space: nowrap; font-size: 11.5px; letter-spacing: -0.2px;">📞 โทร: 02-419-7466-80 ต่อ 1857- 1859</span><br>
                                 ✉️ <a href="mailto:phonphimon.pra@mahidol.ac.th">phonphimon.pra@mahidol.ac.th</a>
                             </div>
+                            <details class="staff-expertise">
+                                <summary>&#3588;&#3623;&#3634;&#3617;&#3648;&#3594;&#3637;&#3656;&#3618;&#3623;&#3594;&#3634;&#3597; / &#3591;&#3634;&#3609;&#3623;&#3636;&#3592;&#3633;&#3618;</summary>
+                                <div class="expertise-content">
+                                    <span class="expertise-title">Expertise area: </span>
+                                    <ul>
+                                      <li>Critical care in newborn</li>
+                                    </ul>
+                                    <p class="expertise-title">Research area:</p>
+                                    <ul>
+                                      <li>Health promotion in early childhood</li>
+                                    </ul>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <div class="staff-card">

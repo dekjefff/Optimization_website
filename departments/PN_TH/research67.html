@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -46,6 +46,121 @@
         .intro-text-elegant p {
             text-indent: 2.5em;
             margin: 0;
+        }
+            /* --- Research Layout --- */
+        .research-container {
+            max-width: 1000px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+        
+        .research-intro {
+            font-size: 18px;
+            color: var(--gray-700);
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        .research-group {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+        .research-group-header {
+            background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%);
+            padding: 20px 30px;
+            color: var(--white);
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .research-group-header svg {
+            width: 24px;
+            height: 24px;
+            color: var(--mu-gold);
+        }
+        
+        .research-subgroup {
+            background: var(--mu-blue-pale);
+            padding: 15px 30px;
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--mu-blue-dark);
+            border-bottom: 1px solid var(--gray-100);
+            border-top: 1px solid var(--gray-100);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .research-group > .research-subgroup:first-child { border-top: none; }
+
+        .research-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .research-table td {
+            padding: 18px 30px;
+            border-bottom: 1px solid var(--gray-100);
+            transition: background-color 0.2s;
+            font-size: 15.5px;
+            line-height: 1.6;
+        }
+        .research-table td.icon-col {
+            width: 40px;
+            padding-right: 0;
+            vertical-align: top;
+            padding-top: 20px;
+        }
+        .research-table tr:last-child td { border-bottom: none; }
+        .research-table tr:hover td { background-color: #fcfcfc; }
+        
+                .research-table a {
+            color: var(--mu-blue-dark);
+            text-decoration: none;
+            transition: color 0.2s;
+            display: block;
+            line-height: 1.6;
+        }
+                .research-table a:hover {
+            color: var(--mu-blue);
+            text-decoration: underline;
+        }
+
+        .view-all-container {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .view-all-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: var(--mu-blue);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 15px;
+        }
+        .view-all-link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(25, 68, 136, 0.3);
+            background: var(--mu-blue-dark);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .research-group-header { padding: 16px 20px; font-size: 18px; }
+            .research-table td { padding: 16px 20px; }
+            .research-subgroup { padding: 12px 20px; }
+            .research-table td.icon-col { padding-left: 20px; }
         }
     </style>
 </head>
@@ -167,80 +282,84 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+                <main class="content-area">
+            <div class="clean-header">
+                <h1>วิจัยและนวัตกรรม</h1>
+            </div>
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">วิจัยและนวัตกรรม</td>
-              </tr>
-              <tr>
-                <td height="363" align="left" valign="top"><p class="bg_purple"><strong>งานวิจัยและนวัตกรรม ของอาจารย์ในภาควิชาการพยาบาลกุมารเวชศาสตร์ ปี 2567</strong></p>
-                  <table width="95%" border="0" align="center" cellpadding="10" cellspacing="0">
-                    <tr class="bg_blue">
-                      <td colspan="2" align="center" valign="middle" class="txt_white">ผลงานวิจัย</td>
-                    </tr>
-                    <tr class="line_body">
-                      <td colspan="2" align="center" valign="middle" bgcolor="#B24697"><span class="txt_white">International Journal Publications (นานาชาติ ฐานข้อมูล SCOPUS)</span></td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" class="line_body"><a href="https://he02.tci-thaijo.org/index.php/PRIJNR/article/view/264464" target="_blank" class="hyperlink"> Enhancing maternal self-efficacy in caring for preterm infants with ventilator through a telehealth program: a randomized controlled trial. </a>                      
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" bgcolor="#FBEEF3"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" bgcolor="#FBEEF3" class="line_body"><a href="https://digital.car.chula.ac.th/jhr/vol38/iss4/4/" target="_blank" class="hyperlink"> Children's Self-report and Caregivers' Perception of Chemotherapy Symptoms in Children Receiving Chemotherapy for Cancer Treatment. </a>                      
-                    </tr>
-                    <tr class="line_body">
-                      <td colspan="2" align="center" valign="middle" bgcolor="#B24697"><span class="txt_white">National Journal Publications (ระดับชาติ ฐานข้อมูล TCI) </span></td>
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle"class="line_body"><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/263863" target="_blank" class="hyperlink"> Predictive Factors of Late-onset Sepsis in Preterm Infants and Nurses’ Practices for the Prevention of Sepsis in Pediatric Intensive Care Units.</a>                      
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" bgcolor="#FBEEF3"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" bgcolor="#FBEEF3"class="line_body"><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/269188" target="_blank" class="hyperlink">  Breastfeeding promoting experiences of nurses infected with covid-19: a phenomenological study.</a>                      
-                    </tr>
-                    <tr class="line_body">
-                      <td width="7%" align="center" valign="middle"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" class="line_body"><a href="https://he01.tci-thaijo.org/index.php/bcnbangkok/article/view/270607" target="_blank" class="hyperlink">  Effects of a Health Literacy Enhancement Program on Language Development Promoting Behavior of Caregivers and Expressive Language Development of Children Aged 2 - 5 Years Old.</a>                      
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" bgcolor="#FBEEF3"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" bgcolor="#FBEEF3" class="line_body"><a href="https://he01.tci-thaijo.org/index.php/nmdjournal/article/view/273178" target="_blank" class="hyperlink">A comparative study of selected factors among school-aged children and parents between normal nutritional children and at-risk of metabolic syndrome children in chainat province. </a>                      
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" class="line_body"><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/268942" target="_blank" class="hyperlink">  Predictive factors of perceived maternal self-efficacy in preterm infant care post- discharge during the covid-19 pandemic. </a>                                            
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" bgcolor="#FBEEF3"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" bgcolor="#FBEEF3" class="line_body"><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/269096" target="_blank" class="hyperlink">  Effects of a planned behavior program via smartphone applications on asthma care behavior and asthma symptom control in school-age children with asthma. </a>                                            
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" class="line_body"><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/268724" target="_blank" class="hyperlink"> Predicting factors of executive function problems in preschool aged children. </a>                                            
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle" bgcolor="#FBEEF3"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" bgcolor="#FBEEF3" class="line_body"><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/269086" target="_blank" class="hyperlink">  Factors predicting infection prevention behaviors among caregivers of children with cancer undergoing chemotherapy. </a>                      
-                    </tr>
-                    <tr class="line_body">
-                      <td align="center" valign="middle"><a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="hyperlink"><img src="img/other/bullet3.png" alt="" width="11" height="11"></a></td>
-                      <td valign="middle" class="line_body"><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/268724" target="_blank" class="hyperlink">  Effects of Wiping 70% alcohol on the Skin of neonates on Pain level: A Quasi-Experiment.</a>                      
-                    </tr>
-                  </table>
-                  <p>&nbsp;</p>
-                  <p>&nbsp;</p>
-                  <p>&nbsp;</p>
-               <div align="right"><table width="12%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td height="28" align="center" bgcolor="#b24697"><span class="txt_white"><a href="research_all.html" target="_parent" class="hyperlink_menu">Other &gt;&gt;</a></span></td>
-                  </tr>
-            </table></div></td>
-              </tr>
-            </table>
-          
+            <div class="research-container">
+                <div class="research-intro">
+                    งานวิจัยและนวัตกรรม ของอาจารย์ในภาควิชาการพยาบาลกุมารเวชศาสตร์ ปี 2567
+                </div>
+                
+                <div class="research-group">
+                    <div class="research-group-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                        </svg>
+                        ผลงานวิจัย
+                    </div>
+<!-- นานาชาติ -->
+                    <div class="research-subgroup">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:20px; height:20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        International Journal Publications (นานาชาติ ฐานข้อมูล SCOPUS)
+                    </div>
+<table class="research-table">
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he02.tci-thaijo.org/index.php/PRIJNR/article/view/264464" target="_blank">Enhancing maternal self-efficacy in caring for preterm infants with ventilator through a telehealth program: a randomized controlled trial.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://digital.car.chula.ac.th/jhr/vol38/iss4/4/" target="_blank">Children's Self-report and Caregivers' Perception of Chemotherapy Symptoms in Children Receiving Chemotherapy for Cancer Treatment.</a></td></tr>
+</table>
+
+<!-- ระดับชาติ -->
+                    <div class="research-subgroup">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:20px; height:20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                        </svg>
+                        National Journal Publications (ระดับชาติ ฐานข้อมูล TCI)
+                    </div>
+<table class="research-table">
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/263863" target="_blank">Predictive Factors of Late-onset Sepsis in Preterm Infants and Nurses’ Practices for the Prevention of Sepsis in Pediatric Intensive Care Units.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/269188" target="_blank">Breastfeeding promoting experiences of nurses infected with covid-19: a phenomenological study.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he01.tci-thaijo.org/index.php/bcnbangkok/article/view/270607" target="_blank">Effects of a Health Literacy Enhancement Program on Language Development Promoting Behavior of Caregivers and Expressive Language Development of Children Aged 2 - 5 Years Old.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he01.tci-thaijo.org/index.php/nmdjournal/article/view/273178" target="_blank">A comparative study of selected factors among school-aged children and parents between normal nutritional children and at-risk of metabolic syndrome children in chainat province.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/268942" target="_blank">Predictive factors of perceived maternal self-efficacy in preterm infant care post- discharge during the covid-19 pandemic.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/269096" target="_blank">Effects of a planned behavior program via smartphone applications on asthma care behavior and asthma symptom control in school-age children with asthma.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/268724" target="_blank">Predicting factors of executive function problems in preschool aged children.</a></td></tr>
+<tr><td class="icon-col"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width:16px; height:16px; color:var(--mu-blue);">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg></td><td><a href="https://he02.tci-thaijo.org/index.php/ns/article/view/269086" target="_blank">Factors predicting infection prevention behaviors among caregivers of children with cancer undergoing chemotherapy.</a></td></tr>
+</table>
+
+                </div>
+<div class="view-all-container">
+                    <a href="research_all.html" class="view-all-link-btn">
+                        ดูผลงานวิจัยย้อนหลังทั้งหมด
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 16px; height: 16px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
         </main>
 
         <footer class="site-footer">
@@ -257,7 +376,7 @@
                     </p>
                 </div>
                 <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
-                                        <div style="display:flex;gap:12px;align-items:center;">
+                                                            <div style="display:flex;gap:12px;align-items:center;">
                         <a href="https://web.facebook.com/%E0%B9%80%E0%B8%A5%E0%B8%B5%E0%B9%89%E0%B8%A2%E0%B8%87%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B8%AD%E0%B8%9A%E0%B9%82%E0%B8%A5%E0%B8%81_Care4kid-107980808251682" target="_blank" title="Facebook" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/fb.png" alt="Facebook" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                         <a href="https://twitter.com/Care4kid" target="_blank" title="Twitter" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/twitter.png" alt="Twitter" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
                         <a href="https://www.instagram.com/care4kids.pednsmu/" target="_blank" title="Instagram" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"><img src="img/template/ig.png" alt="Instagram" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></a>
@@ -320,6 +439,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 

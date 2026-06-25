@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -46,6 +46,127 @@
         .intro-text-elegant p {
             text-indent: 2.5em;
             margin: 0;
+        }
+
+        /* --- Education Cards --- */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .edu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .edu-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(25, 68, 136, 0.1);
+            position: relative;
+        }
+        
+        .edu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(25, 68, 136, 0.15);
+            border-color: rgba(25, 68, 136, 0.3);
+        }
+        
+        .edu-card-top {
+            height: 140px;
+            background: linear-gradient(135deg, var(--mu-blue) 0%, #112d5e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .edu-card-top::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 100% 0%, rgba(255,255,255,0.1) 0%, transparent 60%);
+        }
+        
+        .edu-card-top .degree-level {
+            font-size: 58px;
+            font-weight: 800;
+            color: rgba(255,255,255,0.08);
+            position: absolute;
+            bottom: -15px;
+            right: 5px;
+            line-height: 1;
+            letter-spacing: -2px;
+            z-index: 0;
+        }
+        
+        .edu-card-top h2 {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+            z-index: 1;
+            text-align: center;
+            margin: 0;
+            padding: 0 20px;
+        }
+        
+        .edu-card-body {
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .edu-card-title {
+            color: var(--mu-blue-dark);
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .edu-card-desc {
+            color: var(--gray-700);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+        
+        .edu-card-action {
+            display: flex;
+            align-items: center;
+            color: var(--mu-gold);
+            font-weight: 700;
+            font-size: 15px;
+            transition: color 0.3s;
+            margin-top: auto;
+        }
+        
+        .edu-card-action .arrow {
+            margin-left: 6px;
+            transition: transform 0.3s;
+            font-size: 18px;
+        }
+        
+        .edu-card:hover .edu-card-action {
+            color: var(--mu-gold-dark);
+        }
+        
+        .edu-card:hover .edu-card-action .arrow {
+            transform: translateX(6px);
         }
     </style>
 </head>
@@ -167,26 +288,64 @@
         </nav>
         <div id="header-placeholder"></div>
 
-        <main class="content-area legacy-content">
+        <main class="content-area">
+            <div class="clean-header">
+                <h1>การศึกษา</h1>
+            </div>
+            
+            <div class="edu-grid">
+                <!-- Bachelor's Degree -->
+                <a href="degree_bns.html" class="edu-card">
+                    <div class="edu-card-top">
+                        <div class="degree-level">B.N.S.</div>
+                        <h2>ปริญญาตรี</h2>
+                    </div>
+                    <div class="edu-card-body">
+                        <div class="edu-card-title">หลักสูตรพยาบาลศาสตรบัณฑิต</div>
+                        <div class="edu-card-desc">มุ่งเน้นการสร้างบัณฑิตพยาบาลที่มีความรู้ ความสามารถ ทักษะทางวิชาชีพ และมีคุณธรรมจริยธรรม</div>
+                        <div class="edu-card-action">ดูรายละเอียดเพิ่มเติม <span class="arrow">→</span></div>
+                    </div>
+                </a>
 
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-              <tr>
-                <td height="33" valign="top" class="txt_head">การศึกษา</td>
-              </tr>
-              <tr>
-                <td height="363" valign="top"><p class="txt_purple">&nbsp;</p>
-                  <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                      <td align="center"><a href="degree_bns.html"><img src="img/other/c_bns.png" width="195" height="250"></a></td>
-                      <td align="center"><a href="degree_mns.html"><img src="img/other/c_mns.png" alt="" width="195" height="250"></a></td>
-                      <td align="center"><a href="degree_phd.html"><img src="img/other/c_phd.png" alt="" width="195" height="250"></a></td>
-                      <td align="center"><a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank"><img src="img/other/c_special.png" alt="" width="195" height="250"></a></td>
-                    </tr>
-                  </table>
-                <p>&nbsp;</p></td>
-              </tr>
-            </table>
-          
+                <!-- Master's Degree -->
+                <a href="degree_mns.html" class="edu-card">
+                    <div class="edu-card-top">
+                        <div class="degree-level">M.N.S.</div>
+                        <h2>ปริญญาโท</h2>
+                    </div>
+                    <div class="edu-card-body">
+                        <div class="edu-card-title">หลักสูตรพยาบาลศาสตรมหาบัณฑิต</div>
+                        <div class="edu-card-desc">มุ่งเน้นการเป็นผู้นำทางการพยาบาลกุมารเวชศาสตร์ มีความเชี่ยวชาญในการปฏิบัติการพยาบาลระดับสูง</div>
+                        <div class="edu-card-action">ดูรายละเอียดเพิ่มเติม <span class="arrow">→</span></div>
+                    </div>
+                </a>
+
+                <!-- Ph.D. -->
+                <a href="degree_phd.html" class="edu-card">
+                    <div class="edu-card-top">
+                        <div class="degree-level">Ph.D.</div>
+                        <h2>ปริญญาเอก</h2>
+                    </div>
+                    <div class="edu-card-body">
+                        <div class="edu-card-title">หลักสูตรปรัชญาดุษฎีบัณฑิต</div>
+                        <div class="edu-card-desc">ผลิตนักวิจัยและนักวิชาการระดับสูง เพื่อสร้างองค์ความรู้ใหม่และชี้นำสังคมทางการพยาบาลเด็ก</div>
+                        <div class="edu-card-action">ดูรายละเอียดเพิ่มเติม <span class="arrow">→</span></div>
+                    </div>
+                </a>
+
+                <!-- Specialty Program -->
+                <a href="https://ns.mahidol.ac.th/nurse_th/Specialty/specialty_program.html" target="_blank" class="edu-card">
+                    <div class="edu-card-top">
+                        <div class="degree-level">Cert.</div>
+                        <h2>เฉพาะทาง</h2>
+                    </div>
+                    <div class="edu-card-body">
+                        <div class="edu-card-title">หลักสูตรการพยาบาลเฉพาะทาง</div>
+                        <div class="edu-card-desc">การฝึกอบรมพยาบาลขั้นสูงเฉพาะทาง สาขาการพยาบาลกุมารเวชศาสตร์ (การพยาบาลเด็ก)</div>
+                        <div class="edu-card-action">ดูรายละเอียดเพิ่มเติม <span class="arrow">↗</span></div>
+                    </div>
+                </a>
+            </div>
         </main>
 
         <footer class="site-footer">
