@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/header.js" defer></script>
   <link rel="stylesheet" type="text/css" href="../cookie/cookieconsent.css">
   <link rel = "icon" type = "image/png" href = "../img/logo/favicon.png">
 </head>
@@ -20,131 +21,13 @@
 <button data-cc="c-settings" class="cc-link cc-reconsent" style="position:fixed;left:8px;bottom:16px;border-radius:999px;padding:4px;display:grid;place-items:center;width:40px;height:40px;box-shadow:rgb(204 204 204 / 50%) 0 2px 10px 0;border:1px solid #e8e8e8;background-color:#fff;z-index:900;cursor:pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0a0b0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path><path d="M8.5 8.5v.01"></path><path d="M16 15.5v.01"></path><path d="M12 12v.01"></path><path d="M11 17v.01"></path><path d="M7 14v.01"></path></svg></button>
 <script defer src="../cookie/cookieconsent.js"></script>
 <script defer src="../cookie/consent-init.js"></script>
-<button id="back-to-top" title="กลับขึ้นด้านบน" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg></button>
+
 
 <!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav-panel">
-    <div class="mobile-nav-header">
-      <span class="mobile-nav-title">เมนูหลัก</span>
-      <button class="mobile-close" id="mobileClose">×</button>
-    </div>
-    <nav class="mobile-nav-list">
-      <div class="mobile-nav-item"><a href="../index.html" class="mobile-nav-link">หน้าหลัก</a></div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">เกี่ยวกับภาควิชา <span>▾</span></div>
-        <div class="mobile-dropdown">
-          <a href="../about.html">ประวัติและความเป็นมา</a>
-          <a href="../vision.html">วิสัยทัศน์ / พันชกิจ</a>
-          <a href="../award.html">รางวัลแห่งความภาคภูมิใจ</a>
-          <a href="../staff.html">บุคลากร</a>
-          <a href="../contact.html">ติดต่อเรา</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item"><a href="../teaching.html" class="mobile-nav-link">การเรียนการสอน</a></div>
-      <div class="mobile-nav-item"><a href="../research.html" class="mobile-nav-link">วิจัยและนวัตกรรม</a></div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">บริการวิชาการ <span>▾</span></div>
-        <div class="mobile-dropdown">
-          <a href="../academic_about.html">ด้านประวัติความเป็นมา</a>
-          <a href="../academic.html">โครงการส่งเสริมและบริการวิชาการ</a>
-          <a href="../book.html">หนังสือภาควิชาฯ</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item"><a href="../km.html" class="mobile-nav-link">การจัดการความรู้</a></div>
-      <div class="mobile-nav-item"><a href="../excellence.html" class="mobile-nav-link">ศูนย์ความเป็นเลิศ</a></div>
-      <div class="mobile-nav-item"><a href="../Activities_all.html" class="mobile-nav-link">ข่าวสารภาควิชา</a></div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">E-Learning <span>▾</span></div>
-        <div class="mobile-dropdown">
-          <a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank">E-Learning คณะพยาบาลศาสตร์</a>
-          <a href="https://mux.mahidol.ac.th/" target="_blank">E-Learning มหาวิทยาลัยมหิดล</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">หน่วยงานที่เกี่ยวข้อง <span>▾</span></div>
-        <div class="mobile-dropdown">
-          <a href="https://www.tnmc.or.th/" target="_blank">สภาการพยาบาล</a>
-          <a href="https://www.hsri.or.th/researcher" target="_blank">สถาบันวิจัยระบบสาธารณสุข (สวรส.)</a>
-          <a href="https://www.nrct.go.th/" target="_blank">สำนักงานคณะกรรมการวิจัยแห่งชาติ</a>
-        </div>
-      </div>
-    </nav>
-  </div>
-</div>
+
 
 <div class="mn-wrapper">
-  <div class="topbar">
-    <div class="topbar-links">
-      <a href="https://ns.mahidol.ac.th/" target="_blank">คณะพยาบาลศาสตร์</a>
-      <span class="sep">|</span>
-      <a href="https://mahidol.ac.th/" target="_blank">มหาวิทยาลัยมหิดล</a>
-    </div>
-    <div class="topbar-social">
-    </div>
-    <div class="topbar-lang">
-      <a href="../../MN_EN/index.html" target="_parent">
-        <img src="../img/template/en.png" alt="EN"> EN
-      </a>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="header-logo">
-      <img src="../img/logo/logo.png" alt="โลโก้มหาวิทยาลัยมหิดล">
-    </div>
-    <div class="header-text">
-      <div class="header-dept-name">ภาควิชาการพยาบาลอายุรศาสตร์</div>
-    </div>
-  </header>
-
-  <nav class="navbar" id="mainNav">
-    <div class="navbar-inner">
-      <span class="navbar-brand" style="display:none" id="navBrand">ภาควิชาการพยาบาลอายุรศาสตร์</span>
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="../index.html" class="nav-link">หน้าหลัก</a></li>
-        <li class="nav-item">
-          <span class="nav-link">เกี่ยวกับภาควิชา <span class="nav-arrow">▾</span></span>
-          <ul class="dropdown">
-            <li><a href="../about.html" class="dropdown-item">ประวัติและความเป็นมา</a></li>
-            <li><a href="../vision.html" class="dropdown-item">วิสัยทัศน์ / พันธกิจ</a></li>
-            <li><a href="../award.html" class="dropdown-item">รางวัลแห่งความภาคภูมิใจ</a></li>
-            <li><a href="../staff.html" class="dropdown-item">บุคลากร</a></li>
-            <li><a href="../contact.html" class="dropdown-item">ติดต่อเรา</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="../teaching.html" class="nav-link">การเรียนการสอน</a></li>
-        <li class="nav-item"><a href="../research.html" class="nav-link">วิจัยและนวัตกรรม</a></li>
-        <li class="nav-item">
-          <span class="nav-link">บริการวิชาการ <span class="nav-arrow">▾</span></span>
-          <ul class="dropdown">
-            <li><a href="../academic_about.html" class="dropdown-item">ด้านประวัติความเป็นมา</a></li>
-            <li><a href="../academic.html" class="dropdown-item">โครงการส่งเสริมและบริการวิชาการ</a></li>
-            <li><a href="../book.html" class="dropdown-item">หนังสือภาควิชาฯ</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="../km.html" class="nav-link active">จัดการความรู้</a></li>
-        <li class="nav-item"><a href="../excellence.html" class="nav-link">ศูนย์ความเป็นเลิศ</a></li>
-        <li class="nav-item"><a href="../Activities_all.html" class="nav-link">ข่าวสาร</a></li>
-        <li class="nav-item">
-          <span class="nav-link">E-Learning <span class="nav-arrow">▾</span></span>
-          <ul class="dropdown">
-            <li><a href="http://www.elearning.ns.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning คณะพยาบาลศาสตร์</a></li>
-            <li><a href="https://mux.mahidol.ac.th/" target="_blank" class="dropdown-item">E-Learning มหาวิทยาลัยมหิดล</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <span class="nav-link">หน่วยงาน <span class="nav-arrow">▾</span></span>
-          <ul class="dropdown" style="right:0;left:auto;">
-            <li><a href="https://www.tnmc.or.th/" target="_blank" class="dropdown-item">สภาการพยาบาล</a></li>
-            <li><a href="https://www.hsri.or.th/researcher" target="_blank" class="dropdown-item">สถาบันวิจัยระบบสาธารณสุข (สวรส.)</a></li>
-            <li><a href="https://www.nrct.go.th/" target="_blank" class="dropdown-item">สำนักงานคณะกรรมการวิจัยแห่งชาติ</a></li>
-          </ul>
-        </li>
-      </ul>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
+  
 
   <main class="main-content">
     <!-- BREADCRUMB -->
@@ -213,21 +96,5 @@
 
 <script async type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-C0VND84NRS"></script>
 <script type="text/plain" data-cookiecategory="analytics">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-C0VND84NRS');</script>
-<script>
-const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu'),mobileClose=document.getElementById('mobileClose');
-function openMobileMenu(){mobileMenu.classList.add('open');hamburger.classList.add('open');document.body.style.overflow='hidden';}
-function closeMobileMenu(){mobileMenu.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';}
-hamburger.addEventListener('click',openMobileMenu);mobileClose.addEventListener('click',closeMobileMenu);
-mobileMenu.addEventListener('click',function(e){if(e.target===mobileMenu)closeMobileMenu();});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileMenu();});
-function toggleMobileDropdown(el){const d=el.nextElementSibling;if(d){d.classList.toggle('open');el.classList.toggle('active');}}
-const navBrand=document.getElementById('navBrand');
-window.addEventListener('scroll',()=>{
-  const h=document.querySelector('.site-header');if(h&&navBrand)navBrand.style.display=h.getBoundingClientRect().bottom<0?'block':'none';
-  const b=document.getElementById('back-to-top');if(b)b.classList.toggle('visible',window.scrollY>300);
-},{passive:true});
-const animEls=document.querySelectorAll('.animate-in');
-if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.style.animationPlayState='running';obs.unobserve(e.target);}});},{threshold:0.1});animEls.forEach(el=>{el.style.animationPlayState='paused';obs.observe(el);});}
-</script>
 </body>
 </html>

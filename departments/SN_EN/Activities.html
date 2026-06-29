@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/header.js" defer></script>
   <link rel="icon" href="img/logo/favicon.png" type="image/png">
 
   <style>
@@ -180,83 +181,7 @@
   </script>
   <!-- 6. END Script Blocking Marketing -->
 
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav-panel">
-    <div class="mobile-nav-header">
-      <span class="mobile-nav-title">Main Menu</span>
-      <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
-    </div>
-    <nav class="mobile-nav-list">
-      <div class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">About us <span>▾</span></div>
-        <div class="mobile-dropdown">
-            <a href="about.html">About us</a>
-            <a href="staff.html">Staff</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item"><a href="teaching.html" class="mobile-nav-link">Teaching</a></div>
-      <div class="mobile-nav-item"><a href="research.html" class="mobile-nav-link">Research</a></div>
-      <div class="mobile-nav-item"><a href="academic.html" class="mobile-nav-link">Academic Services</a></div>
-      <div class="mobile-nav-item"><a href="COE.html" class="mobile-nav-link">Center of Excellence</a></div>
-      <div class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link">Contact</a></div>
-    </nav>
-  </div>
-</div>
-
 <div class="mn-wrapper">
-
-  <div class="topbar">
-    <div class="topbar-links">
-      <a href="https://ns.mahidol.ac.th/nurse_en/" target="_blank">Faculty of Nursing</a>
-      <span class="sep">|</span>
-      <a href="https://mahidol.ac.th/" target="_blank">Mahidol University</a>
-    </div>
-    <div class="topbar-social">
-      <a href="#" title="Facebook">
-        <img src="img/template/fb.png" alt="Facebook">
-      </a>
-    </div>
-    <div class="topbar-lang">
-      <a href="../SN_TH/index.html" target="_parent" title="Thai version">
-        <img src="img/template/th.jpg" alt="TH"> TH
-      </a>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <div class="header-logo">
-      <img src="img/logo/logo.png" alt="Mahidol University Logo">
-    </div>
-    <div class="header-text">
-      <div class="header-dept-name">Department of Surgical Nursing</div>
-      <div class="header-faculty-name">Faculty of Nursing, Mahidol University</div>
-    </div>
-  </header>
-
-  <nav class="navbar" id="mainNav">
-    <div class="navbar-inner">
-      <span class="navbar-brand" style="display:none" id="navBrand">Department of Surgical Nursing</span>
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-        <li class="nav-item">
-          <span class="nav-link">About us <span class="nav-arrow">▾</span></span>
-          <ul class="dropdown">
-            <li><a href="about.html" class="dropdown-item">About us</a></li>
-            <li><a href="staff.html" class="dropdown-item">Staff</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="teaching.html" class="nav-link">Teaching</a></li>
-        <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
-        <li class="nav-item"><a href="academic.html" class="nav-link">Academic Services</a></li>
-        <li class="nav-item"><a href="COE.html" class="nav-link">Center of Excellence</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open/Close Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
 
   <main class="main-content">
     <h1 class="txt_head">Gallery of Activities</h1>
@@ -309,62 +234,7 @@
 
 </div>
 
-<button id="back-to-top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
-</button>
 
-<script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileClose = document.getElementById('mobileClose');
-
-function openMobileMenu() {
-  mobileMenu.classList.add('open');
-  hamburger.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeMobileMenu() {
-  mobileMenu.classList.remove('open');
-  hamburger.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-if(hamburger) hamburger.addEventListener('click', openMobileMenu);
-if(mobileClose) mobileClose.addEventListener('click', closeMobileMenu);
-
-if(mobileMenu) {
-  mobileMenu.addEventListener('click', function(e) {
-    if (e.target === mobileMenu) closeMobileMenu();
-  });
-}
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeMobileMenu();
-});
-
-function toggleMobileDropdown(el) {
-  const dropdown = el.nextElementSibling;
-  if (dropdown) {
-    dropdown.classList.toggle('open');
-    el.classList.toggle('active');
-  }
-}
-
-const navBrand = document.getElementById('navBrand');
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.site-header');
-  if (header) {
-    const headerBottom = header.getBoundingClientRect().bottom;
-    if (navBrand) navBrand.style.display = headerBottom < 0 ? 'block' : 'none';
-  }
-
-  const backTop = document.getElementById('back-to-top');
-  if (backTop) {
-    backTop.classList.toggle('visible', window.scrollY > 300);
-  }
-}, { passive: true });
-</script>
 
 </body>
 </html>
