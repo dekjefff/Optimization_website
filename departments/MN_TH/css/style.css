@@ -73,7 +73,7 @@
   --transition-slow: 0.4s ease;
 
   /* Layout */
-  --container-max: 1180px;
+  --container-max: 100%;
   --navbar-height: 68px;
   --topbar-height: 40px;
 }

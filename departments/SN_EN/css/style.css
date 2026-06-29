@@ -51,7 +51,7 @@
   --transition-fast: 0.15s ease;
   --transition-base: 0.25s ease;
   --transition-slow: 0.4s ease;
-  --container-max: 1180px;
+  --container-max: 100%;
   --navbar-height: 68px;
   --topbar-height: 40px;
 }
@@ -270,9 +270,9 @@ ul {
 
 .navbar-brand {
   color: var(--white) !important;
-  font-size: 15px;
+  font-size: 14px;
   font-family: var(--font-base);
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.3px;
 }
 
