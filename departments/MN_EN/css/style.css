@@ -72,7 +72,7 @@
   --transition-base: 0.25s ease;
   --transition-slow: 0.4s ease;
 
-  /* Layout */
+  /* ---Layout--- */
   --container-max: 100%;
   --navbar-height: 68px;
   --topbar-height: 40px;
