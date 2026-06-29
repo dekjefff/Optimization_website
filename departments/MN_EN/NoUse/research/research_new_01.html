@@ -33,6 +33,51 @@
   <!-- Cookie Consent -->
   <link rel="stylesheet" type="text/css" href="../../cookie/cookieconsent.css">
   <link rel="icon" type="image/png" href="../../img/logo/favicon.png">
+
+  <style>
+    .research-entry {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e8eaed;
+    }
+    .research-entry:last-child {
+      padding-bottom: 16px;
+      border-bottom: none;
+    }
+    .research-img-wrapper {
+      flex-shrink: 0;
+      display: block;
+      text-decoration: none;
+    }
+    .research-img {
+      width: 140px;
+      height: 175px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #e8eaed;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+    .research-img:hover {
+      transform: scale(1.03);
+    }
+    .research-entry-content {
+      flex: 1;
+    }
+    @media (max-width: 576px) {
+      .research-entry {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      .research-img {
+        width: 150px;
+        height: 187px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -258,28 +303,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="display:flex; flex-direction:column; gap:24px;">
           
           <!-- Entry 1 -->
-          <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:24px; border-bottom:1px solid #e8eaed;">
-            <img src="../../img/staff/อัจฉริยา พ่วงแก้ว.png" alt="Assoc. Prof. Dr. Ajchariya Pongnumkul" style="flex-shrink:0; width:100px; height:125px; border-radius:8px; object-fit:cover; border:1px solid #e8eaed;">
-            <div style="flex:1;">
+          <div class="research-entry">
+            <div class="research-img-wrapper">
+              <img src="../../img/staff/อัจฉริยา พ่วงแก้ว.png" alt="Assoc. Prof. Dr. Ajchariya Pongnumkul" class="research-img">
+            </div>
+            <div class="research-entry-content">
               <h3 style="font-size:16px; font-weight:700; color:var(--mu-blue); margin:0 0 8px; font-family:var(--font-base);">
                 Assoc. Prof. Dr. Ajchariya Pongnumkul
               </h3>
-              <p style="font-size:14px; color:var(--gray-700); line-height:1.7; margin:0; font-family:var(--font-base); text-align:justify;">
+              <p style="font-size:14px; color:var(--gray-700); line-height:1.7; margin:0; font-family:var(--font-base); text-align:left;">
                 Congratulations to <strong>Assoc. Prof. Dr. Ajchariya Pongnumkul</strong> on receiving a research grant for the project <strong>"Tele-Warfarin management and monitoring platform for elderly using digital technology"</strong> from the National Research Council of Thailand (NRCT) for the fiscal year 2022. This project falls under Program 8: Quality Aging Society, with a total research funding of <strong>2,730,000 Baht</strong>.
               </p>
             </div>
           </div>
 
           <!-- Entry 2 -->
-          <div style="display:flex; gap:20px; align-items:flex-start; padding-bottom:16px;">
-            <a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" style="flex-shrink:0;">
-              <img src="../../img/staff/พิจิตรา เล็กดำรงกุล.png" alt="Asst. Prof. Dr. Pichitra Lekdamrongkul" style="width:100px; height:125px; border-radius:8px; object-fit:cover; border:1px solid #e8eaed; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform=''">
+          <div class="research-entry">
+            <a href="https://www.emerald.com/insight/content/doi/10.1108/JHR-01-2021-0008/full/html" target="_blank" class="research-img-wrapper">
+              <img src="../../img/staff/พิจิตรา เล็กดำรงกุล.png" alt="Asst. Prof. Dr. Pichitra Lekdamrongkul" class="research-img">
             </a>
-            <div style="flex:1;">
+            <div class="research-entry-content">
               <h3 style="font-size:16px; font-weight:700; color:var(--mu-blue); margin:0 0 8px; font-family:var(--font-base);">
                 Asst. Prof. Dr. Pichitra Lekdamrongkul
               </h3>
-              <p style="font-size:14px; color:var(--gray-700); line-height:1.7; margin:0; font-family:var(--font-base); text-align:justify;">
+              <p style="font-size:14px; color:var(--gray-700); line-height:1.7; margin:0; font-family:var(--font-base); text-align:left;">
                 Congratulations to <strong>Asst. Prof. Dr. Pichitra Lekdamrongkul</strong> on receiving a research grant for the project <strong>"EXERCISING TOGETHER: A randomized controlled trial of partnered exercise training on the health of couples coping with cancer: Exploring the concept of dyadic health in Thai couples coping with breast cancer"</strong>. This is a collaborative research project between Oregon Health & Science University and the Faculty of Nursing, Mahidol University for the year 2022, and has received a research funding grant from the National Institutes of Health (NIH) totaling <strong>$47,563 USD</strong>.
               </p>
             </div>
