@@ -391,12 +391,12 @@ tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
 .staff-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     background: var(--white);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
     padding: 24px;
-    text-align: center;
+    text-align: left;
     transition: transform var(--transition-base), box-shadow var(--transition-base);
     border: 1px solid var(--gray-100);
 }
@@ -429,7 +429,7 @@ tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
 }
 .staff-position {
     display: inline-block;
-    align-self: center;
+    align-self: flex-start;
     font-size: 13px;
     color: var(--mu-gold-dark);
     background: var(--mu-blue-pale);
@@ -481,7 +481,8 @@ tr.bg_blue td, tr.bg_blue th { padding: 14px 16px; font-weight: 600; }
         padding: 0 20px;
     }
     body:not(.head-page) .staff-position {
-        align-self: center;
+        align-self: flex-start;
+        margin-left: 20px;
     }
     body:not(.head-page) .staff-contact {
         padding: 0 20px;
