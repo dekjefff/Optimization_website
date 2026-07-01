@@ -424,6 +424,8 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   background-color: var(--surface); /* White */
   overflow: hidden;
   padding: 6rem 0 4rem; /* Top padding to clear navbar */
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 .organic-bg::after {
   content: '';

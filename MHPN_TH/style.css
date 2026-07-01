@@ -49,6 +49,8 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   background-color: #e9eee9;
   overflow: hidden;
   padding: 4rem 0 6rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 .organic-bg::before, .organic-bg::after {
   content: '';
