@@ -1,91 +1,86 @@
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav-panel">
-    <div class="mobile-nav-header">
-      <span class="mobile-nav-title" data-i18n="nav.menu">Menu</span>
-      <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
-    </div>
-    <nav class="mobile-nav-list">
-      <div class="mobile-nav-item">
-        <a href="index.html" class="mobile-nav-link active" data-i18n="nav.home">Home</a>
-      </div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
-          <span data-i18n="nav.about">About</span> <span>▾</span>
-        </div>
-        <div class="mobile-dropdown">
-          <a href="about.html" data-i18n="nav.about">About</a>
-          <a href="staff.html" data-i18n="nav.staff">Staff</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact Us</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item">
-        <a href="teaching.html" class="mobile-nav-link" data-i18n="nav.teaching">Teaching & Learning</a>
-      </div>
-      <div class="mobile-nav-item">
-        <a href="research.html" class="mobile-nav-link" data-i18n="nav.research">Research</a>
-      </div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
-          <span data-i18n="nav.academic">Academic Services</span> <span>▾</span>
-        </div>
-        <div class="mobile-dropdown">
-          <a href="academic.html" data-i18n="nav.academic">Academic Services</a>
-          <a href="COE.html" data-i18n="nav.coe">Academic Excellence Center</a>
-        </div>
-      </div>
-      
-      
-    </nav>
-  </div>
+<div class="mobile-nav-panel">
+<div class="mobile-nav-header">
+<span class="mobile-nav-title" data-i18n="nav.menu">Menu</span>
+<button aria-label="Close" class="mobile-close" id="mobileClose">×</button>
+</div>
+<nav class="mobile-nav-list">
+<div class="mobile-nav-item">
+<a class="mobile-nav-link active" data-i18n="nav.home" href="index.html">Home</a>
+</div>
+<div class="mobile-nav-item">
+<div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+<span data-i18n="nav.about">About</span> <span>▾</span>
+</div>
+<div class="mobile-dropdown">
+<a data-i18n="nav.about" href="about.html">About</a>
+<a data-i18n="nav.staff" href="staff.html">Staff</a>
+<a data-i18n="nav.contact" href="contact.html">Contact Us</a>
+</div>
+</div>
+<div class="mobile-nav-item">
+<a class="mobile-nav-link" data-i18n="nav.teaching" href="teaching.html">Teaching &amp; Learning</a>
+</div><div class="mobile-nav-item">
+<a class="mobile-nav-link" data-i18n="nav.research" href="research.html">Research</a>
 </div>
 
+<div class="mobile-nav-item">
+<div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+<span data-i18n="nav.academic">Academic Services</span> <span>▾</span>
+</div>
+<div class="mobile-dropdown">
+<a data-i18n="nav.academic" href="academic.html">Academic Services</a>
+<a data-i18n="nav.coe" href="COE.html">Academic Excellence Center</a>
+</div>
+</div>
+</nav>
+</div>
+</div>
 <nav class="navbar" id="mainNav">
-  <div class="navbar-inner">
-    <span class="navbar-brand" style="display:none" id="navBrand" data-i18n="dept.name">Department of Mental Health and Psychiatric Nursing</span>
-    <ul class="nav-menu">
-      <li class="nav-item">
-        <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
-      </li>
-      <li class="nav-item">
-        <span class="nav-link">
-          <span data-i18n="nav.about">About</span> <span class="nav-arrow">▾</span>
-        </span>
-        <ul class="dropdown">
-          <li>
-            <a href="about.html" class="dropdown-item" data-i18n="nav.about">About</a>
-          </li>
-          <li>
-            <a href="staff.html" class="dropdown-item" data-i18n="nav.staff">Staff</a>
-          </li>
-          <li>
-            <a href="contact.html" class="dropdown-item" data-i18n="nav.contact">Contact Us</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a href="teaching.html" class="nav-link" data-i18n="nav.teaching">Teaching & Learning</a>
-      </li>
-      <li class="nav-item">
-        <a href="research.html" class="nav-link" data-i18n="nav.research">Research</a>
-      </li>
-      <li class="nav-item">
-        <span class="nav-link">
-          <span data-i18n="nav.academic">Academic Services</span> <span class="nav-arrow">▾</span>
-        </span>
-        <ul class="dropdown">
-          <li>
-            <a href="academic.html" class="dropdown-item" data-i18n="nav.academic">Academic Services</a>
-          </li>
-          <li>
-            <a href="COE.html" class="dropdown-item" data-i18n="nav.coe">Academic Excellence Center</a>
-          </li>
-        </ul>
-      </li>
-      
-      
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="เปิด/Close">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<div class="navbar-inner">
+<span class="navbar-brand" data-i18n="dept.name" id="navBrand" style="display:none">Department of Mental Health and Psychiatric Nursing</span>
+<ul class="nav-menu">
+<li class="nav-item">
+<a class="nav-link active" data-i18n="nav.home" href="index.html">Home</a>
+</li>
+<li class="nav-item">
+<span class="nav-link">
+<span data-i18n="nav.about">About</span> <span class="nav-arrow">▾</span>
+</span>
+<ul class="dropdown">
+<li>
+<a class="dropdown-item" data-i18n="nav.about" href="about.html">About</a>
+</li>
+<li>
+<a class="dropdown-item" data-i18n="nav.staff" href="staff.html">Staff</a>
+</li>
+<li>
+<a class="dropdown-item" data-i18n="nav.contact" href="contact.html">Contact Us</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-i18n="nav.teaching" href="teaching.html">Teaching &amp; Learning</a>
+</li><li class="nav-item">
+<a class="nav-link" data-i18n="nav.research" href="research.html">Research</a>
+</li>
+
+<li class="nav-item">
+<span class="nav-link">
+<span data-i18n="nav.academic">Academic Services</span> <span class="nav-arrow">▾</span>
+</span>
+<ul class="dropdown">
+<li>
+<a class="dropdown-item" data-i18n="nav.academic" href="academic.html">Academic Services</a>
+</li>
+<li>
+<a class="dropdown-item" data-i18n="nav.coe" href="COE.html">Academic Excellence Center</a>
+</li>
+</ul>
+</li>
+</ul>
+<button aria-label="เปิด/Close" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
 </nav>
