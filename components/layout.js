@@ -1,26 +1,25 @@
 function getPrefixes() {
   const path = window.location.pathname.replace(/\\/g, '/');
-  const index = path.toLowerCase().indexOf('/departments/');
-  let subPath = '';
-  if (index !== -1) {
-    subPath = path.substring(index + 13);
-  } else {
-    const indexDep = path.toLowerCase().indexOf('/department/');
-    if (indexDep !== -1) {
-      subPath = path.substring(indexDep + 12);
-    }
-  }
+  const depts = ['MHPN_TH', 'MHPN_EN', 'PHN_TH', 'PHN_EN', 'OGN_TH', 'OGN_EN'];
+  const parts = path.split('/');
   
-  if (subPath) {
-    const parts = subPath.split('/');
-    parts.shift();
-    const slashCount = parts.length - 1;
+  // Find index of department folder
+  const deptIndex = parts.findIndex(p => depts.includes(p.toUpperCase()));
+  
+  if (deptIndex !== -1) {
+    const stepsToDept = Math.max(0, (parts.length - 2) - deptIndex);
+    const stepsToRoot = stepsToDept + 1;
+    
+    const deptPrefix = stepsToDept > 0 ? '../'.repeat(stepsToDept) : './';
+    const relativePrefix = '../'.repeat(stepsToRoot);
+    
     return {
-      relativePrefix: '../../' + '../'.repeat(slashCount),
-      deptPrefix: './' + '../'.repeat(slashCount)
+      relativePrefix: relativePrefix,
+      deptPrefix: deptPrefix
     };
   }
   
+  // Fallback
   return {
     relativePrefix: '../../',
     deptPrefix: './'
@@ -34,18 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadTemplateCSS() {
-  const { relativePrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = relativePrefix + 'components/template_style.css';
+  link.href = deptPrefix + 'components/template_style.css';
   document.head.appendChild(link);
 }
 
 function resolveAssetPaths(htmlText) {
-  const { relativePrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
   return htmlText
-    .replace(/\.\.\/\.\.\/assets\//g, relativePrefix + 'assets/')
-    .replace(/\.\.\/\.\.\/components\//g, relativePrefix + 'components/');
+    .replace(/\.\.\/\.\.\/assets\//g, deptPrefix + 'assets/')
+    .replace(/\.\.\/\.\.\/components\//g, deptPrefix + 'components/');
 }
 
 function resolveNavbarLinks(htmlText, deptPrefix) {
@@ -60,13 +59,13 @@ function resolveNavbarLinks(htmlText, deptPrefix) {
 
 async function buildHeader() {
   const deptTitleTh = document.body.getAttribute('data-dept-th') || 'ชื่อภาควิชา';
-  const { relativePrefix, deptPrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
 
   try {
     // Load Header into its own container
     const headerContainer = document.createElement('div');
     headerContainer.id = 'site-header-container';
-    let headerRes = await fetch(relativePrefix + 'components/header.html');
+    let headerRes = await fetch(deptPrefix + 'components/header.html');
     let headerHtml = await headerRes.text();
     headerHtml = resolveAssetPaths(headerHtml);
     headerHtml = headerHtml.replace(/{{DEPT_TH}}/g, deptTitleTh);
@@ -109,10 +108,10 @@ async function buildFooter() {
   footerContainer.id = 'site-footer-container';
   
   const deptTitleTh = document.body.getAttribute('data-dept-th') || 'ชื่อภาควิชา';
-  const { relativePrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
 
   try {
-    const response = await fetch(relativePrefix + 'components/footer.html');
+    const response = await fetch(deptPrefix + 'components/footer.html');
     let htmlContent = await response.text();
     htmlContent = resolveAssetPaths(htmlContent);
     htmlContent = htmlContent.replace(/{{DEPT_TH}}/g, deptTitleTh);
@@ -121,7 +120,9 @@ async function buildFooter() {
 
     // Customize links based on current department
     const path = window.location.pathname.replace(/\\/g, '/');
-    const deptMatch = path.match(/\/(?:departments|department)\/([^\/]+)/i);
+    // Match both /departments/XXX/ and root-level /OGN_TH/, /PHN_EN/, etc.
+    const deptMatch = path.match(/\/(?:departments|department)\/([^\/]+)/i)
+      || path.match(/\/(OGN|PHN|MHPN)_(TH|EN)\//i);
     const deptFolder = deptMatch ? deptMatch[1].toUpperCase() : '';
 
     const fbLink = footerContainer.querySelector('a[title="Facebook"]');
@@ -129,24 +130,50 @@ async function buildFooter() {
     const igLink = footerContainer.querySelector('a[title="Instagram"]');
     const langBtn = footerContainer.querySelector('.footer-lang-btn');
 
+    // Detect if current page is English version
+    const isEnglish = path.includes('_EN/') || path.toLowerCase().includes('eng');
+
     // 1. Language Button Customization
     if (langBtn) {
       if (deptFolder.includes('OGN')) {
-        langBtn.href = 'https://ns.mahidol.ac.th/department/ogn - eng/index.html';
+        if (isEnglish) {
+          langBtn.href = '../OGN_TH/index.html';
+          langBtn.innerHTML = '<img src="' + deptPrefix + 'assets/th.svg" alt="TH"> ไทย';
+        } else {
+          langBtn.href = '../OGN_EN/index.html';
+        }
       } else if (deptFolder.includes('PHN')) {
-        langBtn.href = 'https://ns.mahidol.ac.th/department/PHN - eng/index.html';
+        if (isEnglish) {
+          langBtn.href = '../PHN_TH/index.html';
+          langBtn.innerHTML = '<img src="' + deptPrefix + 'assets/th.svg" alt="TH"> ไทย';
+        } else {
+          langBtn.href = '../PHN_EN/index.html';
+        }
+      } else if (deptFolder.includes('MHPN')) {
+        if (isEnglish) {
+          langBtn.href = '../MHPN_TH/index.html';
+          langBtn.innerHTML = '<img src="' + deptPrefix + 'assets/th.svg" alt="TH"> ไทย';
+        } else {
+          langBtn.href = '../MHPN_EN/index.html';
+        }
       }
     }
 
-    // 2. Social Links Customization (Hide if not linked / PHN Facebook)
+    // 2. Social Links Customization per department
+    // OGN: has Facebook
+    // PHN: no Facebook, no social
+    // MHPN: has Facebook
     if (fbLink) {
       if (deptFolder.includes('OGN')) {
         fbLink.href = 'https://www.facebook.com/obgynnursingmahidol/';
+      } else if (deptFolder.includes('MHPN')) {
+        fbLink.href = 'https://www.facebook.com/mhpnmahidol/';
       } else if (deptFolder.includes('PHN')) {
         fbLink.remove();
       }
     }
 
+    // Remove social links that have placeholder '#' href
     if (twitterLink && twitterLink.getAttribute('href') === '#') {
       twitterLink.remove();
     }

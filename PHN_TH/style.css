@@ -423,6 +423,8 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   background-color: var(--surface); /* White */
   overflow: hidden;
   padding: 6rem 0 4rem; /* Top padding to clear navbar */
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 .organic-bg::after {
   content: '';
@@ -540,4 +542,12 @@ body { font-family: var(--font-body); color: var(--text-main); background-color:
   font-size: 1.15rem;
   border-left: 5px solid var(--secondary);
   box-shadow: var(--shadow-sm);
+}
+
+/* White content background to contrast with body background */
+main.site-main {
+  background: var(--surface, #ffffff);
+  max-width: var(--container-max, 1180px);
+  margin: 0 auto;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
 }

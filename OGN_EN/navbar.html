@@ -1,75 +1,72 @@
 <div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-nav-panel">
-    <div class="mobile-nav-header">
-      <span class="mobile-nav-title" data-i18n="nav.menu">Main Menu</span>
-      <button class="mobile-close" id="mobileClose" aria-label="Close">×</button>
-    </div>
-    <nav class="mobile-nav-list">
-      <div class="mobile-nav-item">
-        <a href="index.html" class="mobile-nav-link active" data-i18n="nav.home">Home</a>
-      </div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
-          <span data-i18n="nav.about">About us</span> <span>▾</span>
-        </div>
-        <div class="mobile-dropdown">
-          <a href="about.html" data-i18n="nav.about_history">History & Background</a>
-          <a href="staff.html" data-i18n="nav.about_staff">Faculty & Staff</a>
-          <a href="contact.html" data-i18n="nav.contact">Contact us</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item">
-        <a href="teaching.html" class="mobile-nav-link" data-i18n="nav.teaching">Teaching</a>
-      </div>
-      <div class="mobile-nav-item">
-        <div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
-          <span data-i18n="nav.service">Services & Research</span> <span>▾</span>
-        </div>
-        <div class="mobile-dropdown">
-          <a href="academic.html" data-i18n="nav.service_academic">Academic Services</a>
-          <a href="COE.html" data-i18n="nav.service_coe">Center of Excellence</a>
-        </div>
-      </div>
-      <div class="mobile-nav-item">
-        <a href="research.html" class="mobile-nav-link" data-i18n="nav.service_research">Research</a>
-      </div>
-      
-    </nav>
-  </div>
+<div class="mobile-nav-panel">
+<div class="mobile-nav-header">
+<span class="mobile-nav-title" data-i18n="nav.menu">Main Menu</span>
+<button aria-label="Close" class="mobile-close" id="mobileClose">×</button>
+</div>
+<nav class="mobile-nav-list">
+<div class="mobile-nav-item">
+<a class="mobile-nav-link active" data-i18n="nav.home" href="index.html">Home</a>
+</div>
+<div class="mobile-nav-item">
+<div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+<span data-i18n="nav.about">About us</span> <span>▾</span>
+</div>
+<div class="mobile-dropdown">
+<a data-i18n="nav.about_history" href="about.html">History &amp; Background</a>
+<a data-i18n="nav.about_staff" href="staff.html">Faculty &amp; Staff</a>
+<a data-i18n="nav.contact" href="contact.html">Contact us</a>
+</div>
+</div>
+<div class="mobile-nav-item">
+<a class="mobile-nav-link" data-i18n="nav.teaching" href="teaching.html">Teaching</a>
+</div><div class="mobile-nav-item">
+<a class="mobile-nav-link" data-i18n="nav.service_research" href="research.html">Research</a>
+</div>
+<div class="mobile-nav-item">
+<div class="mobile-nav-link" onclick="toggleMobileDropdown(this)">
+<span data-i18n="nav.service">Services &amp; Research</span> <span>▾</span>
+</div>
+<div class="mobile-dropdown">
+<a data-i18n="nav.service_academic" href="academic.html">Academic Services</a>
+<a data-i18n="nav.service_coe" href="COE.html">Center of Excellence</a>
+</div>
 </div>
 
+</nav>
+</div>
+</div>
 <nav class="navbar" id="mainNav">
-  <div class="navbar-inner">
-    <span class="navbar-brand" style="display:none" id="navBrand">{{DEPT_TH}}</span>
-    <ul class="nav-menu">
-      <li class="nav-item">
-        <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
-      </li>
-      <li class="nav-item">
-        <span class="nav-link"><span data-i18n="nav.about">About us</span> <span class="nav-arrow">▾</span></span>
-        <ul class="dropdown">
-          <li><a href="about.html" class="dropdown-item" data-i18n="nav.about_history">History & Background</a></li>
-          <li><a href="staff.html" class="dropdown-item" data-i18n="nav.about_staff">Faculty & Staff</a></li>
-          <li><a href="contact.html" class="dropdown-item" data-i18n="nav.contact">Contact us</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a href="teaching.html" class="nav-link" data-i18n="nav.teaching">Teaching</a>
-      </li>
-      <li class="nav-item">
-        <span class="nav-link"><span data-i18n="nav.service">Services & Research</span> <span class="nav-arrow">▾</span></span>
-        <ul class="dropdown">
-          <li><a href="academic.html" class="dropdown-item" data-i18n="nav.service_academic">Academic Services</a></li>
-          <li><a href="COE.html" class="dropdown-item" data-i18n="nav.service_coe">Center of Excellence</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a href="research.html" class="nav-link" data-i18n="nav.service_research">Research</a>
-      </li>
-      
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="เปิด/Close">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<div class="navbar-inner">
+<span class="navbar-brand" id="navBrand" style="display:none">{{DEPT_TH}}</span>
+<ul class="nav-menu">
+<li class="nav-item">
+<a class="nav-link active" data-i18n="nav.home" href="index.html">Home</a>
+</li>
+<li class="nav-item">
+<span class="nav-link"><span data-i18n="nav.about">About us</span> <span class="nav-arrow">▾</span></span>
+<ul class="dropdown">
+<li><a class="dropdown-item" data-i18n="nav.about_history" href="about.html">History &amp; Background</a></li>
+<li><a class="dropdown-item" data-i18n="nav.about_staff" href="staff.html">Faculty &amp; Staff</a></li>
+<li><a class="dropdown-item" data-i18n="nav.contact" href="contact.html">Contact us</a></li>
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-i18n="nav.teaching" href="teaching.html">Teaching</a>
+</li><li class="nav-item">
+<a class="nav-link" data-i18n="nav.service_research" href="research.html">Research</a>
+</li>
+<li class="nav-item">
+<span class="nav-link"><span data-i18n="nav.service">Services &amp; Research</span> <span class="nav-arrow">▾</span></span>
+<ul class="dropdown">
+<li><a class="dropdown-item" data-i18n="nav.service_academic" href="academic.html">Academic Services</a></li>
+<li><a class="dropdown-item" data-i18n="nav.service_coe" href="COE.html">Center of Excellence</a></li>
+</ul>
+</li>
+
+</ul>
+<button aria-label="เปิด/Close" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</div>
 </nav>

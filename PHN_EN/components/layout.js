@@ -1,29 +1,28 @@
 function getPrefixes() {
   const path = window.location.pathname.replace(/\\/g, '/');
-  const index = path.toLowerCase().indexOf('/departments/');
-  let subPath = '';
-  if (index !== -1) {
-    subPath = path.substring(index + 13);
-  } else {
-    const indexDep = path.toLowerCase().indexOf('/department/');
-    if (indexDep !== -1) {
-      subPath = path.substring(indexDep + 12);
-    }
+  const depts = ['MHPN_TH', 'MHPN_EN', 'PHN_TH', 'PHN_EN', 'OGN_TH', 'OGN_EN'];
+  const parts = path.split('/');
+  
+  // Find index of department folder
+  const deptIndex = parts.findIndex(p => depts.includes(p.toUpperCase()));
+  
+  if (deptIndex !== -1) {
+    const stepsToDept = Math.max(0, (parts.length - 2) - deptIndex);
+    const stepsToRoot = stepsToDept + 1;
+    
+    const deptPrefix = stepsToDept > 0 ? '../'.repeat(stepsToDept) : './';
+    const relativePrefix = '../'.repeat(stepsToRoot);
+    
+    return {
+      relativePrefix: relativePrefix,
+      deptPrefix: deptPrefix
+    };
   }
   
-  let deptPrefix = './';
-  if (subPath) {
-    const parts = subPath.split('/');
-    parts.shift();
-    const slashCount = parts.length - 1;
-    if (slashCount > 0) {
-      deptPrefix = '../'.repeat(slashCount);
-    }
-  }
-  
+  // Fallback
   return {
-    relativePrefix: deptPrefix,
-    deptPrefix: deptPrefix
+    relativePrefix: '../../',
+    deptPrefix: './'
   };
 }
 
@@ -34,18 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadTemplateCSS() {
-  const { relativePrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = relativePrefix + 'components/template_style.css';
+  link.href = deptPrefix + 'components/template_style.css';
   document.head.appendChild(link);
 }
 
 function resolveAssetPaths(htmlText) {
-  const { relativePrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
   return htmlText
-    .replace(/\.\.\/\.\.\/assets\//g, relativePrefix + 'assets/')
-    .replace(/\.\.\/\.\.\/components\//g, relativePrefix + 'components/');
+    .replace(/\.\.\/\.\.\/assets\//g, deptPrefix + 'assets/')
+    .replace(/\.\.\/\.\.\/components\//g, deptPrefix + 'components/');
 }
 
 function resolveNavbarLinks(htmlText, deptPrefix) {
@@ -60,13 +59,13 @@ function resolveNavbarLinks(htmlText, deptPrefix) {
 
 async function buildHeader() {
   const deptTitleTh = document.body.getAttribute('data-dept-th') || 'ชื่อภาควิชา';
-  const { relativePrefix, deptPrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
 
   try {
     // Load Header into its own container
     const headerContainer = document.createElement('div');
     headerContainer.id = 'site-header-container';
-    let headerRes = await fetch(relativePrefix + 'components/header.html');
+    let headerRes = await fetch(deptPrefix + 'components/header.html');
     let headerHtml = await headerRes.text();
     headerHtml = resolveAssetPaths(headerHtml);
     headerHtml = headerHtml.replace(/{{DEPT_TH}}/g, deptTitleTh);
@@ -109,10 +108,10 @@ async function buildFooter() {
   footerContainer.id = 'site-footer-container';
   
   const deptTitleTh = document.body.getAttribute('data-dept-th') || 'ชื่อภาควิชา';
-  const { relativePrefix } = getPrefixes();
+  const { deptPrefix } = getPrefixes();
 
   try {
-    const response = await fetch(relativePrefix + 'components/footer.html');
+    const response = await fetch(deptPrefix + 'components/footer.html');
     let htmlContent = await response.text();
     htmlContent = resolveAssetPaths(htmlContent);
     htmlContent = htmlContent.replace(/{{DEPT_TH}}/g, deptTitleTh);
@@ -139,21 +138,21 @@ async function buildFooter() {
       if (deptFolder.includes('OGN')) {
         if (isEnglish) {
           langBtn.href = '../OGN_TH/index.html';
-          langBtn.innerHTML = '<img src="' + relativePrefix + 'assets/th.svg" alt="TH"> ไทย';
+          langBtn.innerHTML = '<img src="' + deptPrefix + 'assets/th.svg" alt="TH"> ไทย';
         } else {
           langBtn.href = '../OGN_EN/index.html';
         }
       } else if (deptFolder.includes('PHN')) {
         if (isEnglish) {
           langBtn.href = '../PHN_TH/index.html';
-          langBtn.innerHTML = '<img src="' + relativePrefix + 'assets/th.svg" alt="TH"> ไทย';
+          langBtn.innerHTML = '<img src="' + deptPrefix + 'assets/th.svg" alt="TH"> ไทย';
         } else {
           langBtn.href = '../PHN_EN/index.html';
         }
       } else if (deptFolder.includes('MHPN')) {
         if (isEnglish) {
           langBtn.href = '../MHPN_TH/index.html';
-          langBtn.innerHTML = '<img src="' + relativePrefix + 'assets/th.svg" alt="TH"> ไทย';
+          langBtn.innerHTML = '<img src="' + deptPrefix + 'assets/th.svg" alt="TH"> ไทย';
         } else {
           langBtn.href = '../MHPN_EN/index.html';
         }

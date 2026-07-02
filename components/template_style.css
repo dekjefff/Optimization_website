@@ -1,4 +1,4 @@
-/* ========================================================    SHARED LAYOUT STYLES (HEADER, NAVBAR, FOOTER)    ======================================================== */  :root {   /* Mahidol Brand Colors Token */   --mu-blue: #194488;   --mu-blue-dark: #102d5e;   --mu-blue-mid: #1d549c;   --mu-blue-light: #2a6fc4;   --mu-blue-pale: #e8f0fb;   --mu-gold: #C8A84B;   --mu-gold-light: #e8ca70;   --mu-gold-dark: #a08030;    /* Neutrals */   --white: #ffffff;   --off-white: #f8f9fc;   --gray-50: #f4f5f7;   --gray-100: #e8eaed;   --gray-200: #d1d5db;   --gray-400: #9ca3af;   --gray-500: #6b7280;   --gray-600: #4b5563;   --gray-700: #374151;   --gray-800: #1f2937;   --gray-900: #111827;    /* Typography */   --font-thai: 'Sarabun', sans-serif;   --font-en: 'Inter', sans-serif;   --font-base: var(--font-thai);    /* Utilities */   --radius-sm: 6px;   --radius-md: 10px;   --radius-lg: 16px;   --radius-full: 9999px;   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);   --shadow-md: 0 4px 16px rgba(25, 68, 136, 0.1);   --shadow-lg: 0 10px 40px rgba(25, 68, 136, 0.15);   --shadow-xl: 0 20px 60px rgba(25, 68, 136, 0.2);   --transition-fast: 0.15s ease;   --transition-base: 0.25s ease;   --transition-slow: 0.4s ease;   --container-max: 1180px;   --navbar-height: 68px;   --topbar-height: 40px; }  /* Reset เบื้องต้นสำหรับ Layout */ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: var(--font-base); background-color: var(--off-white); color: var(--gray-700); -webkit-font-smoothing: antialiased; } a { text-decoration: none; transition: color var(--transition-fast); } ul { list-style: none; }  .mn-wrapper {   max-width: var(--container-max);   margin: 0 auto;   background: var(--white);   box-shadow: var(--shadow-xl);   min-height: 100vh;   position: relative; }  /* =========================================    1. TOP BAR    ========================================= */ .topbar { background: var(--mu-blue-dark); height: var(--topbar-height); display: flex; align-items: center; padding: 0 24px; gap: 16px; } .topbar-links { display: flex; align-items: center; gap: 4px; flex: 1; } .topbar-links a { color: rgba(255,255,255,0.75); font-size: 13px; padding: 4px 8px; border-radius: var(--radius-sm); } .topbar-links a:hover { color: var(--mu-gold-light); } .topbar-links .sep { color: rgba(255,255,255,0.25); font-size: 12px; margin: 0 4px; } .topbar-social { display: flex; align-items: center; gap: 8px; } .topbar-social a { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: var(--radius-full); background: rgba(255,255,255,0.1); } .topbar-social a:hover { background: var(--mu-gold); transform: translateY(-1px); } .topbar-social img { width: 16px; height: 16px; filter: brightness(0) invert(1); } .topbar-lang a { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.75); font-size: 12px; padding: 3px 10px; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-full); } .topbar-lang a:hover { background: var(--mu-gold); border-color: var(--mu-gold); color: white; } .topbar-lang img { width: 20px; height: 14px; border-radius: 2px; }  /* =========================================    2. SITE HEADER    ========================================= */ .site-header {   background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 60%, var(--mu-blue-light) 100%);   position: relative; overflow: hidden; } .site-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--mu-gold) 0%, var(--mu-gold-light) 50%, var(--mu-gold) 100%); } .header-inner { max-width: var(--container-max); margin: 0 auto; width: 100%; padding: 24px; display: flex; align-items: center; gap: 20px; } .header-logo { flex-shrink: 0; height: 75px; display: flex; align-items: center; } .header-logo img { width: auto; height: 100%; max-width: 250px; object-fit: contain; } .logo-placeholder { display: none; } .header-text { flex: 1; } .header-dept-name { font-size: clamp(18px, 2.5vw, 26px); font-weight: 700; color: var(--white); line-height: 1.3; text-shadow: 0 2px 8px rgba(0,0,0,0.2); } .header-faculty-name { font-size: clamp(13px, 1.8vw, 16px); color: rgba(255,255,255,0.75); margin-top: 4px; } .header-univ-name { font-size: clamp(12px, 1.5vw, 14px); color: var(--mu-gold-light); margin-top: 4px; font-weight: 500; letter-spacing: 0.5px; }  /* =========================================    3. NAVIGATION BAR    ========================================= */ #site-nav-container { position: sticky; top: 0; z-index: 1000; } .navbar { background: var(--mu-blue); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 20px rgba(25, 68, 136, 0.3); } .navbar-inner { display: flex; align-items: center; justify-content: space-between; height: var(--navbar-height); padding: 0 16px; max-width: var(--container-max); margin: 0 auto; width: 100%; } .nav-menu { display: flex; align-items: center; height: 100%; } .nav-item { position: relative; height: 100%; display: flex; align-items: center; } .nav-link { display: flex; align-items: center; gap: 5px; padding: 0 12px; height: 100%; color: rgba(255,255,255,0.88); font-size: 13.5px; font-weight: 500; white-space: nowrap; cursor: pointer; } .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 3px; background: var(--mu-gold); transition: width var(--transition-base); } .nav-link:hover, .nav-link.active { color: var(--white); background: rgba(255,255,255,0.08); } .nav-link:hover::after, .nav-link.active::after { width: 60%; } .nav-arrow { font-size: 10px; opacity: 0.7; transition: transform var(--transition-fast); } .nav-item:hover .nav-arrow { transform: rotate(180deg); }  .navbar-brand { color: white !important; font-size: 16px; font-weight: 600; white-space: nowrap; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
+/* ========================================================    SHARED LAYOUT STYLES (HEADER, NAVBAR, FOOTER)    ======================================================== */  :root {   /* Mahidol Brand Colors Token */   --mu-blue: #194488;   --mu-blue-dark: #102d5e;   --mu-blue-mid: #1d549c;   --mu-blue-light: #2a6fc4;   --mu-blue-pale: #e8f0fb;   --mu-gold: #C8A84B;   --mu-gold-light: #e8ca70;   --mu-gold-dark: #a08030;    /* Neutrals */   --white: #ffffff;   --off-white: #f8f9fc;   --gray-50: #f4f5f7;   --gray-100: #e8eaed;   --gray-200: #d1d5db;   --gray-400: #9ca3af;   --gray-500: #6b7280;   --gray-600: #4b5563;   --gray-700: #374151;   --gray-800: #1f2937;   --gray-900: #111827;    /* Typography */   --font-thai: 'Sarabun', sans-serif;   --font-en: 'Inter', sans-serif;   --font-base: var(--font-thai);    /* Utilities */   --radius-sm: 6px;   --radius-md: 10px;   --radius-lg: 16px;   --radius-full: 9999px;   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);   --shadow-md: 0 4px 16px rgba(25, 68, 136, 0.1);   --shadow-lg: 0 10px 40px rgba(25, 68, 136, 0.15);   --shadow-xl: 0 20px 60px rgba(25, 68, 136, 0.2);   --transition-fast: 0.15s ease;   --transition-base: 0.25s ease;   --transition-slow: 0.4s ease;   --container-max: 1180px;   --navbar-height: 68px;   --topbar-height: 40px; }  /* Reset เบื้องต้นสำหรับ Layout */ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: var(--font-base); background-color: var(--off-white); color: var(--gray-700); -webkit-font-smoothing: antialiased; } a { text-decoration: none; transition: color var(--transition-fast); } ul { list-style: none; }  .mn-wrapper {   max-width: var(--container-max);   margin: 0 auto;   background: var(--white);   box-shadow: var(--shadow-xl);   min-height: 100vh;   position: relative; }  /* =========================================    1. TOP BAR    ========================================= */ .topbar { background: var(--mu-blue-dark); height: var(--topbar-height); display: flex; align-items: center; padding: 0 24px; gap: 16px; } .topbar-links { display: flex; align-items: center; gap: 4px; flex: 1; } .topbar-links a { color: rgba(255,255,255,0.75); font-size: 13px; padding: 4px 8px; border-radius: var(--radius-sm); } .topbar-links a:hover { color: var(--mu-gold-light); } .topbar-links .sep { color: rgba(255,255,255,0.25); font-size: 12px; margin: 0 4px; } .topbar-social { display: flex; align-items: center; gap: 8px; } .topbar-social a { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: var(--radius-full); background: rgba(255,255,255,0.1); } .topbar-social a:hover { background: var(--mu-gold); transform: translateY(-1px); } .topbar-social img { width: 16px; height: 16px; filter: brightness(0) invert(1); } .topbar-lang a { display: flex; align-items: center; gap: 4px; color: rgba(255,255,255,0.75); font-size: 12px; padding: 3px 10px; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-full); } .topbar-lang a:hover { background: var(--mu-gold); border-color: var(--mu-gold); color: white; } .topbar-lang img { width: 20px; height: 14px; border-radius: 2px; }  /* =========================================    2. SITE HEADER    ========================================= */ .site-header {   background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 60%, var(--mu-blue-light) 100%);   position: relative; overflow: hidden; max-width: var(--container-max); margin: 0 auto; } .site-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--mu-gold) 0%, var(--mu-gold-light) 50%, var(--mu-gold) 100%); } .header-inner { max-width: var(--container-max); margin: 0 auto; width: 100%; padding: 24px; display: flex; align-items: center; gap: 20px; } .header-logo { flex-shrink: 0; height: 95px; display: flex; align-items: center; } .header-logo img { width: auto; height: 100%; max-width: 350px; object-fit: contain; } .logo-placeholder { display: none; } .header-text { flex: 1; } .header-dept-name { font-size: clamp(18px, 2.5vw, 26px); font-weight: 700; color: var(--white); line-height: 1.3; text-shadow: 0 2px 8px rgba(0,0,0,0.2); } .header-faculty-name { font-size: clamp(13px, 1.8vw, 16px); color: rgba(255,255,255,0.75); margin-top: 4px; } .header-univ-name { font-size: clamp(12px, 1.5vw, 14px); color: var(--mu-gold-light); margin-top: 4px; font-weight: 500; letter-spacing: 0.5px; }  /* =========================================    3. NAVIGATION BAR    ========================================= */ #site-nav-container { position: sticky; top: 0; z-index: 1000; } .navbar { background: var(--mu-blue); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 20px rgba(25, 68, 136, 0.3); max-width: var(--container-max); margin: 0 auto; } .navbar-inner { display: flex; align-items: center; justify-content: space-between; height: var(--navbar-height); padding: 0 16px; max-width: var(--container-max); margin: 0 auto; width: 100%; } .nav-menu { display: flex; align-items: center; height: 100%; } .nav-item { position: relative; height: 100%; display: flex; align-items: center; } .nav-link { display: flex; align-items: center; gap: 5px; padding: 0 12px; height: 100%; color: rgba(255,255,255,0.88); font-size: 13.5px; font-weight: 500; white-space: nowrap; cursor: pointer; } .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 3px; background: var(--mu-gold); transition: width var(--transition-base); } .nav-link:hover, .nav-link.active { color: var(--white); background: rgba(255,255,255,0.08); } .nav-link:hover::after, .nav-link.active::after { width: 60%; } .nav-arrow { font-size: 10px; opacity: 0.7; transition: transform var(--transition-fast); } .nav-item:hover .nav-arrow { transform: rotate(180deg); }  .navbar-brand { color: white !important; font-size: 16px; font-weight: 600; white-space: nowrap; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
 
 /* Apple Liquid Glass Effect */
 .navbar.scrolled {
@@ -25,16 +25,38 @@
 .navbar.scrolled .hamburger span { background: var(--mu-blue-dark); }
 
 /* Dropdown เมนู */ .dropdown {   position: absolute; top: calc(100% + 4px); left: 0; min-width: 240px; background: var(--white); border-radius: var(--radius-md);   box-shadow: var(--shadow-lg); overflow: hidden; opacity: 0; visibility: hidden; transform: translateY(-8px);   transition: all var(--transition-base); border: 1px solid var(--gray-100); z-index: 1100; } .nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); } .dropdown-item { display: block; padding: 12px 20px; color: var(--gray-700); font-size: 14.5px; border-bottom: 1px solid var(--gray-50); transition: all var(--transition-fast); position: relative; } .dropdown-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--primary, var(--mu-blue)); transition: width var(--transition-fast); }
-.dropdown-item:hover { background: var(--primary-glow, var(--mu-blue-pale)); color: var(--primary, var(--mu-blue)); padding-left: 28px; } .dropdown-item:hover::before { width: 4px; } .dropdown-item:last-child { border-bottom: none; }  /* Hamburger Menu & Mobile Dropdown */ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; } .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: var(--radius-full); transition: all var(--transition-base); } .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); } .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); } .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }  .mobile-menu { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0); backdrop-filter: blur(0px); transition: all var(--transition-slow); pointer-events: none; } .mobile-menu.open { display: block; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); pointer-events: all; } .mobile-nav-panel { position: fixed; top: 0; right: -100%; width: min(320px, 85vw); height: 100%; background: rgba(16, 45, 94, 0.65); backdrop-filter: blur(25px) saturate(180%); -webkit-backdrop-filter: blur(25px) saturate(180%); border-left: 1px solid rgba(255,255,255,0.12); box-shadow: -10px 0 40px rgba(0,0,0,0.3); overflow-y: auto; transition: right var(--transition-slow); display: flex; flex-direction: column; } .mobile-menu.open .mobile-nav-panel { right: 0; } .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.12); background: rgba(25, 68, 136, 0.25); } .mobile-nav-title { color: white; font-size: 15px; font-weight: 600; } .mobile-close { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: var(--radius-full); border: none; background: rgba(255,255,255,0.1); color: white; font-size: 20px; cursor: pointer; transition: all var(--transition-fast); } .mobile-close:hover { background: rgba(255,255,255,0.25); } .mobile-nav-list { padding: 16px 0; flex: 1; } .mobile-nav-item { border-bottom: 1px solid rgba(255,255,255,0.06); } .mobile-nav-link { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; color: rgba(255,255,255,0.85); font-size: 15px; cursor: pointer; transition: all var(--transition-fast); } .mobile-nav-link:hover { background: rgba(255,255,255,0.05); color: var(--mu-gold-light); } .mobile-dropdown { display: none; background: rgba(0,0,0,0.15); } .mobile-dropdown.open { display: block; } .mobile-dropdown a { display: block; padding: 12px 20px 12px 36px; color: rgba(255,255,255,0.7); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: all var(--transition-fast); } .mobile-dropdown a:hover { color: var(--mu-gold-light); background: rgba(255,255,255,0.05); }  /* =========================================    4. MAIN CONTENT CONTAINER    ========================================= */ .main-content { padding: 32px 24px; min-height: 400px; }  /* =========================================    5. SITE FOOTER    ========================================= */ .site-footer { background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%); padding: 40px 24px; position: relative; overflow: hidden; } .site-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--mu-gold), var(--mu-gold-light), var(--mu-gold)); } .footer-inner { max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: start; } .footer-info h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; } .footer-info p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 4px; } .footer-info a { color: var(--mu-gold-light); } .footer-info a:hover { color: var(--mu-gold); } .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); } .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; } .footer-social { display: flex; gap: 10px; } .footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 50%; transition: background 0.2s; } .footer-social a:hover { background: var(--mu-gold); transform: translateY(-2px); } .footer-social img { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; } .footer-lang-btn { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.6); font-size: 13px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; transition: all 0.2s; } .footer-lang-btn:hover { background: var(--mu-gold); border-color: var(--mu-gold); color: white; } .footer-lang-btn img { width: 22px; height: 15px; border-radius: 2px; }  /* BACK TO TOP BUTTON */ #back-to-top {   position: fixed; right: 24px; bottom: 32px; width: 44px; height: 44px; background: linear-gradient(135deg, var(--mu-blue), var(--mu-blue-light));   border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; cursor: pointer;   opacity: 0; pointer-events: none; transition: all var(--transition-base); box-shadow: var(--shadow-md); z-index: 999; border: none; } #back-to-top.visible { opacity: 1; pointer-events: all; } #back-to-top svg { width: 20px; height: 20px; fill: white; }  /* =========================================
+.dropdown-item:hover { background: var(--primary-glow, var(--mu-blue-pale)); color: var(--primary, var(--mu-blue)); padding-left: 28px; } .dropdown-item:hover::before { width: 4px; } .dropdown-item:last-child { border-bottom: none; }  /* Hamburger Menu & Mobile Dropdown */ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; border: none; background: none; } .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: var(--radius-full); transition: all var(--transition-base); } .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); } .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); } .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }  .mobile-menu { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0); backdrop-filter: blur(0px); transition: all var(--transition-slow); pointer-events: none; }
+.mobile-menu.open { display: block; background: rgba(0, 0, 0, 0.25) !important; backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important; pointer-events: all; }
+.mobile-nav-panel { position: fixed; top: 0; right: -100%; width: min(300px, 80vw); height: 100%; background: color-mix(in srgb, var(--primary, var(--mu-blue)) 10%, rgba(255, 255, 255, 0.05)) !important; backdrop-filter: blur(35px) saturate(180%) !important; -webkit-backdrop-filter: blur(35px) saturate(180%) !important; border-left: 1px solid rgba(255, 255, 255, 0.15) !important; box-shadow: -15px 0 50px rgba(0, 0, 0, 0.2) !important; overflow-y: auto; transition: right var(--transition-slow); display: flex; flex-direction: column; } .mobile-menu.open .mobile-nav-panel { right: 0; } .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.12); background: rgba(25, 68, 136, 0.25); } .mobile-nav-title { color: white; font-size: 15px; font-weight: 600; } .mobile-close { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: var(--radius-full); border: none; background: rgba(255,255,255,0.1); color: white; font-size: 20px; cursor: pointer; transition: all var(--transition-fast); } .mobile-close:hover { background: rgba(255,255,255,0.25); } .mobile-nav-list { padding: 16px 0; flex: 1; } .mobile-nav-item { border-bottom: 1px solid rgba(255,255,255,0.06); } .mobile-nav-link { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; color: rgba(255,255,255,0.85); font-size: 15px; cursor: pointer; transition: all var(--transition-fast); } .mobile-nav-link:hover { background: rgba(255,255,255,0.05); color: var(--mu-gold-light); } .mobile-dropdown { display: none; background: rgba(0,0,0,0.15); } .mobile-dropdown.open { display: block; } .mobile-dropdown a { display: block; padding: 12px 20px 12px 36px; color: rgba(255,255,255,0.7); font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.04); transition: all var(--transition-fast); } .mobile-dropdown a:hover { color: var(--mu-gold-light); background: rgba(255,255,255,0.05); }  /* =========================================    4. MAIN CONTENT CONTAINER    ========================================= */ .main-content { padding: 32px 24px; min-height: 400px; }  /* =========================================    5. SITE FOOTER    ========================================= */ .site-footer { background: linear-gradient(135deg, var(--mu-blue-dark) 0%, var(--mu-blue) 100%); padding: 40px 24px; position: relative; overflow: hidden; max-width: var(--container-max); margin: 0 auto; } .site-footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--mu-gold), var(--mu-gold-light), var(--mu-gold)); } .footer-inner { max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: start; } .footer-info h3 { font-size: 16px; font-weight: 700; color: white; margin-bottom: 8px; } .footer-info p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 4px; } .footer-info a { color: var(--mu-gold-light); } .footer-info a:hover { color: var(--mu-gold); } .footer-copy { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); } .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; } .footer-social { display: flex; gap: 10px; } .footer-social a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.1); border-radius: 50%; transition: background 0.2s; } .footer-social a:hover { background: var(--mu-gold); transform: translateY(-2px); } .footer-social img { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; } .footer-lang-btn { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.6); font-size: 13px; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; transition: all 0.2s; } .footer-lang-btn:hover { background: var(--mu-gold); border-color: var(--mu-gold); color: white; } .footer-lang-btn img { width: 22px; height: 15px; border-radius: 2px; }  /* BACK TO TOP BUTTON */ #back-to-top {   position: fixed; right: 24px; bottom: 32px; width: 44px; height: 44px; background: linear-gradient(135deg, var(--mu-blue), var(--mu-blue-light));   border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; cursor: pointer;   opacity: 0; pointer-events: none; transition: all var(--transition-base); box-shadow: var(--shadow-md); z-index: 999; border: none; } #back-to-top.visible { opacity: 1; pointer-events: all; } #back-to-top svg { width: 20px; height: 20px; fill: white; }  /* =========================================
     RESPONSIVE DESIGN BREAKPOINTS
 ========================================= */
 @media (max-width: 960px) {
   .nav-menu { display: none; }
   .hamburger { display: flex; }
-  .navbar-brand { color: white; font-size: 16px; font-weight: 600; display: block; }
+  .navbar-brand { color: white; font-size: 15px; font-weight: 600; display: block; }
   .footer-inner { grid-template-columns: 1fr; gap: 24px; }
 
-  /* ซ่อนพื้นหลังแถบ Navbar เมื่อยังไม่ได้เลื่อนลงบนจอเล็ก */
+  /* Stack header elements vertically and align left to prevent hamburger overlapping */
+  .header-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding-right: 80px !important; /* Reserve space for hamburger */
+  }
+  .header-logo {
+    margin-bottom: 0 !important;
+    height: 60px !important;
+  }
+  .header-text {
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .header-dept-name {
+    text-align: left !important;
+    display: inline-block !important;
+  }
+
+  /* Navbar background is hidden on mobile to stack overlay, navbar Brand is visible */
   .navbar:not(.scrolled) {
     background: transparent !important;
     box-shadow: none !important;
@@ -45,32 +67,35 @@
     height: 0;
   }
 
-  /* ดันปุ่ม Hamburger ไปอยู่ที่มุมขวาบนของ Header แบบโปร่งแสงหรูหรา */
+  /* Hamburger sits absolute in top-right of the header when not scrolled */
   .navbar:not(.scrolled) .hamburger {
-    position: absolute;
-    top: calc(20px - var(--header-height, 160px));
-    right: 20px;
-    z-index: 1010;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 0;
+    position: absolute !important;
+    top: calc(20px - var(--header-height, 160px)) !important;
+    right: 20px !important;
+    z-index: 1010 !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    padding: 0 !important;
     transition: all var(--transition-base);
   }
+  .navbar:not(.scrolled) .hamburger span {
+    background: white !important;
+  }
   .navbar:not(.scrolled) .hamburger:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.25) !important;
   }
 
-  /* ป้องกันเนื้อหากล่องกินขอบจอในแท็บเล็ตและจอขนาดกลาง */
+  /* Prevent page container layout overflows on tablets */
   #page-content {
     padding: 2rem !important;
     margin-bottom: 2rem !important;
@@ -82,20 +107,19 @@
 
 @media (max-width: 768px) {
   .topbar { display: none; }
-  .header-inner { padding: 12px 16px; justify-content: center; gap: 12px; }
-  .header-text { text-align: center !important; }
-  .header-logo { height: 50px; }
-  .header-dept-name { font-size: 14px; }
-  .header-faculty-name { font-size: 11px; }
+  .header-inner { padding: 12px 16px !important; }
+  .header-logo { height: 50px !important; }
+  .header-dept-name { font-size: 14px !important; }
+  .header-faculty-name { font-size: 11px !important; }
   .main-content { padding: 20px 16px; }
 
-  /* ปรับระยะขอบปุ่ม Hamburger ในหน้าจอมือถือเล็กให้สอดคล้องกับ Padding ของ Header */
+  /* Adjust hamburger top margin on small mobiles to match padded header */
   .navbar:not(.scrolled) .hamburger {
-    top: calc(16px - var(--header-height, 160px));
-    right: 16px;
+    top: calc(16px - var(--header-height, 160px)) !important;
+    right: 16px !important;
   }
 
-  /* ปรับระยะขอบและลดช่องว่างภายในหน้าจอโทรศัพท์มือถือ เพื่อให้เนื้อหาไม่เบียดแน่นเกินไป */
+  /* Adjust page borders for mobile */
   #page-content {
     padding: 1.25rem !important;
     margin-bottom: 1.5rem !important;
@@ -107,59 +131,31 @@
 }
 
 /* =========================================
-   TABLE STYLING (teaching.html etc)
-========================================= */
-.table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: 2.5rem;
-}
-
-.table-responsive table, .courses-list table {
+   TABLE STYLES
+   ========================================= */
+table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  background: var(--surface, #ffffff);
-  border-radius: var(--radius-md, 10px);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm, 0 4px 20px rgba(0, 0, 0, 0.04));
-  border: 1px solid rgba(0,0,0,0.05);
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
 }
-
-.table-responsive th, .courses-list th {
-  background: var(--primary);
-  color: #ffffff;
-  font-weight: 500;
-  padding: 1.25rem 1.5rem;
+th, td {
+  padding: 12px 16px;
+  border: 1px solid var(--gray-200);
   text-align: left;
-  border-bottom: 3px solid var(--secondary);
-  font-family: var(--font-heading);
-  letter-spacing: 0.5px;
 }
-
-.table-responsive td, .courses-list td {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  color: var(--text-main);
-  vertical-align: middle;
-}
-
-.table-responsive tr:last-child td, .courses-list tr:last-child td {
-  border-bottom: none;
-}
-
-.table-responsive tbody tr, .courses-list tbody tr {
-  transition: background var(--transition-fast);
-}
-
-.table-responsive tbody tr:hover, .courses-list tbody tr:hover {
-  background: var(--primary-glow);
-}
-
-/* For the sub-headers inside the table */
-.table-responsive tr.table-section-header td, .courses-list tr.table-section-header td {
-  background: rgba(0, 0, 0, 0.03);
-  color: var(--primary);
+th {
+  background: var(--primary-glow, var(--mu-blue-pale));
+  color: var(--primary, var(--mu-blue-dark));
   font-weight: 600;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.table-section-header td {
+  background: rgba(0,0,0,0.03);
+  font-weight: 600;
+  color: var(--primary, var(--mu-blue));
+}
+.text-center {
+  text-align: center !important;
 }
