@@ -1,29 +1,28 @@
 function getPrefixes() {
   const path = window.location.pathname.replace(/\\/g, '/');
-  const index = path.toLowerCase().indexOf('/departments/');
-  let subPath = '';
-  if (index !== -1) {
-    subPath = path.substring(index + 13);
-  } else {
-    const indexDep = path.toLowerCase().indexOf('/department/');
-    if (indexDep !== -1) {
-      subPath = path.substring(indexDep + 12);
-    }
+  const depts = ['MHPN_TH', 'MHPN_EN', 'PHN_TH', 'PHN_EN', 'OGN_TH', 'OGN_EN'];
+  const parts = path.split('/');
+  
+  // Find index of department folder
+  const deptIndex = parts.findIndex(p => depts.includes(p.toUpperCase()));
+  
+  if (deptIndex !== -1) {
+    const stepsToDept = Math.max(0, (parts.length - 2) - deptIndex);
+    const stepsToRoot = stepsToDept + 1;
+    
+    const deptPrefix = stepsToDept > 0 ? '../'.repeat(stepsToDept) : './';
+    const relativePrefix = '../'.repeat(stepsToRoot);
+    
+    return {
+      relativePrefix: relativePrefix,
+      deptPrefix: deptPrefix
+    };
   }
   
-  let deptPrefix = './';
-  if (subPath) {
-    const parts = subPath.split('/');
-    parts.shift();
-    const slashCount = parts.length - 1;
-    if (slashCount > 0) {
-      deptPrefix = '../'.repeat(slashCount);
-    }
-  }
-  
+  // Fallback
   return {
-    relativePrefix: deptPrefix,
-    deptPrefix: deptPrefix
+    relativePrefix: '../../',
+    deptPrefix: './'
   };
 }
 
